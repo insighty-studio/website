@@ -1,5 +1,6 @@
 {
   "projects": {
-    "master": ""
+    "master": "",
+    "production": "insighty-website"
   }
 }
