@@ -37,6 +37,9 @@ module.exports = {
     ),
     extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx'],
     alias: {
+      components: path.resolve('src/imports/components'),
+      styles: path.resolve('src/imports/styles'),
+      images: path.resolve('src/imports/images'),
       'react-native': 'react-native-web',
     },
     plugins: [
@@ -85,7 +88,14 @@ module.exports = {
               require.resolve('style-loader'),
               {
                 loader: require.resolve('css-loader'),
-                options: {importLoaders: 1},
+                options: {
+                  importLoaders: 1,
+                  stylus: {
+                    define: {
+                      $styles: path.resolve('src/imports/styles')
+                    }
+                  }
+                },
               },
               {
                 loader: require.resolve('stylus-loader'),

@@ -50,6 +50,8 @@ module.exports = {
     ),
     extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx'],
     alias: {
+      components: path.resolve('src/imports/sections'),
+      styles: path.resolve('src/imports/styles'),
       'react-native': 'react-native-web',
     },
     plugins: [
@@ -229,7 +231,7 @@ module.exports = {
         console.log(message);
       },
       minify: true,
-      navigateFallback: publicUrl + '/index.html',
+      navigateFallback: publicUrl + '/index.styl.html',
       navigateFallbackWhitelist: [/^(?!\/__).*/],
       staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
     }),
