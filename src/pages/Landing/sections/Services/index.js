@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import SectionHeading from 'components/SectionHeading';
+
 import Service from './components/Service';
 
 import './index.styl';
@@ -8,7 +9,7 @@ import './index.styl';
 class Services extends Component {
   render() {
     return (
-      <div className="services">
+      <div className="services" id="services">
         <SectionHeading title="Services" />
         <div className="service-list">
           <Service

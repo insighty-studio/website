@@ -8,7 +8,7 @@ class Main extends Component {
   render() {
     return (
       <div className="main">
-        <Logo description="We Create Web & Mobile Applications That’ll Delight Your Users" />
+        <Logo motto="We Create Web & Mobile Applications That’ll Delight Your Users" />
         <Description
           title="Insighty"
           text=" is a software development studio with a focus on creating apps that solve business problems.

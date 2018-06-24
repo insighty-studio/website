@@ -2,12 +2,8 @@ import React from 'react';
 
 import './index.styl';
 
-const SectionHeading = ({title}) => {
-  return (
-    <div className="section-heading">
-      {title}
-    </div>
-  );
-};
+const SectionHeading = ({style, title}) => (
+  <div className="section-heading" style={style}>{title}</div>
+);
 
 export default SectionHeading;

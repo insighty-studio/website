@@ -231,7 +231,7 @@ module.exports = {
         console.log(message);
       },
       minify: true,
-      navigateFallback: publicUrl + '/index.styl.html',
+      navigateFallback: publicUrl + '/index.html',
       navigateFallbackWhitelist: [/^(?!\/__).*/],
       staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/],
     }),
