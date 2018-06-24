@@ -2,8 +2,6 @@ import React from 'react';
 
 import './index.styl';
 
-//TODO for changes is coming soon. Temporary implementation.
-
 const NavigationBar = () => (
   <div className="navigation-bar">
     <div className="links">

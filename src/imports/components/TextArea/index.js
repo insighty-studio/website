@@ -6,7 +6,7 @@ class TextArea extends Component {
   render() {
     return (
       <div className="form-text-area">
-        <textarea name="" id="" cols="30" rows="10" />
+        <textarea cols="30" rows="10" />
       </div>
     );
   }

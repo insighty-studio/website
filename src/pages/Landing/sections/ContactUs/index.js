@@ -11,7 +11,7 @@ class ContactUs extends Component {
     return (
       <div className="contact-us" id="contact-us">
         <SectionHeading title="Contact Us" />
-        <form action="" className="contact-us-form">
+        <form action="post" className="contact-us-form">
           <div>
             <Input
               type="text"
