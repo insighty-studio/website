@@ -1,14 +1,16 @@
 import React, {Component} from 'react';
 import Logo from './components/Logo';
 import Description from './components/Description';
+import NavigationBar from './components/NavigationBar';
 
-import './index.styl';
+import './main-section.styl';
 
 class Main extends Component {
   render() {
     return (
       <div className="main">
-        <Logo motto="We Create Web & Mobile Applications That’ll Delight Your Users" />
+        <NavigationBar />
+        <Logo desc="We Create Web & Mobile Applications That’ll Delight Your Users" />
         <Description
           title="Insighty"
           text=" is a software development studio with a focus on creating apps that solve business problems.

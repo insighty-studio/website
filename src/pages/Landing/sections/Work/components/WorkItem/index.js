@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './index.styl';
+import './work-item.styl';
 
 const WorkItem = ({title, color}) => (
   <div className="work-item">

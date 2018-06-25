@@ -1,0 +1,27 @@
+@import "~styles/config.styl"
+
+.work
+  display flex
+  flex-direction column
+  margin-top 60px
+  height 100vh
+
+  .section-heading
+    margin-top 20px
+    padding 0 18px
+
+  .work-list
+    display flex
+    margin-top 60px
+    height calc(100vh - 272px)
+    transform rotate(-3deg)
+    background-color $light-gray
+    margin-left -5%
+    width 110%
+
+    .work-list-items
+      display flex
+      transform rotate(3deg)
+      flex-direction row
+      align-items center
+      flex 1

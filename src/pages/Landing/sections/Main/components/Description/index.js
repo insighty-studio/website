@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './index.styl';
+import './description.styl';
 
 const Description = ({title, text}) => (
   <div className="description">
