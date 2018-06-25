@@ -1,14 +1,15 @@
 import React from 'react';
+import {Link} from 'react-scroll'
 
-import './index.styl';
+import './navigation-bar.styl';
 
 const NavigationBar = () => (
   <div className="navigation-bar">
     <div className="links">
-      <a href="#services">Services</a>
-      <a href="#the-process">Process</a>
-      <a href="#work">Work</a>
-      <a href="#contact-us">Contact</a>
+      <Link activeClass="active" to="services" smooth duration={500}>Services</Link>
+      <Link activeClass="active" to="the-process" smooth duration={700}>Process</Link>
+      <Link activeClass="active" to="work" smooth duration={900}>Work</Link>
+      <Link activeClass="active" to="contact-us" smooth duration={1100}>Contact</Link>
     </div>
   </div>
 );
