@@ -2,16 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import './index.styl';
+import './process.styl';
 
-const Process = ({color, step, title, description, rightHand}) => (
-  <div className={classnames('process', rightHand && 'right-hand')}>
-    <div className="process-circle" style={{background: color}} />
+const Process = ({color, step, title, description}) => (
+  <div className={classnames('process')}>
+    <div className="process-circle">
+      <div className="circle" style={{background: color}} />
+    </div>
     <div className="process-title">
       <span>{step}</span>
-      <span>{title}</span>
+      {title}
     </div>
-    <div className="process-description">{description}</div>
+    <div className="process-desc">{description}</div>
   </div>
 );
 

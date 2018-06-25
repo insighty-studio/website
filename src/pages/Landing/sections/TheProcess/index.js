@@ -5,16 +5,13 @@ import SectionHeading from 'components/SectionHeading';
 import Process from './components/Process';
 import ProcessGroup from './components/ProcessGroup';
 
-import './index.styl';
+import './process-section.styl';
 
 class TheProcess extends Component {
   render() {
     return (
       <div className="the-process" id="the-process">
-        <SectionHeading
-          title="The Process"
-          style={{margin: '0 0 144px 0'}}
-        />
+        <SectionHeading title="The Process" />
         <ProcessGroup>
           <Process
             color="#3492FF"
@@ -24,7 +21,6 @@ class TheProcess extends Component {
         and what problems need solved. This gives us a great base to set the process in motion."
           />
           <Process
-            rightHand
             color="#7ED321"
             step="02"
             title="Requirements Analysis"

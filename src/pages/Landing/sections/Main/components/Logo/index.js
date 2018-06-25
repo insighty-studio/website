@@ -1,14 +1,14 @@
 import React from 'react';
 
-import './index.styl';
+import './logo.styl';
 
-const Logo = ({motto}) => (
+const Logo = ({desc}) => (
   <div className="logo">
     <div className="logo-title">
       <span>Insighty</span>
       <span>.</span>
     </div>
-    <div className="logo-motto">{motto}</div>
+    <div className="logo-motto">{desc}</div>
   </div>
 );
 

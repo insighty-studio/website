@@ -1,0 +1,35 @@
+@import "~styles/config.styl"
+
+.process
+  display flex
+  flex-direction column
+  width 400px
+
+  &:nth-child(even)
+    margin 200px 0 100px 200px
+
+  .process-circle
+    height 144px
+
+    .circle
+      width 10px
+      height 10px
+      border-radius 50%
+      background $black
+
+  .process-title
+    position relative
+    font-size $giant
+    line-height 44px
+
+    span
+      left -40px
+      line-height 48px
+      position absolute
+      color rgba(0,0,0, .2)
+      font-size $step
+
+  .process-desc
+    margin-top 8px
+    line-height 34px
+    font-size $normal
