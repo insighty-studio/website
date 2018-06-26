@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import SectionHeading from 'components/SectionHeading';
 import Input from 'components/Input';
 import TextArea from 'components/TextArea';
+import Button from 'components/Button';
 
 import Footer from './components/Footer';
 
@@ -36,7 +37,9 @@ class ContactUs extends Component {
               />
             </div>
             <TextArea />
+            <Button title="Send" />
           </form>
+
         </div>
         <Footer
           address="240 Richmond St W, Toronto, ON M5V 1V6"
