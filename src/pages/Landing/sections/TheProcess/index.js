@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import SectionHeading from 'components/SectionHeading';
+import SectionHeading from 'imports/components/SectionHeading';
 
 import Process from './components/Process';
 import ProcessGroup from './components/ProcessGroup';
