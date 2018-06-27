@@ -5,7 +5,7 @@ import CSSTransition from 'react-transition-group/CSSTransition';
 import './logo.styl';
 
 const Logo = ({desc}) => (
-  <CSSTransition in classNames="logo" appear={true}>
+  <CSSTransition classNames="logo" timeout={1000} in appear >
     <div className="logo">
       <div className="logo-items-bg">
         <div className="logo-items">

@@ -1,6 +1,7 @@
 @import "~styles/config.styl"
 
 .section-heading
+  cursor default
   display flex
   align-self center
   align-items center
@@ -10,3 +11,7 @@
   font-weight $regular-weight
   line-height 48px
   background: url("../../images/section-heading-bg.png") no-repeat center;
+  transition all .1s ease-in
+
+  &:hover
+    transform scale(1.1) rotate(-1deg)
