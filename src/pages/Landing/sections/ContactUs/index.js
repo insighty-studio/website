@@ -13,7 +13,6 @@ class ContactUs extends Component {
   constructor(props) {
     super(props);
     this.state = {formMessage: ''};
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   showMessage() {
@@ -22,8 +21,8 @@ class ContactUs extends Component {
     )
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
+  handleSubmit(e) {
+    e.preventDefault();
     if (this.state.formMessage) return;
     this.setState({formMessage: '*you message has been sent'});
     setTimeout(() => this.setState({formMessage: ''}), 10000);
@@ -34,7 +33,7 @@ class ContactUs extends Component {
       <div className="contact-us" id="contact-us">
         <div className="contact-form-section">
           <SectionHeading title="Contact Us"/>
-          <form className="contact-form" onSubmit={this.handleSubmit}>
+          <form className="contact-form" onSubmit={e => this.handleSubmit(e)}>
             <div className="form-row">
               <Input
                 type="text"
