@@ -1,13 +1,14 @@
 import React from 'react';
+import Typist from 'react-typist';
 
 import './description.styl';
 
 const Description = ({title, text}) => (
   <div className="description">
-    <div>
+    <Typist avgTypingDelay={40} cursor={{hideWhenDone: true}}>
       <span>{title}</span>
       {text}
-    </div>
+    </Typist>
   </div>
 );
 
