@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 
-import SectionHeading from 'components/SectionHeading';
-import Input from 'components/Input';
-import TextArea from 'components/TextArea';
-import Button from 'components/Button';
+import SectionHeading from 'imports/components/SectionHeading';
+import Input from 'imports/components/Input';
+import TextArea from 'imports/components/TextArea';
+import Button from 'imports/components/Button';
 
 import Footer from './components/Footer';
 

@@ -37,6 +37,7 @@ module.exports = {
     ),
     extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx'],
     alias: {
+      imports: path.resolve('src/imports'),
       components: path.resolve('src/imports/components'),
       styles: path.resolve('src/imports/styles'),
       images: path.resolve('src/imports/images'),
@@ -57,7 +58,6 @@ module.exports = {
             options: {
               formatter: eslintFormatter,
               eslintPath: require.resolve('eslint'),
-
             },
             loader: require.resolve('eslint-loader'),
           },

@@ -1,13 +1,14 @@
 import React from 'react';
+import OpacityAnimation from 'imports/components/OpacityAnimation';
 
 import './work-item.styl';
 
-const WorkItem = ({title, color}) => (
+const WorkItem = ({title, color, delay}) => (
   <div className="work-item">
-    <div>
+    <OpacityAnimation delay={delay}>
       <span>{title}</span>
       <span style={{color}}>.</span>
-    </div>
+    </OpacityAnimation>
   </div>
 );
 

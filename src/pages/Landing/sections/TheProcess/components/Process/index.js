@@ -1,19 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import OpacityAnimation from 'imports/components/OpacityAnimation';
 import classnames from 'classnames';
 
 import './process.styl';
 
 const Process = ({color, step, title, description}) => (
   <div className={classnames('process')}>
-    <div className="process-circle">
-      <div className="circle" style={{background: color}} />
-    </div>
-    <div className="process-title">
-      <span>{step}</span>
-      {title}
-    </div>
-    <div className="process-desc">{description}</div>
+    <OpacityAnimation delay={300}>
+      <div className="process-circle">
+        <div className="circle" style={{background: color}} />
+      </div>
+    </OpacityAnimation>
+    <OpacityAnimation delay={600}>
+      <div className="process-title">
+        <span>{step}</span>
+        {title}
+      </div>
+      <div className="process-desc">{description}</div>
+    </OpacityAnimation>
   </div>
 );
 

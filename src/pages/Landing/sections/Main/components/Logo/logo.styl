@@ -1,14 +1,37 @@
 @import "~styles/config.styl"
 
+.logo-appear
+  width 0
+
+.logo-appear.logo-appear-active
+  width 500px
+  transition width 1s cubic-bezier(0, 0, 1, 0.25)
+
 .logo
   display flex
   flex 1
   align-self center
   align-items center
   justify-content space-around
-  width 500px
   height 230px
-  background: url("../../../../../../imports/images/logo-bg.png") no-repeat center;
+  overflow hidden
+
+  .logo-items-bg
+    display flex
+    height 20px
+    transform rotate(-20deg)
+    background-color $light-gray
+    width 570px
+    padding 0 60px
+
+    .logo-items
+      flex 1
+      display flex
+      align-items center
+      transform rotate(20deg)
+      flex-direction row
+      width 500px
+      justify-content space-around
 
   .logo-title
     font-weight $semi-bold-weight
@@ -16,10 +39,10 @@
     font-size 40px
     line-height 50px
 
-    span:last-child
+    span
       color $light-blue
 
-  .logo-motto
+  .logo-desc
     width 226px
     font-size $large
     line-height 28px

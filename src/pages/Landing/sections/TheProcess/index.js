@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-
-import SectionHeading from 'components/SectionHeading';
-
+import SectionHeading from 'imports/components/SectionHeading';
 import Process from './components/Process';
 import ProcessGroup from './components/ProcessGroup';
 
@@ -18,14 +16,14 @@ class TheProcess extends Component {
             step="01"
             title="Product Discovery"
             description="First, we sit down to understand your business your users,
-        and what problems need solved. This gives us a great base to set the process in motion."
+          and what problems need solved. This gives us a great base to set the process in motion."
           />
           <Process
             color="#7ED321"
             step="02"
             title="Requirements Analysis"
             description="This is where we break down the specific features your application
-        needs and identify potential challenges within the project."
+          needs and identify potential challenges within the project."
           />
         </ProcessGroup>
         <ProcessGroup style={{justifyContent: 'flex-end'}}>
@@ -34,7 +32,7 @@ class TheProcess extends Component {
             step="03"
             title="Workload Estimation"
             description="First, we sit down to understand your business your users,
-        and what problems need solved. This gives us a great base to set the process in motion."
+          and what problems need solved. This gives us a great base to set the process in motion."
           />
           <Process
             rightHand
@@ -42,7 +40,7 @@ class TheProcess extends Component {
             step="04"
             title="Development"
             description="This is where we break down the specific features your application
-        needs and identify potential challenges within the project."
+          needs and identify potential challenges within the project."
           />
         </ProcessGroup>
         <ProcessGroup>
@@ -51,7 +49,7 @@ class TheProcess extends Component {
             step="05"
             title="Quality Assurance"
             description="Rigorous user testing and quality assurance takes place until
-            the final product perfectly solves user problems and meets the project brief."
+              the final product perfectly solves user problems and meets the project brief."
           />
           <Process
             rightHand
