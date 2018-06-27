@@ -10,12 +10,30 @@ import Footer from './components/Footer';
 import './contact-us-section.styl';
 
 class ContactUs extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {formMessage: ''};
+  }
+
+  showMessage() {
+    if (this.state.formMessage) return (
+      <div className="form-message">{this.state.formMessage}</div>
+    )
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    if (this.state.formMessage) return;
+    this.setState({formMessage: '*you message has been sent'});
+    setTimeout(() => this.setState({formMessage: ''}), 10000);
+  }
+
   render() {
     return (
       <div className="contact-us" id="contact-us">
         <div className="contact-form-section">
-          <SectionHeading title="Contact Us" />
-          <form className="contact-form">
+          <SectionHeading title="Contact Us"/>
+          <form className="contact-form" onSubmit={e => this.handleSubmit(e)}>
             <div className="form-row">
               <Input
                 type="text"
@@ -28,7 +46,7 @@ class ContactUs extends Component {
             </div>
             <div className="form-row">
               <Input
-                type="number"
+                type="phone"
                 placeholder="Phone"
               />
               <Input
@@ -36,10 +54,10 @@ class ContactUs extends Component {
                 placeholder="Website"
               />
             </div>
-            <TextArea />
-            <Button title="Send" />
+            <TextArea/>
+            <Button title="Send"/>
           </form>
-
+          {this.showMessage()}
         </div>
         <Footer
           address="240 Richmond St W, Toronto, ON M5V 1V6"
