@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
+import classnames from 'classnames';
 
 import SectionHeading from 'imports/components/SectionHeading';
 import Input from 'imports/components/Input';
 import TextArea from 'imports/components/TextArea';
 import Button from 'imports/components/Button';
-
 import Footer from './components/Footer';
 
 import './contact-us-section.styl';
@@ -12,27 +12,26 @@ import './contact-us-section.styl';
 class ContactUs extends Component {
   constructor(props) {
     super(props);
-    this.state = {formMessage: ''};
+    this.state = {isVisibleMessage: false};
   }
 
-  showMessage() {
-    if (this.state.formMessage) return (
-      <div className="form-message">{this.state.formMessage}</div>
+  showMessage(message) {
+    return (
+      <div className={classnames('form-message', this.state.isVisibleMessage && 'appearance')}>{message}</div>
     )
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    if (this.state.formMessage) return;
-    this.setState({formMessage: '*you message has been sent'});
-    setTimeout(() => this.setState({formMessage: ''}), 10000);
+    this.setState({isVisibleMessage: true});
+    setTimeout(() => this.setState({isVisibleMessage: false}), 5000);
   }
 
   render() {
     return (
       <div className="contact-us" id="contact-us">
         <div className="contact-form-section">
-          <SectionHeading title="Contact Us"/>
+          <SectionHeading title="Contact Us" />
           <form className="contact-form" onSubmit={e => this.handleSubmit(e)}>
             <div className="form-row">
               <Input
@@ -57,7 +56,7 @@ class ContactUs extends Component {
             <TextArea/>
             <Button title="Send"/>
           </form>
-          {this.showMessage()}
+          {this.showMessage('*you message has been sent')}
         </div>
         <Footer
           address="240 Richmond St W, Toronto, ON M5V 1V6"
