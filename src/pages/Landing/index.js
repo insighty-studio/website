@@ -14,15 +14,25 @@ import './landing.styl';
 class Landing extends Component {
   constructor(props) {
     super(props);
-    this.state = {percentagesScrolled: 0};
-    this.handleScroll = this.handleScroll.bind(this);
+    this.state = {
+      documentHeight: 0,
+      windowHeight: 0,
+      trackLength: 0,
+      throttleScroll: 0,
+      percentagesScrolled: 0,
+    };
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    this.getDocumentMeasurements();
+    window.addEventListener('scroll', () => {
+      clearTimeout(this.state.throttleScroll);
+      const throttleScroll = setTimeout(() => this.handleScroll(), 50);
+      this.setState({throttleScroll});
+    });
   }
 
-  handleScroll() {
+  getDocumentMeasurements() {
     const documentHeight = Math.max(
       document.body.scrollHeight, document.documentElement.scrollHeight,
       document.body.offsetHeight, document.documentElement.offsetHeight,
@@ -30,15 +40,19 @@ class Landing extends Component {
     );
     const windowHeight = window.innerHeight;
     const trackLength = documentHeight - windowHeight;
+    this.setState({documentHeight, windowHeight, trackLength});
+  }
+
+  handleScroll() {
     const scrollToTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
-    const percentagesScrolled = Math.floor(scrollToTop / trackLength * 100);
+    const percentagesScrolled = Math.floor(scrollToTop / this.state.trackLength * 100);
     this.setState({percentagesScrolled});
   }
 
   renderScrollBtn() {
     return (
       <div
-        className={classnames('scroll-btn', this.state.percentagesScrolled >= 85 && 'scroll-btn-visible')}
+        className={classnames('scroll-btn', this.state.percentagesScrolled >= 17 && 'scroll-btn-visible')}
         onClick={() => Scroll.animateScroll.scrollToTop({smooth: true, duration: 500})}>
         <ScrollToTopBtn />
       </div>
