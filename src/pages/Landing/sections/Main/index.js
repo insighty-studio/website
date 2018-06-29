@@ -8,7 +8,7 @@ import './main-section.styl';
 class Main extends Component {
   render() {
     return (
-      <div className="main">
+      <div className="main" style={this.props.style}>
         <NavigationBar />
         <Logo desc="We Create Web & Mobile Applications That’ll Delight Your Users" />
         <Description

@@ -8,11 +8,11 @@ import './services-section.styl';
 class Services extends Component {
   render() {
     return (
-      <div className="services" id="services">
+      <div className="services" id="services" style={this.props.style}>
         <SectionHeading title="Services" />
         <div className="service-list">
           <div className="service-list-items">
-            <OpacityAnimation delay={300}>
+            <OpacityAnimation delay={100}>
               <Service
                 title="Create experiences your users will love"
                 description="Good design doesn’t stand out. Good design is invisible.
@@ -20,7 +20,7 @@ class Services extends Component {
                 in turn, keep them sticking around for good."
               />
             </OpacityAnimation>
-            <OpacityAnimation delay={600}>
+            <OpacityAnimation delay={300}>
               <Service
                   title="See your app in weeks, not month"
                   description="You hate software projects
@@ -28,7 +28,7 @@ class Services extends Component {
                   of your brief so you can visualize the end product and request adjustments as quickly as possible."
                 />
             </OpacityAnimation>
-            <OpacityAnimation delay={900}>
+            <OpacityAnimation delay={500}>
               <Service
                 title="Get pristine code the first time round"
                 description="Software development is expensive and unpredictable. But it doesn’t have to be.

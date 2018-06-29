@@ -4,14 +4,29 @@
   display flex
   justify-content flex-end
   margin-top 32px
+  min-height 20px
 
-  .links a
-    color $black
-    font-size $small
-    line-height 20px
-    text-decoration none
-    margin-right 32px
-    cursor pointer
+  .links
+    display flex
+    opacity 0
+    animation opacityMainSection .5s forwards
+    animation-duration .5s
+    animation-delay 1.6s
 
-    &:last-child
-      margin-right 0
+    a
+      color $black
+      font-size $small
+      line-height 20px
+      text-decoration none
+      margin-right 32px
+      cursor pointer
+
+      &:last-child
+        margin-right 0
+
+@keyframes opacityMainSection
+  0%
+    opacity 0
+
+  100%
+    opacity 1

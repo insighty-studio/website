@@ -9,7 +9,7 @@ import './process-section.styl';
 class TheProcess extends Component {
   render() {
     return (
-      <div className="the-process" id="the-process">
+      <div className="the-process" id="the-process" style={this.props.style}>
         <SectionHeading title="The Process" />
         <ProcessGroup>
           <Process
