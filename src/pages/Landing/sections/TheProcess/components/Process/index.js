@@ -7,12 +7,12 @@ import './process.styl';
 
 const Process = ({color, step, title, description}) => (
   <div className={classnames('process')}>
-    <OpacityAnimation delay={300}>
+    <OpacityAnimation delay={100}>
       <div className="process-circle">
         <div className="circle" style={{background: color}} />
       </div>
     </OpacityAnimation>
-    <OpacityAnimation delay={600}>
+    <OpacityAnimation delay={500}>
       <div className="process-title">
         <span>{step}</span>
         {title}

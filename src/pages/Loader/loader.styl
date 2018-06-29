@@ -1,0 +1,48 @@
+@import '~styles/config.styl'
+
+.loader-page
+  display flex
+  justify-content center
+  align-items center
+  height 100vh
+
+  .logo-title
+    font-weight $semi-bold-weight
+    letter-spacing 0.1px
+    font-size 40px
+    line-height 50px
+    animation opacity .4s forwards
+    animation-duration .4s
+    animation-delay 1.6s
+
+    span
+      animation colorPulse 2s forwards
+      animation-duration 2s
+
+@keyframes opacity
+  0%
+    opacity 1
+
+  100%
+    opacity 0
+
+
+@keyframes colorPulse
+  0%
+    color $light-blue
+
+  20%
+    color orange
+
+  40%
+    color greenyellow
+
+  60%
+    color purple
+
+  80%
+    color yellow
+    opacity 1
+
+  100%
+    opacity 0

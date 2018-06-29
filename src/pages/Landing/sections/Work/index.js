@@ -7,7 +7,7 @@ import './work-section.styl';
 class Work extends Component {
   render() {
     return (
-      <div className="work" id="work">
+      <div className="work" id="work" style={this.props.style}>
         <SectionHeading title="Work" />
         <div className="work-list">
           <div className="work-list-items">
