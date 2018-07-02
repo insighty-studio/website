@@ -1,16 +1,19 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-import './index.styl';
+import './styles/button.styl';
 
-const Button = ({className, title, ...rest}) => {
-  return (
-    <div className={classnames('button', className)}>
-      <button {...rest}>{title}</button>
-    </div>
-  );
-};
+class Button extends PureComponent {
+  render() {
+    const {className, title, ...rest} = this.props;
+    return (
+      <div className={classnames('button', className)}>
+        <button {...rest}>{title}</button>
+      </div>
+    );
+  }
+}
 
 Button.propTypes = {
   className: PropTypes.string,

@@ -7,17 +7,21 @@ import TextArea from 'imports/components/TextArea';
 import Button from 'imports/components/Button';
 import Footer from './components/Footer';
 
-import './contact-us-section.styl';
+import './styles/contact-us-section.styl';
 
 class ContactUs extends Component {
   constructor(props) {
     super(props);
-    this.state = {isVisibleMessage: false};
+    this.state = {
+      isVisibleMessage: false
+    };
   }
 
   showMessage(message) {
     return (
-      <div className={classnames('form-message', this.state.isVisibleMessage && 'appearance')}>{message}</div>
+      <div className={classnames('form-message', this.state.isVisibleMessage && 'appearance')}>
+        {message}
+      </div>
     )
   }
 
@@ -53,8 +57,8 @@ class ContactUs extends Component {
                 placeholder="Website"
               />
             </div>
-            <TextArea/>
-            <Button title="Send"/>
+            <TextArea />
+            <Button title="Send" />
           </form>
           {this.showMessage('*you message has been sent')}
         </div>

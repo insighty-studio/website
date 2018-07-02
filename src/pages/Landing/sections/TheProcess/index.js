@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 
 import SectionHeading from 'imports/components/SectionHeading';
 import Process from './components/Process';
 import ProcessGroup from './components/ProcessGroup';
 
-import './process-section.styl';
+import './styles/process-section.styl';
 
-class TheProcess extends Component {
+class TheProcess extends PureComponent {
   render() {
     return (
       <div className="the-process" id="the-process" style={this.props.style}>
