@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import Scroll from 'react-scroll';
-import {ScrollToTopBtn} from 'imports/icons';
-import classnames from 'classnames';
+import ScrollToTopBtn from 'imports/components/ScrollToTopBtn';
 
 import Main from './sections/Main';
 import Services from './sections/Services';
@@ -9,7 +7,7 @@ import TheProcess from './sections/TheProcess';
 import Work from './sections/Work';
 import ContactUs from './sections/ContactUs';
 
-import './landing.styl';
+import './styles/landing.styl';
 
 class Landing extends Component {
   constructor(props) {
@@ -49,20 +47,10 @@ class Landing extends Component {
     this.setState({percentagesScrolled});
   }
 
-  renderScrollBtn() {
-    return (
-      <div
-        className={classnames('scroll-btn', this.state.percentagesScrolled >= 17 && 'scroll-btn-visible')}
-        onClick={() => Scroll.animateScroll.scrollToTop({smooth: true, duration: 500})}>
-        <ScrollToTopBtn />
-      </div>
-    );
-  }
-
   render() {
     return (
       <div className="landing">
-        {this.renderScrollBtn()}
+        <ScrollToTopBtn percentagesScrolled={this.state.percentagesScrolled} />
         <Main />
         <Services />
         <TheProcess />

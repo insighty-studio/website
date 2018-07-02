@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import SectionHeading from 'imports/components/SectionHeading';
 import WorkItem from './components/WorkItem';
 
-import './work-section.styl';
+import './styles/work-section.styl';
 
-class Work extends Component {
+class Work extends PureComponent {
   render() {
     return (
       <div className="work" id="work" style={this.props.style}>

@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import Logo from './components/Logo';
 import Description from './components/Description';
 import NavigationBar from './components/NavigationBar';
 
-import './main-section.styl';
+import './styles/main-section.styl';
 
-class Main extends Component {
+class Main extends PureComponent {
   render() {
     return (
       <div className="main" style={this.props.style}>

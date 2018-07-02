@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import SectionHeading from 'imports/components/SectionHeading';
 import OpacityAnimation from 'imports/components/OpacityAnimation';
 import Service from './components/Service';
 
-import './services-section.styl';
+import './styles/services-section.styl';
 
-class Services extends Component {
+class Services extends PureComponent {
   render() {
     return (
       <div className="services" id="services" style={this.props.style}>

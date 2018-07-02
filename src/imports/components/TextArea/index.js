@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 
-import './index.styl';
+import './styles/text-area.styl';
 
-const TextArea = () => (
-  <div className="form-text-area">
-    <textarea cols="30" rows="10" />
-  </div>
-);
+class TextArea extends PureComponent {
+  render() {
+    return (
+      <div className="form-text-area">
+        <textarea cols="30" rows="10" />
+      </div>
+    );
+  }
+}
 
 export default TextArea;

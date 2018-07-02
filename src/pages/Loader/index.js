@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 
-import './loader.styl';
+import './styles/loader.styl';
 
-class Loader extends Component {
+class Loader extends PureComponent {
   render() {
     return (
       <div className="loader-page">
