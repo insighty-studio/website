@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ScrollToTopBtn from 'imports/components/ScrollToTopBtn';
+import provideScrollPosition from 'react-provide-scroll-position';
 
 import Main from './sections/Main';
 import Services from './sections/Services';
@@ -9,55 +10,22 @@ import ContactUs from './sections/ContactUs';
 
 import './styles/landing.styl';
 
+const LandingPage = ({scrollTop}) => (
+  <div className="landing">
+    <ScrollToTopBtn percentagesScrolled={scrollTop} />
+    <Main />
+    <Services />
+    <TheProcess />
+    <Work />
+    <ContactUs />
+  </div>
+);
+
+const LandingScroll = provideScrollPosition(LandingPage);
+
 class Landing extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      documentHeight: 0,
-      windowHeight: 0,
-      trackLength: 0,
-      throttleScroll: 0,
-      percentagesScrolled: 0,
-    };
-  }
-
-  componentDidMount() {
-    this.getDocumentMeasurements();
-    window.addEventListener('scroll', () => {
-      clearTimeout(this.state.throttleScroll);
-      const throttleScroll = setTimeout(() => this.handleScroll(), 50);
-      this.setState({throttleScroll});
-    });
-  }
-
-  getDocumentMeasurements() {
-    const documentHeight = Math.max(
-      document.body.scrollHeight, document.documentElement.scrollHeight,
-      document.body.offsetHeight, document.documentElement.offsetHeight,
-      document.body.clientHeight, document.documentElement.clientHeight
-    );
-    const windowHeight = window.innerHeight;
-    const trackLength = documentHeight - windowHeight;
-    this.setState({documentHeight, windowHeight, trackLength});
-  }
-
-  handleScroll() {
-    const scrollToTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop;
-    const percentagesScrolled = Math.floor(scrollToTop / this.state.trackLength * 100);
-    this.setState({percentagesScrolled});
-  }
-
   render() {
-    return (
-      <div className="landing">
-        <ScrollToTopBtn percentagesScrolled={this.state.percentagesScrolled} />
-        <Main />
-        <Services />
-        <TheProcess />
-        <Work />
-        <ContactUs />
-      </div>
-    );
+    return <LandingScroll />;
   }
 }
 
