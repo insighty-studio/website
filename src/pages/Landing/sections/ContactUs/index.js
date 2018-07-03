@@ -13,13 +13,14 @@ class ContactUs extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isVisibleMessage: false
+      isMessageVisible: false,
+      isFormSubmitted: false,
     };
   }
 
   showMessage(message) {
     return (
-      <div className={classnames('form-message', this.state.isVisibleMessage && 'appearance')}>
+      <div className={classnames('form-message', this.state.isMessageVisible && 'appearance')}>
         {message}
       </div>
     )
@@ -27,8 +28,8 @@ class ContactUs extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.setState({isVisibleMessage: true});
-    setTimeout(() => this.setState({isVisibleMessage: false}), 5000);
+    this.setState({isMessageVisible: true, isFormSubmitted: true});
+    setTimeout(() => this.setState({isMessageVisible: false}), 5000);
   }
 
   render() {
@@ -58,7 +59,10 @@ class ContactUs extends Component {
               />
             </div>
             <TextArea />
-            <Button title="Send" />
+            <Button
+              disabled={this.state.isFormSubmitted}
+              title={this.state.isFormSubmitted ? 'Thanks!' : 'Send'}
+            />
           </form>
           {this.showMessage('*you message has been sent')}
         </div>
