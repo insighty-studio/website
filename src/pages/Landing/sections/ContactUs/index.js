@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 import classnames from 'classnames';
 
 import SectionHeading from 'imports/components/SectionHeading';
@@ -15,6 +16,11 @@ class ContactUs extends Component {
     this.state = {
       isMessageVisible: false,
       isFormSubmitted: false,
+      name: '',
+      email: '',
+      phone: '',
+      website: '',
+      message: '',
     };
   }
 
@@ -28,37 +34,78 @@ class ContactUs extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    const {name, email, phone, website, message} = this.state;
+    const formData = JSON.stringify({
+      attachments: [
+        {
+          color: '#000000',
+          pretext: 'New Contact Us form request',
+          author_name: `From: ${name}`,
+          text: `*Email:* ${email}\n*Phone:* ${phone}\n*Website:* ${website}\n*Message:* _${message}_`,
+        }
+      ]
+    });
+    axios.post(`https://hooks.slack.com/services/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`, formData)
+      .then(() => this.setState({name: '', email: '', phone: '', website: '', message: ''}));
     this.setState({isMessageVisible: true, isFormSubmitted: true});
     setTimeout(() => this.setState({isMessageVisible: false}), 5000);
   }
 
+  handleFormInput(e) {
+    this.setState({[e.target.name]: e.target.value});
+  }
+
   render() {
+    const {name, email, phone, website, message} = this.state;
     return (
       <div className="contact-us" id="contact-us">
         <div className="contact-form-section">
           <SectionHeading title="Contact Us" />
-          <form className="contact-form" onSubmit={e => this.handleSubmit(e)}>
+          <form
+            className="contact-form"
+            onSubmit={e => this.handleSubmit(e)}
+          >
             <div className="form-row">
               <Input
+                required
+                name="name"
                 type="text"
                 placeholder="Name *"
+                value={name}
+                onChange={e => this.handleFormInput(e)}
               />
               <Input
+                required
+                name="email"
                 type="email"
                 placeholder="Email *"
+                value={email}
+                onChange={e => this.handleFormInput(e)}
               />
             </div>
             <div className="form-row">
               <Input
+                name="phone"
                 type="phone"
                 placeholder="Phone"
+                value={phone}
+                onChange={e => this.handleFormInput(e)}
               />
               <Input
-                type="test"
+                name="website"
+                type="text"
                 placeholder="Website"
+                value={website}
+                onChange={e => this.handleFormInput(e)}
               />
             </div>
-            <TextArea />
+            <TextArea
+              required
+              name="message"
+              value={message}
+              placeholder="Message *"
+              onChange={e => this.handleFormInput(e)}
+            />
             <Button
               disabled={this.state.isFormSubmitted}
               title={this.state.isFormSubmitted ? 'Thanks!' : 'Send'}
