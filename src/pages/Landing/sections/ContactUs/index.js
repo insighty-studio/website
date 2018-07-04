@@ -46,9 +46,18 @@ class ContactUs extends Component {
       ]
     });
     axios.post(`https://hooks.slack.com/services/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`, formData)
-      .then(() => this.setState({name: '', email: '', phone: '', website: '', message: ''}));
-    this.setState({isMessageVisible: true, isFormSubmitted: true});
-    setTimeout(() => this.setState({isMessageVisible: false}), 5000);
+      .then(() => {
+        this.setState({
+          isMessageVisible: true,
+          sFormSubmitted: true,
+          name: '',
+          email: '',
+          phone: '',
+          website: '',
+          message: '',
+        });
+        setTimeout(() => this.setState({isMessageVisible: false}), 5000);
+      });
   }
 
   handleFormInput(e) {
