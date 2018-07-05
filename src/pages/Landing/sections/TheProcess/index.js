@@ -9,7 +9,7 @@ import './styles/process-section.styl';
 class TheProcess extends PureComponent {
   render() {
     return (
-      <div className="the-process" id="the-process" style={this.props.style}>
+      <div className="the-process" id="the-process">
         <SectionHeading title="The Process" />
         <ProcessGroup>
           <Process

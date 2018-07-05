@@ -8,7 +8,7 @@ import './styles/services-section.styl';
 class Services extends PureComponent {
   render() {
     return (
-      <div className="services" id="services" style={this.props.style}>
+      <div className="services" id="services">
         <SectionHeading title="Services" />
         <div className="service-list">
           <div className="service-list-items">
