@@ -8,7 +8,7 @@ import './styles/main-section.styl';
 class Main extends PureComponent {
   render() {
     return (
-      <div className="main" style={this.props.style}>
+      <div className="main">
         <NavigationBar />
         <Logo desc="We Create Web & Mobile Applications That’ll Delight Your Users" />
         <Description

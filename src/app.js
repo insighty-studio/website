@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import 'normalize.css';
 import 'styles/main.styl';
 
 import Landing from './pages/Landing';
+import BetterYet from './pages/BetterYet';
 import Loader from './pages/Loader';
 
 class App extends Component {
@@ -24,7 +25,10 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="root">
-          <Route path="/" component={Landing} />
+          <Switch>
+            <Route exact path="/" component={Landing} />
+            <Route path="/better-yet" component={BetterYet} />
+          </Switch>
         </div>
       </BrowserRouter>
     );
