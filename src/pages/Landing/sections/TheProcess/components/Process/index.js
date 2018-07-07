@@ -27,7 +27,6 @@ Process.propTypes = {
   step: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
-  rightHand: PropTypes.bool,
 };
 
 Process.defaultProps = {
@@ -35,7 +34,6 @@ Process.defaultProps = {
   step: '',
   title: '',
   description: '',
-  rightHand: false,
 };
 
 export default Process;

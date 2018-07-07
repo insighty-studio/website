@@ -14,7 +14,7 @@ class ContactUs extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMessageVisible: false,
+      messageIsVisible: false,
       isFormSubmitted: false,
       name: '',
       email: '',
@@ -26,7 +26,7 @@ class ContactUs extends Component {
 
   showMessage(message) {
     return (
-      <div className={classnames('form-message', this.state.isMessageVisible && 'appearance')}>
+      <div className={classnames('form-message', this.state.messageIsVisible && 'appearance')}>
         {message}
       </div>
     )
@@ -48,15 +48,15 @@ class ContactUs extends Component {
     axios.post(`https://hooks.slack.com/services/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`, formData)
       .then(() => {
         this.setState({
-          isMessageVisible: true,
-          sFormSubmitted: true,
+          messageIsVisible: true,
+          formIsSubmitted: true,
           name: '',
           email: '',
           phone: '',
           website: '',
           message: '',
         });
-        setTimeout(() => this.setState({isMessageVisible: false}), 5000);
+        setTimeout(() => this.setState({messageIsVisible: false}), 5000);
       });
   }
 
