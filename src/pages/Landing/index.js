@@ -8,7 +8,7 @@ import TheProcess from './sections/TheProcess';
 import Work from './sections/Work';
 import ContactUs from './sections/ContactUs';
 
-import './styles/landing';
+import './styles/landing.styl';
 
 const LandingPage = ({scrollTop}) => (
   <div className="landing">

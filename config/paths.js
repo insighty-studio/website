@@ -28,7 +28,7 @@ const getPublicUrl = appPackageJson =>
 // We use `PUBLIC_URL` environment variable or "homepage" field to infer
 // "public path" at which the Landing is served.
 // Webpack needs to know it to put the right <script> hrefs into HTML even in
-// single-Landing apps that may serve logo.styl.html for nested URLs like /todos/42.
+// single-Landing apps that may serve index.styl.html for nested URLs like /todos/42.
 // We can't use a relative path in HTML because we don't want to load something
 // like /todos/42/static/js/bundle.7289d.js. We have to know the root.
 function getServedPath(appPackageJson) {
