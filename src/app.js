@@ -4,14 +4,14 @@ import 'normalize.css';
 import 'styles/main.styl';
 
 import Landing from './pages/Landing';
-import BetterYet from './pages/BetterYet';
 import Loader from './pages/Loader';
+import BetterYet from './pages/BetterYet';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ready: false
+      ready: true
     };
   }
 

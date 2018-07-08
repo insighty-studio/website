@@ -1,0 +1,25 @@
+@import '~styles/config.styl'
+
+.navigation-bar
+  display flex
+  justify-content space-between
+  align-items center
+  padding-top 40px
+
+  .logo
+    font-weight $medium-weight
+    font-size 24px
+
+  .links
+    display flex
+
+    a
+      color $black
+      font-size $small
+      line-height 20px
+      text-decoration none
+      margin-right 32px
+      cursor pointer
+
+      &:last-child
+        margin-right 0
