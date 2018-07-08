@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './description.styl';
+import './main-description.styl';
 
 const Description = ({title, text}) => (
-  <div className="description">
+  <div className="main-description">
     <span>{title}</span>
     {text}
   </div>

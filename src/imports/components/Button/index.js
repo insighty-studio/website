@@ -6,10 +6,15 @@ import './styles/button.styl';
 
 class Button extends PureComponent {
   render() {
-    const {className, title, ...rest} = this.props;
+    const {className, title, disabled, ...rest} = this.props;
     return (
-      <div className={classnames('button', className)}>
-        <button {...rest}>{title}</button>
+      <div className={classnames('button', disabled && 'disabled', className)}>
+        <button
+          disabled={disabled}
+          {...rest}
+        >
+          {title}
+        </button>
       </div>
     );
   }
@@ -17,10 +22,14 @@ class Button extends PureComponent {
 
 Button.propTypes = {
   className: PropTypes.string,
+  title: PropTypes.string,
+  disabled: PropTypes.bool,
 };
 
 Button.defaultProps = {
   className: '',
+  title: '',
+  disabled: false,
 };
 
 export default Button;
