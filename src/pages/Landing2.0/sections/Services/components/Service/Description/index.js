@@ -1,8 +1,21 @@
 import React, {PureComponent} from 'react';
+import PropTypes from 'prop-types';
 
 import './description.styl';
 
 class Description extends PureComponent {
+  static propTypes = {
+    title: PropTypes.string,
+		subtitle: PropTypes.string,
+		text: PropTypes.string
+  };
+
+  static defaultProps = {
+    title: '',
+    subtitle: '',
+    text: ''
+  };
+
   render() {
     const {title, subtitle, text} = this.props;
 

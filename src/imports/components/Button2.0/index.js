@@ -5,6 +5,16 @@ import PropTypes from 'prop-types';
 import './styles/button.styl';
 
 class Button extends PureComponent {
+  static propTypes = {
+		className: PropTypes.string,
+    title: PropTypes.string
+  };
+
+	static defaultProps = {
+		className: '',
+		title: ''
+	};
+
   render() {
     const {className, title} = this.props;
     return (
@@ -14,13 +24,5 @@ class Button extends PureComponent {
     );
   }
 }
-
-Button.propTypes = {
-  className: PropTypes.string,
-};
-
-Button.defaultProps = {
-  className: '',
-};
 
 export default Button;

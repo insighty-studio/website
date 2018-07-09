@@ -1,10 +1,29 @@
 import React, {PureComponent} from 'react';
+import PropTypes from 'prop-types';
 
 import Description from './Description';
 
 import './service.styl';
 
 class Service extends PureComponent {
+	static propTypes = {
+		className: PropTypes.string,
+		title: PropTypes.string,
+		subtitle: PropTypes.string,
+		text: PropTypes.string,
+		left: PropTypes.string,
+		icons: PropTypes.arrayOf(PropTypes.object)
+	};
+
+	static defaultProps = {
+		className: '',
+		title: '',
+		subtitle: '',
+    text: '',
+    left: '',
+		icons: null
+	};
+
   renderIcons() {
     const {icons} = this.props;
 
