@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 
-import {BetterYetTitle} from "imports/icons";
+import {BetterYetTitle} from 'imports/icons';
 
 import './index.styl';
 

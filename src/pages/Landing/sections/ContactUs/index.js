@@ -29,12 +29,14 @@ class ContactUs extends Component {
       <div className={classnames('form-message', this.state.messageIsVisible && 'appearance')}>
         {message}
       </div>
-    )
+    );
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    const {name, email, phone, website, message} = this.state;
+    const {
+      name, email, phone, website, message
+    } = this.state;
     const formData = JSON.stringify({
       attachments: [
         {
@@ -45,7 +47,7 @@ class ContactUs extends Component {
         }
       ]
     });
-    axios.post(`https://hooks.slack.com/services/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`, formData)
+    axios.post('https://hooks.slack.com/services/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', formData)
       .then(() => {
         this.setState({
           messageIsVisible: true,
@@ -65,7 +67,9 @@ class ContactUs extends Component {
   }
 
   render() {
-    const {name, email, phone, website, message} = this.state;
+    const {
+      name, email, phone, website, message
+    } = this.state;
     return (
       <div className="contact-us" id="contact-us">
         <div className="contact-form-section">
