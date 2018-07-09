@@ -3,7 +3,7 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import 'normalize.css';
 import 'styles/main.styl';
 
-import Landing from './pages/Landing';
+import Landing from './pages/Landing2.0';
 import Loader from './pages/Loader';
 import BetterYet from './pages/BetterYet';
 import SuperHero from './pages/SuperHero';
