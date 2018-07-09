@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   render() {
-    if(!this.state.ready) return <Loader />;
+    if (!this.state.ready) return <Loader />;
 
     return (
       <BrowserRouter>

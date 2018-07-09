@@ -6,7 +6,9 @@ import './styles/button.styl';
 
 class Button extends PureComponent {
   render() {
-    const {className, title, disabled, ...rest} = this.props;
+    const {
+      className, title, disabled, ...rest
+    } = this.props;
     return (
       <div className={classnames('button', disabled && 'disabled', className)}>
         <button

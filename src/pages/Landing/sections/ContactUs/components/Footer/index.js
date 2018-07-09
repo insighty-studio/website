@@ -8,7 +8,8 @@ class Footer extends PureComponent {
     return (
       <div className="footer">
         <div className="footer-details">
-          {address}<br />
+          {address}
+          <br />
           {email}
         </div>
         <div className="rights">

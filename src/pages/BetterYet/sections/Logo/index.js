@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 
-import {BetterYetLogo} from "imports/icons";
+import {BetterYetLogo} from 'imports/icons';
 
 import './logo.styl';
 
