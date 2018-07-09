@@ -2,7 +2,7 @@
 
 import React, {PureComponent} from 'react';
 
-import './icons.styl';
+import './index.styl';
 
 export class ScrollToTopBtnIcon extends PureComponent {
   render() {

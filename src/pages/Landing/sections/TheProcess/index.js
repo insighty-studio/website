@@ -4,7 +4,7 @@ import SectionHeading from 'imports/components/SectionHeading';
 import Process from './components/Process';
 import ProcessGroup from './components/ProcessGroup';
 
-import './styles/process-section.styl';
+import './index.styl';
 
 class TheProcess extends PureComponent {
   render() {

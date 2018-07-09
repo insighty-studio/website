@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 
-import './styles/section-heading.styl';
+import './index.styl';
 
 class SectionHeading extends PureComponent {
   render() {

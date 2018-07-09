@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Description from './Description';
 
-import './service.styl';
+import './index.styl';
 
 class Service extends PureComponent {
 	static propTypes = {

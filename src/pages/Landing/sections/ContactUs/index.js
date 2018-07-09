@@ -8,7 +8,7 @@ import TextArea from 'imports/components/TextArea';
 import Button from 'imports/components/Button';
 import Footer from './components/Footer';
 
-import './styles/contact-us-section.styl';
+import './index.styl';
 
 class ContactUs extends Component {
   constructor(props) {

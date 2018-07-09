@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import OpacityAnimation from 'imports/components/OpacityAnimation';
 import CSSTransition from 'react-transition-group/CSSTransition';
 
-import './logo.styl';
+import './index.styl';
 
 class Logo extends Component {
   renderLogo() {

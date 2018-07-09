@@ -1,25 +1,38 @@
 import React, {PureComponent} from 'react';
+import PropTypes from 'prop-types';
 
-import './details.styl';
+import './index.styl';
 
 class Details extends PureComponent {
+  static propTypes = {
+    year: PropTypes.string,
+    client: PropTypes.string,
+		services: PropTypes.string,
+  };
+
+  static defaultProps = {
+		year: '',
+		client: '',
+		services: ''
+  };
+
   render() {
     return (
       <div className="by-description-details">
         <div>
-Year:
+          Year:
           <span>
             {this.props.year}
           </span>
         </div>
         <div>
-Client:
+          Client:
           <span>
             {this.props.client}
           </span>
         </div>
         <div>
-Services:
+          Services:
           <span>
             {this.props.services}
           </span>

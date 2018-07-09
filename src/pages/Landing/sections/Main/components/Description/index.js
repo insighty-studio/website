@@ -1,14 +1,19 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 
-import './main-description.styl';
+import './index.styl';
 
-const Description = ({title, text}) => (
-  <div className="main-description">
-    <span>
-      {title}
-    </span>
-    {text}
-  </div>
-);
+class Description extends PureComponent {
+	render() {
+		const {title, text} = this.props;
+		return (
+			<div className="main-description">
+				<span>
+					{title}
+				</span>
+				{text}
+			</div>
+		);
+	}
+}
 
 export default Description;

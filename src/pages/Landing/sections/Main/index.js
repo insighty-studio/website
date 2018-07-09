@@ -3,7 +3,7 @@ import Logo from './components/Logo';
 import Description from './components/Description';
 import NavigationBar from './components/NavigationBar';
 
-import './styles/main-section.styl';
+import './index.styl';
 
 class Main extends PureComponent {
   render() {

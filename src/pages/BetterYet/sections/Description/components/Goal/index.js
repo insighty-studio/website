@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 
-import './goal.styl';
+import './index.styl';
 
 class Goal extends PureComponent {
   render() {

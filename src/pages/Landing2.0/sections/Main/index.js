@@ -4,7 +4,7 @@ import Button from 'imports/components/Button2.0';
 import NavigationBar from './components/NavigationBar';
 import ContactUsButton from './components/ContactUsButton';
 
-import './main.styl';
+import './index.styl';
 
 class Main extends Component {
   render() {
