@@ -9,7 +9,7 @@ class Services extends PureComponent {
 	render() {
 		return (
 			<div className="services" id="services">
-				<SectionHeading title="Services" />
+				<SectionHeading title="Services"	/>
 				<div className="service-list">
 					<div className="service-list-items">
 						<OpacityAnimation delay={100}>
