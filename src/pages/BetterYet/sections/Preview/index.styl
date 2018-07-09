@@ -16,16 +16,12 @@
     animation jumpUp 2s infinite
     animation-duration 2.5s
     animation-delay 1s
-    -webkit-transition-property top, bottom
-    -webkit-transition-duration 0.5s
+    transition transform .3s ease-in
 
     &:hover
       animation none
-      animation-play-state paused
-      bottom -150px
-      -webkit-transition-property top, bottom
-      -webkit-transition-duration 0.5s
-      transition: top, bottom .5s ease-in-out;
+      transform translateY(-750px)
+      transition transform .3s ease-in-out
 
     img
       width 640px
