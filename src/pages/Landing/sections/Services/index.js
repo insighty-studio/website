@@ -15,7 +15,8 @@ class Services extends PureComponent {
 						<OpacityAnimation delay={100}>
 							<Service
 								title="Create experiences your users will love"
-								description="Good design doesn’t stand out. Good design is invisible.
+								description="Good design doesn’t stand out.
+                Good design is invisible.
                 We design applications that intuitively meet the needs of your customers and,
                 in turn, keep them sticking around for good."
 							/>
