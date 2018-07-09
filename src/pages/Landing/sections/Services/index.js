@@ -1,4 +1,5 @@
 import React, {PureComponent} from 'react';
+
 import SectionHeading from 'imports/components/SectionHeading';
 import OpacityAnimation from 'imports/components/OpacityAnimation';
 import Service from './components/Service';
@@ -9,7 +10,7 @@ class Services extends PureComponent {
 	render() {
 		return (
 			<div className="services" id="services">
-				<SectionHeading title="Services"	/>
+				<SectionHeading title="Services" />
 				<div className="service-list">
 					<div className="service-list-items">
 						<OpacityAnimation delay={100}>
