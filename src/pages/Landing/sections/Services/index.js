@@ -3,7 +3,7 @@ import SectionHeading from 'imports/components/SectionHeading';
 import OpacityAnimation from 'imports/components/OpacityAnimation';
 import Service from './components/Service';
 
-import './styles/services-section.styl';
+import './index.styl';
 
 class Services extends PureComponent {
   render() {

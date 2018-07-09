@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 
-import './styles/loader.styl';
+import './index.styl';
 
 class Loader extends PureComponent {
   render() {

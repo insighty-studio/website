@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 
-import './description.styl';
+import './index.styl';
 
 class Description extends PureComponent {
   render() {

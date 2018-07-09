@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import {ContactUsIcon} from 'imports/icons';
 
-import './contact-us-btn.styl';
+import './index.styl';
 
 class ContactUsButton extends PureComponent {
   render() {

@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import Service from './components/Service';
 import {Design, Development, Quality} from './services';
 
-import './services.styl';
+import './index.styl';
 
 class Services extends Component {
   render() {

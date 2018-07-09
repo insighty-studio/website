@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './service.styl';
+import './index.styl';
 
 const Service = ({title, description}) => {
   return (

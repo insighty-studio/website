@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './progress-group.styl';
+import './index.styl';
 
 const ProcessGroup = ({style, children}) => (
   <div className="process-group" style={style}>{children}</div>

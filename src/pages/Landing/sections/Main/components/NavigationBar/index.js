@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Link} from 'react-scroll'
 
-import './navigation-bar.styl';
+import './index.styl';
 
-class NavigationBar extends React.Component {
+class NavigationBar extends Component {
   render() {
     return (
       <div className="navigation-bar">

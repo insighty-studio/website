@@ -3,7 +3,7 @@ import Scroll from 'react-scroll';
 import {ScrollToTopBtnIcon} from 'imports/icons';
 import classnames from 'classnames';
 
-import './styles/scroll-to-top-btn.styl'
+import './index.styl';
 
 class ScrollToTopBtn extends PureComponent {
   render() {

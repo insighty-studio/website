@@ -2,9 +2,17 @@ import React, {PureComponent} from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-import './styles/input.styl';
+import './index.styl';
 
 class Input extends PureComponent {
+  static propTypes = {
+    className: PropTypes.string,
+  };
+
+  static defaultProps = {
+    className: '',
+  };
+
   render() {
     const {className, ...rest} = this.props;
     return (
@@ -14,13 +22,5 @@ class Input extends PureComponent {
     );
   }
 }
-
-Input.propTypes = {
-  className: PropTypes.string,
-};
-
-Input.defaultProps = {
-  className: '',
-};
 
 export default Input;

@@ -10,6 +10,19 @@ class DelayMount extends PureComponent {
     };
   }
 
+  static propTypes = {
+    render: PropTypes.bool.isRequired,
+    children: PropTypes.any,
+    transitionEnterDelay: PropTypes.number.isRequired,
+    transitionLeaveTimeout: PropTypes.number.isRequired
+  };
+
+  static defaultProps = {
+    render: true,
+    transitionEnterDelay: 0,
+    transitionLeaveTimeout: 0
+  };
+
   componentDidMount () {
     if (this.props.render) {
       this.setEnterTimeout(this.props);
@@ -73,18 +86,5 @@ class DelayMount extends PureComponent {
     return this.state.shouldMount ? this.props.children : null;
   }
 }
-
-DelayMount.defaultProps = {
-  render: true,
-  transitionEnterDelay: 0,
-  transitionLeaveTimeout: 0
-};
-
-DelayMount.propTypes = {
-  render: PropTypes.bool.isRequired,
-  children: PropTypes.any,
-  transitionEnterDelay: PropTypes.number.isRequired,
-  transitionLeaveTimeout: PropTypes.number.isRequired
-};
 
 export default DelayMount;

@@ -2,9 +2,17 @@ import React, {PureComponent} from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-import './styles/text-area.styl';
+import './index.styl';
 
 class TextArea extends PureComponent {
+  static propTypes = {
+    className: PropTypes.string,
+  };
+
+  static defaultProps = {
+    className: '',
+  };
+
   render() {
     const {className, ...rest} = this.props;
     return (
@@ -18,13 +26,5 @@ class TextArea extends PureComponent {
     );
   }
 }
-
-TextArea.propTypes = {
-  className: PropTypes.string,
-};
-
-TextArea.defaultProps = {
-  className: '',
-};
 
 export default TextArea;

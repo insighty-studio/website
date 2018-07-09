@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 
 import Description from './Description';
 
-import './service.styl';
+import './index.styl';
 
 class Service extends PureComponent {
   renderIcons() {
