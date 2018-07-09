@@ -6,8 +6,8 @@ import './description.styl';
 class Description extends PureComponent {
   static propTypes = {
     title: PropTypes.string,
-		subtitle: PropTypes.string,
-		text: PropTypes.string
+    subtitle: PropTypes.string,
+    text: PropTypes.string
   };
 
   static defaultProps = {
@@ -25,8 +25,12 @@ class Description extends PureComponent {
           <div className="title-line" />
           {title}
         </div>
-        <div className="service-subtitle">{subtitle}</div>
-        <div className="service-text">{text}</div>
+        <div className="service-subtitle">
+          {subtitle}
+        </div>
+        <div className="service-text">
+          {text}
+        </div>
       </div>
     );
   }

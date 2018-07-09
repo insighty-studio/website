@@ -2,7 +2,7 @@ import {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 class DelayMount extends PureComponent {
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -10,13 +10,13 @@ class DelayMount extends PureComponent {
     };
   }
 
-  componentDidMount () {
+  componentDidMount() {
     if (this.props.render) {
       this.setEnterTimeout(this.props);
     }
   }
 
-  componentWillUpdate (nextProps, nextState) {
+  componentWillUpdate(nextProps, nextState) {
     if (nextProps.render) {
       this.setEnterTimeout(nextProps);
     } else {
@@ -24,12 +24,12 @@ class DelayMount extends PureComponent {
     }
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     this.clearEnterTimeout();
     this.clearLeaveTimeout();
   }
 
-  setEnterTimeout (props) {
+  setEnterTimeout(props) {
     if (this.enterTimeout) {
       return;
     }
@@ -42,7 +42,7 @@ class DelayMount extends PureComponent {
     }, props.transitionEnterDelay);
   }
 
-  setLeaveTimeout (props) {
+  setLeaveTimeout(props) {
     if (this.leaveTimeout) {
       return;
     }
@@ -55,21 +55,21 @@ class DelayMount extends PureComponent {
     }, props.transitionLeaveTimeout);
   }
 
-  clearEnterTimeout () {
+  clearEnterTimeout() {
     if (this.enterTimeout) {
       window.clearTimeout(this.enterTimeout);
       this.enterTimeout = null;
     }
   }
 
-  clearLeaveTimeout () {
+  clearLeaveTimeout() {
     if (this.leaveTimeout) {
       window.clearTimeout(this.leaveTimeout);
       this.leaveTimeout = null;
     }
   }
 
-  render () {
+  render() {
     return this.state.shouldMount ? this.props.children : null;
   }
 }

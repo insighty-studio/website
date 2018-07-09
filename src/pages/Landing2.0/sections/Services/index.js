@@ -9,7 +9,9 @@ class Services extends Component {
   render() {
     return (
       <div className="services-section" id="services-section">
-        <div className="services-heading">Services</div>
+        <div className="services-heading">
+          Services
+        </div>
         <div className="services">
           <Service
             left

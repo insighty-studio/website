@@ -6,22 +6,22 @@ import './styles/button.styl';
 
 class Button extends PureComponent {
 	static propTypes = {
-		className: PropTypes.string,
-		title: PropTypes.string
+	  className: PropTypes.string,
+	  title: PropTypes.string
 	};
 
 	static defaultProps = {
-		className: '',
-		title: ''
+	  className: '',
+	  title: ''
 	};
 
 	render() {
-		const {className, title} = this.props;
-		return (
-			<div className={classnames('button', className)}>
-				{title}
-			</div>
-		);
+	  const {className, title} = this.props;
+	  return (
+  <div className={classnames('button', className)}>
+    {title}
+  </div>
+	  );
 	}
 }
 

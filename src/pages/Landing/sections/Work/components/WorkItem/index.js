@@ -4,14 +4,20 @@ import OpacityAnimation from 'imports/components/OpacityAnimation';
 
 import './work-item.styl';
 
-const WorkItem = ({title, color, delay, link}) => (
+const WorkItem = ({
+  title, color, delay, link
+}) => (
   <div className="work-item">
-      <OpacityAnimation delay={delay}>
-        <Link to={link}>
-          <span>{title}</span>
-          <span style={{color}}>.</span>
-        </Link>
-      </OpacityAnimation>
+    <OpacityAnimation delay={delay}>
+      <Link to={link}>
+        <span>
+          {title}
+        </span>
+        <span style={{color}}>
+.
+        </span>
+      </Link>
+    </OpacityAnimation>
   </div>
 );
 

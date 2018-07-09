@@ -5,7 +5,9 @@ import classnames from 'classnames';
 
 import './process.styl';
 
-const Process = ({color, step, title, description}) => (
+const Process = ({
+  color, step, title, description
+}) => (
   <div className={classnames('process')}>
     <OpacityAnimation delay={100}>
       <div className="process-circle">
@@ -14,10 +16,14 @@ const Process = ({color, step, title, description}) => (
     </OpacityAnimation>
     <OpacityAnimation delay={500}>
       <div className="process-title">
-        <span>{step}</span>
+        <span>
+          {step}
+        </span>
         {title}
       </div>
-      <div className="process-desc">{description}</div>
+      <div className="process-desc">
+        {description}
+      </div>
     </OpacityAnimation>
   </div>
 );
