@@ -7,3 +7,33 @@
   height 100vh
   padding 0 124px
   background #FFDF4A
+  position relative
+  overflow hidden
+
+  .hand-image
+    position absolute
+    bottom -900px
+    animation jumpUp 2s infinite
+    animation-duration 2.5s
+    animation-delay 1s
+    -webkit-transition-property top, bottom
+    -webkit-transition-duration 0.5s
+
+    &:hover
+      animation none
+      animation-play-state paused
+      bottom -150px
+      -webkit-transition-property top, bottom
+      -webkit-transition-duration 0.5s
+      transition: top, bottom .5s ease-in-out;
+
+    img
+      width 640px
+      height 960px
+
+@keyframes jumpUp
+  0%, 10%, 20%, 100%
+    bottom -900px
+
+  3%, 13%
+    bottom -850px
