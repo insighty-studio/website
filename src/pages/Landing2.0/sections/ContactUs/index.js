@@ -6,7 +6,7 @@ import SectionHeading from 'imports/components/SectionHeading';
 import Input from 'imports/components/Input';
 import TextArea from 'imports/components/TextArea';
 import Button from 'imports/components/Button';
-import Footer from './components/Footer/index';
+import Footer from './components/Footer';
 
 import './index.styl';
 

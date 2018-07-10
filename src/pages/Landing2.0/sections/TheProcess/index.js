@@ -1,8 +1,8 @@
 import React, {PureComponent} from 'react';
 
 import SectionHeading from 'imports/components/SectionHeading';
-import Process from './components/Process/index';
-import ProcessGroup from './components/ProcessGroup/index';
+import Process from './components/Process';
+import ProcessGroup from './components/ProcessGroup';
 
 import './index.styl';
 
