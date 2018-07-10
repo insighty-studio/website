@@ -8,7 +8,9 @@ class Loader extends PureComponent {
       <div className="loader-page">
         <div className="logo-title">
           Insighty
-          <span>.</span>
+          <span>
+            .
+          </span>
         </div>
       </div>
     );

@@ -29,12 +29,14 @@ class ContactUs extends Component {
       <div className={classnames('form-message', this.state.messageIsVisible && 'appearance')}>
         {message}
       </div>
-    )
+    );
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    const {name, email, phone, website, message} = this.state;
+    const {
+      name, email, phone, website, message
+    } = this.state;
     const formData = JSON.stringify({
       attachments: [
         {
@@ -45,7 +47,7 @@ class ContactUs extends Component {
         }
       ]
     });
-    axios.post(`https://hooks.slack.com/services/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`, formData)
+    axios.post('https://hooks.slack.com/services/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', formData)
       .then(() => {
         this.setState({
           messageIsVisible: true,
@@ -65,7 +67,9 @@ class ContactUs extends Component {
   }
 
   render() {
-    const {name, email, phone, website, message} = this.state;
+    const {
+      name, email, phone, website, message
+    } = this.state;
     return (
       <div className="contact-us" id="contact-us">
         <div className="contact-form-section">
@@ -74,7 +78,7 @@ class ContactUs extends Component {
             className="contact-form"
             onSubmit={e => this.handleSubmit(e)}
           >
-            <div className="form-row">
+            <div>
               <Input
                 required
                 name="name"
@@ -92,7 +96,7 @@ class ContactUs extends Component {
                 onChange={e => this.handleFormInput(e)}
               />
             </div>
-            <div className="form-row">
+            <div>
               <Input
                 name="phone"
                 type="phone"
@@ -115,10 +119,13 @@ class ContactUs extends Component {
               placeholder="Message *"
               onChange={e => this.handleFormInput(e)}
             />
-            <Button
-              disabled={this.state.isFormSubmitted}
-              title={this.state.isFormSubmitted ? 'Thanks!' : 'Send'}
-            />
+            <div>
+							<Button
+								title={this.state.isFormSubmitted ? 'Thanks!' : 'Send'}
+                styleType="white"
+								disabled={this.state.isFormSubmitted}
+							/>
+            </div>
           </form>
           {this.showMessage('*you message has been sent')}
         </div>

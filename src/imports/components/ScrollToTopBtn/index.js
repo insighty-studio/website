@@ -10,7 +10,8 @@ class ScrollToTopBtn extends PureComponent {
     return (
       <div
         className={classnames('scroll-btn', this.props.percentagesScrolled >= 920 && 'scroll-btn-visible')}
-        onClick={() => Scroll.animateScroll.scrollToTop({smooth: true, duration: 500})}>
+        onClick={() => Scroll.animateScroll.scrollToTop({smooth: true, duration: 500})}
+      >
         <ScrollToTopBtnIcon />
       </div>
     );

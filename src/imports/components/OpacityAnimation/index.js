@@ -8,13 +8,15 @@ import './index.styl';
 class OpacityAnimation extends PureComponent {
   static propTypes = {
     delay: PropTypes.number,
-    animateIn: PropTypes.string
+    animateIn: PropTypes.string,
+    children: PropTypes.node.isRequired,
   };
 
   static defaultProps = {
     delay: 500,
     animateIn: 'fadeIn',
-    animateOnce: true
+    animateOnce: true,
+    children: null
   };
 
   render() {
