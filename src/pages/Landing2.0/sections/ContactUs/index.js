@@ -78,7 +78,7 @@ class ContactUs extends Component {
             className="contact-form"
             onSubmit={e => this.handleSubmit(e)}
           >
-            <div className="form-row">
+            <div>
               <Input
                 required
                 name="name"
@@ -96,7 +96,7 @@ class ContactUs extends Component {
                 onChange={e => this.handleFormInput(e)}
               />
             </div>
-            <div className="form-row">
+            <div>
               <Input
                 name="phone"
                 type="phone"
@@ -119,10 +119,13 @@ class ContactUs extends Component {
               placeholder="Message *"
               onChange={e => this.handleFormInput(e)}
             />
-            <Button
-              disabled={this.state.isFormSubmitted}
-              title={this.state.isFormSubmitted ? 'Thanks!' : 'Send'}
-            />
+            <div>
+							<Button
+								title={this.state.isFormSubmitted ? 'Thanks!' : 'Send'}
+                styleType="white"
+								disabled={this.state.isFormSubmitted}
+							/>
+            </div>
           </form>
           {this.showMessage('*you message has been sent')}
         </div>
