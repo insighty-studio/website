@@ -56,7 +56,7 @@ export const Quality = [{
 },
 {
   icon: <QAIcon />,
-  title: 'UI Design'
+  title: 'QA'
 },
 {
   icon: <ProjectManagementIcon />,

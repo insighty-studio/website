@@ -7,10 +7,8 @@ import TheProcess from './sections/TheProcess';
 import Work from './sections/Work';
 import ContactUs from './sections/ContactUs';
 
-import './index.styl';
-
 const LandingPage = () => (
-  <div className="landing">
+  <div className="landing-v2">
     <Main />
     <Services />
     <TheProcess />

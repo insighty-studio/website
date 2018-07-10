@@ -8,7 +8,7 @@ import './index.styl';
 class Main extends PureComponent {
   render() {
     return (
-      <div className="main">
+      <div className="main-section">
         <NavigationBar />
         <Logo desc="We Create Web & Mobile Applications That’ll Delight Your Users" />
         <Description
