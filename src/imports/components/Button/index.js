@@ -6,28 +6,30 @@ import './index.styl';
 
 class Button extends PureComponent {
 	static propTypes = {
-		className: PropTypes.string,
-		title: PropTypes.string,
-		disabled: PropTypes.bool,
-		styleType: PropTypes.oneOf(['white, blue'])
-	};
-
-	static defaultProps = {
 		className: '',
 		title: '',
 		disabled: false,
-		styleType: null
+	};
+
+	static defaultProps = {
+		className: PropTypes.string,
+		title: PropTypes.string,
+		disabled: PropTypes.bool,
 	};
 
 	render() {
-		const {className, title, disabled, styleType} = this.props;
+		const {
+			className, title, disabled, ...rest
+		} = this.props;
 		return (
-			<button
-				className={classnames('button', className, styleType)}
-				disabled={disabled}
-			>
-				{title}
-			</button>
+			<div className={classnames('button', disabled && 'disabled', className)}>
+				<button
+					disabled={disabled}
+					{...rest}
+				>
+					{title}
+				</button>
+			</div>
 		);
 	}
 }
