@@ -1,0 +1,64 @@
+@import '~styles/config.styl'
+
+.superhero-page .about-section
+  display flex
+  flex-direction column
+  position relative
+  max-width 1320px
+  margin 40px auto 0
+
+  .section-name
+    position absolute
+    font-family Poppins
+    font-size 470px
+    left -60px
+    line-height 350px
+    opacity .06
+    -webkit-touch-callout none
+    -webkit-user-select none
+    -khtml-user-select none
+    -moz-user-select none
+    -ms-user-select none
+    user-select none
+
+  .desc
+    display flex
+    justify-content space-between
+    min-height 450px
+
+    .short ul
+      margin 0 auto
+      padding-left 0
+      width 280px
+
+      li
+        font-size 20px
+        font-weight 500
+        color #999
+        list-style none
+        margin-bottom 15px
+
+        span
+          color $white
+
+        &:last-item
+          margin-bottom 0
+
+    .story
+      width 660px
+      font-weight 500
+      font-size 36px
+      color $white
+
+      span
+        color #FFD900
+
+  .logo
+    display flex
+    justify-content center
+    min-height 700px
+    margin-top 20px
+
+    .logo-bg
+      position absolute
+      margin-top -70px

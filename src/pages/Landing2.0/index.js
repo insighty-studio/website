@@ -4,10 +4,8 @@ import provideScrollPosition from 'react-provide-scroll-position';
 import Main from './sections/Main';
 import Services from './sections/Services';
 
-import './index.styl';
-
 const LandingPage = () => (
-  <div className="landing">
+  <div className="landing-v2">
     <Main />
     <Services />
   </div>
