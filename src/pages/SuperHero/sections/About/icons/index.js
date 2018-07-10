@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, {PureComponent} from 'react';
 
 export class SuperHeroLogo extends PureComponent {

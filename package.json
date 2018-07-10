@@ -77,10 +77,9 @@
   "devDependencies": {
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-import": "^2.13.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.13.0",
     "firebase-tools": "^3.18.5"
   },
   "jest": {

@@ -18,7 +18,9 @@ class About extends PureComponent {
             </ul>
           </div>
           <div className="story">
-            <span>SuperHero</span> mission is to equip small and medium-sized businesses with the means to make travel expenses part of a frictionless and simple experience.
+            <span>SuperHero</span>
+            mission is to equip small and medium-sized businesses with the means to make travel
+            expenses part of a frictionless and simple experience.
           </div>
         </div>
         <div className="logo">
