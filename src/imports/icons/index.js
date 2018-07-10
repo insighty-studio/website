@@ -127,7 +127,7 @@ export class MobileAppsIcon extends PureComponent {
   }
 }
 
-export class ProjectManagementIcon extends PureComponent {
+export class QAIcon extends PureComponent {
   render() {
     return (
       <svg width="50px" height="50px" viewBox="0 0 50 50">
@@ -150,7 +150,7 @@ export class PrototypeIcon extends PureComponent {
   }
 }
 
-export class QAIcon extends PureComponent {
+export class ProjectManagementIcon extends PureComponent {
   render() {
     return (
       <svg width="48px" height="48px" viewBox="0 0 48 48">
