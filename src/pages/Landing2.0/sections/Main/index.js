@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Button from 'imports/components/Button2.0';
+import Button from 'imports/components/Button';
 
 import NavigationBar from './components/NavigationBar';
 import ContactUsButton from './components/ContactUsButton';
@@ -22,7 +22,11 @@ class Main extends Component {
                 help our clients connect with customers and stand out from the chaos of the digital world.
               </div>
               <div className="buttons">
-                <Button title="Explore" className="explore-btn" />
+                <Button
+                  title="Explore"
+                  className="explore-btn"
+                  styleType="blue"
+                />
                 <ContactUsButton />
               </div>
             </div>
