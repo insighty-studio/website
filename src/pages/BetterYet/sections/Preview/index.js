@@ -1,15 +1,15 @@
 import React, {PureComponent} from 'react';
 
-import {BetterYetTitle} from "imports/icons";
+import {BetterYetTitle} from 'imports/icons';
 
-import './preview.styl';
+import './index.styl';
 
 class Preview extends PureComponent {
   render() {
     return (
       <div className="by-preview">
         <div className="hand-image">
-          <img src={require('./img/hand.png')} />
+          <img alt="BetterYet App" src={require('./img/hand.png')} />
         </div>
         <BetterYetTitle />
       </div>

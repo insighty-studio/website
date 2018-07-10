@@ -2,11 +2,25 @@ import React, {PureComponent} from 'react';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-import './styles/button.styl';
+import './index.styl';
 
 class Button extends PureComponent {
+  static propTypes = {
+    className: '',
+    title: '',
+    disabled: false,
+  };
+
+  static defaultProps = {
+    className: PropTypes.string,
+    title: PropTypes.string,
+    disabled: PropTypes.bool,
+  };
+
   render() {
-    const {className, title, disabled, ...rest} = this.props;
+    const {
+      className, title, disabled, ...rest
+    } = this.props;
     return (
       <div className={classnames('button', disabled && 'disabled', className)}>
         <button
@@ -19,17 +33,5 @@ class Button extends PureComponent {
     );
   }
 }
-
-Button.propTypes = {
-  className: PropTypes.string,
-  title: PropTypes.string,
-  disabled: PropTypes.bool,
-};
-
-Button.defaultProps = {
-  className: '',
-  title: '',
-  disabled: false,
-};
 
 export default Button;

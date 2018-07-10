@@ -5,6 +5,9 @@ import 'styles/main.styl';
 
 import Landing from './pages/Landing2.0';
 import Loader from './pages/Loader';
+import BetterYet from './pages/BetterYet';
+import SuperHero from './pages/SuperHero';
+import CET from './pages/CET';
 
 class App extends Component {
   constructor(props) {
@@ -19,13 +22,16 @@ class App extends Component {
   }
 
   render() {
-    if(!this.state.ready) return <Loader />;
+    if (!this.state.ready) return <Loader />;
 
     return (
       <BrowserRouter>
         <div className="root">
           <Switch>
             <Route exact path="/" component={Landing} />
+            <Route path="/betteryet" component={BetterYet} />
+            <Route path="/superhero" component={SuperHero} />
+            <Route path="/cet" component={CET} />
           </Switch>
         </div>
       </BrowserRouter>

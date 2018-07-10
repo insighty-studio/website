@@ -3,8 +3,20 @@ import PropTypes from 'prop-types';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 import 'animate.css/animate.min.css';
+import './index.styl';
 
 class OpacityAnimation extends PureComponent {
+  static propTypes = {
+    delay: PropTypes.number,
+    animateIn: PropTypes.string
+  };
+
+  static defaultProps = {
+    delay: 500,
+    animateIn: 'fadeIn',
+    animateOnce: true
+  };
+
   render() {
     const {children, ...animationProps} = this.props;
     return (
@@ -14,16 +26,5 @@ class OpacityAnimation extends PureComponent {
     );
   }
 }
-
-OpacityAnimation.defaultProps = {
-  delay: 500,
-  animateIn: 'fadeIn',
-  animateOnce: true
-};
-
-OpacityAnimation.propTypes = {
-  delay: PropTypes.number,
-  animateIn: PropTypes.string
-};
 
 export default OpacityAnimation;

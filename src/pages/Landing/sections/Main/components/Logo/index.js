@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import OpacityAnimation from 'imports/components/OpacityAnimation';
 import CSSTransition from 'react-transition-group/CSSTransition';
 
-import './logo.styl';
+import './index.styl';
 
 class Logo extends Component {
   renderLogo() {
@@ -10,7 +10,9 @@ class Logo extends Component {
       <OpacityAnimation delay={1000}>
         <div className="logo-title">
           Insighty
-          <span>.</span>
+          <span>
+.
+          </span>
         </div>
       </OpacityAnimation>
     );
@@ -19,14 +21,16 @@ class Logo extends Component {
   renderDesc() {
     return (
       <OpacityAnimation delay={1300}>
-        <div className="logo-desc">{this.props.desc}</div>
+        <div className="logo-desc">
+          {this.props.desc}
+        </div>
       </OpacityAnimation>
     );
   }
 
   render() {
     return (
-      <CSSTransition classNames="logo" timeout={1000} in appear >
+      <CSSTransition classNames="logo" timeout={1000} in appear>
         <div className="logo">
           <div className="logo-items-bg">
             <div className="logo-items">
