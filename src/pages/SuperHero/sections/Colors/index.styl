@@ -1,0 +1,50 @@
+@import "~styles/config.styl"
+
+.superhero-page
+  .colors-section
+    display flex
+    height 100vh
+    max-width 1556px
+    margin 0 auto
+    justify-content center
+
+    .colors
+      display flex
+      justify-content space-between
+      align-self center
+      width 1200px
+
+      .color
+        display flex
+        min-width 200px
+
+        .color-circle
+          display flex
+          justify-content flex-start
+          width 100px
+          height 100px
+          border-radius 50%
+          background-color #272730
+          -webkit-box-shadow 0px 2px 7px 0px rgba(0,0,0,0.5)
+          -moz-box-shadow 0px 2px 7px 0px rgba(0,0,0,0.5)
+          box-shadow 0px 2px 7px 0px rgba(0,0,0,0.5)
+
+        &:nth-child(2) .color-circle
+          background-color #FFD900
+
+        &:nth-child(3) .color-circle
+          background-color #09CE95
+
+        &:last-child .color-circle
+          background-color #000
+
+        .color-info
+          display flex
+          flex-direction column
+          align-items flex-start
+          margin-top 106px
+
+          div
+            font-size 22px
+            line-height 32px
+            color $white
