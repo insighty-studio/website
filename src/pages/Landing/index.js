@@ -11,7 +11,7 @@ import ContactUs from '../Landing2.0/sections/ContactUs';
 import './index.styl';
 
 const LandingPage = ({scrollTop}) => (
-  <div className="landing">
+  <div className="landing-old">
     <ScrollToTopBtn percentagesScrolled={scrollTop} />
     <Main />
     <Services />

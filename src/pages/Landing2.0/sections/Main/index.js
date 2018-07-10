@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Button from 'imports/components/Button';
 
+import Button from 'imports/components/Button';
 import NavigationBar from './components/NavigationBar';
 import ContactUsButton from './components/ContactUsButton';
 
@@ -9,7 +9,7 @@ import './index.styl';
 class Main extends Component {
   render() {
     return (
-      <div className="main-section-bg">
+      <div className="main">
         <div className="main-section">
           <NavigationBar />
           <div className="main-info-bg">

@@ -1,4 +1,5 @@
 import React, {PureComponent} from 'react';
+
 import SectionHeading from 'imports/components/SectionHeading';
 import WorkItem from './components/WorkItem';
 

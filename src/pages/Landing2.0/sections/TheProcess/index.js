@@ -27,7 +27,7 @@ class TheProcess extends PureComponent {
           needs and identify potential challenges within the project."
           />
         </ProcessGroup>
-        <ProcessGroup style={{justifyContent: 'flex-end'}}>
+        <ProcessGroup>
           <Process
             color="#F5A623"
             step="03"
