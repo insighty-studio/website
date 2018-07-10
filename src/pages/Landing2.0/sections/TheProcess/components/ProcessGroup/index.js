@@ -1,11 +1,27 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
+import PropTypes from 'prop-types';
 
 import './index.styl';
 
-const ProcessGroup = ({style, children}) => (
-  <div className="process-group" style={style}>
-    {children}
-  </div>
-);
+class ProcessGroup extends PureComponent {
+	static propTypes = {
+		style: PropTypes.object,
+		children: PropTypes.node
+	};
+
+	static defaultProps = {
+		style: null,
+		children: null
+	};
+
+	render() {
+		const {style, children} = this.props;
+		return (
+			<div className="process-group" style={style}>
+				{children}
+			</div>
+		)
+	}
+}
 
 export default ProcessGroup;
