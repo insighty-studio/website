@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import provideScrollPosition from 'react-provide-scroll-position';
 
+import './index.styl';
+
 import Main from './sections/Main';
 import Services from './sections/Services';
 import TheProcess from './sections/TheProcess';
