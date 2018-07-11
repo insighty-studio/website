@@ -1,14 +1,14 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 
 import Service from './components/Service';
 import {Design, Development, Quality} from './services';
 
 import './index.styl';
 
-class Services extends Component {
+class Services extends PureComponent {
   render() {
     return (
-      <div className="services-section" id="services-section">
+      <div className="services" id="services">
         <div className="services-heading">
           Services
         </div>
