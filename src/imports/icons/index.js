@@ -411,3 +411,155 @@ export class BetterYetLogo extends PureComponent {
     );
   }
 }
+
+export class FirstStepIcon extends PureComponent {
+  render() {
+    return (
+			<svg height="52px" viewBox="0 0 618 52">
+				<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+					<g transform="translate(-125.000000, -2658.000000)">
+						<g transform="translate(0.000000, 2477.000000)">
+							<g transform="translate(126.000000, 182.000000)">
+								<g>
+									<rect fill="#39C877" x="51" y="24" width="566" height="2" />
+									<g>
+										<circle stroke="#39C877" strokeWidth="2" cx="25" cy="25" r="25" />
+										<text fontFamily="Roboto-Medium, Roboto" fontSize="18" fontWeight="400" fill="#39C877">
+											<tspan x="20.3847656" y="31">1</tspan>
+										</text>
+									</g>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</svg>
+    )
+  }
+}
+
+export class SecondStepIcon extends PureComponent {
+	render() {
+		return (
+      <svg height="52px" viewBox="0 0 537 52">
+        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+          <g transform="translate(-743.000000, -2657.000000)">
+            <g transform="translate(0.000000, 2477.000000)">
+              <g transform="translate(744.000000, 181.000000)">
+                <g>
+                  <circle stroke="#39C877" strokeWidth="2" cx="25" cy="25" r="25" />
+                  <rect fill="#39C877" x="51" y="25" width="485" height="2" />
+                  <text fontFamily="Roboto-Medium, Roboto" fontSize="18" fontWeight="400" fill="#39C877">
+                    <tspan x="20.3847656" y="31">2</tspan>
+                  </text>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+		)
+	}
+}
+
+export class ThirdStepIcon extends PureComponent {
+	render() {
+		return (
+			<svg height="52px" viewBox="0 0 743 52">
+				<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+					<g transform="translate(0.000000, -2996.000000)">
+						<g transform="translate(0.000000, 2477.000000)">
+							<g transform="translate(0.000000, 520.000000)">
+								<g>
+									<rect fill="#39C877" x="177" y="24" width="566" height="2" />
+									<g>
+										<circle stroke="#39C877" strokeWidth="2" cx="151" cy="25" r="25" />
+										<rect fill="#39C877" x="0" y="24" width="125" height="2" />
+										<text fontFamily="Roboto-Medium, Roboto" fontSize="18" fontWeight="400" fill="#39C877">
+											<tspan x="146.384766" y="31">3</tspan>
+										</text>
+									</g>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</svg>
+		)
+	}
+}
+
+export class FourthStepIcon extends PureComponent {
+	render() {
+		return (
+			<svg height="52px" viewBox="0 0 537 52">
+				<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+					<g transform="translate(-743.000000, -2996.000000)">
+						<g transform="translate(0.000000, 2477.000000)">
+							<g transform="translate(744.000000, 520.000000)">
+								<g>
+									<circle stroke="#39C877" strokeWidth="2" cx="25" cy="25" r="25" />
+									<rect fill="#39C877" x="51" y="25" width="485" height="2" />
+									<text fontFamily="Roboto-Medium, Roboto" fontSize="18" fontWeight="400" fill="#39C877">
+										<tspan x="20.3847656" y="31">4</tspan>
+									</text>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</svg>
+
+		)
+	}
+}
+
+export class FifthStepIcon extends PureComponent {
+	render() {
+		return (
+			<svg height="52px" viewBox="0 0 743 52">
+				<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+					<g transform="translate(0.000000, -3334.000000)">
+						<g transform="translate(0.000000, 2477.000000)">
+							<g transform="translate(0.000000, 858.000000)">
+								<g>
+									<rect fill="#39C877" x="177" y="24" width="566" height="2" />
+									<g>
+										<circle stroke="#39C877" strokeWidth="2" cx="151" cy="25" r="25" />
+										<rect fill="#39C877" x="0" y="24" width="125" height="2" />
+										<text fontFamily="Roboto-Medium, Roboto" fontSize="18" fontWeight="400" fill="#39C877">
+											<tspan x="146.384766" y="31">5</tspan>
+										</text>
+									</g>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</svg>
+		)
+	}
+}
+
+export class SixthStepIcon extends PureComponent {
+	render() {
+		return(
+			<svg height="52px" viewBox="0 0 52 52">
+				<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+					<g transform="translate(-743.000000, -3334.000000)">
+						<g transform="translate(0.000000, 2477.000000)">
+							<g transform="translate(744.000000, 858.000000)">
+								<g>
+									<circle stroke="#39C877" strokeWidth="2" cx="25" cy="25" r="25" />
+									<text id="6" fontFamily="Roboto-Medium, Roboto" fontSize="18" fontWeight="400" fill="#39C877">
+										<tspan x="20.3847656" y="31">6</tspan>
+									</text>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</svg>
+		)
+	}
+}

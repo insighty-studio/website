@@ -5,22 +5,22 @@ import './index.styl';
 
 class SectionHeading extends PureComponent {
   static propTypes = {
-    title: PropTypes.string
+    firstLine: PropTypes.string,
+    secondLine: PropTypes.string,
+		style: PropTypes.object
   };
 
   static defaultProps = {
-    title: ''
+		firstLine: '',
+		secondLine: '',
+		style: null
   };
 
   render() {
     return (
-      <div className="section-heading">
-        <div className="section-heading-title">
-          {this.props.title}
-        </div>
-        <div className="section-heading-bg-container">
-          <div className="section-heading-bg" />
-        </div>
+      <div className="section-heading" style={this.props.style}>
+        <div>{this.props.firstLine}</div>
+        <div>{this.props.secondLine}</div>
       </div>
     );
   }

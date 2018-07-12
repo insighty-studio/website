@@ -1,27 +1,17 @@
 @import "~styles/config.styl"
 
 .section-heading
-  display flex
-  cursor default
-  align-self center
-  align-items center
-  justify-content center
-  width 200px
-  height 92px
-  overflow hidden
-  transition width .1s ease-in
+  font-family 'Roboto Mono', sans-serif
+  text-transform uppercase
+  text-align center
 
-  &:hover
-    width 160px
+  div:first-child
+    opacity 0.4
+    line-height 21px
+    letter-spacing 5.33px
 
-  .section-heading-title
-    font-size: $section
-    position absolute
-    z-index 1
-
-  .section-heading-bg
-    display flex
-    height 12px
-    transform rotate(-20deg)
-    background-color $snow
-    width 240px
+  div:last-child
+    margin-top 2px
+    font-size $section
+    line-height 63px
+    letter-spacing 16px
