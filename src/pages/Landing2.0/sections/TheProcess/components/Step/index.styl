@@ -6,17 +6,47 @@
   flex 1
 
   +iphone()
-    display: block
-    flex: none
-    width: 100%
-
-  .step-line
+    display block
+    flex none
     width 100%
+
+  .step-header
+    display flex
+    align-items center
+
+    .number
+      display flex
+      align-items center
+
+      .circle
+        display flex
+        justify-content center
+        align-items center
+        min-width 50px
+        min-height 50px
+        border 2px solid $light-green
+        border-radius 50%
+        color $light-green
+        font-size $large
+        font-weight $medium-weight
+        line-height 21px
+
+      .line
+        width 126px
+
+    .line
+      width 100%
+      height 2px
+      background-color $light-green
+
+    .filler
+      width 126px
 
   .step-desc
     display flex
     flex-direction column
     margin-top 22px
+    margin-left 126px
     width 410px
 
     +iphone()
