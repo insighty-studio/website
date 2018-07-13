@@ -6,6 +6,11 @@
   max-width 1280px
   margin 120px auto
 
+  +iphone()
+    margin: 64px 0
+    max-width 100%
+    width 100%
+
   .description
     display flex
     flex-direction column
@@ -15,5 +20,12 @@
       width: 100%
       margin-top 86px
 
+      +iphone()
+        margin-top: 24px
+        display: block
+
       &:first-child
         margin-top 96px
+
+        +iphone()
+          margin-top: 40px

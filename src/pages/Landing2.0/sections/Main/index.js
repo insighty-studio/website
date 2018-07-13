@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import Button from 'imports/components/Button';
+import SubTitle from 'imports/components/SubTitle';
 import NavigationBar from './components/NavigationBar';
 import ContactUsButton from './components/ContactUsButton';
 
@@ -14,6 +15,7 @@ class Main extends Component {
           <NavigationBar />
           <div className="main-info-bg">
             <div className="main-info">
+              <SubTitle>Insighty Studio</SubTitle>
               <div className="title">
                 We Create Web & Mobile Applications That’ll Delight Your Users
               </div>
@@ -27,7 +29,6 @@ class Main extends Component {
                   className="explore-btn"
                   styleType="blue"
                 />
-                <ContactUsButton />
               </div>
             </div>
           </div>

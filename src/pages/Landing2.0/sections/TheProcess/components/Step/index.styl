@@ -5,6 +5,11 @@
   flex-direction column
   flex 1
 
+  +iphone()
+    display: block
+    flex: none
+    width: 100%
+
   .step-line
     width 100%
 
@@ -13,6 +18,9 @@
     flex-direction column
     margin-top 22px
     width 410px
+
+    +iphone()
+      width: 100%
 
     div:first-child
       margin-bottom 12px

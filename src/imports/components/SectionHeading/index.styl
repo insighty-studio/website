@@ -5,13 +5,18 @@
   text-transform uppercase
   text-align center
 
+  // TODO WTF?
   div:first-child
     opacity 0.4
     line-height 21px
-    letter-spacing 5.33px
+    letter-spacing 6px
 
   div:last-child
     margin-top 2px
     font-size $section
     line-height 63px
     letter-spacing 16px
+
+    +iphone()
+      font-size: 28px
+      line-height: 1.5
