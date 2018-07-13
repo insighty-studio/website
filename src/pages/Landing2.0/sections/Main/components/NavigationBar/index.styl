@@ -6,12 +6,19 @@
   align-items center
   padding-top 40px
 
+  +iphone()
+    padding-top: 0
+    display block
+
   .logo
-    font-weight $medium-weight
-    font-size 24px
+    width: 48px
+    height: 49px
+    background: url("../../images/logo@2x.png") no-repeat;
+    background-size: @width @height;
 
   .links
     display flex
+    iphoneDisabled()
 
     a
       color $black
