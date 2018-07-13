@@ -12,7 +12,7 @@ class TheProcess extends PureComponent {
 	render() {
 		return (
 			<div className="the-process">
-				<SectionHeading firstLine="the" secondLine="process" />
+				<SectionHeading subText="the" text="process" />
 				<div className="description">
 					<div className="row">
 						<Step

@@ -1,18 +1,24 @@
 @import "~styles/config.styl"
 
-.form-text-area
-  textarea
-    display flex
-    flex 1
-    resize none
-    outline none
-    padding 12px 20px
-    border 1px solid $snow
-    color $nobel
-    font-size $small
-    line-height $small-height
-    letter-spacing 0.1px
-    background-color $snow
+.text-area
+  width 100%
+  height 144px
+  resize none
+  outline none
+  padding 16px
+  border none
+  border-radius 8px
+  background-color #F2F3F5
+  -webkit-box-shadow inset 0 1px 0 0 rgba(0,0,0,0.07)
+  -moz-box-shadow inset 0 1px 0 0 rgba(0,0,0,0.07)
+  box-shadow inset 0 1px 0 0 rgba(0,0,0,0.07)
 
+  &::placeholder
+    color #AAADB2
 
+  &:focus
+    border 2px solid $blue
+    background-color $white
 
+  &:focus::-webkit-input-placeholder
+    color transparent

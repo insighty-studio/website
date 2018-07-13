@@ -1,34 +1,40 @@
 @import "~styles/config.styl"
 
-.contact-us
+.contact-us-old
   display flex
   flex-direction column
-  justify-content space-around
   height 100vh
+  justify-content center
   margin 0 124px
 
-  form
-    display flex
-    flex 1
-    flex-direction column
-    align-self center
-    align-items center
+  .section-heading
+    margin-top 20px
     justify-content center
 
-    .form-raw
-      margin-bottom 32px
+  .contact-form-section
+    display flex
+    flex-direction column
+    flex 1
+    align-self center
+    justify-content center
 
-      .input:last-child
-        margin-left 32px
+    .contact-form
+      margin-top 80px
 
-    .text-area
-      margin-bottom 64px
+      div
+        display flex
 
-    .form-btn
-      width 150px
-      font-family 'Roboto Mono'
-      line-height 21px
-      font-weight $medium-weight
+        &:last-child
+          justify-content center
+
+      .form-input
+        margin 0 32px 24px 0
+
+        &:last-child
+          margin 0
+
+      .form-text-area
+        margin-bottom 22px
 
   .form-message
     display flex
