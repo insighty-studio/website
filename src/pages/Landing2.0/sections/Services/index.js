@@ -12,7 +12,7 @@ class Services extends PureComponent {
         <div className="services-heading">
           Services
         </div>
-        <div className="services">
+        <div className="services-list">
           <Service
             left
             icons={Design}
