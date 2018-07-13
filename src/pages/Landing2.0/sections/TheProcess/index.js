@@ -16,8 +16,9 @@ class TheProcess extends PureComponent {
 							first
 							number="1"
 							title="Client Happiness"
-							desc="Rigorous user testing and quality assurance takes place until the final product
-							perfectly solves user problems and meets the project brief."
+							desc="You hate software projects that drag on. So do we. That’s why our team creates
+							interactive prototypes within weeks of your brief so you can visualize the
+							end product and request adjustments as quickly as possible."
 						/>
 						<Step
 							number="2"

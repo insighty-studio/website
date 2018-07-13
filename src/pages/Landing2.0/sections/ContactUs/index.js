@@ -72,56 +72,58 @@ class ContactUs extends PureComponent {
 		} = this.state;
     return (
       <div className="contact-us">
+				<div>
 				<SectionHeading subText="feel free to" text="contact us" />
-        <form onSubmit={e => this.handleSubmit(e)}>
-          <div className="form-raw">
-						<Input
+					<form onSubmit={e => this.handleSubmit(e)}>
+						<div className="form-raw">
+							<Input
+								required
+								name="name"
+								type="text"
+								placeholder="Name *"
+								value={name}
+								onChange={e => this.handleFormInput(e)}
+							/>
+							<Input
+								required
+								name="email"
+								type="email"
+								placeholder="Email *"
+								value={email}
+								onChange={e => this.handleFormInput(e)}
+							/>
+						</div>
+						<div className="form-raw">
+							<Input
+								name="phone"
+								type="phone"
+								placeholder="Phone"
+								value={phone}
+								onChange={e => this.handleFormInput(e)}
+							/>
+							<Input
+								name="website"
+								type="text"
+								placeholder="Website"
+								value={website}
+								onChange={e => this.handleFormInput(e)}
+							/>
+						</div>
+						<TextArea
 							required
-							name="name"
-							type="text"
-							placeholder="Name *"
-							value={name}
+							name="message"
+							value={message}
+							placeholder="Message *"
 							onChange={e => this.handleFormInput(e)}
 						/>
-						<Input
-							required
-							name="email"
-							type="email"
-							placeholder="Email *"
-							value={email}
-							onChange={e => this.handleFormInput(e)}
+						<Button
+							className="form-btn"
+							title={this.state.formIsSubmitted ? 'Thanks!' : 'SEND'}
+							disabled={this.state.formIsSubmitted}
 						/>
-          </div>
-          <div className="form-raw">
-						<Input
-							name="phone"
-							type="phone"
-							placeholder="Phone"
-							value={phone}
-							onChange={e => this.handleFormInput(e)}
-						/>
-						<Input
-							name="website"
-							type="text"
-							placeholder="Website"
-							value={website}
-							onChange={e => this.handleFormInput(e)}
-						/>
-          </div>
-					<TextArea
-						required
-						name="message"
-						value={message}
-						placeholder="Message *"
-						onChange={e => this.handleFormInput(e)}
-					/>
-          <Button
-            className="form-btn"
-            title={this.state.formIsSubmitted ? 'Thanks!' : 'SEND'}
-            disabled={this.state.formIsSubmitted}
-          />
-        </form>
-				{this.showMessage('*you message has been sent')}
+					</form>
+					{this.showMessage('*you message has been sent')}
+				</div>
 				<Footer
 					address="240 Richmond St W, Toronto, ON M5V 1V6"
 					email="hello@insighty.studio"
