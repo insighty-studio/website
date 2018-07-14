@@ -41,9 +41,9 @@ class TheProcess extends PureComponent {
 						/>
 						<Step
 							line={<FourthStepIcon />}
-							title="Requirements Analysis"
-							desc="This is where we break down the specific features your application needs
-							and identify potential challenges within the project."
+							title="Development"
+							desc="This is where the magic happens. Our software engineers get to work,
+							implementing features and functionalities as previously agreed."
 						/>
 					</div>
 					<div className="row">
@@ -57,8 +57,8 @@ class TheProcess extends PureComponent {
 						<Step
 							line={<SixthStepIcon />}
 							title="Client Happiness"
-							desc="Rigorous user testing and quality assurance takes place until the final product
-							perfectly solves user problems and meets the project brief."
+							desc="We create communication channels to make sure that everyone on the team is conscious
+							of your goals. This team alignment ensures mutual wins."
 						/>
 					</div>
 				</div>
