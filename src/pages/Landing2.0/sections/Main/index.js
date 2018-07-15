@@ -24,7 +24,8 @@ class Main extends Component {
               </div>
               <div className="buttons" data-aos="fade-up" data-aos-easing="ease-out-sine"
                    data-aos-duration="700"
-                   data-aos-delay="400">
+                   data-aos-delay="400"
+              >
                 <Button
                   title="Explore"
                   className="explore-btn"

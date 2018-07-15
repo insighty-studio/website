@@ -33,13 +33,15 @@ class Service extends PureComponent {
           <div className="service-icon hover-grow" key={title}>
             <span data-aos="fade-in"
                   data-aos-easing="ease-in-sine"
-                  data-aos-delay={animationDelay}>
+                  data-aos-delay={animationDelay}
+						>
               {icon}
             </span>
             <div className="icon-title no-user-select"
                  data-aos="fade-in"
                  data-aos-easing="ease-in-sine"
-                 data-aos-delay={animationDelay + 300}>
+                 data-aos-delay={animationDelay + 300}
+						>
               {title}
             </div>
           </div>
