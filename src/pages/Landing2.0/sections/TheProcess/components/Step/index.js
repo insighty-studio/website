@@ -23,7 +23,7 @@ class Step extends PureComponent {
 	render() {
 		return (
 			<div className="step">
-				<div className="step-header">
+				<div className="step-header" data-aos="fade-right">
 					<div className="number">
 						<div className={!this.props.first ? 'line' : 'filler'} />
 						<div className="circle">{this.props.number}</div>
