@@ -54,7 +54,7 @@ class TheProcess extends PureComponent {
 							title="Client Happiness"
               desc="We create communication channels to make sure that everyone on the team is conscious
 							of your goals. This team alignment ensures mutual wins."
-            />
+						/>
 					</div>
 				</div>
 			</div>
