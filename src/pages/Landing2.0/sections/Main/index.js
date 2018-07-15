@@ -12,17 +12,19 @@ class Main extends Component {
       <div className="main">
         <div className="main-section">
           <NavigationBar />
-          <div className="main-info-bg">
-            <div className="main-info">
+          <div className="main-info-bg" data-aos="fade-up" data-aos-easing="ease-out-sine">
+            <div className="main-info" >
               <SubTitle>Insighty Studio</SubTitle>
-              <div className="title">
+              <div className="title"  data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-delay="125">
                 We Create Web & Mobile Applications That’ll Delight Your Users
               </div>
-              <div className="desc">
+              <div className="desc" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-delay="250">
                 Insighty is a software development studio with a focus on creating apps that solve business problems. We
                 help our clients connect with customers and stand out from the chaos of the digital world.
               </div>
-              <div className="buttons">
+              <div className="buttons" data-aos="fade-up" data-aos-easing="ease-out-sine"
+                   data-aos-duration="700"
+                   data-aos-delay="400">
                 <Button
                   title="Explore"
                   className="explore-btn"

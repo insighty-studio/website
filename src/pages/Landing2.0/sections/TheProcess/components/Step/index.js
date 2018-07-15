@@ -31,8 +31,8 @@ class Step extends PureComponent {
 					<div className={!this.props.last ? 'line' : ''} />
 				</div>
 				<div className="step-desc">
-					<div>{this.props.title}</div>
-					<div>{this.props.desc}</div>
+					<div data-aos="fade-in" data-aos-easing="ease-in-sine">{this.props.title}</div>
+					<div data-aos="fade-in" data-aos-easing="ease-in-sine" data-aos-delay="250">{this.props.desc}</div>
 				</div>
 			</div>
 		);

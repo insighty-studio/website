@@ -21,7 +21,7 @@ class Button extends PureComponent {
 		const {className, title, disabled} = this.props;
 		return (
 			<button
-				className={classnames('button', className)}
+				className={classnames('button', className, 'hover-grow')}
 				disabled={disabled}
 			>
 				{title}
