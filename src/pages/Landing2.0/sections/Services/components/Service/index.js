@@ -28,16 +28,16 @@ class Service extends PureComponent {
 	  const {icons} = this.props;
 
 	  return (
-  <div className="service-icons">
-    {icons.map(({icon, title}) => (
-      <div className="service-icon" key={title}>
-        {icon}
-        <div className="icon-title">
-          {title}
-        </div>
+      <div className="service-icons">
+        {icons.map(({icon, title}) => (
+          <div className="service-icon" key={title}>
+            {icon}
+            <div className="icon-title">
+              {title}
+            </div>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
 	  );
 	}
 
@@ -47,15 +47,15 @@ class Service extends PureComponent {
 	  } = this.props;
 
 	  return (
-  <div className="service">
-    {left && this.renderIcons()}
-    <Description
-      title={title}
-      subtitle={subtitle}
-      text={text}
-    />
-    {!left && this.renderIcons()}
-  </div>
+      <div className="service">
+        {left && this.renderIcons()}
+        <Description
+          title={title}
+          subtitle={subtitle}
+          text={text}
+        />
+        {!left && this.renderIcons()}
+      </div>
 	  );
 	}
 }
