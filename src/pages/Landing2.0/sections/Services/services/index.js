@@ -20,33 +20,39 @@ export const Design = [{
 },
 {
   icon: <UIDesignIcon />,
-  title: 'UI Design'
+  title: 'UI Design',
+  animationDelay: 200,
 },
 {
   icon: <UXDesignIcon />,
-  title: 'UX Design'
+  title: 'UX Design',
+  animationDelay: 400,
 },
 {
   icon: <PrototypeIcon />,
-  title: 'Prototype'
+  title: 'Prototype',
+  animationDelay: 600,
 }
 ];
 
 export const Development = [{
   icon: <MobileAppsIcon />,
-  title: 'Mobile Apps'
+  title: 'Mobile Apps',
 },
 {
   icon: <WebAppsIcon />,
-  title: 'Web Apps'
+  title: 'Web Apps',
+  animationDelay: 200,
 },
 {
   icon: <ApisIcon />,
-  title: 'Apis'
+  title: 'Apis',
+  animationDelay: 400
 },
 {
   icon: <DesktopAppsIcon />,
-  title: 'Desktop Apps'
+  title: 'Desktop Apps',
+  animationDelay: 600
 }
 ];
 
@@ -56,14 +62,17 @@ export const Quality = [{
 },
 {
   icon: <QAIcon />,
-  title: 'QA'
+  title: 'QA',
+  animationDelay: 200,
 },
 {
   icon: <ProjectManagementIcon />,
-  title: 'Project Management'
+  title: 'Project Management',
+  animationDelay: 400,
 },
 {
   icon: <AutomationIcon />,
-  title: 'Automation'
+  title: 'Automation',
+  animationDelay: 600,
 }
 ];
