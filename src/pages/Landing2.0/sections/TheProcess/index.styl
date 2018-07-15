@@ -3,7 +3,6 @@
 .the-process
   display flex
   flex-direction column
-  max-width 1280px
   margin 120px auto
 
   +iphone()
@@ -17,15 +16,16 @@
 
     .row
       display flex
-      width: 100%
+      justify-content space-around
+      width 100%
       margin-top 86px
 
       +iphone()
-        margin-top: 24px
         display: block
+        margin-top 0
 
       &:first-child
         margin-top 96px
 
         +iphone()
-          margin-top: 40px
+          margin-top: 0

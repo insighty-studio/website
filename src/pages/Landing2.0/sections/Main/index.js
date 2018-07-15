@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import Button from 'imports/components/Button';
 import SubTitle from 'imports/components/SubTitle';
 import NavigationBar from './components/NavigationBar';
-import ContactUsButton from './components/ContactUsButton';
 
 import './index.styl';
 
@@ -27,7 +26,6 @@ class Main extends Component {
                 <Button
                   title="Explore"
                   className="explore-btn"
-                  styleType="blue"
                 />
               </div>
             </div>

@@ -1,0 +1,52 @@
+@import "~styles/config.styl"
+
+.contact-us-old
+  display flex
+  flex-direction column
+  height 100vh
+  justify-content center
+  margin 0 124px
+
+  .section-heading
+    margin-top 20px
+    justify-content center
+
+  .contact-form-section
+    display flex
+    flex-direction column
+    flex 1
+    align-self center
+    justify-content center
+
+    .contact-form
+      margin-top 80px
+
+      div
+        display flex
+
+        &:last-child
+          justify-content center
+
+      .form-input
+        margin 0 32px 24px 0
+
+        &:last-child
+          margin 0
+
+      .form-text-area
+        margin-bottom 22px
+
+  .form-message
+    display flex
+    justify-content center
+    height 20px
+    margin-top 22px
+    color $grayish-blue
+    font-size $small
+    line-height 20px
+    letter-spacing 0.1px
+    transition 1s
+    opacity 0
+
+  .appearance
+    opacity 1

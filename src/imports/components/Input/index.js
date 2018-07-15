@@ -16,9 +16,7 @@ class Input extends PureComponent {
   render() {
     const {className, ...rest} = this.props;
     return (
-      <div className={classnames('form-input', className)}>
-        <input {...rest} />
-      </div>
+      <input className={classnames('input', className)} {...rest} />
     );
   }
 }

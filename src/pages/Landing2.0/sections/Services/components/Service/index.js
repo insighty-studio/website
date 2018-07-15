@@ -11,7 +11,7 @@ class Service extends PureComponent {
 	  title: PropTypes.string,
 	  subtitle: PropTypes.string,
 	  text: PropTypes.string,
-	  left: PropTypes.string,
+	  left: PropTypes.bool,
 	  icons: PropTypes.arrayOf(PropTypes.object)
 	};
 
@@ -20,7 +20,7 @@ class Service extends PureComponent {
 	  title: '',
 	  subtitle: '',
 	  text: '',
-	  left: '',
+	  left: false,
 	  icons: null
 	};
 
