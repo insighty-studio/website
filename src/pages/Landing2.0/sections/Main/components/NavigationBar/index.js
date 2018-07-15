@@ -9,7 +9,7 @@ class NavigationBar extends React.Component {
       <div className="navigation-bar">
         <div className="logo" />
         <div className="links">
-          <Link activeClass="active" to="services-section" smooth duration={500}>
+          <Link activeClass="active" to="services" smooth duration={500}>
             Services
           </Link>
           <Link activeClass="active" to="the-process" smooth duration={700}>

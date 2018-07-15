@@ -7,32 +7,36 @@ class Step extends PureComponent {
 	static propTypes = {
 		title: PropTypes.string,
 		desc: PropTypes.string,
-		line: PropTypes.node,
-		lineStyle: PropTypes.object,
-		descStyle: PropTypes.object
+		number: PropTypes.string,
+		first: PropTypes.bool,
+		last: PropTypes.bool
 	};
 
 	static defaultProps = {
 		title: '',
 		desc: '',
-		line: null,
-		lineStyle: null,
-		descStyle: null
+		number: '',
+		first: false,
+		last: false,
 	};
 
-  render() {
-    return (
+	render() {
+		return (
 			<div className="step">
-				<div className="step-line" style={this.props.lineStyle}>
-					{this.props.line}
+				<div className="step-header">
+					<div className="number">
+						<div className={!this.props.first ? 'line' : 'filler'} />
+						<div className="circle">{this.props.number}</div>
+					</div>
+					<div className={!this.props.last ? 'line' : ''} />
 				</div>
-				<div className="step-desc" style={this.props.descStyle}>
+				<div className="step-desc">
 					<div>{this.props.title}</div>
 					<div>{this.props.desc}</div>
 				</div>
 			</div>
-    );
-  }
+		);
+	}
 }
 
 export default Step;

@@ -3,44 +3,83 @@
 .contact-us
   display flex
   flex-direction column
-  height 100vh
-  justify-content center
-  margin 0 124px
+  margin 0px 124px
+
+  +iphone()
+    display block
+    width 100%
+    max-width 100%
+    margin 0
+    padding 0px 40px 40px
+    background url(images/bg.png) bottom no-repeat
+
 
   .section-heading
-    margin-top 20px
-    justify-content center
+    margin-top 120px
 
-  .contact-form-section
+    +iphone()
+      margin-top 0px
+      padding-top 64px
+
+    div:last-child
+      +iphone()
+        letter-spacing 6px
+
+  form
     display flex
     flex-direction column
-    flex 1
     align-self center
-    justify-content center
+    align-items center
+    margin-top 64px
 
-    .contact-form
-      margin-top 80px
+    +iphone()
+      margin-top 40px
 
-      div
-        display flex
+    .form-raw
+      margin-bottom 32px
 
-        &:last-child
-          justify-content center
+      +iphone()
+        margin-bottom 0
 
-      .form-input
-        margin 0 32px 24px 0
+      .input
+        +iphone()
+          width 100%
+          margin-bottom 12px
 
-        &:last-child
-          margin 0
+      .input:last-child
+        margin-left 32px
 
-      .form-text-area
-        margin-bottom 22px
+        +iphone()
+          margin 0 0 12px
+
+
+    .text-area
+      width 676px
+      margin-bottom 64px
+
+      +iphone()
+        width 100%
+        margin-bottom 32px
+
+    .form-btn
+      width 150px
+      font-family 'Roboto Mono'
+      line-height 21px
+      font-weight $medium-weight
+
+      +iphone()
+        border 0.5px solid #C2C9D2
+        background-color $white
+        color $blue
+        -webkit-box-shadow 0 1px 3px 0 rgba(0,0,0,0.05)
+        -moz-box-shadow 0 1px 3px 0 rgba(0,0,0,0.05)
+        box-shadow 0 1px 3px 0 rgba(0,0,0,0.05)
 
   .form-message
     display flex
     justify-content center
     height 20px
-    margin-top 22px
+    margin 22px 0 54px
     color $grayish-blue
     font-size $small
     line-height 20px
@@ -48,5 +87,20 @@
     transition 1s
     opacity 0
 
+    +iphone()
+      margin 22px 0 10px
+
+
   .appearance
     opacity 1
+
+  .footer
+    +iphone()
+      display block
+      text-align center
+      margin-bottom 0px
+
+    .footer-details
+      +iphone()
+        text-align center
+        margin-bottom 32px

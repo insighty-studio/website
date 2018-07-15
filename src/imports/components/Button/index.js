@@ -8,22 +8,20 @@ class Button extends PureComponent {
 	static propTypes = {
 		className: PropTypes.string,
 		title: PropTypes.string,
-		disabled: PropTypes.bool,
-		styleType: PropTypes.oneOf(['white, blue'])
+		disabled: PropTypes.bool
 	};
 
 	static defaultProps = {
 		className: '',
 		title: '',
-		disabled: false,
-		styleType: null
+		disabled: false
 	};
 
 	render() {
-		const {className, title, disabled, styleType} = this.props;
+		const {className, title, disabled} = this.props;
 		return (
 			<button
-				className={classnames('button', className, styleType)}
+				className={classnames('button', className)}
 				disabled={disabled}
 			>
 				{title}

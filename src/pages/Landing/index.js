@@ -6,7 +6,7 @@ import Main from './sections/Main';
 import Services from './sections/Services';
 import TheProcess from '../Landing2.0/sections/TheOldProcess';
 import Work from '../Landing2.0/sections/Work';
-import ContactUs from '../Landing2.0/sections/ContactUs';
+import ContactUs from '../Landing2.0/sections/ContactUsOld';
 
 import './index.styl';
 
