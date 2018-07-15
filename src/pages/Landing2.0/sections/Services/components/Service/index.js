@@ -34,14 +34,14 @@ class Service extends PureComponent {
             <span data-aos="fade-in"
                   data-aos-easing="ease-in-sine"
                   data-aos-delay={animationDelay}
-						>
+            >
               {icon}
             </span>
             <div className="icon-title no-user-select"
                  data-aos="fade-in"
                  data-aos-easing="ease-in-sine"
                  data-aos-delay={animationDelay + 300}
-						>
+            >
               {title}
             </div>
           </div>
