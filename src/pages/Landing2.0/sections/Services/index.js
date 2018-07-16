@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 
 import Service from './components/Service';
+import SectiondHeading from 'imports/components/Typography/SectionHeading'
 import {Design, Development, Quality} from './services';
 
 import './index.styl';
@@ -9,9 +10,10 @@ class Services extends PureComponent {
   render() {
     return (
       <div className="services" id="services">
-        <div className="services-heading">
-          Services
-        </div>
+        <SectiondHeading
+          subTitle="our"
+          title="services"
+        />
         <div className="services-list">
           <Service
             left
