@@ -39,7 +39,7 @@ class ContactUs extends PureComponent {
 				}
 			]
 		});
-		axios.post('https://hooks.slack.com/services/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', formData)
+		axios.post('https://hooks.slack.com/services/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', formData)
 			.then(() => {
 				this.setState({
 					messageIsVisible: true,
