@@ -10,11 +10,11 @@ import './index.styl';
 class Main extends Component {
   render() {
     return (
-      <div className="main">
-        <div className="main-section">
+      <div className="header">
+        <div className="content">
           <NavigationBar />
-          <div className="main-info-bg" data-aos="fade-up" data-aos-easing="ease-out-sine">
-            <div className="main-info" >
+          <div className="content-info-bg" data-aos="fade-up" data-aos-easing="ease-out-sine">
+            <div className="content-info" >
               <Heading
                 animated
                 subTitle="Insighty Studio"

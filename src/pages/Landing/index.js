@@ -4,7 +4,7 @@ import provideScrollPosition from 'react-provide-scroll-position';
 import 'styles/main.styl';
 import './index.styl';
 
-import Main from './sections/Main';
+import Header from './sections/Header';
 import Services from './sections/Services';
 import TheProcess from './sections/TheProcess';
 import ContactUs from './sections/ContactUs';
@@ -13,7 +13,7 @@ class LandingPage extends PureComponent {
   render() {
     return (
 			<div className="landing">
-				<Main />
+				<Header />
 				<Services />
 				<TheProcess />
 				<ContactUs />
