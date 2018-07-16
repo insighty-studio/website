@@ -5,7 +5,7 @@ import './index.styl';
 
 const links = [
   {text: 'Services', to: "services"},
-  {text: 'Process', to: "the-process"},
+  {text: 'Process', to: "process"},
   {text: 'Contact', to: "contact-us"},
 ];
 

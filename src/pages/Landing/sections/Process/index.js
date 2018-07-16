@@ -5,10 +5,10 @@ import './index.styl';
 import SectionHeading from 'imports/components/Typography/SectionHeading';
 import Step from './components/Step';
 
-class TheProcess extends PureComponent {
+class Process extends PureComponent {
 	render() {
 		return (
-			<div className="the-process">
+			<div className="process">
 				<SectionHeading subTitle="the" title="process" />
 				<div className="description">
 					<div className="row">
@@ -62,4 +62,4 @@ class TheProcess extends PureComponent {
 	}
 }
 
-export default TheProcess;
+export default Process;
