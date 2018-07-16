@@ -2,14 +2,14 @@ import React, {PureComponent} from 'react';
 
 import './index.styl';
 
-import SectionHeading from 'imports/components/SectionHeading';
+import SectionHeading from 'imports/components/Typography/SectionHeading';
 import Step from './components/Step';
 
 class TheProcess extends PureComponent {
 	render() {
 		return (
 			<div className="the-process">
-				<SectionHeading subText="the" text="process" />
+				<SectionHeading subTitle="the" title="process" />
 				<div className="description">
 					<div className="row">
 						<Step

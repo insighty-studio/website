@@ -3,7 +3,7 @@ import axios from 'axios/index';
 
 import './index.styl';
 
-import SectionHeading from 'imports/components/SectionHeading';
+import SectionHeading from 'imports/components/Typography/SectionHeading';
 import Footer from 'imports/components/Footer';
 import Input from 'imports/components/Input';
 import TextArea from 'imports/components/TextArea';
@@ -73,7 +73,7 @@ class ContactUs extends PureComponent {
     return (
       <div className="contact-us">
 				<div>
-				<SectionHeading subText="feel free to" text="contact us" />
+				<SectionHeading subTitle="feel free to" title="contact us" />
 					<form onSubmit={e => this.handleSubmit(e)}>
 						<div className="form-raw">
 							<Input
