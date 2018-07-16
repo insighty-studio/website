@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 
 import './index.styl';
 
-import SectionHeading from 'imports/components/Typography/SectionHeading';
+import SectionHeading from 'components/Typography/SectionHeading';
 import Step from './components/Step';
 
 class Process extends PureComponent {

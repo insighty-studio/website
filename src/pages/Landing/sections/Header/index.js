@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
-import Button from 'imports/components/Button';
-import Heading from 'imports/components/Typography/Heading';
-import Paragraph from 'imports/components/Typography/Paragraph';
+import Button from 'components/Button';
+import Heading from 'components/Typography/Heading';
+import Paragraph from 'components/Typography/Paragraph';
 import NavigationBar from './components/NavigationBar';
 
 import './index.styl';

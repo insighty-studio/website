@@ -1,14 +1,14 @@
 import React, {PureComponent} from 'react';
+import classnames from 'classnames';
 import axios from 'axios/index';
 
 import './index.styl';
 
-import SectionHeading from 'imports/components/Typography/SectionHeading';
-import Footer from 'imports/components/Footer';
-import Input from 'imports/components/Input';
-import TextArea from 'imports/components/TextArea';
-import Button from 'imports/components/Button';
-import classnames from 'classnames';
+import SectionHeading from 'components/Typography/SectionHeading';
+import Footer from 'components/Footer';
+import Input from 'components/Input';
+import TextArea from 'components/TextArea';
+import Button from 'components/Button';
 
 class ContactUs extends PureComponent {
 	constructor(props) {

@@ -37,6 +37,8 @@ module.exports = {
     ),
     extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx'],
     alias: {
+			components: path.resolve('src/imports/components'),
+			icons: path.resolve('src/imports/icons'),
       styles: path.resolve('src/imports/styles'),
       'react-native': 'react-native-web',
     },

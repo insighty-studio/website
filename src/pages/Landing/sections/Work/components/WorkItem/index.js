@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
-import OpacityAnimation from 'imports/components/OpacityAnimation';
+import OpacityAnimation from 'components/OpacityAnimation';
 
 import './index.styl';
 
