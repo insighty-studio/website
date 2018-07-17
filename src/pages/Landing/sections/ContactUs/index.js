@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import classnames from 'classnames';
-import axios from 'axios/index';
 
 import './index.styl';
 
@@ -9,6 +8,9 @@ import Footer from 'components/Footer';
 import Input from 'components/Input';
 import TextArea from 'components/TextArea';
 import Button from 'components/Button';
+import request from 'utils/request'
+
+const WEBHOOK_URL = 'https://hooks.slack.com/services/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';
 
 class ContactUs extends PureComponent {
 	constructor(props) {
@@ -39,7 +41,7 @@ class ContactUs extends PureComponent {
 				}
 			]
 		});
-		axios.post('https://hooks.slack.com/services/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', formData)
+		request.post(WEBHOOK_URL, formData)
 			.then(() => {
 				this.setState({
 					messageIsVisible: true,
