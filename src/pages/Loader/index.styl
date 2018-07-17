@@ -6,43 +6,44 @@
   align-items center
   height 100vh
 
-  .logo-title
-    font-weight $semi-bold-weight
-    letter-spacing 0.1px
-    font-size 40px
-    line-height 50px
-    animation opacity .4s forwards
-    animation-duration .4s
-    animation-delay 1.6s
+  .logo
+    height 40px
+    width 40px
 
-    span
-      animation colorPulse 2s forwards
-      animation-duration 2s
+  .loader
+    position absolute
+    width 100px
 
-@keyframes opacity
+    .circular
+      animation rotate 2s linear infinite
+      transform-origin center center
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      margin auto
+
+    .path
+      stroke #0081FF
+      stroke-dasharray 1, 200
+      stroke-dashoffset 0
+      animation dash 1.5s ease-in-out infinite
+      stroke-linecap round
+
+@keyframes rotate
+  100%
+    transform: rotate(360deg)
+
+@keyframes dash
   0%
-    opacity 1
+    stroke-dasharray: 1, 200
+    stroke-dashoffset: 0
+
+  50%
+    stroke-dasharray: 89, 200
+    stroke-dashoffset: -35px
 
   100%
-    opacity 0
-
-
-@keyframes colorPulse
-  0%
-    color $light-blue
-
-  20%
-    color orange
-
-  40%
-    color greenyellow
-
-  60%
-    color purple
-
-  80%
-    color yellow
-    opacity 1
-
-  100%
-    opacity 0
+    stroke-dasharray: 89, 200
+    stroke-dashoffset: -124px
