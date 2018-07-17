@@ -1,16 +1,49 @@
-@import "~styles/config.styl"
+@import '~styles/config.styl'
 
 .service
-  width 370px
+  display flex
+  margin-bottom 200px
 
-  .service-title
-    width 256px
-    margin 0
-    font-size $title
-    line-height 40px
+  +iphone()
+    margin-bottom: 64px
+    display: block
+    width: 100%
+    padding: 0 40px
+    padding-bottom: 210px
+    position: relative
 
-  .service-description
-    margin: 14px 0 0 0
-    color #1A1A1A
-    font-weight $light-weight
-    line-height 26px
+  &:last-child
+    margin-bottom 160px
+
+    +iphone()
+      margin-bottom: 64px
+
+  .service-icons
+    display grid
+    grid-template-columns 1fr 1fr
+    grid-gap 70px
+
+    +iphone()
+      grid-gap 40px
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      padding: 0 40px
+
+    .service-icon
+      align-items center
+      display flex
+      flex-direction column
+
+      .icon-title
+        margin-top 20px
+        text-transform uppercase
+        color $gray
+        font-size $small
+        font-family "Roboto Mono", sans-serif
+        letter-spacing 2px
+        white-space nowrap
+
+        +iphone()
+          font-size: 12px

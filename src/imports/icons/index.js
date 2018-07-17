@@ -543,7 +543,7 @@ export class FifthStepIcon extends PureComponent {
 
 export class SixthStepIcon extends PureComponent {
 	render() {
-		return(
+		return (
 			<svg height="52px" viewBox="0 0 52 52">
 				<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
 					<g transform="translate(-743.000000, -3334.000000)">
@@ -554,6 +554,58 @@ export class SixthStepIcon extends PureComponent {
 									<text id="6" fontFamily="Roboto-Medium, Roboto" fontSize="18" fontWeight="400" fill="#39C877">
 										<tspan x="20.3847656" y="31">6</tspan>
 									</text>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</svg>
+		)
+	}
+}
+
+export class ExploreButtonIcon extends PureComponent {
+	render() {
+		return (
+			<svg width="12px" height="8px">
+				<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+					<g transform="translate(-242.000000, -567.000000)" fill="#FFFFFF">
+						<g transform="translate(0.000000, 1.000000)">
+							<g transform="translate(127.000000, 196.000000)">
+								<g transform="translate(1.000000, 350.000000)">
+									<polygon points="122 20 122 23 114 23 114 25 122 25 122 28 126 24" />
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</svg>
+		)
+	}
+}
+
+export class SendButtonIcon extends PureComponent {
+	render() {
+		return (
+			<svg width="15px" height="15px">
+				<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+					<g transform="translate(-660.000000, -4298.000000)" fill="#FFFFFF" fillRule="nonzero">
+						<g transform="translate(0.000000, 3644.000000)">
+							<g transform="translate(302.000000, 270.000000)">
+								<g>
+									<g transform="translate(264.000000, 367.000000)">
+										<g transform="translate(39.000000, 13.000000)">
+											<g>
+												<g>
+													<g transform="translate(55.000000, 4.000000)">
+														<path d="M0,0 C0,4 0,6 0,6 C0,6 2.49999994,6.5 7.49999983,7.5 L0,9 L0,15 L15,7.5 L0,0 Z"
+																	id="Shape"
+														/>
+													</g>
+												</g>
+											</g>
+										</g>
+									</g>
 								</g>
 							</g>
 						</g>

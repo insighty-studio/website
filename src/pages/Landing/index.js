@@ -1,25 +1,26 @@
-import React, {Component} from 'react';
-import ScrollToTopBtn from 'imports/components/ScrollToTopBtn';
+import React, {PureComponent, Component} from 'react';
 import provideScrollPosition from 'react-provide-scroll-position';
 
-import Main from './sections/Main';
-import Services from './sections/Services';
-import TheProcess from '../Landing2.0/sections/TheOldProcess';
-import Work from '../Landing2.0/sections/Work';
-import ContactUs from '../Landing2.0/sections/ContactUsOld';
-
+import 'styles/main.styl';
 import './index.styl';
 
-const LandingPage = ({scrollTop}) => (
-  <div className="landing-old">
-    <ScrollToTopBtn percentagesScrolled={scrollTop} />
-    <Main />
-    <Services />
-    <TheProcess />
-    <Work />
-    <ContactUs />
-  </div>
-);
+import Header from './sections/Header';
+import Services from './sections/Services';
+import Process from './sections/Process';
+import ContactUs from './sections/ContactUs';
+
+class LandingPage extends PureComponent {
+  render() {
+    return (
+			<div className="landing">
+				<Header />
+				<Services />
+				<Process />
+				<ContactUs />
+			</div>
+    );
+  }
+}
 
 const LandingScroll = provideScrollPosition(LandingPage);
 

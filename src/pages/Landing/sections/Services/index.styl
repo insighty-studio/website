@@ -1,29 +1,18 @@
-@import "~styles/config.styl"
+@import '~styles/config.styl'
 
-.services-old
+.services
   display flex
   flex-direction column
-  justify-content space-between
-  height calc(100vh - 80px)
-  margin 60px 0
+  align-items center
+  background-color $dark-blue
 
   .section-heading
-    margin-top 20px
+    color $white
+    padding 120px 0 150px
 
-  .service-list
-    display flex
-    height calc(100vh - 272px)
-    width 110%
-    margin-top 60px
-    margin-left -5%
-    transform rotate(-3deg)
-    background-color $snow
-
-    .service-list-items
-      flex 1
-      display flex
-      margin 0 124px
-      align-items center
-      transform rotate(3deg)
-      flex-direction row
-      justify-content space-around
+    +iphone()
+      padding: 64px 0
+      font-size: 28px
+      font-weight: $regular-weight
+      line-height: 1
+      letter-spacing 6px
