@@ -3,6 +3,7 @@ import classnames from 'classnames';
 
 import './index.styl';
 
+import {SendButtonIcon} from 'icons';
 import SectionHeading from 'components/Typography/SectionHeading';
 import Footer from 'components/Footer';
 import Input from 'components/Input';
@@ -122,9 +123,11 @@ class ContactUs extends PureComponent {
 							className="form-btn"
 							title={this.state.formIsSubmitted ? 'Thanks!' : 'SEND'}
 							disabled={this.state.formIsSubmitted}
-						/>
+						>
+							<SendButtonIcon />
+						</Button>
 					</form>
-					{this.showMessage('*you message has been sent')}
+					{this.showMessage('*your message has been sent')}
 				</div>
 				<Footer
 					address="240 Richmond St W, Toronto, ON M5V 1V6"

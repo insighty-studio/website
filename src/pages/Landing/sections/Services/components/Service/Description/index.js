@@ -24,24 +24,8 @@ class Description extends PureComponent {
 
     return (
       <div className="service-description">
-        <Heading
-          subTitle={subtitle}
-          title={title}
-        />
-        <Paragraph>
-          {text}
-        </Paragraph>
-
-        {/*<div className="service-title">*/}
-          {/*<div className="title-line" />*/}
-          {/*{title}*/}
-        {/*</div>*/}
-        {/*<div className="service-subtitle">*/}
-          {/*{subtitle}*/}
-        {/*</div>*/}
-        {/*<div className="service-text">*/}
-          {/*{text}*/}
-        {/*</div>*/}
+        <Heading subTitle={subtitle} title={title} />
+        <Paragraph>{text}</Paragraph>
       </div>
     );
   }

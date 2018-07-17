@@ -4,6 +4,7 @@ import Button from 'components/Button';
 import Heading from 'components/Typography/Heading';
 import Paragraph from 'components/Typography/Paragraph';
 import NavigationBar from './components/NavigationBar';
+import {ExploreButtonIcon} from 'icons';
 
 import './index.styl';
 
@@ -31,7 +32,9 @@ class Main extends Component {
                    data-aos-duration="700"
                    data-aos-delay="400"
               >
-                <Button title="Explore" className="explore-btn" />
+								<Button title="explore" className="explore-btn">
+									<ExploreButtonIcon />
+								</Button>
               </div>
             </div>
           </div>

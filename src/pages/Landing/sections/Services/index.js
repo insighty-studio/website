@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 
-import Service from './components/Service';
 import SectionHeading from 'components/Typography/SectionHeading';
+import Service from './components/Service';
 import {Design, Development, Quality} from './services';
 
 import './index.styl';
