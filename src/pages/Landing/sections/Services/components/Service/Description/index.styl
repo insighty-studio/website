@@ -8,33 +8,14 @@
     width: 100%
     margin: 0 0 40px
 
-  .service-title
-    display flex
-    align-items center
-    color $gray
-    text-transform uppercase
-    font-size 12px
-    letter-spacing 4px
-    font-family "Roboto Mono", sans-serif
-
-    .title-line
-      width 45px
-      height 1px
-      margin-right 12px
-      background-color $gray
-
-  // TODO this is title, not sub-title
-  .service-subtitle
+  .heading
     color $white
-    font-size 32px
-    font-family "Roboto Mono", sans-serif
-    margin-top 12px
 
-    +iphone()
-      font-size: 21px
-      line-height: 1.5
+    .title
 
-  .service-text
-    margin-top 24px
+      +iphone()
+        font-size: 21px
+        line-height: 1.5
+
+  .paragraph
     color $light-gray
-    line-height 32px

@@ -7,29 +7,25 @@ import './index.styl';
 
 class Service extends PureComponent {
 	static propTypes = {
-	  className: PropTypes.string,
-	  title: PropTypes.string,
-	  subtitle: PropTypes.string,
+		subtitle: PropTypes.string,
+		title: PropTypes.string,
 	  text: PropTypes.string,
 	  left: PropTypes.bool,
 	  icons: PropTypes.arrayOf(PropTypes.object)
 	};
 
 	static defaultProps = {
-	  className: '',
-	  title: '',
-	  subtitle: '',
+		subtitle: '',
+		title: '',
 	  text: '',
 	  left: false,
 	  icons: null
 	};
 
   renderIcons() {
-    const {icons} = this.props;
-
     return (
       <div className="service-icons">
-        {icons.map(({icon, title, animationDelay = 0}) => (
+        {this.props.icons.map(({icon, title, animationDelay = 0}) => (
           <div className="service-icon hover-grow" key={title}>
             <span data-aos="fade-in"
                   data-aos-easing="ease-in-sine"
@@ -58,11 +54,11 @@ class Service extends PureComponent {
 	  return (
       <div className="service">
         {left && this.renderIcons()}
-        <Description
-          title={title}
-          subtitle={subtitle}
-          text={text}
-        />
+				<Description
+					subtitle={subtitle}
+					title={title}
+					text={text}
+				/>
         {!left && this.renderIcons()}
       </div>
 	  );
