@@ -146,7 +146,7 @@ export class QAIcon extends PureComponent {
 export class PrototypeIcon extends PureComponent {
   render() {
     return (
-      <svg width="58px" height="54px" viewBox="0 0 58 54">
+      <svg width="56px" height="52px" viewBox="0 0 58 54">
         <g stroke="#FFC600" strokeWidth="1" fill="none" fillRule="evenodd">
           <rect strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" x="0" y="0" width="56" height="52" rx="6" />
           <g transform="translate(14.000000, 9.000000)" strokeWidth="2.08">
