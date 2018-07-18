@@ -24,7 +24,6 @@ class ScrollUpButton extends PureComponent {
 
   componentDidMount() {
     const windowHeight = window.innerHeight;
-    console.log(windowHeight);
     this.setState({windowHeight});
   }
 
