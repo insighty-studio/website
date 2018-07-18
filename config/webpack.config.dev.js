@@ -91,6 +91,7 @@ module.exports = {
                 options: {
                   importLoaders: 1,
                   stylus: {
+                    import: ['~styles/config.styl'],
                     define: {
                       $styles: path.resolve('src/imports/styles')
                     }
