@@ -1,5 +1,7 @@
 import React, {PureComponent, Component} from 'react';
+import PropTypes from 'prop-types';
 import provideScrollPosition from 'react-provide-scroll-position';
+import ScrollUpButton from 'components/ScrollUpButton';
 
 import 'styles/main.styl';
 import './index.styl';
@@ -10,14 +12,23 @@ import Process from './sections/Process';
 import ContactUs from './sections/ContactUs';
 
 class LandingPage extends PureComponent {
+  static propTypes = {
+    scrollTop: PropTypes.number
+  };
+
+  static defaultProps = {
+    scrollTop: 0
+  };
+
   render() {
     return (
-			<div className="landing">
-				<Header />
-				<Services />
-				<Process />
-				<ContactUs />
-			</div>
+      <div className="landing">
+        <ScrollUpButton percentagesScrolled={this.props.scrollTop} />
+        <Header />
+        <Services />
+        <Process />
+        <ContactUs />
+      </div>
     );
   }
 }
