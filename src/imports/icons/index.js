@@ -122,7 +122,8 @@ export class MobileAppsIcon extends PureComponent {
     return (
       <svg width="32px" height="50px" viewBox="0 0 32 50">
         <rect transform="translate(1, 1)" fill="none" stroke="#0084FF" strokeWidth="2" strokeLinecap="round"
-              strokeLinejoin="round" x="0" y="0" width="30" height="48" rx="4.34782609" />
+              strokeLinejoin="round" x="0" y="0" width="30" height="48" rx="4.34782609"
+        />
         <circle transform="translate(1, 1)" fill="#0084FF" cx="15" cy="41" r="2" />
       </svg>
     );
