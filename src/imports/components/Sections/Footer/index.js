@@ -27,7 +27,7 @@ class FooterSection extends PureComponent {
         <a href="#" className="title">Ready start a project?</a>
         <div className="projects">
           {projects.map(({name, color, backgroundColor}) => (
-            <div className="project" style={{backgroundColor}}>
+            <div key={backgroundColor} className="project" style={{backgroundColor}}>
               <div className="project-name">
                 {name}
                 <span style={{backgroundColor: color}} />

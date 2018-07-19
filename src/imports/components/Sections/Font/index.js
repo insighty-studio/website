@@ -2,6 +2,8 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
+import SectionName from '../SectionName';
+
 import './index.styl';
 
 class FontSection extends PureComponent {
@@ -47,7 +49,7 @@ class FontSection extends PureComponent {
             <div className="font-example">Aa</div>
           </div>
         </div>
-        <div className="section-name">Font</div>
+        <SectionName name="Font" />
       </div>
     );
   }

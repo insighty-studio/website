@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import {ExploreButtonIcon} from 'icons';
 
 import './index.styl';
+import SectionName from "../SectionName";
 
 class AboutSection extends PureComponent {
   static propTypes = {
@@ -46,6 +47,7 @@ class AboutSection extends PureComponent {
             <span>{name} </span>{desc}
           </div>
         </div>
+        <SectionName name="About" />
         {logo}
       </div>
     );
