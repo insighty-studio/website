@@ -1,0 +1,27 @@
+@import "~styles/config.styl"
+
+.colors-section
+  display flex
+  align-items center
+  position relative
+  max-width 1160px
+  height 400px
+  margin 0 auto
+
+  .colors
+    display flex
+    flex-grow 1
+    justify-content space-between
+
+    .color-info
+      margin-left 90px
+      font-size 22px
+      color $white
+
+    .color-circle
+      width 100px
+      height 100px
+      -webkit-box-shadow 0 2px 7px 0 rgba(0,0,0,0.5)
+      -moz-box-shadow 0 2px 7px 0 rgba(0,0,0,0.5)
+      box-shadow 0 2px 7px 0 rgba(0,0,0,0.5)
+      border-radius 50px

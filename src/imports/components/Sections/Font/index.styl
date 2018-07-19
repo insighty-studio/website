@@ -1,0 +1,83 @@
+@import '~styles/config.styl'
+
+.font-section
+  max-width 1160px
+  margin 0 auto
+  min-height 400px
+  position relative
+
+  .font-main-info
+    display flex
+    justify-content space-between
+
+    .font-name
+      line-height 48px
+
+      .name
+        font-size 48px
+        font-weight 500
+
+      .company
+        font-size 24px
+
+    .font-desc
+      line-height 26px
+      max-width 800px
+
+  .section-name
+    font-size 470px
+    line-height 470px
+    height 400px
+    font-family Poppins
+    font-weight 700
+    opacity .1
+    position absolute
+    top 0
+    z-index 0
+    -webkit-touch-callout none
+    -webkit-user-select none
+    -khtml-user-select none
+    -moz-user-select none
+    -ms-user-select none
+    user-select none
+
+  .font-types
+    display flex
+    justify-content space-between
+    margin-top 100px
+    height 120px
+
+    .font
+      width 260px
+      position relative
+      line-height 60px
+      z-index 1
+
+      &.bold
+        font-weight 700
+        font-size 24px
+
+      &.medium
+        font-weight 500
+        font-size 32px
+
+      &.regular
+        font-weight 400
+        font-size 48px
+
+      .font-size
+        z-index 2
+        position absolute
+
+      .font-example
+        z-index 1
+        right 0
+        position absolute
+        font-size 144px
+        line-height 120px
+        -webkit-touch-callout none
+        -webkit-user-select none
+        -khtml-user-select none
+        -moz-user-select none
+        -ms-user-select none
+        user-select none
