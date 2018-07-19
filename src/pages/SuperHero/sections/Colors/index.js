@@ -1,42 +1,17 @@
 import React, {PureComponent} from 'react';
-
-import './index.styl';
+import ColorsSection from 'components/Sections/Colors';
 
 class Colors extends PureComponent {
   render() {
     return (
-      <div className="colors-section">
-				<div className="colors">
-					<div className="color">
-						<div className="color-circle" />
-						<div className="color-info">
-							<div>Charade</div>
-							<div>#272730</div>
-						</div>
-					</div>
-					<div className="color">
-						<div className="color-circle" />
-						<div className="color-info">
-							<div>School bus yellow</div>
-							<div>#FFD900</div>
-						</div>
-					</div>
-					<div className="color">
-						<div className="color-circle" />
-						<div className="color-info">
-							<div>Caribbean Green</div>
-							<div>#09CE95</div>
-						</div>
-					</div>
-					<div className="color">
-						<div className="color-circle" />
-						<div className="color-info">
-							<div>Black</div>
-							<div>#000000</div>
-						</div>
-					</div>
-				</div>
-      </div>
+      <ColorsSection
+        colors={[
+          {name: "Charade", color: "#272730"},
+          {name: "School bus yellow", color: "#FFD900"},
+          {name: "Caribbean Green", color: "#09CE95"},
+          {name: "Black", color: "#000000"}
+        ]}
+      />
     );
   }
 }
