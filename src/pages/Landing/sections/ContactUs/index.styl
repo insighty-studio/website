@@ -11,8 +11,7 @@
     max-width 100%
     margin 0
     padding 0 40px 40px
-    background url(images/bg.png) bottom no-repeat
-
+    background #D4E1F8 linear-gradient(white, #D4E1F8)
 
   .section-heading
     margin-top 120px
@@ -61,19 +60,16 @@
         width 100%
         margin-bottom 32px
 
+    .input, .text-area
+      +iphone()
+        background: white
+        box-shadow: 0 0 1px 0 rgba(16,22,53,0.1), 0 4px 8px 0 rgba(28,31,56,0.05)
+
     .form-btn
       width 150px
       font-family 'Roboto Mono'
       line-height 21px
       font-weight $medium-weight
-
-      +iphone()
-        border 0.5px solid #C2C9D2
-        background-color $white
-        color $blue
-        -webkit-box-shadow 0 1px 3px 0 rgba(0,0,0,0.05)
-        -moz-box-shadow 0 1px 3px 0 rgba(0,0,0,0.05)
-        box-shadow 0 1px 3px 0 rgba(0,0,0,0.05)
 
   .form-message
     display flex
@@ -98,7 +94,7 @@
     +iphone()
       display block
       text-align center
-      margin-bottom 0px
+      margin-bottom 0
 
     .footer-details
       +iphone()
