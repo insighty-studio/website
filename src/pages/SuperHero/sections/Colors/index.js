@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import ColorsSection from 'imports/components/Sections/Colors';
+import ColorsSection from 'components/Sections/Colors';
 
 class Colors extends PureComponent {
   render() {

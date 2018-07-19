@@ -8,12 +8,12 @@ import './index.styl';
 class AboutSection extends PureComponent {
   static propTypes = {
     className: PropTypes.string,
-    shortDesc: PropTypes.arrayOf({
+    shortDesc: PropTypes.shape({
       year: PropTypes.number,
       client: PropTypes.string,
       services: PropTypes.string,
     }).isRequired,
-    story: PropTypes.arrayOf({
+    story: PropTypes.shape({
       name: PropTypes.string,
       desc: PropTypes.string,
     }).isRequired,

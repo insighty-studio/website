@@ -3,8 +3,6 @@ import React, {PureComponent} from 'react';
 import Details from './components/Details';
 import Goal from './components/Goal';
 
-import './index.styl';
-
 class Description extends PureComponent {
   render() {
     return (

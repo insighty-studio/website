@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import FontSection from 'imports/components/Sections/Font';
+import FontSection from 'components/Sections/Font';
 
 class Fonts extends PureComponent {
   render() {
