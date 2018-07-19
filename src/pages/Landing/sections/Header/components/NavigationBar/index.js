@@ -12,7 +12,7 @@ const links = [
 class NavigationBar extends React.Component {
   renderLinks() {
     return links.map(({text, to}, i) => (
-      <Link activeClass="active" className="hover-grow" to={to} smooth duration={500 + (i * 200)}>
+      <Link key={to} activeClass="active" className="hover-grow" to={to} smooth duration={500 + (i * 200)}>
         {text}
       </Link>
     ));
