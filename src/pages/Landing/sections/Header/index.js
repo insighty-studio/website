@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {Parallax} from 'react-scroll-parallax';
+import {Link} from 'react-scroll';
 
 import Button from 'components/Button';
 import Heading from 'components/Typography/Heading';
@@ -37,7 +39,7 @@ class Main extends Component {
                  data-aos-duration="700"
                  data-aos-delay="400"
             >
-              <Link smooth to="process" duration={700}>
+              <Link smooth to="services" duration={700}>
                 <Button title="explore" className="explore-btn">
                   <ExploreButtonIcon />
                 </Button>
