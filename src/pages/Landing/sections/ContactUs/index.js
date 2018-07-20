@@ -1,8 +1,5 @@
 import React, {PureComponent} from 'react';
 import classnames from 'classnames';
-
-import './index.styl';
-
 import {SendButtonIcon} from 'icons';
 import SectionHeading from 'components/Typography/SectionHeading';
 import Footer from 'components/Footer';
@@ -10,6 +7,8 @@ import Input from 'components/Input';
 import TextArea from 'components/TextArea';
 import Button from 'components/Button';
 import request from 'utils/request'
+
+import './index.styl';
 
 const WEBHOOK_URL = 'https://hooks.slack.com/services/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';
 

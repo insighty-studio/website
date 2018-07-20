@@ -61,6 +61,11 @@
         width 100%
         margin-bottom 32px
 
+    .input, .text-area
+      +iphone()
+        background: white
+        box-shadow: 0 0 1px 0 rgba(16,22,53,0.1), 0 4px 8px 0 rgba(28,31,56,0.05)
+
     .form-btn
       width 150px
       font-family 'Roboto Mono'
@@ -102,7 +107,7 @@
     +iphone()
       display block
       text-align center
-      margin-bottom 0px
+      margin-bottom 0
 
     .footer-details
       +iphone()
