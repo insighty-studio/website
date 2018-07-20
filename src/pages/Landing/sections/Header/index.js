@@ -11,8 +11,13 @@ import NavigationBar from './components/NavigationBar';
 import Illustration from './components/Illustration';
 
 import './index.styl';
+import {trackEvent} from "imports/analytics";
 
 class Main extends Component {
+  onClickExplore() {
+    trackEvent('Explore clicked')
+  }
+
   render() {
     return (
       <div className="header">
@@ -39,7 +44,7 @@ class Main extends Component {
                  data-aos-duration="700"
                  data-aos-delay="400"
             >
-              <Link smooth to="services" duration={700}>
+              <Link smooth to="services" duration={700} onClick={() => this.onClickExplore()}>
                 <Button title="explore" className="explore-btn">
                   <ExploreButtonIcon />
                 </Button>
