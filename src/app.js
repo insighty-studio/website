@@ -8,6 +8,7 @@ import Loader from './pages/Loader';
 import BetterYet from './pages/BetterYet';
 import SuperHero from './pages/SuperHero';
 import CET from './pages/CET';
+import LPMA from './pages/LPMA';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
@@ -55,6 +56,7 @@ class App extends Component {
             <Route path="/betteryet" component={BetterYet} />
             <Route path="/superhero" component={SuperHero} />
             <Route path="/cet" component={CET} />
+            <Route path="/lpma" component={LPMA} />
           </Switch>
         </div>
       </BrowserRouter>
