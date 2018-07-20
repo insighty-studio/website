@@ -71,6 +71,18 @@
       line-height 21px
       font-weight $medium-weight
 
+      +iphone()
+        border 0.5px solid #C2C9D2
+        background-color $white
+        color $blue
+        -webkit-box-shadow 0 1px 3px 0 rgba(0,0,0,0.05)
+        -moz-box-shadow 0 1px 3px 0 rgba(0,0,0,0.05)
+        box-shadow 0 1px 3px 0 rgba(0,0,0,0.05)
+
+      svg
+        +iphone()
+          fill $blue
+
   .form-message
     display flex
     justify-content center
