@@ -1,9 +1,9 @@
 import React, {PureComponent} from 'react';
 import PropTypes from "prop-types";
 import classnames from 'classnames';
+import SectionName from "../SectionName";
 
 import './index.styl';
-import SectionName from "../SectionName";
 
 class ColorsSection extends PureComponent {
   static propTypes = {
