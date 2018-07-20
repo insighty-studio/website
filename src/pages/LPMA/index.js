@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 
 import Main from './sections/Main';
+import Description from './sections/Description';
 
 import './index.styl';
 
@@ -9,6 +10,7 @@ class LPMA extends PureComponent {
     return (
       <div className="lpma-page">
         <Main />
+        <Description />
       </div>
 
     );
