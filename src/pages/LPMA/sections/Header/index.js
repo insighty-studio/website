@@ -4,10 +4,10 @@ import {LPMATitle, LPMAGraph} from 'icons';
 
 import './index.styl';
 
-class Main extends PureComponent {
+class Header extends PureComponent {
   render() {
     return (
-      <div className="main-section">
+      <div className="header-section">
         <div className="lpma-graph">
           <LPMAGraph />
         </div>
@@ -22,4 +22,4 @@ class Main extends PureComponent {
   }
 }
 
-export default Main;
+export default Header;
