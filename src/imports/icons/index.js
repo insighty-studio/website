@@ -572,19 +572,13 @@ export class SixthStepIcon extends PureComponent {
 export class ExploreButtonIcon extends PureComponent {
 	render() {
 		return (
-			<svg width="12px" height="8px">
-				<g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-					<g transform="translate(-242.000000, -567.000000)" fill="#FFFFFF">
-						<g transform="translate(0.000000, 1.000000)">
-							<g transform="translate(127.000000, 196.000000)">
-								<g transform="translate(1.000000, 350.000000)">
-									<polygon points="122 20 122 23 114 23 114 25 122 25 122 28 126 24" />
-								</g>
-							</g>
-						</g>
-					</g>
-				</g>
-			</svg>
+      <svg width="14px" height="8px" viewBox="0 0 14 8">
+        <path
+          fill="#FFFFFF"
+          d="M6.88461538,0.00037425682 C7.12873677,-0.00644425667 7.37571617,0.0798702667 7.57156599,0.262257984 L13.4423916,5.72954163 C13.8476876,6.1069788 13.8805433,6.7529224 13.515777,7.17229703 C13.1510106,7.59167167 12.5267518,7.6256687 12.1214559,7.24823153 L6.88461538,2.37135491 L1.64777489,7.24823153 C1.24247896,7.6256687 0.618220141,7.59167167 0.253453799,7.17229703 C-0.111312542,6.7529224 -0.0784568152,6.1069788 0.32683912,5.72954163 L6.19766478,0.262257984 C6.39351459,0.0798702667 6.640494,-0.00644425667 6.88461538,0.00037425682 Z"
+          transform="translate(6.884615, 3.755245) scale(1, -1) translate(-6.884615, -3.755245) "
+        />
+      </svg>
 		)
 	}
 }

@@ -1,9 +1,9 @@
 @import '~styles/config.styl'
 
 .header
-  background url(./images/bg.png)
-  background-size cover
   height 100vh
+  overflow: hidden
+  background-image: linear-gradient(-180deg, rgba(0,84,255,0.00) 0%, rgba(0,77,255,0.10) 100%)
 
   +iphone()
     padding: 40px
@@ -12,64 +12,56 @@
 
   .content
     display flex
-    flex-direction column
+    flex-direction row
     max-width 1160px
     margin 0 auto
     height: 100%
     position: relative
+    align-items center
+    padding-top: 48px
 
     +iphone()
       max-width: 100%
       width: 100%
 
-    .content-info-bg
-      background url(./images/main-art.png) right no-repeat
-      background-size 760px 560px
-      margin-top 20px
+    .content-info
       display flex
-      flex 1
+      flex-direction column
+      justify-content center
+      min-height 560px
+      width 440px
 
       +iphone()
-        background: none
-        margin-top: 0
-        display: block
+        width: 100%
+        margin: 0
+        display block
+        margin-top: 32px
 
-      .content-info
-        display flex
-        flex-direction column
-        justify-content center
-        min-height 560px
-        width 452px
-        margin-left 20px
+      .paragraph
+        opacity 0.8
+
+      .title
 
         +iphone()
-          width: 100%
-          margin: 0
-          display block
-          margin-top: 32px
+          font-size: 21px
+          line-height: 1.5
+          margin-bottom: 16px
 
-        .paragraph
-          opacity 0.8
+      .desc
+        color $dark-gray
+        line-height 32px
 
-        .title
+        +iphone()
+          line-height: 2
 
-          +iphone()
-            font-size: 21px
-            line-height: 1.5
-            margin-bottom: 16px
+      .buttons
+        display flex
+        margin-top 38px
 
-        .desc
-          color $dark-gray
-          line-height 32px
+        iphoneDisabled()
 
-          +iphone()
-            line-height: 2
+        .explore-btn
+          margin-right 32px
 
-        .buttons
-          display flex
-          margin-top 38px
-
-          iphoneDisabled()
-
-          .explore-btn
-            margin-right 32px
+          svg
+            margin-top: 1px

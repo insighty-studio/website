@@ -1,9 +1,11 @@
 import React from 'react';
 import {Link} from 'react-scroll';
+import classnames from 'classnames';
 
 import './index.styl';
 
 const links = [
+  {text: 'Home', to: "home", active: true},
   {text: 'Services', to: "services"},
   {text: 'Process', to: "process"},
   {text: 'Contact', to: "contact-us"},
@@ -11,8 +13,8 @@ const links = [
 
 class NavigationBar extends React.Component {
   renderLinks() {
-    return links.map(({text, to}, i) => (
-      <Link key={to} activeClass="active" className="hover-grow" to={to} smooth duration={500 + (i * 200)}>
+    return links.map(({text, to, active}, i) => (
+      <Link key={to} className={classnames({active})} activeClass="active" to={to} smooth duration={500 + (i * 200)}>
         {text}
       </Link>
     ));
@@ -21,9 +23,11 @@ class NavigationBar extends React.Component {
   render() {
     return (
       <div className="navigation-bar">
-        <div className="logo" />
-        <div className="links">
-          {this.renderLinks()}
+        <div className="bar-content">
+          <div className="logo" />
+          <div className="links">
+            {this.renderLinks()}
+          </div>
         </div>
       </div>
     );
