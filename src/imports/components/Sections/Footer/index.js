@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import Footer from 'components/Footer';
 
 import './index.styl';
 
@@ -24,7 +25,6 @@ class FooterSection extends PureComponent {
 
     return (
       <div className={classnames('footer-section', className)}>
-        <a href="#" className="title">Ready start a project?</a>
         <div className="projects">
           {projects.map(({name, color, backgroundColor}) => (
             <div key={backgroundColor} className="project" style={{backgroundColor}}>
@@ -35,6 +35,10 @@ class FooterSection extends PureComponent {
             </div>
           ))}
         </div>
+        <Footer
+          address="240 Richmond St W, Toronto, ON M5V 1V6"
+          email="hello@insighty.studio"
+        />
       </div>
     );
   }

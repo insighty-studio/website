@@ -1,0 +1,102 @@
+@import "~styles/config.styl"
+
+.contact-us-form
+  display flex
+  flex-direction column
+  margin 0 124px
+
+  +iphone()
+    display block
+    width 100%
+    max-width 100%
+    margin 0
+    padding 0 40px 40px
+    background #D4E1F8 linear-gradient(white, #D4E1F8)
+
+  .section-heading
+    margin-top 120px
+
+    +iphone()
+      margin-top 0
+      padding-top 64px
+
+    div:last-child
+      +iphone()
+        letter-spacing 6px
+
+  form
+    display flex
+    flex-direction column
+    align-self center
+    align-items center
+    margin-top 64px
+
+    +iphone()
+      margin-top 40px
+
+    .form-raw
+      margin-bottom 32px
+
+      +iphone()
+        margin-bottom 0
+
+      .input
+        +iphone()
+          width 100%
+          margin-bottom 12px
+
+      .input:last-child
+        margin-left 32px
+
+        +iphone()
+          margin 0 0 12px
+
+
+    .text-area
+      width 676px
+      margin-bottom 64px
+
+      +iphone()
+        width 100%
+        margin-bottom 32px
+
+    .input, .text-area
+      +iphone()
+        background: white
+        box-shadow: 0 0 1px 0 rgba(16,22,53,0.1), 0 4px 8px 0 rgba(28,31,56,0.05)
+
+    .form-btn
+      width 150px
+      font-family 'Roboto Mono'
+      line-height 21px
+      font-weight $medium-weight
+
+  .form-message
+    display flex
+    justify-content center
+    height 20px
+    margin 22px 0 54px
+    color $grayish-blue
+    font-size $small
+    line-height 20px
+    letter-spacing 0.1px
+    transition 1s
+    opacity 0
+
+    +iphone()
+      margin 22px 0 10px
+
+
+  .appearance
+    opacity 1
+
+  .footer
+    +iphone()
+      display block
+      text-align center
+      margin-bottom 0
+
+    .footer-details
+      +iphone()
+        text-align center
+        margin-bottom 32px
