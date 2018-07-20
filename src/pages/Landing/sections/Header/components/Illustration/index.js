@@ -19,36 +19,37 @@ class Illustration extends PureComponent {
         </Parallax>
         <Parallax
           className="parallax person"
-          offsetYMax={20}
-          offsetYMin={-20}
+          offsetYMax={15}
+          offsetYMin={-15}
         >
           <div className="illustration person" />
         </Parallax>
         <Parallax
           className="parallax plant"
-          offsetYMax={35}
-          offsetYMin={-35}
+          offsetYMax={50}
+          offsetYMin={-50}
         >
           <div className="illustration plant" />
         </Parallax>
         <Parallax
           className="parallax message"
-          offsetYMax={10}
-          offsetYMin={-10}
+          offsetYMax={5}
+          offsetYMin={-5}
+          slowerScrollRate
         >
           <div className="illustration message" />
         </Parallax>
         <Parallax
           className="parallax laptop"
-          offsetYMax={25}
-          offsetYMin={-25}
+          offsetYMax={20}
+          offsetYMin={-20}
         >
           <div className="illustration laptop" />
         </Parallax>
         <Parallax
           className="parallax program"
-          offsetYMax={25}
-          offsetYMin={-25}
+          offsetYMax={10}
+          offsetYMin={-10}
         >
           <div className="illustration program" />
         </Parallax>

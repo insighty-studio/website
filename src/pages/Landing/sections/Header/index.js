@@ -19,8 +19,8 @@ class Main extends Component {
         <div className="content">
           <Parallax
             className="content-info"
-            offsetYMax={35}
-            offsetYMin={-35}
+            offsetYMax={40}
+            offsetYMin={-40}
           >
             <Heading
               animated
