@@ -24,11 +24,12 @@ class Button extends PureComponent {
 		const {className, title, disabled, children} = this.props;
 		return (
 			<button
-				className={classnames('button', className, 'hover-grow')}
+				className={classnames('button', className)}
 				disabled={disabled}
 			>
-				<span className={children && 'button-title'}>{title}</span>
-				{children}
+				<div className={children && 'button-title'}>{title}</div>
+				<div className="button-hover-text"><span>{title}</span></div>
+				<div className="button-icon">{children}</div>
 			</button>
 		);
 	}
