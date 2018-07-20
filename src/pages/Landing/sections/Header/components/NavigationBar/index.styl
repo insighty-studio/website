@@ -1,35 +1,72 @@
 @import '~styles/config.styl'
 
 .navigation-bar
-  display flex
-  justify-content space-between
-  align-items center
-  padding-top 40px
-  padding-left 20px
-  padding-right 20px
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 9
 
   +iphone()
-    padding-top: 0
-    padding-left 0
-    display block
+    position relative
 
-  .logo
-    width: 48px
-    height: 49px
-    background: url("../../images/logo@2x.png") no-repeat;
-    background-size: @width @height;
-
-  .links
+  .bar-content
+    padding-top 40px
+    width: 100%
+    max-width 1160px
+    margin: 0 auto
     display flex
-    iphoneDisabled()
+    justify-content space-between
+    align-items center
 
-    a
-      color $black
-      font-size $small
-      line-height 20px
-      text-decoration none
-      margin-right 32px
-      cursor pointer
+    +iphone()
+      display block
+      padding-top: 0
 
-      &:last-child
-        margin-right 0
+    .logo
+        width: 48px
+        height: 49px
+        background: url("../../images/logo@2x.png") no-repeat;
+        background-size: @width @height;
+
+    .links
+      display flex
+      iphoneDisabled()
+
+      a
+        font-size $normal
+        line-height 20px
+        text-decoration none
+        margin-right 32px
+        cursor pointer
+        font-family: "Roboto Mono", sans-serif
+        text-transform: uppercase
+        letter-spacing 1px
+        position: relative
+        color: rgba(0, 0, 0, 0.6)
+        transition color .4s
+
+        &:before
+          content ''
+          display: block
+          height: 2px
+          background: $blue
+          width: 0
+          position: absolute
+          bottom: -8px
+          right: 0
+          transition width .4s
+
+        &:hover
+          color: black
+
+          &:before
+            width: 100%
+            left: 0
+
+        &:last-child
+          margin-right 0
+
+        &.active
+          color: #000
+          font-weight: $medium-weight
