@@ -225,6 +225,70 @@ export class WebAppsIcon extends PureComponent {
   }
 }
 
+export class LPMATitle extends PureComponent {
+  render() {
+    return (
+      <svg viewBox="0 0 997 671" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fillRule="evenodd">
+          <g fill="#FFF" fillRule="nonzero">
+            <path d="M779.7812 389.3601h85.5108l-44.0254-91.9437-41.4854 91.9437zm101.597 33.9621H763.695l-29.6326 67.0929h-44.872l138.0027-299.852h28.786l140.5419 299.852H913.55l-32.1718-67.0929zM544.4218 370.6556l-76.1969 180.574-71.9646-180.574H294.6632v299.852h46.5653V436.9214l93.1307 233.5864h27.9392L557.97 436.9213v233.5864h77.8897v-299.852zM456.3838 155.7244c51.645 0 71.9644-18.2231 71.9644-59.6392 0-41.416-20.3193-58.8109-71.9644-58.8109h-28.786v118.45h28.786zm-28.786 36.4461V299.852h-80.431V0h139.696C557.9809 0 611.32 32.3046 611.32 96.0852c0 63.7807-52.4927 96.9135-124.4571 96.9135h-59.265v-.8282zM0 190.563v299.8521h226.8992V452.313H80.431v-261.75z" />
+          </g>
+        </g>
+      </svg>
+    );
+  }
+}
+
+export class LPMAGraph extends PureComponent {
+  render() {
+    return (
+      <svg viewBox="0 0 1508 391" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fillRule="evenodd">
+          <g transform="translate(0 -4)">
+            <g fontFamily="Rubik-Regular, Rubik" fontSize="20.16">
+              <text fill="#8C9BA2" transform="translate(53.76 371.28)">
+                <tspan x="0" y="19">Apr 02, 2018</tspan>
+              </text>
+              <text fill="#8C9BA2" transform="translate(53.76 371.28)">
+                <tspan x="332.64" y="19">Apr 22, 2018</tspan>
+              </text>
+              <text fill="#3D474C" transform="translate(53.76 371.28)">
+                <tspan x="668.64" y="19">Apr 29, 2018</tspan>
+              </text>
+              <text fill="#8C9BA2" transform="translate(53.76 371.28)">
+                <tspan x="1004.64" y="19">Jun 14, 2018</tspan>
+              </text>
+              <text fill="#8C9BA2" transform="translate(53.76 371.28)">
+                <tspan x="1333.92" y="19">Jun 25, 2018</tspan>
+              </text>
+            </g>
+            <path d="M53.76 120.7343c19.7566 9.2015 201.0462 121.1658 411.5932 121.1658 284.838 0 398.9187-183.1001 638.6188-183.1001 239.7 0 309.5805 103.8795 401.308 140.6807" stroke="#6EBF56" strokeWidth="4.86" />
+            <path d="M53.76 120.167c19.7566 8.9545 201.0462 117.9131 411.5932 117.9131 284.838 0 398.9187-176.0394 638.6188-176.0394 239.7 0 304.932 85.6597 401.308 134.7587V330.96H53.76V120.167z" fillOpacity=".04" fill="#49D14E" />
+            <g strokeLinecap="square" strokeWidth="1.68">
+              <path d="M54.6 331.8h1449.84" stroke="#D7D7D7" />
+              <path d="M53.76 170.52h1451.52M53.76 10.92h1451.52" strokeOpacity=".1022" stroke="#738187" />
+            </g>
+            <circle stroke="#6CBF55" strokeWidth="3.36" fill="#FFF" cx="1500.24" cy="198.24" r="5.04" />
+            <circle stroke="#6CBF55" strokeWidth="3.36" fill="#FFF" cx="450.24" cy="241.92" r="5.04" />
+            <circle stroke="#6CBF55" strokeWidth="3.36" fill="#FFF" cx="58.8" cy="122.64" r="5.04" />
+            <g fill="#8C9BA2" fontFamily="Rubik-Regular, Rubik" fontSize="20.16">
+              <text>
+                <tspan x="0" y="339.88">0</tspan>
+              </text>
+              <text>
+                <tspan x="0" y="178.6">5</tspan>
+              </text>
+              <text>
+                <tspan x="0" y="19">10</tspan>
+              </text>
+            </g>
+          </g>
+        </g>
+      </svg>
+    );
+  }
+}
+
 export class BetterYetTitle extends PureComponent {
   render() {
     return (
