@@ -8,6 +8,7 @@ import Button from 'components/Button';
 import request from 'utils/request'
 
 import './index.styl';
+import {trackEvent} from "../../analytics";
 
 const WEBHOOK_URL = 'https://hooks.slack.com/services/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';
 
@@ -17,6 +18,7 @@ class ContactUsForm extends PureComponent {
     this.state = {
       messageIsVisible: false,
       formIsSubmitted: false,
+      pristine: true,
       name: '',
       email: '',
       phone: '',
@@ -26,6 +28,8 @@ class ContactUsForm extends PureComponent {
   }
 
   handleSubmit(e) {
+    trackEvent('Form submit pressed');
+
     e.preventDefault();
     const {
       name, email, phone, website, message
@@ -57,6 +61,11 @@ class ContactUsForm extends PureComponent {
   }
 
   handleFormInput(e) {
+    const {pristine} = this.state;
+    if (pristine) {
+      this.setState({pristine: false});
+      trackEvent('Form input started');
+    }
     this.setState({[e.target.name]: e.target.value});
   }
 
