@@ -41,9 +41,7 @@ class App extends Component {
     setTimeout(() => this.setState({ready: true}), 2000);
   }
 
-  render() {
-    if (!this.state.ready) return <Loader />;
-
+  renderRoutes() {
     return (
       <BrowserRouter>
         <div className="root">
@@ -53,6 +51,17 @@ class App extends Component {
             <Route path="/superhero" component={SuperHero} />
             <Route path="/lpma" component={LPMA} />
           </Switch>
+        </div>
+      </BrowserRouter>
+    );
+  }
+
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="root">
+          <Loader />
+          {this.state.ready && this.renderRoutes()}
         </div>
       </BrowserRouter>
     );
