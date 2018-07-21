@@ -6,8 +6,8 @@ class Footer extends PureComponent {
     return (
       <FooterSection
         projects={[
-          {name: 'CET', color: '#7ED321', backgroundColor: '#464F53'},
-          {name: 'BetterYet', color: '#F8C91C', backgroundColor: '#FFDF4A'},
+          {name: 'LPMA', color: '#7ED321', backgroundColor: '#464F53', link: '/lpma'},
+          {name: 'BetterYet', color: '#F8C91C', backgroundColor: '#FFDF4A', link: '/betteryet'},
         ]}
       />
     );

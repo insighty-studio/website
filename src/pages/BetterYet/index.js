@@ -1,4 +1,5 @@
 import React, {PureComponent} from 'react';
+import BodyBackground from 'components/BodyBackground';
 
 import Header from './sections/Header';
 import About from './sections/About';
@@ -39,6 +40,7 @@ class BetterYet extends PureComponent {
   render() {
     return (
       <div className="betteryet-page">
+        <BodyBackground color="#9FC6E2" />
         <Header />
         <About />
         {this.renderTopPrototypes()}
