@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import BodyBackground from 'components/BodyBackground';
+import {betteryetBlue} from 'styles/config';
 
 import Header from './sections/Header';
 import About from './sections/About';
@@ -11,7 +12,6 @@ import Footer from './sections/Footer';
 import Illustration from './sections/Illustration';
 
 import './index.styl';
-import {betteryetBlue} from 'src/imports/styles/config';
 
 class BetterYet extends PureComponent {
   renderTopPrototypes() {
