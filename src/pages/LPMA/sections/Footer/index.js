@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import FooterSection from 'components/Sections/Footer';
+import {lpmaGreen, lpmaDarkGray, betteryetOrangeYellow, betteryetYellow} from 'styles/config';
 
 import './index.styl';
 
@@ -8,8 +9,8 @@ class Footer extends PureComponent {
     return (
       <FooterSection
         projects={[
-          {name: 'SuperHero', color: '#5B5B5B', backgroundColor: '#272730', link: '/superhero'},
-          {name: 'BetterYet', color: '#F8C91C', backgroundColor: '#FFDF4A', link: '/betteryet'},
+          {name: 'LPMA', color: lpmaGreen, backgroundColor: lpmaDarkGray, link: '/lpma'},
+          {name: 'BetterYet', color: betteryetOrangeYellow, backgroundColor: betteryetYellow, link: '/betteryet'},
         ]}
       />
     );

@@ -6,7 +6,6 @@ import 'styles/main.styl';
 import Landing from './pages/Landing';
 import Loader from './pages/Loader';
 import BetterYet from './pages/BetterYet';
-import SuperHero from './pages/SuperHero';
 import LPMA from './pages/LPMA';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -48,7 +47,6 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route path="/betteryet" component={BetterYet} />
-            <Route path="/superhero" component={SuperHero} />
             <Route path="/lpma" component={LPMA} />
           </Switch>
         </div>

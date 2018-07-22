@@ -11,6 +11,7 @@ import Footer from './sections/Footer';
 import Illustration from './sections/Illustration';
 
 import './index.styl';
+import {betteryetBlue} from 'src/imports/styles/config';
 
 class BetterYet extends PureComponent {
   renderTopPrototypes() {
@@ -40,7 +41,7 @@ class BetterYet extends PureComponent {
   render() {
     return (
       <div className="betteryet-page">
-        <BodyBackground color="#9FC6E2" />
+        <BodyBackground color={betteryetBlue} />
         <Header />
         <About />
         {this.renderTopPrototypes()}
