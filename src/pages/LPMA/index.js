@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import BodyBackground from 'components/BodyBackground';
+import {lpmaDarkGray} from 'styles/config';
 
 import Header from './sections/Header';
 import About from './sections/About';
@@ -16,7 +17,7 @@ class LPMA extends PureComponent {
   render() {
     return (
       <div className="lpma-page">
-        <BodyBackground color="#464F53" />
+        <BodyBackground color={lpmaDarkGray} />
         <Header />
         <About />
         <Fonts />
