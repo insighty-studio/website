@@ -7,7 +7,7 @@ import {RightArrowIcon} from 'icons';
 
 import './index.styl';
 
-class ClientInfo extends PureComponent {
+class Client extends PureComponent {
   static propTypes = {
     name: PropTypes.string,
     position: PropTypes.string,
@@ -20,8 +20,6 @@ class ClientInfo extends PureComponent {
     position: '',
     comment: ''
   };
-
-
 
   render() {
     return (
@@ -45,4 +43,4 @@ class ClientInfo extends PureComponent {
   }
 }
 
-export default ClientInfo;
+export default Client;
