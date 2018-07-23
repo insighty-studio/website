@@ -23,11 +23,7 @@ class Main extends Component {
       <div className="header">
         <NavigationBar />
         <div className="content">
-          <Parallax
-            className="content-info"
-            offsetYMax={40}
-            offsetYMin={-40}
-          >
+          <Parallax className="content-info">
             <Heading
               animated
               subTitle="Insighty Studio"
