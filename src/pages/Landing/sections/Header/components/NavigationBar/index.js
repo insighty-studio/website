@@ -9,7 +9,7 @@ const links = [
   {text: 'Services', to: "services"},
   {text: 'Process', to: "process"},
   {text: 'Clients', to: "clients"},
-  {text: 'Contact', to: "contact-us"},
+  {text: 'Contact', to: "contact-us-form"},
 ];
 
 class NavigationBar extends React.Component {
