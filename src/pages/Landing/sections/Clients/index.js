@@ -19,7 +19,7 @@ class Clients extends Component {
     return (
       <div className="clients">
         <SectionHeading subTitle="our" title="clients" />
-        <Client name={name} position={position} comment={comment} />
+        <Client name={name} position={position} comment={comment} key={this.state.currentElementIndex} />
         <div className="pagination">{this.renderPagination(clients)}</div>
       </div>
     );
