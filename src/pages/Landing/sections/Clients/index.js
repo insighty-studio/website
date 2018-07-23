@@ -19,7 +19,9 @@ class Clients extends Component {
     return (
       <div className="clients">
         <SectionHeading subTitle="our" title="clients" />
-        <Client name={name} position={position} comment={comment} key={this.state.currentElementIndex} />
+        <Client name={name} position={position} comment={comment} key={this.state.currentElementIndex}
+                href="https://clutch.co/profile/insighty#review-516735"
+        />
         <div className="pagination">{this.renderPagination(clients)}</div>
       </div>
     );

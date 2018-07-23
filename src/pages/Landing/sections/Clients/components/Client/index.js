@@ -11,14 +11,17 @@ class Client extends PureComponent {
   static propTypes = {
     name: PropTypes.string,
     position: PropTypes.string,
-    comment: PropTypes.string
-
+    comment: PropTypes.string,
+    href: PropTypes.string,
+    to: PropTypes.string
   };
 
   static defaultProps = {
     name: '',
     position: '',
-    comment: ''
+    comment: '',
+    href: '',
+    to: ''
   };
 
   render() {
@@ -30,9 +33,9 @@ class Client extends PureComponent {
           <div className="position">{this.props.position}</div>
           <div className="comment">{this.props.comment}</div>
           <div className="buttons">
-            <Button title="full review" className="full-review-btn"><RightArrowIcon /></Button>
+            <Button title="full review" className="full-review-btn" to="betteryet"><RightArrowIcon /></Button>
             <Button title="project details" className="project-details-btn"
-                    href="https://meetflo.zendesk.com/hc/en-us/articles/230425728-Privacy-Policies"
+                    href={this.props.href}
             ><RightArrowIcon />
             </Button>
           </div>
