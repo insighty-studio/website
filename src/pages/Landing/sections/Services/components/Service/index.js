@@ -1,7 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-
-import Description from './Description';
+import Description from 'components/BigDescription';
 
 import './index.styl';
 
@@ -55,6 +54,7 @@ class Service extends PureComponent {
       <div className="service">
         {left && this.renderIcons()}
 				<Description
+					className="landing"
 					subtitle={subtitle}
 					title={title}
 					text={text}

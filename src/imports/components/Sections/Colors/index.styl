@@ -21,19 +21,23 @@
     font-family Quicksand
     font-style Italic
     font-weight 700
+    margin-top: 95px;
 
     .color
       width 25%
 
-      .color-info
-        margin-left 90px
-        font-size 22px
-        color $white
+      &:first-child
+        border-radius: 8px 0 0 8px;
 
-      .color-circle
-        width 100px
-        height 100px
-        -webkit-box-shadow 0 2px 7px 0 rgba(0,0,0,0.5)
-        -moz-box-shadow 0 2px 7px 0 rgba(0,0,0,0.5)
-        box-shadow 0 2px 7px 0 rgba(0,0,0,0.5)
-        border-radius 50px
+      &:last-child
+        border-radius: 0 8px 8px 0;
+
+      .color-info
+        padding 30px
+        color $white
+        font-weight 500
+        font-style: normal
+        font-family "Roboto Mono", sans-serif
+
+        .hash
+          font-weight normal
