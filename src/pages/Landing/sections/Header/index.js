@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {Parallax} from 'react-scroll-parallax';
 import {Link} from 'react-scroll';
+import {ExploreButtonIcon} from 'icons';
 
 import Button from 'components/Button';
 import Heading from 'components/Typography/Heading';
 import Paragraph from 'components/Typography/Paragraph';
-import {ExploreButtonIcon} from 'icons';
 
 import NavigationBar from './components/NavigationBar';
 import Illustration from './components/Illustration';
@@ -13,7 +13,7 @@ import Illustration from './components/Illustration';
 import './index.styl';
 import {trackEvent} from "imports/analytics";
 
-class Main extends Component {
+class Header extends Component {
   onClickExplore() {
     trackEvent('Explore clicked')
   }
@@ -23,7 +23,11 @@ class Main extends Component {
       <div className="header">
         <NavigationBar />
         <div className="content">
-          <Parallax className="content-info">
+          <Parallax
+            className="content-info"
+            offsetYMax={40}
+            offsetYMin={-40}
+          >
             <Heading
               animated
               subTitle="Insighty Studio"
@@ -50,4 +54,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default Header;

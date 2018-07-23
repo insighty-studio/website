@@ -7,6 +7,7 @@ import Landing from './pages/Landing';
 import Loader from './pages/Loader';
 import BetterYet from './pages/BetterYet';
 import LPMA from './pages/LPMA';
+import LoaderLine from './pages/Loader/LoaderLine';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -32,12 +33,15 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ready: false
+      ready: 0,
+      images: [
+        require('./pages/Landing/sections/Header/images/person@2x.png'),
+        require('./pages/Landing/sections/Header/images/plant@2x.png'),
+        require('./pages/Landing/sections/Header/images/program@2x.png'),
+        require('./pages/Landing/sections/Header/images/message@2x.png'),
+        require('./pages/Landing/sections/Header/images/laptop@2x.png'),
+      ]
     };
-  }
-
-  componentDidMount() {
-    setTimeout(() => this.setState({ready: true}), 2000);
   }
 
   renderRoutes() {
@@ -55,6 +59,21 @@ class App extends Component {
   }
 
   render() {
+    if (this.state.ready < this.state.images.length) {
+      return (
+        <div>
+          {this.state.images.map(src => (
+            <img
+              src={src}
+              style={{display: 'none'}}
+              onLoad={() => this.setState({ready: this.state.ready + 1})}
+            />
+          ))}
+          <LoaderLine loading={(this.state.ready + 1) / this.state.images.length * 100} />
+        </div>
+      );
+    }
+
     return (
       <BrowserRouter>
         <div className="root">
