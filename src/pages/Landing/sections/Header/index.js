@@ -23,11 +23,7 @@ class Main extends Component {
       <div className="header">
         <NavigationBar />
         <div className="content">
-          <Parallax
-            className="content-info"
-            offsetYMax={40}
-            offsetYMin={-40}
-          >
+          <Parallax className="content-info">
             <Heading
               subTitle="Insighty Studio"
               title="We Create Web & Mobile Applications That’ll Delight Your Users"
@@ -45,7 +41,6 @@ class Main extends Component {
               </Link>
             </div>
           </Parallax>
-
           <Illustration />
         </div>
       </div>

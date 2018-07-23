@@ -8,6 +8,7 @@ const links = [
   {text: 'Home', to: "home", active: true},
   {text: 'Services', to: "services"},
   {text: 'Process', to: "process"},
+  {text: 'Clients', to: "clients"},
   {text: 'Contact', to: "contact-us"},
 ];
 
