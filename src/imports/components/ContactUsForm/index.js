@@ -84,60 +84,58 @@ class ContactUsForm extends PureComponent {
 
     return (
       <div className="contact-us-form">
-        <div>
-          <SectionHeading subTitle="feel free to" title="contact us" />
-          <form onSubmit={e => this.handleSubmit(e)}>
-            <div className="form-raw">
-              <Input
-                required
-                name="name"
-                type="text"
-                placeholder="Name *"
-                value={name}
-                onChange={e => this.handleFormInput(e)}
-              />
-              <Input
-                required
-                name="email"
-                type="email"
-                placeholder="Email *"
-                value={email}
-                onChange={e => this.handleFormInput(e)}
-              />
-            </div>
-            <div className="form-raw">
-              <Input
-                name="phone"
-                type="phone"
-                placeholder="Phone"
-                value={phone}
-                onChange={e => this.handleFormInput(e)}
-              />
-              <Input
-                name="website"
-                type="text"
-                placeholder="Website"
-                value={website}
-                onChange={e => this.handleFormInput(e)}
-              />
-            </div>
-            <TextArea
+        <SectionHeading subTitle="feel free to" title="contact us" />
+        <form onSubmit={e => this.handleSubmit(e)}>
+          <div className="form-raw">
+            <Input
               required
-              name="message"
-              value={message}
-              placeholder="Message *"
+              name="name"
+              type="text"
+              placeholder="Name *"
+              value={name}
               onChange={e => this.handleFormInput(e)}
             />
-            <Button
-              className="form-btn"
-              title={this.state.formIsSubmitted ? 'Thanks!' : 'SEND'}
-              disabled={this.state.formIsSubmitted}
-            >
-              <SendButtonIcon />
-            </Button>
-          </form>
-          {this.showMessage('*your message has been sent')}
-        </div>
+            <Input
+              required
+              name="email"
+              type="email"
+              placeholder="Email *"
+              value={email}
+              onChange={e => this.handleFormInput(e)}
+            />
+          </div>
+          <div className="form-raw">
+            <Input
+              name="phone"
+              type="phone"
+              placeholder="Phone"
+              value={phone}
+              onChange={e => this.handleFormInput(e)}
+            />
+            <Input
+              name="website"
+              type="text"
+              placeholder="Website"
+              value={website}
+              onChange={e => this.handleFormInput(e)}
+            />
+          </div>
+          <TextArea
+            required
+            name="message"
+            value={message}
+            placeholder="Message *"
+            onChange={e => this.handleFormInput(e)}
+          />
+          <Button
+            className="form-btn"
+            title={this.state.formIsSubmitted ? 'Thanks!' : 'SEND'}
+            disabled={this.state.formIsSubmitted}
+          >
+            <SendButtonIcon />
+          </Button>
+        </form>
+        {this.showMessage('*your message has been sent')}
       </div>
     );
   }
