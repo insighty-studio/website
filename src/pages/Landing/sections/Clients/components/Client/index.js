@@ -21,6 +21,8 @@ class ClientInfo extends PureComponent {
     comment: ''
   };
 
+
+
   render() {
     return (
       <div className="client">
@@ -31,7 +33,10 @@ class ClientInfo extends PureComponent {
           <div className="comment">{this.props.comment}</div>
           <div className="buttons">
             <Button title="full review" className="full-review-btn"><RightArrowIcon /></Button>
-            <Button title="project details" className="project-details-btn"><RightArrowIcon /></Button>
+            <Button title="project details" className="project-details-btn"
+                    href="https://meetflo.zendesk.com/hc/en-us/articles/230425728-Privacy-Policies"
+            ><RightArrowIcon />
+            </Button>
           </div>
         </div>
         <div className="background"><ClientsBackgroundIcon /></div>
