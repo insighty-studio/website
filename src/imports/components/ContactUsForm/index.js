@@ -6,9 +6,9 @@ import Input from 'components/Input';
 import TextArea from 'components/TextArea';
 import Button from 'components/Button';
 import request from 'utils/request'
+import {trackEvent} from 'analytics';
 
 import './index.styl';
-import {trackEvent} from "../../analytics";
 
 const WEBHOOK_URL = 'https://hooks.slack.com/services/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';
 

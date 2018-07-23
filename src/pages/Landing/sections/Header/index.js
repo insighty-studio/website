@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Parallax} from 'react-scroll-parallax';
 import {Link} from 'react-scroll';
 import {ExploreButtonIcon} from 'icons';
-import {trackEvent} from "analytics";
+import {trackEvent} from 'analytics';
 
 import Button from 'components/Button';
 import Heading from 'components/Typography/Heading';
