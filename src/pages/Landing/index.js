@@ -9,6 +9,7 @@ import './index.styl';
 import Header from './sections/Header';
 import Services from './sections/Services';
 import Process from './sections/Process';
+import Clients from './sections/Clients';
 import ContactUs from './sections/ContactUs';
 
 class LandingPage extends PureComponent {
@@ -27,6 +28,7 @@ class LandingPage extends PureComponent {
         <Header />
         <Services />
         <Process />
+        <Clients />
         <ContactUs />
       </div>
     );

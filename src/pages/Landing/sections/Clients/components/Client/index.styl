@@ -1,0 +1,80 @@
+@import "~styles/config.styl"
+
+.client
+  z-index 1
+  display flex
+  width 774px
+
+  .client-photo
+    width 160px
+    height 160px
+    border-radius 50%
+
+  .client-overview
+    margin-left 40px
+    font-family "Roboto Mono", sans-serif
+
+    .name, .position
+      font-size $small
+      text-transform uppercase
+
+    .name
+      font-weight $medium-weight
+      letter-spacing 2px
+
+    .position
+      margin-top 8px
+      opacity 0.6
+      letter-spacing 1px
+
+    .comment
+      margin 32px 0
+      font-size 32px
+      line-height 42px
+
+  .buttons
+    display flex
+
+    .full-review-btn, .project-details-btn
+      height 32px
+      color $black
+      font-size $small
+
+      .button-hover-text
+        width 32px
+        height 32px
+        box-shadow none
+        background $black
+
+      .button-icon
+        width 32px
+        height 32px
+        border-radius 50%
+        background $black
+
+    .project-details-btn
+      margin-left 40px
+
+  .background
+    z-index -1
+    left 50%
+    bottom 0
+    position absolute
+    margin-left 138px
+
+    svg
+      vertical-align middle
+
+.client-enter
+  opacity 0.01
+
+.client-enter.client-enter-active
+  opacity 1
+  transition opacity 500ms ease-in
+
+.client-leave
+  opacity 1
+
+.client-leave.client-leave-active
+  opacity 0.01
+  transition opacity 300ms ease-in

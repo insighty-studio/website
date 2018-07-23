@@ -16,7 +16,7 @@ class Main extends Component {
   render() {
     return (
       <div className="header">
-        <NavigationBar />
+        <NavigationBar/>
         <div className="content">
           <Parallax
             className="content-info"
@@ -46,7 +46,6 @@ class Main extends Component {
               </Link>
             </div>
           </Parallax>
-
           <Illustration />
         </div>
       </div>
