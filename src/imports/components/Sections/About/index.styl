@@ -14,8 +14,12 @@
     z-index 1
     margin 0 auto
     justify-content space-evenly
+    flex-wrap wrap
     align-items center
     min-height 450px
+
+    +iphone()
+      justify-content normal
 
     .short ul
       margin 0 auto
