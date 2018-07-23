@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Parallax} from 'react-scroll-parallax';
 import {Link} from 'react-scroll';
+import {trackEvent} from "analytics";
 
 import Button from 'components/Button';
 import Heading from 'components/Typography/Heading';
@@ -11,7 +12,6 @@ import NavigationBar from './components/NavigationBar';
 import Illustration from './components/Illustration';
 
 import './index.styl';
-import {trackEvent} from "imports/analytics";
 
 class Main extends Component {
   onClickExplore() {
@@ -29,7 +29,6 @@ class Main extends Component {
             offsetYMin={-40}
           >
             <Heading
-              animated
               subTitle="Insighty Studio"
               title="We Create Web & Mobile Applications That’ll Delight Your Users"
             />

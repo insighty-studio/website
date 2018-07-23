@@ -41,6 +41,7 @@ module.exports = {
       components: path.resolve('src/imports/components'),
       icons: path.resolve('src/imports/icons'),
       styles: path.resolve('src/imports/styles'),
+      analytics: path.resolve('src/imports/analytics'),
       'react-native': 'react-native-web',
     },
     plugins: [
