@@ -28,7 +28,15 @@ class Clients extends Component {
     super(props);
     this.state = {
       currentClient: 0
-    }
+    };
+  }
+
+  componentDidMount() {
+    console.log('Component did mount');
+  }
+
+  componentWillUpdate() {
+    console.log('Component will update');
   }
 
   render() {
@@ -38,10 +46,10 @@ class Clients extends Component {
         <SectionHeading subTitle="our" title="clients" />
         <ReactCSSTransitionGroup
           transitionName="client"
+          transitionAppear={true}
+          transitionAppearTimeout={300}
           transitionEnterTimeout={500}
-          transitionAppearTimeout={500}
-          transitionEnter={true}
-          transitionLeave={false}
+          transitionLeaveTimeout={300}
         >
           <Client name={name} position={position} comment={comment} key={key} />
         </ReactCSSTransitionGroup>
