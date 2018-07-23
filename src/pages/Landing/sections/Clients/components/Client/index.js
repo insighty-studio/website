@@ -1,7 +1,5 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-
-import {ClientsBackgroundIcon} from 'icons';
 import Button from 'components/Button';
 import {RightArrowIcon} from 'icons';
 
@@ -9,25 +7,18 @@ import './index.styl';
 
 class Client extends PureComponent {
   static propTypes = {
-    name: PropTypes.string,
-    position: PropTypes.string,
-    comment: PropTypes.string,
-    href: PropTypes.string,
-    to: PropTypes.string
-  };
-
-  static defaultProps = {
-    name: '',
-    position: '',
-    comment: '',
-    href: '',
-    to: ''
+    name: PropTypes.string.isRequired,
+    position: PropTypes.string.isRequired,
+    comment: PropTypes.string.isRequired,
+    href: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired,
+    photo: PropTypes.string.isRequired
   };
 
   render() {
     return (
       <div className="client">
-        <div className="client-photo"><img src={require('./images/client-photo.png')} alt="" /></div>
+        <div className="client-photo"><img src={require(`../../images/${this.props.photo}.png`)} alt="" /></div>
         <div className="client-overview">
           <div className="name">{this.props.name}</div>
           <div className="position">{this.props.position}</div>
@@ -39,7 +30,6 @@ class Client extends PureComponent {
             </Button>
           </div>
         </div>
-        <div className="background"><ClientsBackgroundIcon /></div>
       </div>
     );
   }

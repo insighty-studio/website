@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {ClientsBackgroundIcon} from 'icons';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import SectionHeading from 'components/Typography/SectionHeading';
+import {ClientsBackgroundIcon} from 'icons';
 
 import clients from './clients';
 import Client from './components/Client';
@@ -15,15 +16,23 @@ class Clients extends Component {
   }
 
   render() {
-    const {name, position, comment, link, page} = clients[this.state.currentElementIndex];
+    const {name, position, comment, link, page, photo} = clients[this.state.currentElementIndex];
     return (
       <div className="clients">
         <SectionHeading subTitle="our" title="clients" />
-        <Client name={name} position={position} comment={comment} key={this.state.currentElementIndex}
-                href={link}
-                to={page}
-        />
+        <ReactCSSTransitionGroup
+          transitionName="client"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={300}
+        >
+          <Client name={name} position={position} comment={comment} key={this.state.currentElementIndex}
+                  href={link}
+                  to={page}
+                  photo={photo}
+          />
+        </ReactCSSTransitionGroup>
         <div className="pagination">{this.renderPagination(clients)}</div>
+        <div className="background"><ClientsBackgroundIcon /></div>
       </div>
     );
   }
