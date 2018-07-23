@@ -5,45 +5,72 @@
   justify-content center
   align-items center
   height 100vh
+  width 100%
+  z-index 15
+  background-color $white
+  position absolute
+  animation shadeOut .8s ease-in-out forwards
+  animation-delay 2s
 
-  .logo
-    height 40px
-    width 40px
+  svg
+    animation scaleLogo .6s ease-in-out forwards
+    animation-delay 1.2s
+    z-index 18
 
-  .loader
+  .light-shade, .shade
     position absolute
-    width 100px
+    top 0
+    height 100vh
+    width 100%
 
-    .circular
-      animation rotate 2s linear infinite
-      transform-origin center center
-      position absolute
-      top 0
-      bottom 0
-      left 0
-      right 0
-      margin auto
+  .light-shade
+    z-index 16
+    height 3px
+    animation shade 1.8s ease-in-out forwards
+    background-color $blue
 
-    .path
-      stroke #0081FF
-      stroke-dasharray 1, 200
-      stroke-dashoffset 0
-      animation dash 1.5s ease-in-out infinite
-      stroke-linecap round
+  .shade
+    z-index 17
+    animation shadeBottom 2s ease-in-out forwards
+    animation-delay 1s
+    transform translateY(-100%)
+    background-color #060B18
 
-@keyframes rotate
-  100%
-    transform: rotate(360deg)
-
-@keyframes dash
+@keyframes shade
   0%
-    stroke-dasharray: 1, 200
-    stroke-dashoffset: 0
+    transform translateX(-100%)
+
+  30%
+    transform translateX(-70%)
 
   50%
-    stroke-dasharray: 89, 200
-    stroke-dashoffset: -35px
+    height 3px
+    transform translateX(0)
 
   100%
-    stroke-dasharray: 89, 200
-    stroke-dashoffset: -124px
+    height 100vh
+    transform translateX(0)
+
+@keyframes scaleLogo
+  0%
+    transform scale(0.6)
+
+  100%
+    transform scale(1.2)
+
+@keyframes shadeBottom
+  0%
+    transform translateY(-100%)
+
+  50%
+    transform translateY(0)
+
+  100%
+    transform translateY(100%)
+
+@keyframes shadeOut
+  0%
+    transform translateY(0)
+
+  100%
+    transform translateY(100%)

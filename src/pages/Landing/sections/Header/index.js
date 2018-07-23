@@ -33,17 +33,12 @@ class Main extends Component {
               subTitle="Insighty Studio"
               title="We Create Web & Mobile Applications That’ll Delight Your Users"
             />
-            <Paragraph animated>
+            <Paragraph>
               Insighty is a software development studio with a focus on creating apps that solve
               business problems. We help our clients connect with customers and stand out from
               the chaos of the digital world.
             </Paragraph>
-            <div className="buttons"
-                 data-aos="fade-up"
-                 data-aos-easing="ease-out-sine"
-                 data-aos-duration="700"
-                 data-aos-delay="400"
-            >
+            <div className="buttons">
               <Link smooth to="services" duration={700} onClick={() => this.onClickExplore()}>
                 <Button title="explore" className="explore-btn">
                   <ExploreButtonIcon />

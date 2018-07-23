@@ -2,6 +2,7 @@ import React, {PureComponent, Component} from 'react';
 import PropTypes from 'prop-types';
 import provideScrollPosition from 'react-provide-scroll-position';
 import ScrollUpButton from 'components/ScrollUpButton';
+import Footer from 'components/Footer';
 
 import 'styles/main.styl';
 import './index.styl';
@@ -28,6 +29,7 @@ class LandingPage extends PureComponent {
         <Services />
         <Process />
         <ContactUs />
+        <Footer />
       </div>
     );
   }
