@@ -1,12 +1,15 @@
 import React, {PureComponent} from 'react';
-import {SendButtonIcon} from 'icons';
 import ContactUsForm from 'components/ContactUsForm';
 
 import './index.styl';
 
 class ContactUs extends PureComponent {
   render() {
-    return <ContactUsForm />
+    return (
+      <div className="contact-us">
+        <ContactUsForm />
+      </div>
+    )
   }
 }
 

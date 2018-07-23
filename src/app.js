@@ -11,22 +11,19 @@ import LoaderLine from './pages/Loader/LoaderLine';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-AOS.init();
-
 AOS.init({
   disable: false,
   startEvent: 'DOMContentLoaded',
   initClassName: 'aos-init',
   animatedClassName: 'aos-animate',
   useClassNames: false,
-
-  offset: 120,
+  offset: 40,
   delay: 0,
-  duration: 400,
+  duration: 800,
   easing: 'ease',
-  once: false,
+  once: true,
   mirror: false,
-  anchorPlacement: 'top-bottom',
+  anchorPlacement: 'top'
 });
 
 class App extends Component {
