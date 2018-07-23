@@ -1,4 +1,6 @@
 import React, {PureComponent} from 'react';
+import BodyBackground from 'components/BodyBackground';
+import {betteryetBlue} from 'styles/config';
 
 import Header from './sections/Header';
 import About from './sections/About';
@@ -39,6 +41,7 @@ class BetterYet extends PureComponent {
   render() {
     return (
       <div className="betteryet-page">
+        <BodyBackground color={betteryetBlue} />
         <Header />
         <About />
         {this.renderTopPrototypes()}

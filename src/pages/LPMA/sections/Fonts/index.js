@@ -4,7 +4,7 @@ import FontSection from 'components/Sections/Font';
 
 import './index.styl';
 
-class Font extends PureComponent {
+class Fonts extends PureComponent {
   render() {
     return (
       <FontSection
@@ -20,4 +20,4 @@ class Font extends PureComponent {
   }
 }
 
-export default Font;
+export default Fonts;

@@ -26,19 +26,16 @@ class FooterSection extends PureComponent {
     return (
       <div className={classnames('footer-section', className)}>
         <div className="projects">
-          {projects.map(({name, color, backgroundColor}) => (
-            <div key={backgroundColor} className="project" style={{backgroundColor}}>
+          {projects.map(({name, color, backgroundColor, link}) => (
+            <a href={link} key={backgroundColor} className="project" style={{backgroundColor}}>
               <div className="project-name">
                 {name}
                 <span style={{backgroundColor: color}} />
               </div>
-            </div>
+            </a>
           ))}
         </div>
-        <Footer
-          address="240 Richmond St W, Toronto, ON M5V 1V6"
-          email="hello@insighty.studio"
-        />
+        <Footer />
       </div>
     );
   }
