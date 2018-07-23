@@ -8,7 +8,8 @@ const links = [
   {text: 'Home', to: "home", active: true},
   {text: 'Services', to: "services"},
   {text: 'Process', to: "process"},
-  {text: 'Contact', to: "contact-us"},
+  {text: 'Clients', to: "clients"},
+  {text: 'Contact', to: "contact-us-form"},
 ];
 
 class NavigationBar extends React.Component {

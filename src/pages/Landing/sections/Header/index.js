@@ -41,7 +41,6 @@ class Main extends Component {
               </Link>
             </div>
           </Parallax>
-
           <Illustration />
         </div>
       </div>
