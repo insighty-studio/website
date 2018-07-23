@@ -14,18 +14,19 @@ class Paragraph extends PureComponent {
     animated: false
   };
 
-  render() {
-    return (
-      <div
-        className="paragraph"
-        data-aos={this.props.animated && 'fade-up'}
-        data-aos-easing={this.props.animated && 'ease-out-sine'}
-        data-aos-delay={this.props.animated && '250'}
-      >
-        {this.props.children}
-      </div>
-    );
-  }
+	render() {
+		const {children, animated} = this.props;
+		return (
+			<div
+				className="paragraph"
+				data-aos={animated && 'fade-up'}
+				data-aos-easing={animated && 'ease-out-sine'}
+				data-aos-delay={animated && '250'}
+			>
+				{children}
+			</div>
+		);
+	}
 }
 
 export default Paragraph;

@@ -45,6 +45,7 @@
     "react-animate-on-scroll": "^2.1.5",
     "react-dev-utils": "^5.0.1",
     "react-dom": "^16.4.1",
+    "react-helmet": "^5.2.0",
     "react-hot-loader": "^4.3.3",
     "react-native-parallax-scroll-opacity": "0.0.2",
     "react-provide-scroll-position": "^1.0.2",

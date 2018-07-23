@@ -5,25 +5,20 @@ import './index.styl';
 
 class Footer extends PureComponent {
   static propTypes = {
-    address: PropTypes.string,
-    email: PropTypes.string,
     style: PropTypes.object
   };
 
   static defaultProps = {
-    address: '',
-    email: '',
 		style: null
   };
 
   render() {
-    const {address, email} = this.props;
     return (
       <div className="footer" style={this.props.style}>
         <div className="footer-details">
-          {address}
+          240 Richmond St W, Toronto, ON M5V 1V6
           <br />
-          {email}
+          hello@insighty.studio
         </div>
         <div className="rights">
           © 2018 Insighty All Rights Reserved
