@@ -15,12 +15,13 @@ class Clients extends Component {
   }
 
   render() {
-    const {name, position, comment} = clients[this.state.currentElementIndex];
+    const {name, position, comment, link, page} = clients[this.state.currentElementIndex];
     return (
       <div className="clients">
         <SectionHeading subTitle="our" title="clients" />
         <Client name={name} position={position} comment={comment} key={this.state.currentElementIndex}
-                href="https://clutch.co/profile/insighty#review-516735"
+                href={link}
+                to={page}
         />
         <div className="pagination">{this.renderPagination(clients)}</div>
       </div>

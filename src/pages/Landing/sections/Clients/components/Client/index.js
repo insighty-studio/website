@@ -33,10 +33,9 @@ class Client extends PureComponent {
           <div className="position">{this.props.position}</div>
           <div className="comment">{this.props.comment}</div>
           <div className="buttons">
-            <Button title="full review" className="full-review-btn" to="betteryet"><RightArrowIcon /></Button>
-            <Button title="project details" className="project-details-btn"
-                    href={this.props.href}
-            ><RightArrowIcon />
+            <Button title="full review" className="full-review-btn" href={this.props.href}><RightArrowIcon /></Button>
+            <Button title="project details" className="project-details-btn" to={this.props.to}>
+              <RightArrowIcon />
             </Button>
           </div>
         </div>
