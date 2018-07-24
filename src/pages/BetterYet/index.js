@@ -4,8 +4,8 @@ import {betteryetBlue} from 'styles/config';
 
 import Header from './sections/Header';
 import About from './sections/About';
+import BetterYetLogo from './sections/BetterYetLogo';
 import Prototypes from './sections/Prototypes';
-import Fonts from './sections/Fonts';
 import Colors from './sections/Colors';
 import ContactUs from './sections/ContactUs';
 import Footer from './sections/Footer';
@@ -44,7 +44,7 @@ class BetterYet extends PureComponent {
         <Header />
         <About />
         {this.renderTopPrototypes()}
-        <Fonts />
+        <BetterYetLogo />
         {this.renderBottomPrototypes()}
         <Colors />
         <Illustration />

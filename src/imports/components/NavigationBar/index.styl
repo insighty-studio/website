@@ -1,0 +1,66 @@
+@import '~styles/config.styl'
+
+.pages-navigation-bar
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 9
+
+  +iphone()
+    position relative
+
+  .bar-content
+    padding-top 40px
+    width: 100%
+    max-width 1160px
+    margin: 0 auto
+    display flex
+    justify-content space-between
+    align-items center
+
+    +iphone()
+      display block
+      padding-top: 0
+
+    .links
+      display flex
+      iphoneDisabled()
+
+      a
+        font-size $normal
+        line-height 20px
+        text-decoration none
+        margin-right 32px
+        cursor pointer
+        font-family: "Roboto Mono", sans-serif
+        text-transform: uppercase
+        letter-spacing 1px
+        position: relative
+        color $white
+        transition color .4s
+
+        &:before
+          content ''
+          display: block
+          height: 2px
+          background: $white
+          width: 0
+          position: absolute
+          bottom: -8px
+          right: 0
+          transition width .4s
+
+        &:hover
+          color: $white
+
+          &:before
+            width: 100%
+            left: 0
+
+        &:last-child
+          margin-right 0
+
+        &.active
+          color: #000
+          font-weight: $medium-weight

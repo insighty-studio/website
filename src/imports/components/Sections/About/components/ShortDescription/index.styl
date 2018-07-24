@@ -1,12 +1,13 @@
-.heading
+@import "~styles/config.styl"
+
+.short-description
   font-family "Roboto Mono", sans-serif
   margin-bottom 30px
 
-  .sub-title
+  .title
     display flex
     align-items center
-    margin-bottom 12px
-    opacity 0.4
+    margin-bottom: 12px
     font-size 12px
     line-height 12px
     letter-spacing 4px
@@ -17,16 +18,11 @@
       display block
       height: 1px
       width: 40px
-      margin-right 12px
-      background #BFBFBF
+      background $betteryetYellow
+      margin-right: 12px
 
-    &.betteryet
-      color $betteryetYellow
-      opacity 1
-
-      &:before
-        background $betteryetYellow
-
-  .title
-    font-size 32px
-    line-height 42px
+  .description
+    color $white
+    font-size 24px
+    line-height 32px
+    font-weight normal

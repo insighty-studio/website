@@ -11,8 +11,13 @@
     width 100%
     z-index 1
     margin 0 auto
-    justify-content space-between
+    justify-content space-evenly
+    flex-wrap wrap
+    align-items center
     min-height 450px
+
+    +iphone()
+      justify-content normal
 
     .short ul
       margin 0 auto
@@ -40,13 +45,3 @@
 
       span
         color #FFD900
-
-  .logo
-    display flex
-    justify-content center
-    min-height 700px
-    margin-top 60px
-
-    .logo-bg
-      position absolute
-      margin-top -70px
