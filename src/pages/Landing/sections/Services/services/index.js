@@ -14,10 +14,11 @@ import {
   AutomationIcon
 } from 'icons';
 
-export const Design = [{
+export const Design = [
+  {
   icon: <DesignThinkingIcon/>,
   title: 'Design Thinking'
-},
+  },
   {
     icon: <UIDesignIcon/>,
     title: 'UI Design',
@@ -35,10 +36,11 @@ export const Design = [{
   }
 ];
 
-export const Development = [{
+export const Development = [
+  {
   icon: <MobileAppsIcon/>,
   title: 'Mobile Apps',
-},
+  },
   {
     icon: <WebAppsIcon/>,
     title: 'Web Apps',
@@ -56,10 +58,11 @@ export const Development = [{
   }
 ];
 
-export const Quality = [{
+export const Quality = [
+  {
   icon: <BusinessAnalysisIcon/>,
   title: 'Business Analysis'
-},
+  },
   {
     icon: <QAIcon/>,
     title: 'QA',

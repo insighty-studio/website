@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import SectionHeading from 'components/Typography/SectionHeading';
-import {ClientsBackgroundIcon} from 'icons';
 
+import {ArrowIcons, BackgroundIcons} from './icons';
 import Client from './components/Client';
 import Dot from './components/Dot';
 import clients from './clients';
@@ -15,23 +14,17 @@ class Clients extends Component {
   }
 
   render() {
-    const {name, position, comment, link, page, photo} = clients[this.state.currentElementIndex];
+    const {name, position, comment, href, page, photo, color} = clients[this.state.currentElementIndex];
     return (
       <div className="clients">
-        <SectionHeading subTitle="our" title="clients" />
-        <ReactCSSTransitionGroup
-          transitionName="client"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}
-        >
-          <Client name={name} position={position} comment={comment} key={this.state.currentElementIndex}
-                  href={link}
-                  to={page}
-                  photo={photo}
+        <div className="content" style={{backgroundColor: color}}>
+          <SectionHeading subTitle="our" title="clients" />
+          <Client name={name} position={position} comment={comment} href={href} page={page}
+                  photo={photo} arrowIcon={ArrowIcons[this.state.currentElementIndex]}
           />
-        </ReactCSSTransitionGroup>
-        <div className="pagination">{this.renderPagination(clients)}</div>
-        <div className="background"><ClientsBackgroundIcon /></div>
+          <div className="pagination">{this.renderPagination(clients)}</div>
+          <div className="background">{BackgroundIcons[this.state.currentElementIndex]}</div>
+        </div>
       </div>
     );
   }
