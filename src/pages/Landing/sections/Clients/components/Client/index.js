@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import Button from 'components/Button';
+import {RightArrowIcon} from 'icons';
 
 import './index.styl';
 
@@ -12,7 +13,8 @@ class Client extends PureComponent {
     href: PropTypes.string.isRequired,
     page: PropTypes.string.isRequired,
     photo: PropTypes.string.isRequired,
-    arrowIcon: PropTypes.node.isRequired
+    arrowIcon: PropTypes.node.isRequired,
+    color: PropTypes.string.isRequired
   };
 
   render() {
@@ -25,10 +27,10 @@ class Client extends PureComponent {
           <div className="comment">{this.props.comment}</div>
           <div className="buttons">
             <Button title="full review" className="full-review-btn" href={this.props.href}>
-              {this.props.arrowIcon}
-              </Button>
+              <RightArrowIcon color={this.props.color} />
+            </Button>
             <Button title="project details" className="project-details-btn" href={this.props.page}>
-              {this.props.arrowIcon}
+              <RightArrowIcon color={this.props.color} />
             </Button>
           </div>
         </div>

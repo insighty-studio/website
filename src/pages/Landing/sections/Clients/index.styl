@@ -1,4 +1,10 @@
 .clients
+  .background
+    position absolute
+    min-height 762px
+    height 100%
+    width 100%
+
   .content
     min-height 762px
     position relative
@@ -8,6 +14,10 @@
     align-items center
     height 100vh
     padding 120px 0
+
+    span
+      display flex
+      justify-content center
 
     .section-heading
       z-index 2
@@ -21,29 +31,5 @@
     .element:last-child
       margin-right 0
 
-    .background
-      left 50%
-      bottom 0
-      position absolute
-      margin-left 138px
-
       svg
         vertical-align middle
-
-.example-enter {
-  opacity: 0.01;
-}
-
-.example-enter.example-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
-}
-
-.example-leave {
-  opacity: 1;
-}
-
-.example-leave.example-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
-}
