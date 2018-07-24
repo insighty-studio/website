@@ -1,14 +1,16 @@
 @import "~styles/config.styl"
 
 .client
+  position absolute
   z-index 1
   display flex
   width 774px
 
   .client-photo
-    width 160px
-    height 160px
-    border-radius 50%
+    img
+      width 160px
+      height 160px
+      border-radius 50%
 
   .client-overview
     margin-left 40px
@@ -55,12 +57,16 @@
     .project-details-btn
       margin-left 40px
 
-  .background
-    z-index -1
-    left 50%
-    bottom 0
-    position absolute
-    margin-left 138px
+.client-enter
+  opacity 0.01
 
-    svg
-      vertical-align middle
+.client-enter.client-enter-active
+  opacity 1
+  transition opacity 500ms ease-in
+
+.client-leave
+  opacity 1
+
+.client-leave.client-leave-active
+  opacity 0.01
+  transition opacity 300ms ease-in
