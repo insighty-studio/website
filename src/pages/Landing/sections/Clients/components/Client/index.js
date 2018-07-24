@@ -13,7 +13,6 @@ class Client extends PureComponent {
     href: PropTypes.string.isRequired,
     page: PropTypes.string.isRequired,
     photo: PropTypes.string.isRequired,
-    arrowIcon: PropTypes.node.isRequired,
     color: PropTypes.string.isRequired
   };
 
