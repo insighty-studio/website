@@ -34,7 +34,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({ready: true}), 0);
+    setTimeout(() => this.setState({ready: true}), 2000);
   }
 
   renderRoutes() {
@@ -55,7 +55,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="root">
-          {/*<Loader />*/}
+          <Loader />
           {this.state.ready && this.renderRoutes()}
         </div>
       </BrowserRouter>
