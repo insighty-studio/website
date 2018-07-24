@@ -10,8 +10,8 @@ class SectionHeading extends PureComponent {
   };
 
   static defaultProps = {
-		subTitle: '',
-		title: ''
+    subTitle: '',
+    title: ''
   };
 
   render() {

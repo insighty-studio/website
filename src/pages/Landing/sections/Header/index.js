@@ -3,14 +3,12 @@ import {Parallax} from 'react-scroll-parallax';
 import {Link} from 'react-scroll';
 import {ExploreButtonIcon} from 'icons';
 import {trackEvent} from 'analytics';
-
-import Button from 'components/Button';
 import Heading from 'components/Typography/Heading';
 import Paragraph from 'components/Typography/Paragraph';
+import Button from 'components/Button';
 
 import NavigationBar from './components/NavigationBar';
 import Illustration from './components/Illustration';
-
 import './index.styl';
 
 class Header extends Component {

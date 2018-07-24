@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
-import classnames from 'classnames';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 
 import './index.styl';
 

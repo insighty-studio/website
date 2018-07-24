@@ -2,14 +2,14 @@ import React, {Component} from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import 'normalize.css';
 import 'styles/main.styl';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-import Landing from './pages/Landing';
 import Loader from './pages/Loader';
+import Landing from './pages/Landing';
 import BetterYet from './pages/BetterYet';
 import LPMA from './pages/LPMA';
 import LoaderLine from './pages/Loader/LoaderLine';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 AOS.init({
   disable: false,

@@ -9,9 +9,6 @@ class Illustration extends PureComponent {
         <div className="notebook-illustration">
           <img src={require('./images/notebook.png')} />
         </div>
-        <div className="cards-illustration">
-          <img src={require('./images/cards.png')} />
-        </div>
       </div>
     )
   }

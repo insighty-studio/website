@@ -4,14 +4,12 @@ import provideScrollPosition from 'react-provide-scroll-position';
 import ScrollUpButton from 'components/ScrollUpButton';
 import Footer from 'components/Footer';
 
-import 'styles/main.styl';
-import './index.styl';
-
 import Header from './sections/Header';
 import Services from './sections/Services';
 import Process from './sections/Process';
 import Clients from './sections/Clients';
 import ContactUs from './sections/ContactUs';
+import './index.styl';
 
 class LandingPage extends PureComponent {
   static propTypes = {

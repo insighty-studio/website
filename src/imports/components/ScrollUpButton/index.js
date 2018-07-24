@@ -1,8 +1,8 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import Scroll from 'react-scroll';
 import {ScrollUpBtnIcon} from 'icons';
-import classnames from 'classnames';
 
 import './index.styl';
 

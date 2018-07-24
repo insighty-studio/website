@@ -1,11 +1,11 @@
 import React, {PureComponent} from 'react';
 import classnames from 'classnames';
+import request from 'utils/request'
 import {SendButtonIcon} from 'icons';
 import SectionHeading from 'components/Typography/SectionHeading';
 import Input from 'components/Input';
 import TextArea from 'components/TextArea';
 import Button from 'components/Button';
-import request from 'utils/request'
 import {trackEvent} from 'analytics';
 
 import './index.styl';

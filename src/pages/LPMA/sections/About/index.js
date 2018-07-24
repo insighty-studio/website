@@ -1,5 +1,4 @@
 import React, {PureComponent} from 'react';
-
 import {LPMATitle} from 'icons';
 import AboutSection from 'components/Sections/About';
 
