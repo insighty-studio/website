@@ -3,19 +3,18 @@ import PropTypes from 'prop-types';
 
 import Heading from 'components/Typography/Heading';
 import Paragraph from 'components/Typography/Paragraph';
-
 import './index.styl';
 
 class Description extends PureComponent {
   static propTypes = {
-		subtitle: PropTypes.string,
-		title: PropTypes.string,
+    subtitle: PropTypes.string,
+    title: PropTypes.string,
     text: PropTypes.string
   };
 
   static defaultProps = {
-		subtitle: '',
-		title: '',
+    subtitle: '',
+    title: '',
     text: ''
   };
 

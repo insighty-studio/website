@@ -3,10 +3,9 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import SectionHeading from 'components/Typography/SectionHeading';
 import {ClientsBackgroundIcon} from 'icons';
 
-import clients from './clients';
 import Client from './components/Client';
 import Dot from './components/Dot';
-
+import clients from './clients';
 import './index.styl';
 
 class Clients extends Component {

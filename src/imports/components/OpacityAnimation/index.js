@@ -15,8 +15,7 @@ class OpacityAnimation extends PureComponent {
   static defaultProps = {
     delay: 500,
     animateIn: 'fadeIn',
-    animateOnce: true,
-    children: null
+    animateOnce: true
   };
 
   render() {

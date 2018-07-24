@@ -15,10 +15,7 @@ class FontSection extends PureComponent {
   };
 
   static defaultProps = {
-    className: '',
-    name: '',
-    company: '',
-    desc: '',
+    className: ''
   };
 
   render() {

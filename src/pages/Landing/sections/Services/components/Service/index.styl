@@ -1,22 +1,20 @@
-@import '~styles/config.styl'
-
 .service
   display flex
   margin-bottom 200px
 
   +iphone()
     margin-bottom: 64px
-    display: block
-    width: 100%
-    padding: 0 40px
-    padding-bottom: 210px
-    position: relative
+    display block
+    width 100%
+    padding 0 40px
+    padding-bottom 210px
+    position relative
 
   &:last-child
     margin-bottom 160px
 
     +iphone()
-      margin-bottom: 64px
+      margin-bottom 64px
 
   .service-icons
     display grid
@@ -25,11 +23,11 @@
 
     +iphone()
       grid-gap 40px
-      position: absolute
+      position absolute
       bottom: 0
-      left: 0
-      width: 100%
-      padding: 0 40px
+      left 0
+      width 100%
+      padding 0 40px
 
     .service-icon
       align-items center
@@ -46,4 +44,4 @@
         white-space nowrap
 
         +iphone()
-          font-size: 12px
+          font-size 12px

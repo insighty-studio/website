@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
-import {BetterYetTitle} from './icons';
 
+import {BetterYetTitle} from './icons';
 import './index.styl';
 
 class Header extends PureComponent {

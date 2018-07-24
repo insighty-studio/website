@@ -2,15 +2,13 @@ import React, {Component} from 'react';
 import {Parallax} from 'react-scroll-parallax';
 import {Link} from 'react-scroll';
 import {trackEvent} from "analytics";
-
-import Button from 'components/Button';
+import {ExploreButtonIcon} from 'icons';
 import Heading from 'components/Typography/Heading';
 import Paragraph from 'components/Typography/Paragraph';
-import {ExploreButtonIcon} from 'icons';
+import Button from 'components/Button';
 
 import NavigationBar from './components/NavigationBar';
 import Illustration from './components/Illustration';
-
 import './index.styl';
 
 class Main extends Component {

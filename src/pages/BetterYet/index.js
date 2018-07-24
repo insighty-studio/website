@@ -10,7 +10,6 @@ import Colors from './sections/Colors';
 import ContactUs from './sections/ContactUs';
 import Footer from './sections/Footer';
 import Illustration from './sections/Illustration';
-
 import './index.styl';
 
 class BetterYet extends PureComponent {

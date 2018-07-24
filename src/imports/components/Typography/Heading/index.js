@@ -17,18 +17,18 @@ class Title extends PureComponent {
   };
 
   render() {
-  	const {animated, subTitle} = this.props;
+  	const {animated, subTitle, title} = this.props;
 
     return (
       <div className="heading">
         {subTitle && <div className="sub-title">{subTitle}</div>}
         <div
           className="title"
-          data-aos={this.props.animated && 'fade-up'}
-          data-aos-easing={this.props.animated && 'ease-out'}
-          data-aos-delay={this.props.animated && '40'}
+          data-aos={animated && 'fade-up'}
+          data-aos-easing={animated && 'ease-out'}
+          data-aos-delay={animated && '40'}
         >
-          {this.props.title}
+          {title}
         </div>
       </div>
     );

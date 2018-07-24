@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import AboutSection from 'components/Sections/About';
-import {AboutBackground, AboutLogo} from './icons';
 
+import {AboutBackground, AboutLogo} from './icons';
 import './index.styl';
 
 class About extends PureComponent {
