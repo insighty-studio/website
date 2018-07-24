@@ -9,7 +9,7 @@ class Footer extends PureComponent {
   };
 
   static defaultProps = {
-		style: null
+    style: null
   };
 
   render() {
@@ -17,7 +17,7 @@ class Footer extends PureComponent {
       <div className="footer" style={this.props.style}>
         <div className="footer-details">
           240 Richmond St W, Toronto, ON M5V 1V6
-          <br />
+          <br/>
           hello@insighty.studio
         </div>
         <div className="rights">

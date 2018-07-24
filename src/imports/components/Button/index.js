@@ -40,9 +40,13 @@ class Button extends PureComponent {
   }
 
   provideLink(href, to, title) {
-    if (href) return <a target="_blank" href={href}>{title}</a>
-    else if (to) return <Link to={to}><span className={to && 'fix'}>{title}</span></Link>
-    else return <span>{title}</span>
+    if (href) {
+      return <a target="_blank" href={href}>{title}</a>
+    } else if (to) {
+      return <Link to={to}><span className={to && 'fix'}>{title}</span></Link>
+    } else {
+      return <span>{title}</span>
+    }
   }
 }
 

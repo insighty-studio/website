@@ -1,31 +1,29 @@
-@import '~styles/config.styl'
-
 .header
   height 100vh
-  overflow: hidden
-  background-image: linear-gradient(-180deg, rgba(0,84,255,0.00) 0%, rgba(0,77,255,0.10) 100%)
+  overflow hidden
+  background-image linear-gradient(-180deg, rgba(0,84,255,0.00) 0%, rgba(0,77,255,0.10) 100%)
 
   +iphone()
-    padding: 40px
+    padding 40px
     background url(./images/main-art-mobile@2x.png) center bottom no-repeat
     background-size 100% auto
-    height: auto
+    height auto
 
   .content
     display flex
     flex-direction row
     max-width 1160px
     margin 0 auto
-    height: 100%
-    position: relative
+    height 100%
+    position relative
     align-items center
-    padding-top: 48px
+    padding-top 48px
 
     +iphone()
-      max-width: 100%
-      width: 100%
-      padding-top: 0
-      display: block
+      max-width 100%
+      width 100%
+      padding-top 0
+      display block
 
     .content-info
       display flex
@@ -35,14 +33,14 @@
       width 440px
 
       +iphone()
-        width: 100%
-        margin: 0
+        width 100%
+        margin 0
         display block
-        margin-top: 16px
+        margin-top 16px
 
       .heading
         +iphone()
-          margin: 24px 0
+          margin 24px 0
 
       .paragraph
         opacity 0.8
@@ -67,4 +65,4 @@
           margin-right 32px
 
           svg
-            margin-top: 1px
+            margin-top 1px

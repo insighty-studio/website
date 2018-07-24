@@ -1,0 +1,28 @@
+@import "~styles/config.styl"
+
+.short-description
+  font-family "Roboto Mono", sans-serif
+  margin-bottom 30px
+
+  .title
+    display flex
+    align-items center
+    margin-bottom: 12px
+    font-size 12px
+    line-height 12px
+    letter-spacing 4px
+    text-transform uppercase
+
+    &:before
+      content: ''
+      display block
+      height: 1px
+      width: 40px
+      background $betteryetYellow
+      margin-right: 12px
+
+  .description
+    color $white
+    font-size 24px
+    line-height 32px
+    font-weight normal

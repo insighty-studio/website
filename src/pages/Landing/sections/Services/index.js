@@ -1,9 +1,8 @@
 import React, {PureComponent} from 'react';
-
 import SectionHeading from 'components/Typography/SectionHeading';
+
 import Service from './components/Service';
 import {Design, Development, Quality} from './services';
-
 import './index.styl';
 
 class Services extends PureComponent {

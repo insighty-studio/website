@@ -1,26 +1,25 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-
-import Description from './Description';
+import Description from 'components/BigDescription';
 
 import './index.styl';
 
 class Service extends PureComponent {
-	static propTypes = {
-		subtitle: PropTypes.string,
-		title: PropTypes.string,
-	  text: PropTypes.string,
-	  left: PropTypes.bool,
-	  icons: PropTypes.arrayOf(PropTypes.object)
-	};
+  static propTypes = {
+    subtitle: PropTypes.string,
+    title: PropTypes.string,
+    text: PropTypes.string,
+    left: PropTypes.bool,
+    icons: PropTypes.arrayOf(PropTypes.object)
+  };
 
-	static defaultProps = {
-		subtitle: '',
-		title: '',
-	  text: '',
-	  left: false,
-	  icons: null
-	};
+  static defaultProps = {
+    subtitle: '',
+    title: '',
+    text: '',
+    left: false,
+    icons: null
+  };
 
   renderIcons() {
     return (
@@ -46,23 +45,24 @@ class Service extends PureComponent {
     );
   }
 
-	render() {
-	  const {
-	    title, subtitle, text, left
-	  } = this.props;
+  render() {
+    const {
+      title, subtitle, text, left
+    } = this.props;
 
-	  return (
+    return (
       <div className="service">
         {left && this.renderIcons()}
-				<Description
-					subtitle={subtitle}
-					title={title}
-					text={text}
-				/>
+        <Description
+          className="landing"
+          subtitle={subtitle}
+          title={title}
+          text={text}
+        />
         {!left && this.renderIcons()}
       </div>
-	  );
-	}
+    );
+  }
 }
 
 export default Service;

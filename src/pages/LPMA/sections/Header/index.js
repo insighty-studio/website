@@ -1,5 +1,4 @@
 import React, {PureComponent} from 'react';
-
 import {LPMATitle, LPMAGraph} from 'icons';
 
 import './index.styl';

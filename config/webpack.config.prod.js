@@ -119,7 +119,12 @@ module.exports = {
                       },
                     },
                     {
-                      loader: require.resolve('stylus-loader')
+                      loader: require.resolve('stylus-loader'),
+                      options: {
+                        import: [
+                          path.resolve('src/imports/styles/config.styl'),
+                        ],
+                      }
                     },
                   ],
                 },
