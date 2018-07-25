@@ -39,7 +39,7 @@ class Clients extends Component {
           <div className="background" style={{backgroundColor: color}} key={currentElementIndex} />
         </ReactCSSTransitionGroup>
         <div className="content">
-          <SectionHeading subTitle="our" title="clients" />
+          <SectionHeading subTitle="what our" title="clients say" />
           <ReactCSSTransitionGroup
             transitionName="client"
             transitionEnterTimeout={500}
