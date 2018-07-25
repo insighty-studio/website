@@ -18,7 +18,7 @@ class Clients extends Component {
     const {name, position, comment, link, page, photo} = clients[this.state.currentElementIndex];
     return (
       <div className="clients">
-        <SectionHeading subTitle="our" title="clients" />
+        <SectionHeading subTitle="what our" title="clients say" />
         <ReactCSSTransitionGroup
           transitionName="client"
           transitionEnterTimeout={500}
