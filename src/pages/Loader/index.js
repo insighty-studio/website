@@ -10,7 +10,7 @@ class Loader extends PureComponent {
         <div className="loader">
           <InsightyLogo />
           <div className="light-shade" />
-          <div className="shade" />
+          <div className="dark-shade" />
         </div>
       </div>
     );

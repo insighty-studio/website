@@ -14,64 +14,67 @@ import {
   AutomationIcon
 } from 'icons';
 
-export const Design = [{
-  icon: <DesignThinkingIcon/>,
-  title: 'Design Thinking'
-},
+export const Design = [
   {
-    icon: <UIDesignIcon/>,
+    icon: <DesignThinkingIcon />,
+    title: 'Design Thinking'
+  },
+  {
+    icon: <UIDesignIcon />,
     title: 'UI Design',
     animationDelay: 200,
   },
   {
-    icon: <UXDesignIcon/>,
+    icon: <UXDesignIcon />,
     title: 'UX Design',
     animationDelay: 400,
   },
   {
-    icon: <PrototypeIcon/>,
+    icon: <PrototypeIcon />,
     title: 'Prototype',
     animationDelay: 600,
   }
 ];
 
-export const Development = [{
-  icon: <MobileAppsIcon/>,
-  title: 'Mobile Apps',
-},
+export const Development = [
   {
-    icon: <WebAppsIcon/>,
+    icon: <MobileAppsIcon />,
+    title: 'Mobile Apps',
+  },
+  {
+    icon: <WebAppsIcon />,
     title: 'Web Apps',
     animationDelay: 200,
   },
   {
-    icon: <ApisIcon/>,
+    icon: <ApisIcon />,
     title: 'Apis',
     animationDelay: 400
   },
   {
-    icon: <DesktopAppsIcon/>,
+    icon: <DesktopAppsIcon />,
     title: 'Desktop Apps',
     animationDelay: 600
   }
 ];
 
-export const Quality = [{
-  icon: <BusinessAnalysisIcon/>,
-  title: 'Business Analysis'
-},
+export const Quality = [
   {
-    icon: <QAIcon/>,
+    icon: <BusinessAnalysisIcon />,
+    title: 'Business Analysis'
+  },
+  {
+    icon: <QAIcon />,
     title: 'QA',
     animationDelay: 200,
   },
   {
-    icon: <ProjectManagementIcon/>,
+    icon: <ProjectManagementIcon />,
     title: 'Project Management',
     animationDelay: 400,
   },
   {
-    icon: <AutomationIcon/>,
+    icon: <AutomationIcon />,
     title: 'Automation',
     animationDelay: 600,
   }

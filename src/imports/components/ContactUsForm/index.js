@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, {PureComponent} from 'react';
 import classnames from 'classnames';
 import request from 'utils/request'
@@ -6,9 +7,9 @@ import SectionHeading from 'components/Typography/SectionHeading';
 import Input from 'components/Input';
 import TextArea from 'components/TextArea';
 import Button from 'components/Button';
+import {trackEvent} from 'analytics';
 
 import './index.styl';
-import {trackEvent} from "../../analytics";
 
 const WEBHOOK_URL = 'https://hooks.slack.com/services/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';
 

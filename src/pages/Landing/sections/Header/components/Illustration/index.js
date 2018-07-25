@@ -14,7 +14,9 @@ class Illustration extends PureComponent {
           offsetYMin={-5}
           slowerScrollRate
         >
-          <div className="illustration cloud"><CloudIcon /></div>
+          <div className="illustration cloud">
+            <CloudIcon />
+          </div>
         </Parallax>
         <Parallax
           className="parallax person"

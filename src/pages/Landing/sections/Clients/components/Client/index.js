@@ -1,3 +1,4 @@
+/* eslint-disable import/no-dynamic-require */
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import Button from 'components/Button';
@@ -11,22 +12,36 @@ class Client extends PureComponent {
     position: PropTypes.string.isRequired,
     comment: PropTypes.string.isRequired,
     href: PropTypes.string.isRequired,
-    to: PropTypes.string.isRequired,
-    photo: PropTypes.string.isRequired
+    page: PropTypes.string.isRequired,
+    photo: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired
   };
 
   render() {
+    const {
+      name, position, comment, href, page, photo, color
+    } = this.props;
     return (
       <div className="client">
-        <div className="client-photo"><img src={require(`../../images/${this.props.photo}.png`)} alt="" /></div>
+        <div className="client-photo">
+          <img src={require(`../../images/${photo}.png`)} alt="" />
+        </div>
         <div className="client-overview">
-          <div className="name">{this.props.name}</div>
-          <div className="position">{this.props.position}</div>
-          <div className="comment">{this.props.comment}</div>
+          <div className="name">
+            {name}
+          </div>
+          <div className="position">
+            {position}
+          </div>
+          <div className="comment">
+            {comment}
+          </div>
           <div className="buttons">
-            <Button title="full review" className="full-review-btn" href={this.props.href}><RightArrowIcon /></Button>
-            <Button title="project details" className="project-details-btn" to={this.props.to}>
-              <RightArrowIcon />
+            <Button title="full review" className="full-review-btn" href={href}>
+              <RightArrowIcon color={color} />
+            </Button>
+            <Button title="project details" className="project-details-btn" href={page}>
+              <RightArrowIcon color={color} />
             </Button>
           </div>
         </div>

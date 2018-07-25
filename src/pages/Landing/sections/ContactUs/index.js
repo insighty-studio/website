@@ -7,7 +7,7 @@ class ContactUs extends PureComponent {
       <div className="contact-us">
         <ContactUsForm />
       </div>
-    )
+    );
   }
 }
 

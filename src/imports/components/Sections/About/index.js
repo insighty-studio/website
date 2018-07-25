@@ -24,14 +24,12 @@ class AboutSection extends PureComponent {
   };
 
   static defaultProps = {
-    className: '',
-    logo: null,
-    shortDesc: {},
-    story: {}
+    className: ''
   };
 
   render() {
     const {
+      // eslint-disable-next-line no-unused-vars
       className, shortDesc: {year, client, services}, story: {name, desc}, logo
     } = this.props;
 
@@ -40,9 +38,15 @@ class AboutSection extends PureComponent {
         <div className="desc">
           <div className="short">
             <ul>
-              <li><ShortDescription title="Year" description={year} /></li>
-              <li><ShortDescription title="Client" description={client} /></li>
-              <li><ShortDescription title="Services" description={services} /></li>
+              <li>
+                <ShortDescription title="Year" description={year} />
+              </li>
+              <li>
+                <ShortDescription title="Client" description={client} />
+              </li>
+              <li>
+                <ShortDescription title="Services" description={services} />
+              </li>
             </ul>
           </div>
           <Description

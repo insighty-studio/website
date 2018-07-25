@@ -5,7 +5,7 @@ import './index.styl';
 
 class ContactUs extends PureComponent {
   render() {
-    return <ContactUsForm />
+    return <ContactUsForm />;
   }
 }
 
