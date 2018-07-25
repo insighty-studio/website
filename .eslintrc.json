@@ -24,7 +24,6 @@
     "import/prefer-default-export": "off",
     "import/first": "off",
     "import/extensions": "off",
-    "import/no-unresolved": "off",
     "react/no-array-index-key": "off",
     "react/no-multi-comp": "off",
     "react/no-string-refs": "off",
@@ -39,5 +38,15 @@
     "jsx-a11y/href-no-hash": "off",
     "jsx-a11y/label-has-for": "off",
     "jsx-a11y/anchor-is-valid": ["warn", {"aspects": ["invalidHref"]}]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": [
+          "node_modules",
+          "src/imports"
+        ]
+      }
+    }
   }
 }
