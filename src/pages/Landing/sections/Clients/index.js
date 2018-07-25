@@ -13,8 +13,22 @@ class Clients extends Component {
     this.state = {currentElementIndex: 0};
   }
 
+  renderPagination(data, currentElementIndex) {
+    if (data.length <= 1) return null;
+    return data.map((element, index) => (
+      <Dot
+        key={index}
+        onClick={() => this.setState({currentElementIndex: index})}
+        className={currentElementIndex === index ? 'current' : ''}
+      />
+    ));
+  }
+
   render() {
-    const {name, position, comment, href, page, photo, color} = clients[this.state.currentElementIndex];
+    const {currentElementIndex} = this.state;
+    const {
+      name, position, comment, href, page, photo, color
+    } = clients[currentElementIndex];
     return (
       <div className="clients">
         <ReactCSSTransitionGroup
@@ -22,7 +36,7 @@ class Clients extends Component {
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}
         >
-          <div className="background" style={{backgroundColor: color}} key={this.state.currentElementIndex} />
+          <div className="background" style={{backgroundColor: color}} key={currentElementIndex} />
         </ReactCSSTransitionGroup>
         <div className="content">
           <SectionHeading subTitle="our" title="clients" />
@@ -39,24 +53,15 @@ class Clients extends Component {
               page={page}
               photo={photo}
               color={color}
-              key={this.state.currentElementIndex}
+              key={currentElementIndex}
             />
           </ReactCSSTransitionGroup>
-          <div className="pagination">{this.renderPagination(clients)}</div>
+          <div className="pagination">
+            {this.renderPagination(clients, currentElementIndex)}
+          </div>
         </div>
       </div>
     );
-  }
-
-  renderPagination(clients) {
-    if (clients.length <= 1) return null;
-    return clients.map((element, index) =>
-      <Dot
-        key={index}
-        onClick={() => this.setState({currentElementIndex: index})}
-        className={this.state.currentElementIndex === index ? 'current' : ''}
-      />
-    )
   }
 }
 

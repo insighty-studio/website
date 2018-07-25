@@ -5,16 +5,15 @@ import './index.styl';
 
 class SectionName extends PureComponent {
   static propTypes = {
-    name: PropTypes.string,
-  };
-
-  static defaultProps = {
-    name: '',
+    name: PropTypes.string.isRequired,
   };
 
   render() {
+    const {name} = this.props;
     return (
-      <div className="section-name">{this.props.name}</div>
+      <div className="section-name">
+        {name}
+      </div>
     );
   }
 }

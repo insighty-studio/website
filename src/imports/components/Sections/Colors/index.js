@@ -16,8 +16,7 @@ class ColorsSection extends PureComponent {
   };
 
   static defaultProps = {
-    className: '',
-    colors: {}
+    className: ''
   };
 
   render() {
@@ -29,8 +28,12 @@ class ColorsSection extends PureComponent {
           {colors.map(({name, color, width}) => (
             <div key={color} className="color" style={{backgroundColor: color, width}}>
               <div className="color-info">
-                <div>{name}</div>
-                <div className="hash">{color}</div>
+                <div>
+                  {name}
+                </div>
+                <div className="hash">
+                  {color}
+                </div>
               </div>
             </div>
           ))}

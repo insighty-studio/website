@@ -16,21 +16,21 @@ import {
 
 export const Design = [
   {
-  icon: <DesignThinkingIcon/>,
-  title: 'Design Thinking'
+    icon: <DesignThinkingIcon />,
+    title: 'Design Thinking'
   },
   {
-    icon: <UIDesignIcon/>,
+    icon: <UIDesignIcon />,
     title: 'UI Design',
     animationDelay: 200,
   },
   {
-    icon: <UXDesignIcon/>,
+    icon: <UXDesignIcon />,
     title: 'UX Design',
     animationDelay: 400,
   },
   {
-    icon: <PrototypeIcon/>,
+    icon: <PrototypeIcon />,
     title: 'Prototype',
     animationDelay: 600,
   }
@@ -38,21 +38,21 @@ export const Design = [
 
 export const Development = [
   {
-  icon: <MobileAppsIcon/>,
-  title: 'Mobile Apps',
+    icon: <MobileAppsIcon />,
+    title: 'Mobile Apps',
   },
   {
-    icon: <WebAppsIcon/>,
+    icon: <WebAppsIcon />,
     title: 'Web Apps',
     animationDelay: 200,
   },
   {
-    icon: <ApisIcon/>,
+    icon: <ApisIcon />,
     title: 'Apis',
     animationDelay: 400
   },
   {
-    icon: <DesktopAppsIcon/>,
+    icon: <DesktopAppsIcon />,
     title: 'Desktop Apps',
     animationDelay: 600
   }
@@ -60,21 +60,21 @@ export const Development = [
 
 export const Quality = [
   {
-  icon: <BusinessAnalysisIcon/>,
-  title: 'Business Analysis'
+    icon: <BusinessAnalysisIcon />,
+    title: 'Business Analysis'
   },
   {
-    icon: <QAIcon/>,
+    icon: <QAIcon />,
     title: 'QA',
     animationDelay: 200,
   },
   {
-    icon: <ProjectManagementIcon/>,
+    icon: <ProjectManagementIcon />,
     title: 'Project Management',
     animationDelay: 400,
   },
   {
-    icon: <AutomationIcon/>,
+    icon: <AutomationIcon />,
     title: 'Automation',
     animationDelay: 600,
   }

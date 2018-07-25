@@ -52,11 +52,12 @@ class App extends Component {
   }
 
   render() {
+    const {ready} = this.state;
     return (
       <BrowserRouter>
         <div className="root">
           <Loader />
-          {this.state.ready && this.renderRoutes()}
+          {ready && this.renderRoutes()}
         </div>
       </BrowserRouter>
     );

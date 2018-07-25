@@ -11,17 +11,13 @@ class Prototypes extends PureComponent {
     })).isRequired
   };
 
-  static defaultProps = {
-    prototypes: {},
-  };
-
   renderPrototypes() {
     const {prototypes} = this.props;
     return prototypes.map(({src}, i) => (
       <div className={classnames('prototype', i > 0 && 'mobile-hidden')}>
-        <img height="574" width="283" src={src} />
+        <img alt="" height="574" width="283" src={src} />
       </div>
-    ))
+    ));
   }
 
   render() {

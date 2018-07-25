@@ -7,7 +7,9 @@ class BetterYetLogo extends PureComponent {
     return (
       <div className="betteryet-logo">
         <AboutLogo />
-        <div className="logo-bg"><AboutBackground /></div>
+        <div className="logo-bg">
+          <AboutBackground />
+        </div>
       </div>
     );
   }

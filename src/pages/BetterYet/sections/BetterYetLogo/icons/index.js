@@ -19,7 +19,7 @@ export class AboutBackground extends PureComponent {
           </g>
         </g>
       </svg>
-    )
+    );
   }
 }
 
@@ -94,6 +94,6 @@ export class AboutLogo extends PureComponent {
           </g>
         </g>
       </svg>
-    )
+    );
   }
 }

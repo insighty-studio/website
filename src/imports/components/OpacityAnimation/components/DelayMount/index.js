@@ -2,25 +2,38 @@ import {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 class DelayMount extends PureComponent {
+  static propTypes = {
+    render: PropTypes.bool.isRequired,
+    children: PropTypes.any,
+    transitionEnterDelay: PropTypes.number.isRequired,
+    transitionLeaveTimeout: PropTypes.number.isRequired
+  };
+
+  static defaultProps = {
+    children: null
+  };
+
   constructor(props) {
     super(props);
-
     this.state = {
       shouldMount: false
     };
   }
 
+
   componentDidMount() {
-    if (this.props.render) {
-      this.setEnterTimeout(this.props);
+    const {transitionEnterDelay, render} = this.props;
+    if (render) {
+      this.setEnterTimeout(transitionEnterDelay);
     }
   }
 
-  componentWillUpdate(nextProps, nextState) {
-    if (nextProps.render) {
-      this.setEnterTimeout(nextProps);
+  componentWillUpdate(nextProps) {
+    const {render, transitionEnterDelay, transitionLeaveTimeout} = nextProps;
+    if (render) {
+      this.setEnterTimeout(transitionEnterDelay);
     } else {
-      this.setLeaveTimeout(nextProps);
+      this.setLeaveTimeout(transitionLeaveTimeout);
     }
   }
 
@@ -29,7 +42,7 @@ class DelayMount extends PureComponent {
     this.clearLeaveTimeout();
   }
 
-  setEnterTimeout(props) {
+  setEnterTimeout(transitionEnterDelay) {
     if (this.enterTimeout) {
       return;
     }
@@ -39,10 +52,10 @@ class DelayMount extends PureComponent {
     this.enterTimeout = window.setTimeout(() => {
       this.setState({shouldMount: true});
       this.clearEnterTimeout();
-    }, props.transitionEnterDelay);
+    }, transitionEnterDelay);
   }
 
-  setLeaveTimeout(props) {
+  setLeaveTimeout(transitionLeaveTimeout) {
     if (this.leaveTimeout) {
       return;
     }
@@ -52,7 +65,7 @@ class DelayMount extends PureComponent {
     this.leaveTimeout = window.setTimeout(() => {
       this.setState({shouldMount: false});
       this.clearLeaveTimeout();
-    }, props.transitionLeaveTimeout);
+    }, transitionLeaveTimeout);
   }
 
   clearEnterTimeout() {
@@ -70,21 +83,10 @@ class DelayMount extends PureComponent {
   }
 
   render() {
-    return this.state.shouldMount ? this.props.children : null;
+    const {children} = this.props;
+    const {shouldMount} = this.state;
+    return shouldMount ? children : null;
   }
 }
-
-DelayMount.defaultProps = {
-  render: true,
-  transitionEnterDelay: 0,
-  transitionLeaveTimeout: 0
-};
-
-DelayMount.propTypes = {
-  render: PropTypes.bool.isRequired,
-  children: PropTypes.any,
-  transitionEnterDelay: PropTypes.number.isRequired,
-  transitionLeaveTimeout: PropTypes.number.isRequired
-};
 
 export default DelayMount;

@@ -8,8 +8,8 @@ import Fonts from './sections/Fonts';
 import Illustrations from './sections/Illustrations';
 import Colors from './sections/Colors';
 import Screens from './sections/Screens';
-import ContactUs from "./sections/ContactUs";
-import Footer from "./sections/Footer";
+import ContactUs from './sections/ContactUs';
+import Footer from './sections/Footer';
 import './index.styl';
 
 class LPMA extends PureComponent {

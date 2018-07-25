@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Parallax} from 'react-scroll-parallax';
 import {Link} from 'react-scroll';
-import {trackEvent} from "analytics";
+import {trackEvent} from 'analytics';
 import {ExploreButtonIcon} from 'icons';
 import Heading from 'components/Typography/Heading';
 import Paragraph from 'components/Typography/Paragraph';
@@ -13,7 +13,7 @@ import './index.styl';
 
 class Main extends Component {
   onClickExplore() {
-    trackEvent('Explore clicked')
+    trackEvent('Explore clicked');
   }
 
   render() {

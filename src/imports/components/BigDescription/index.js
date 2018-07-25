@@ -22,12 +22,16 @@ class Description extends PureComponent {
   };
 
   render() {
-    const {title, subtitle, text, page} = this.props;
+    const {
+      title, subtitle, text, page
+    } = this.props;
 
     return (
       <div className={classnames('service-description', page)}>
         <Heading className={page} subTitle={subtitle} title={title} />
-        <Paragraph>{text}</Paragraph>
+        <Paragraph>
+          {text}
+        </Paragraph>
       </div>
     );
   }

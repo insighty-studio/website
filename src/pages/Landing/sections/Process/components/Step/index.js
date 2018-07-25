@@ -18,18 +18,27 @@ class Step extends PureComponent {
   };
 
   render() {
+    const {
+      title, desc, number, first, last
+    } = this.props;
     return (
       <div className="step">
         <div className="step-header" data-aos="fade-right">
           <div className="number">
-            <div className={!this.props.first ? 'line' : 'filler'}/>
-            <div className="circle">{this.props.number}</div>
+            <div className={!first ? 'line' : 'filler'} />
+            <div className="circle">
+              {number}
+            </div>
           </div>
-          <div className={!this.props.last ? 'line' : ''}/>
+          <div className={!last ? 'line' : ''} />
         </div>
         <div className="step-desc">
-          <div data-aos="fade-in" data-aos-easing="ease-in-sine">{this.props.title}</div>
-          <div data-aos="fade-in" data-aos-easing="ease-in-sine" data-aos-delay="250">{this.props.desc}</div>
+          <div data-aos="fade-in" data-aos-easing="ease-in-sine">
+            {title}
+          </div>
+          <div data-aos="fade-in" data-aos-easing="ease-in-sine" data-aos-delay="250">
+            {desc}
+          </div>
         </div>
       </div>
     );

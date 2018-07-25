@@ -15,6 +15,7 @@ class OpacityAnimation extends PureComponent {
   static defaultProps = {
     delay: 500,
     animateIn: 'fadeIn',
+    // eslint-disable-next-line react/default-props-match-prop-types
     animateOnce: true
   };
 

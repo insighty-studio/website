@@ -25,7 +25,7 @@ class Services extends PureComponent {
             subtitle="Development"
             title="See your app in weeks, not months"
             text="You hate software projects that drag on. So do we. That’s why our team creates
-						interactive prototypes within weeks of your brief so you can visualize the end product and
+            interactive prototypes within weeks of your brief so you can visualize the end product and
             request adjustments as quickly as possible."
           />
           <Service
