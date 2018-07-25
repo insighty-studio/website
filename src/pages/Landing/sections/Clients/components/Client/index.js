@@ -1,4 +1,4 @@
-/* eslint-disable import/no-dynamic-require */
+/* eslint-disable import/no-dynamic-require,global-require */
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import Button from 'components/Button';
