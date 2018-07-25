@@ -23,7 +23,7 @@ AOS.init({
   easing: 'ease',
   once: true,
   mirror: false,
-  anchorPlacement: 'top',
+  anchorPlacement: 'top'
 });
 
 class App extends Component {
@@ -40,7 +40,7 @@ class App extends Component {
         '/images/message@2x.png',
         '/images/laptop@2x.png',
         '/images/main-art-mobile@2x.png',
-      ],
+      ]
     };
   }
 
@@ -65,9 +65,9 @@ class App extends Component {
       <BrowserRouter>
         <div className="root">
           <Switch>
-            <Route exact path="/" component={Landing}/>
-            <Route path="/betteryet" component={BetterYet}/>
-            <Route path="/lpma" component={LPMA}/>
+            <Route exact path="/" component={Landing} />
+            <Route path="/betteryet" component={BetterYet} />
+            <Route path="/lpma" component={LPMA} />
           </Switch>
         </div>
       </BrowserRouter>
@@ -76,7 +76,7 @@ class App extends Component {
 
   render() {
     const {
-      ready, images, progress, chunksReady,
+      ready, images, progress, chunksReady
     } = this.state;
     if (!ready) {
       return (
@@ -86,7 +86,7 @@ class App extends Component {
               visibility: 'hidden',
               width: 0,
               height: 0,
-              overflow: 'hidden',
+              overflow: 'hidden'
             }}
           >
             {images.map((src, index) => (
@@ -98,7 +98,7 @@ class App extends Component {
               />
             ))}
           </div>
-          <LoaderLine loading={progress}/>
+          <LoaderLine loading={progress} />
         </Fragment>
       );
     }
@@ -106,7 +106,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="root">
-          <Loader/>
+          <Loader />
           {ready && this.renderRoutes()}
         </div>
       </BrowserRouter>
