@@ -18,7 +18,6 @@
     "max-len": ["error", 120],
     "no-underscore-dangle": ["error", {"allow": ["_id"]}],
     "object-curly-spacing": ["error", "never"],
-    "global-require": "off",
     "import/no-extraneous-dependencies": "off",
     "import/no-absolute-path": "off",
     "import/prefer-default-export": "off",

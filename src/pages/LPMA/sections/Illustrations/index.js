@@ -1,4 +1,5 @@
 import React, {PureComponent} from 'react';
+import LaptopsImage from './img/laptops.png';
 
 import './index.styl';
 
@@ -10,7 +11,7 @@ class Illustrations extends PureComponent {
           Product Development
         </span>
         <div className="illustrations-image">
-          <img alt="LPMA" src={require('./img/laptops.png')} />
+          <img alt="LPMA" src={LaptopsImage} />
         </div>
       </div>
     );

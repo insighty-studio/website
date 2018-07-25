@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react';
 import {LPMATitle} from 'icons';
 import AboutSection from 'components/Sections/About';
 
+import LogoBg from './img/logo-bg.png';
 import './index.styl';
 
 class About extends PureComponent {
@@ -21,7 +22,7 @@ class About extends PureComponent {
           <div className="logo">
             <LPMATitle />
             <div className="logo-bg">
-              <img alt="LPMA" src={require('./img/logo-bg.png')} />
+              <img alt="LPMA" src={LogoBg} />
             </div>
           </div>
         )}
