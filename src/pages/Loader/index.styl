@@ -14,16 +14,16 @@
     display flex
     align-items center
     justify-content center
-    animation shadeOut .8s ease-in-out forwards
-    animation-delay 1.4s
+    animation shadesOut .8s ease-in-out forwards
+    animation-delay 1.2s
     background-color $white
 
     svg
       animation scaleLogo .6s ease-in-out forwards
-      animation-delay .6s
+      animation-delay .4s
       z-index 18
 
-    .light-shade, .shade
+    .light-shade, .dark-shade
       position absolute
       top 0
       height 100vh
@@ -32,22 +32,32 @@
     .light-shade
       z-index 16
       height 3px
-      animation shade 1.4s ease-in-out forwards
+      animation lightShade 1s ease-in-out forwards
       background-color $blue
 
-    .shade
+    .dark-shade
       z-index 17
-      animation shadeBottom 2s ease-in-out forwards
+      animation darkShade 1.6s ease-in-out forwards
       animation-delay .4s
       transform translateY(-100%)
       background-color #060B18
 
-@keyframes shade
+@keyframes lightShade
   0%
     height 3px
 
   100%
     height 100vh
+
+@keyframes darkShade
+  0%
+    transform translateY(-100%)
+
+  40%, 60%
+    transform translateY(0)
+
+  100%
+    transform translateY(100%)
 
 @keyframes scaleLogo
   0%
@@ -56,17 +66,7 @@
   100%
     transform scale(1.2)
 
-@keyframes shadeBottom
-  0%
-    transform translateY(-100%)
-
-  50%
-    transform translateY(0)
-
-  100%
-    transform translateY(100%)
-
-@keyframes shadeOut
+@keyframes shadesOut
   0%
     transform translateY(0)
 

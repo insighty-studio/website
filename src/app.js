@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import 'normalize.css';
 import 'styles/main.styl';
@@ -30,15 +30,34 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ready: 0,
+      ready: false,
+      progress: 0,
+      chunksReady: 0,
       images: [
-        require('./pages/Landing/sections/Header/images/person@2x.png'),
-        require('./pages/Landing/sections/Header/images/plant@2x.png'),
-        require('./pages/Landing/sections/Header/images/program@2x.png'),
-        require('./pages/Landing/sections/Header/images/message@2x.png'),
-        require('./pages/Landing/sections/Header/images/laptop@2x.png'),
+        '/images/person@2x.png',
+        '/images/plant@2x.png',
+        '/images/program@2x.png',
+        '/images/message@2x.png',
+        '/images/laptop@2x.png',
+        '/images/main-art-mobile@2x.png',
       ]
     };
+  }
+
+  componentDidMount() {
+    const transitionDuration = 800;
+
+    const interval = setInterval(() => {
+      const {progress} = this.state;
+
+      if (this.state.chunksReady === this.state.images.length) {
+        this.setState({progress: 100});
+        clearInterval(interval);
+        setTimeout(() => this.setState({ready: true}), transitionDuration);
+      } else if (this.state.progress < 90) {
+        this.setState({progress: progress < 25 ? 25 : progress + 7});
+      }
+    }, transitionDuration);
   }
 
   renderRoutes() {
@@ -56,18 +75,26 @@ class App extends Component {
   }
 
   render() {
-    if (this.state.ready < this.state.images.length) {
+    if (!this.state.ready) {
       return (
-        <div>
-          {this.state.images.map(src => (
-            <img
-              src={src}
-              style={{display: 'none'}}
-              onLoad={() => this.setState({ready: this.state.ready + 1})}
-            />
-          ))}
-          <LoaderLine loading={(this.state.ready + 1) / this.state.images.length * 100} />
-        </div>
+        <Fragment>
+          <div
+            style={{
+              visibility: "hidden",
+              width: 0,
+              height: 0,
+              overflow: "hidden"
+            }}
+          >
+            {this.state.images.map(src => (
+              <img
+                src={src}
+                onLoad={() => this.setState({chunksReady: this.state.chunksReady + 1})}
+              />
+            ))}
+          </div>
+          <LoaderLine loading={this.state.progress} />
+        </Fragment>
       );
     }
 
