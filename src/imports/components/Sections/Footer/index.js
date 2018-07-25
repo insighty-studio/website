@@ -17,7 +17,6 @@ class FooterSection extends PureComponent {
 
   static defaultProps = {
     className: '',
-    projects: {},
   };
 
   render() {
@@ -26,7 +25,9 @@ class FooterSection extends PureComponent {
     return (
       <div className={classnames('footer-section', className)}>
         <div className="projects">
-          {projects.map(({name, color, backgroundColor, link}) => (
+          {projects.map(({
+            name, color, backgroundColor, link
+          }) => (
             <a href={link} key={backgroundColor} className="project" style={{backgroundColor}}>
               <div className="project-name">
                 {name}

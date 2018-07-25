@@ -16,7 +16,9 @@ class BodyBackground extends PureComponent {
 
     return (
       <Helmet>
-        <style>{`body { background-color: ${color}; }`}</style>
+        <style>
+          {`body { background-color: ${color}; }`}
+        </style>
       </Helmet>
     );
   }

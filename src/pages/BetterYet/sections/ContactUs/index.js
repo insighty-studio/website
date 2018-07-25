@@ -3,7 +3,7 @@ import ContactUsForm from 'components/ContactUsForm';
 
 class ContactUs extends PureComponent {
   render() {
-    return <ContactUsForm />
+    return <ContactUsForm />;
   }
 }
 

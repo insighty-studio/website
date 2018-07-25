@@ -21,9 +21,10 @@ class LandingPage extends PureComponent {
   };
 
   render() {
+    const {scrollTop} = this.props;
     return (
       <div className="landing">
-        <ScrollUpButton percentagesScrolled={this.props.scrollTop} />
+        <ScrollUpButton percentagesScrolled={scrollTop} />
         <Header />
         <Services />
         <Process />

@@ -15,10 +15,15 @@ class SectionHeading extends PureComponent {
   };
 
   render() {
+    const {subTitle, title} = this.props;
     return (
       <div className="section-heading">
-        <div className="sub-title">{this.props.subTitle}</div>
-        <div className="title">{this.props.title}</div>
+        <div className="sub-title">
+          {subTitle}
+        </div>
+        <div className="title">
+          {title}
+        </div>
       </div>
     );
   }

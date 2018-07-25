@@ -10,7 +10,6 @@ class Paragraph extends PureComponent {
   };
 
   static defaultProps = {
-    children: '',
     animated: false
   };
 

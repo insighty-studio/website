@@ -6,10 +6,10 @@ import {InsightyLogo} from 'icons';
 import './index.styl';
 
 const links = [
-  {text: 'Home', to: "home"},
-  {text: 'Services', to: "services"},
-  {text: 'Process', to: "process"},
-  {text: 'Contact', to: "contact-us"},
+  {text: 'Home', to: 'home'},
+  {text: 'Services', to: 'services'},
+  {text: 'Process', to: 'process'},
+  {text: 'Contact', to: 'contact-us'},
 ];
 
 class NavigationBar extends React.Component {

@@ -1,4 +1,5 @@
 import React, {PureComponent} from 'react';
+import notebook from './images/notebook.png';
 
 import './index.styl';
 
@@ -7,10 +8,10 @@ class Illustration extends PureComponent {
     return (
       <div className="illustration-section">
         <div className="notebook-illustration">
-          <img src={require('./images/notebook.png')} />
+          <img alt="" src={notebook} />
         </div>
       </div>
-    )
+    );
   }
 }
 

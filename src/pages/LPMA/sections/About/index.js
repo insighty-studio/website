@@ -17,15 +17,14 @@ class About extends PureComponent {
           name: 'Customer Excellence Program',
           desc: 'is enabling real estate agency principals to gather insights about their tenants\' experiences.',
         }}
-
-        logo={
+        logo={(
           <div className="logo">
             <LPMATitle />
             <div className="logo-bg">
               <img alt="LPMA" src={require('./img/logo-bg.png')} />
             </div>
           </div>
-        }
+        )}
       />
     );
   }

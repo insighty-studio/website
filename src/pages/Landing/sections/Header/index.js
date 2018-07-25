@@ -13,7 +13,7 @@ import './index.styl';
 
 class Header extends Component {
   onClickExplore() {
-    trackEvent('Explore clicked')
+    trackEvent('Explore clicked');
   }
 
   render() {

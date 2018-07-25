@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {InsightyLogo} from 'icons';
 
 import './index.styl';
 
@@ -14,9 +13,10 @@ class LoaderLine extends PureComponent {
   };
 
   render() {
+    const {loading} = this.props;
     return (
       <div className="loader-page">
-        <div className="loader-line" style={{width: `${this.props.loading}%`}} />
+        <div className="loader-line" style={{width: `${loading}%`}} />
       </div>
     );
   }

@@ -21,21 +21,23 @@ class Service extends PureComponent {
     icons: null
   };
 
-  renderIcons() {
+  renderIcons(icons) {
     return (
       <div className="service-icons">
-        {this.props.icons.map(({icon, title, animationDelay = 0}) => (
+        {icons.map(({icon, title, animationDelay = 0}) => (
           <div className="service-icon hover-grow" key={title}>
-            <span data-aos="fade-in"
-                  data-aos-easing="ease-in-sine"
-                  data-aos-delay={animationDelay}
+            <span
+              data-aos="fade-in"
+              data-aos-easing="ease-in-sine"
+              data-aos-delay={animationDelay}
             >
               {icon}
             </span>
-            <div className="icon-title no-user-select"
-                 data-aos="fade-in"
-                 data-aos-easing="ease-in-sine"
-                 data-aos-delay={animationDelay + 300}
+            <div
+              className="icon-title no-user-select"
+              data-aos="fade-in"
+              data-aos-easing="ease-in-sine"
+              data-aos-delay={animationDelay + 300}
             >
               {title}
             </div>
@@ -47,19 +49,19 @@ class Service extends PureComponent {
 
   render() {
     const {
-      title, subtitle, text, left
+      title, subtitle, text, left, icons
     } = this.props;
 
     return (
       <div className="service">
-        {left && this.renderIcons()}
+        {left && this.renderIcons(icons)}
         <Description
           className="landing"
           subtitle={subtitle}
           title={title}
           text={text}
         />
-        {!left && this.renderIcons()}
+        {!left && this.renderIcons(icons)}
       </div>
     );
   }

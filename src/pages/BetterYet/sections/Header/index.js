@@ -9,10 +9,10 @@ class Header extends PureComponent {
     return (
       <div className="header-section">
         <NavigationBar />
-        <img className="mobile" src={require('./images/by-mobile.png')} />
+        <img alt="" className="mobile" src={require('./images/by-mobile.png')} />
         <BetterYetTitle />
       </div>
-    )
+    );
   }
 }
 
