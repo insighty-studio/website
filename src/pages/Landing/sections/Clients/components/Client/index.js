@@ -11,8 +11,9 @@ class Client extends PureComponent {
     position: PropTypes.string.isRequired,
     comment: PropTypes.string.isRequired,
     href: PropTypes.string.isRequired,
-    to: PropTypes.string.isRequired,
-    photo: PropTypes.string.isRequired
+    page: PropTypes.string.isRequired,
+    photo: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired
   };
 
   render() {
@@ -24,9 +25,11 @@ class Client extends PureComponent {
           <div className="position">{this.props.position}</div>
           <div className="comment">{this.props.comment}</div>
           <div className="buttons">
-            <Button title="full review" className="full-review-btn" href={this.props.href}><RightArrowIcon /></Button>
-            <Button title="project details" className="project-details-btn" to={this.props.to}>
-              <RightArrowIcon />
+            <Button title="full review" className="full-review-btn" href={this.props.href}>
+              <RightArrowIcon color={this.props.color} />
+            </Button>
+            <Button title="project details" className="project-details-btn" href={this.props.page}>
+              <RightArrowIcon color={this.props.color} />
             </Button>
           </div>
         </div>
