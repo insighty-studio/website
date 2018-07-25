@@ -32,7 +32,7 @@ class FontSection extends PureComponent {
             </div>
             <div className="company">
               <span>
-by
+                by
               </span>
               {' '}
               {company}
