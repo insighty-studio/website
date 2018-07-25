@@ -46,7 +46,7 @@ by
           <div className="font bold">
             <div className="font-size">
               24px
-              <br/>
+              <br />
               Bold
             </div>
             <div className="font-example">
@@ -56,7 +56,7 @@ by
           <div className="font medium">
             <div className="font-size">
               32px
-              <br/>
+              <br />
               Medium
             </div>
             <div className="font-example">
@@ -66,7 +66,7 @@ by
           <div className="font regular">
             <div className="font-size">
               48px
-              <br/>
+              <br />
               Regular
             </div>
             <div className="font-example">
@@ -74,7 +74,7 @@ by
             </div>
           </div>
         </div>
-        <SectionName name="Font"/>
+        <SectionName name="Font" />
       </div>
     );
   }

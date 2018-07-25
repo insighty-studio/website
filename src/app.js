@@ -48,13 +48,13 @@ class App extends Component {
     const transitionDuration = 800;
 
     const interval = setInterval(() => {
-      const {progress} = this.state;
+      const {progress, chunksReady, images} = this.state;
 
-      if (this.state.chunksReady === this.state.images.length) {
+      if (chunksReady === images.length) {
         this.setState({progress: 100});
         clearInterval(interval);
         setTimeout(() => this.setState({ready: true}), transitionDuration);
-      } else if (this.state.progress < 90) {
+      } else if (progress < 90) {
         this.setState({progress: progress < 25 ? 25 : progress + 7});
       }
     }, transitionDuration);
@@ -75,26 +75,29 @@ class App extends Component {
   }
 
   render() {
-    const {ready} = this.state;
-    if (!this.state.ready) {
+    const {
+      ready, images, progress, chunksReady
+    } = this.state;
+    if (!ready) {
       return (
         <Fragment>
           <div
             style={{
-              visibility: "hidden",
+              visibility: 'hidden',
               width: 0,
               height: 0,
-              overflow: "hidden"
+              overflow: 'hidden'
             }}
           >
-            {this.state.images.map(src => (
+            {images.map(src => (
               <img
+                alt=""
                 src={src}
-                onLoad={() => this.setState({chunksReady: this.state.chunksReady + 1})}
+                onLoad={() => this.setState({chunksReady: chunksReady + 1})}
               />
             ))}
           </div>
-          <LoaderLine loading={this.state.progress} />
+          <LoaderLine loading={progress} />
         </Fragment>
       );
     }
