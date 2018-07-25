@@ -45,36 +45,36 @@ by
         <div className="font-types">
           <div className="font bold">
             <div className="font-size">
-24px
-              <br />
-Bold
+              24px
+              <br/>
+              Bold
             </div>
             <div className="font-example">
-Aa
+              Aa
             </div>
           </div>
           <div className="font medium">
             <div className="font-size">
-32px
-              <br />
-Medium
+              32px
+              <br/>
+              Medium
             </div>
             <div className="font-example">
-Aa
+              Aa
             </div>
           </div>
           <div className="font regular">
             <div className="font-size">
-48px
-              <br />
-Regular
+              48px
+              <br/>
+              Regular
             </div>
             <div className="font-example">
-Aa
+              Aa
             </div>
           </div>
         </div>
-        <SectionName name="Font" />
+        <SectionName name="Font"/>
       </div>
     );
   }
