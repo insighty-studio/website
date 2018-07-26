@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import React, {PureComponent} from 'react';
+
 import './index.styl';
 
 class ColorsBackground extends PureComponent {

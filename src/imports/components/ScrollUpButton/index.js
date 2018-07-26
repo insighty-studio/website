@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
@@ -19,6 +18,7 @@ class ScrollUpButton extends PureComponent {
   render() {
     const {percentagesScrolled} = this.props;
     return (
+      // eslint-disable-next-line jsx-a11y/click-events-have-key-events
       <div
         className={classnames('scroll-up-btn',
           percentagesScrolled >= window.innerHeight && 'scroll-up-btn-visible')}

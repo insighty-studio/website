@@ -89,8 +89,9 @@ class App extends Component {
               overflow: 'hidden'
             }}
           >
-            {images.map(src => (
+            {images.map((src, index) => (
               <img
+                key={index}
                 alt=""
                 src={src}
                 onLoad={() => this.setState({chunksReady: chunksReady + 1})}

@@ -1,4 +1,8 @@
 import React, {PureComponent} from 'react';
+import LeftImage from './img/left.png';
+import RightOneImage from './img/right-one.png';
+import RightTwoImage from './img/right-two.png';
+import RightThreeImage from './img/right-three.png';
 
 import './index.styl';
 
@@ -11,13 +15,12 @@ class Screens extends PureComponent {
         </span>
         <div className="screens-images">
           <div className="left">
-            <img alt="LPMA" src={require('./img/left.png')} />
+            <img alt="LPMA" src={LeftImage} />
           </div>
           <div className="right">
-            <img alt="LPMA" src={require('./img/right-one.png')} />
-            <img alt="LPMA" src={require('./img/right-two.png')} />
-            <img alt="LPMA" src={require('./img/right-three.png')} />
-
+            <img alt="LPMA" src={RightOneImage} />
+            <img alt="LPMA" src={RightTwoImage} />
+            <img alt="LPMA" src={RightThreeImage} />
           </div>
         </div>
       </div>
