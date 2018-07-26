@@ -11,6 +11,12 @@ import Colors from './sections/Colors';
 import ContactUs from './sections/ContactUs';
 import Footer from './sections/Footer';
 import Illustration from './sections/Illustration';
+import Image1 from './images/image1.png';
+import Image2 from './images/image2.png';
+import Image3 from './images/image3.png';
+import Image4 from './images/image4.png';
+import Image5 from './images/image5.png';
+import Image6 from './images/image6.png';
 import './index.styl';
 
 class BetterYet extends PureComponent {
@@ -18,9 +24,9 @@ class BetterYet extends PureComponent {
     return (
       <Prototypes
         prototypes={[
-          {src: require('./images/image1.png')},
-          {src: require('./images/image2.png')},
-          {src: require('./images/image3.png')},
+          {src: Image1},
+          {src: Image2},
+          {src: Image3},
         ]}
       />
     );
@@ -30,9 +36,9 @@ class BetterYet extends PureComponent {
     return (
       <Prototypes
         prototypes={[
-          {src: require('./images/image4.png')},
-          {src: require('./images/image5.png')},
-          {src: require('./images/image6.png')},
+          {src: Image4},
+          {src: Image5},
+          {src: Image6},
         ]}
       />
     );

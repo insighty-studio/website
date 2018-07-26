@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
@@ -41,6 +40,7 @@ class Button extends PureComponent {
       className, title, disabled, children, href
     } = this.props;
     return (
+      // eslint-disable-next-line react/button-has-type
       <button
         className={classnames('button', className)}
         disabled={disabled}
