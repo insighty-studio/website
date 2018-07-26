@@ -24,13 +24,12 @@ class AboutSection extends PureComponent {
   };
 
   static defaultProps = {
-    className: ''
+    className: '',
   };
 
   render() {
     const {
-      // eslint-disable-next-line no-unused-vars
-      className, shortDesc: {year, client, services}, story: {name, desc}, logo
+      className, shortDesc: {year, client, services}, story: {title, desc, subtitle}, logo
     } = this.props;
 
     return (
@@ -50,12 +49,9 @@ class AboutSection extends PureComponent {
             </ul>
           </div>
           <Description
-            page="betteryet"
-            subtitle="Mission"
-            title="Loyalty programs for the local shoppers"
-            text="BetterYet missions is to equip small and medium-sized businesses with a simple way to set up
-            loyalty programs for the local shoppers. We are taking care of all the technology related issues
-            from concept to design to implementation."
+            subtitle={subtitle}
+            title={title}
+            text={desc}
           />
         </div>
         <AboutBackground />

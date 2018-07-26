@@ -14,8 +14,10 @@ class About extends PureComponent {
           services: 'UX- and UI- Design, Development',
         }}
         story={{
-          name: 'Customer Excellence Program',
-          desc: 'is enabling real estate agency principals to gather insights about their tenants\' experiences.',
+          title: 'Real estate agency principals to gather insights',
+          desc: 'Customer Excellence Program is enabling real estate agency principals '
+          + 'to gather insights about their tenants experiences.',
+          subtitle: 'Mission'
         }}
         logo={(
           <div className="logo">
