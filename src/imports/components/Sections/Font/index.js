@@ -15,21 +15,28 @@ class FontSection extends PureComponent {
   };
 
   static defaultProps = {
-    className: '',
-    name: '',
-    company: '',
-    desc: '',
+    className: ''
   };
 
   render() {
-    const {className, name, company, desc} = this.props;
+    const {
+      className, name, company, desc
+    } = this.props;
 
     return (
       <div className={classnames('font-section', className)}>
         <div className="font-main-info">
           <div className="font-name">
-            <div className="name">{name}</div>
-            <div className="company"><span>by</span> {company}</div>
+            <div className="name">
+              {name}
+            </div>
+            <div className="company">
+              <span>
+                by
+              </span>
+              {' '}
+              {company}
+            </div>
           </div>
           <div className="font-desc">
             {desc}
@@ -37,16 +44,34 @@ class FontSection extends PureComponent {
         </div>
         <div className="font-types">
           <div className="font bold">
-            <div className="font-size">24px <br />Bold</div>
-            <div className="font-example">Aa</div>
+            <div className="font-size">
+              24px
+              <br />
+              Bold
+            </div>
+            <div className="font-example">
+              Aa
+            </div>
           </div>
           <div className="font medium">
-            <div className="font-size">32px <br />Medium</div>
-            <div className="font-example">Aa</div>
+            <div className="font-size">
+              32px
+              <br />
+              Medium
+            </div>
+            <div className="font-example">
+              Aa
+            </div>
           </div>
           <div className="font regular">
-            <div className="font-size">48px <br />Regular</div>
-            <div className="font-example">Aa</div>
+            <div className="font-size">
+              48px
+              <br />
+              Regular
+            </div>
+            <div className="font-example">
+              Aa
+            </div>
           </div>
         </div>
         <SectionName name="Font" />

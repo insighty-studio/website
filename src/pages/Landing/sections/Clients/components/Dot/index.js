@@ -16,8 +16,10 @@ class Dot extends Component {
   };
 
   render() {
+    const {className, onClick} = this.props;
     return (
-      <div className={classnames('element', this.props.className)} onClick={this.props.onClick} />
+      // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+      <div className={classnames('element', className)} onClick={onClick} />
     );
   }
 }

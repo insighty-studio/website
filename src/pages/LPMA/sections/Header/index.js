@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
-
 import {LPMATitle, LPMAGraph} from 'icons';
 
+import Laptop from './img/laptop.png';
 import './index.styl';
 
 class Header extends PureComponent {
@@ -15,7 +15,7 @@ class Header extends PureComponent {
           <LPMATitle />
         </div>
         <div className="laptop-image">
-          <img alt="LPMA" src={require('./img/laptop.png')} />
+          <img alt="LPMA" src={Laptop} />
         </div>
       </div>
     );

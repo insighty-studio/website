@@ -1,15 +1,13 @@
 import React, {PureComponent} from 'react';
 import ContactUsForm from 'components/ContactUsForm';
 
-import './index.styl';
-
 class ContactUs extends PureComponent {
   render() {
     return (
       <div className="contact-us">
         <ContactUsForm />
       </div>
-    )
+    );
   }
 }
 

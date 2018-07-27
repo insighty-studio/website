@@ -1,5 +1,13 @@
+@import '~styles/config.styl'
+
 .betteryet-page .prototypes-section
   display flex
   justify-content space-between
   max-width 1160px
   margin 120px auto
+
+  +iphone()
+    justify-content center
+
+  .mobile-hidden
+    iphoneDisabled()

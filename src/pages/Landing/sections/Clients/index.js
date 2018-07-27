@@ -1,51 +1,86 @@
 import React, {Component} from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import classnames from 'classnames';
 import SectionHeading from 'components/Typography/SectionHeading';
-import {ClientsBackgroundIcon} from 'icons';
+import ClientFooter from 'components/Sections/ClientFooter';
 
-import clients from './clients';
-import Client from './components/Client';
 import Dot from './components/Dot';
-
+import clients from './clients';
 import './index.styl';
 
 class Clients extends Component {
   constructor(props) {
     super(props);
-    this.state = {currentElementIndex: 0};
+    this.state = {
+      currentElementIndex: 0,
+      activeAnimation: false
+    };
   }
 
-  render() {
-    const {name, position, comment, link, page, photo} = clients[this.state.currentElementIndex];
+  intervalCurrentElement(index, interval) {
+    const intervalElement = setInterval(() => {
+      this.setState({currentElementIndex: index});
+      clearInterval(intervalElement);
+    }, interval);
+  }
+
+  intervalAnimation(interval) {
+    const intervalAnimation = setInterval(() => {
+      this.setState({activeAnimation: false});
+      clearInterval(intervalAnimation);
+    }, interval);
+  }
+
+  renderPagination(data, currentElementIndex) {
+    if (data.length <= 1) return null;
+    return data.map((element, index) => (
+      <Dot
+        key={index}
+        onClick={() => {
+          this.setState({activeAnimation: true});
+          this.intervalCurrentElement(index, 600);
+          this.intervalAnimation(1400);
+        }}
+        className={currentElementIndex === index ? 'current' : ''}
+      />
+    ));
+  }
+
+  renderAnimation() {
     return (
-      <div className="clients">
-        <SectionHeading subTitle="our" title="clients" />
-        <ReactCSSTransitionGroup
-          transitionName="client"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}
-        >
-          <Client name={name} position={position} comment={comment} key={this.state.currentElementIndex}
-                  href={link}
-                  to={page}
-                  photo={photo}
-          />
-        </ReactCSSTransitionGroup>
-        <div className="pagination">{this.renderPagination(clients)}</div>
-        <div className="background"><ClientsBackgroundIcon /></div>
+      <div className="clients-animation">
+        <div className="light-layer" />
+        <div className="dark-layer" />
       </div>
     );
   }
 
-  renderPagination(clients) {
-    if (clients.length <= 1) return null;
-    return clients.map((element, index) =>
-      <Dot
-        key={index}
-        onClick={() => this.setState({currentElementIndex: index})}
-        className={this.state.currentElementIndex === index ? 'current' : ''}
-      />
-    )
+  render() {
+    const {currentElementIndex, activeAnimation} = this.state;
+    const {
+      name, position, comment, href, page, photo, color
+    } = clients[currentElementIndex];
+    return (
+      <div className="clients">
+        {activeAnimation && this.renderAnimation()}
+        <div className="background" style={{backgroundColor: color}} key={currentElementIndex} />
+        <div className={classnames('content', activeAnimation && 'animated')}>
+          <SectionHeading subTitle="What Our" title="Clients Say" />
+          <ClientFooter
+            name={name}
+            position={position}
+            comment={comment}
+            href={href}
+            page={page}
+            photo={photo}
+            color={color}
+            key={currentElementIndex}
+          />
+          <div className="pagination">
+            {this.renderPagination(clients, currentElementIndex)}
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 

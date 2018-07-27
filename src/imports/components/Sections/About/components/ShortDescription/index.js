@@ -13,8 +13,12 @@ class ShortDescription extends PureComponent {
 
     return (
       <div className="short-description">
-        <div className="title">{title}</div>
-        <div className="description">{description}</div>
+        <div className="title">
+          {title}
+        </div>
+        <div className="description">
+          {description}
+        </div>
       </div>
     );
   }

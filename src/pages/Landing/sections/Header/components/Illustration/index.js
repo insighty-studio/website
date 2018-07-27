@@ -2,7 +2,6 @@ import React, {PureComponent} from 'react';
 import {Parallax} from 'react-scroll-parallax';
 
 import CloudIcon from './cloud';
-
 import './index.styl';
 
 class Illustration extends PureComponent {
@@ -15,7 +14,9 @@ class Illustration extends PureComponent {
           offsetYMin={-5}
           slowerScrollRate
         >
-          <div className="illustration cloud"><CloudIcon /></div>
+          <div className="illustration cloud">
+            <CloudIcon />
+          </div>
         </Parallax>
         <Parallax
           className="parallax person"

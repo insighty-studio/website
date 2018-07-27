@@ -1,18 +1,20 @@
 [
   {
-    "name": "alan shortz",
-    "position": "co-founder, betteryet loyalty inc., nyc",
+    "name": "Alan Shortz",
+    "position": "Co-founder, betteryet loyalty inc., nyc",
     "comment": "They know how to build a great product for a very reasonable price.",
-    "link": "https://clutch.co/profile/insighty#review-516735",
-    "page": "betteryet",
-    "photo": "Alan"
+    "href": "https://clutch.co/profile/insighty#review-516735",
+    "page": "https://insighty.studio/betteryet",
+    "photo": "Alan",
+    "color": "#FFE25E"
   },
   {
-    "name": "pat",
-    "position": "product manager, property managers association",
-    "comment": "They know how to build a great product for a very reasonable price.",
-    "link": "https://clutch.co/profile/insighty#review-516735",
-    "page": "lpma",
-    "photo": "Pat"
+    "name": "Pat",
+    "position": "Product manager, property managers association",
+    "comment": "Insighty’s talented team quickly scaled up to deliver the high-quality app within a short time frame.",
+    "href": "https://clutch.co/profile/insighty#review-516735",
+    "page": "https://insighty.studio/lpma",
+    "photo": "Pat",
+    "color": "#6EBF56"
   }
 ]

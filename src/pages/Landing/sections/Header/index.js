@@ -1,21 +1,19 @@
 import React, {Component} from 'react';
 import {Parallax} from 'react-scroll-parallax';
 import {Link} from 'react-scroll';
-import {trackEvent} from "analytics";
-
-import Button from 'components/Button';
+import {ExploreButtonIcon} from 'icons';
+import {trackEvent} from 'analytics';
 import Heading from 'components/Typography/Heading';
 import Paragraph from 'components/Typography/Paragraph';
-import {ExploreButtonIcon} from 'icons';
+import Button from 'components/Button';
 
 import NavigationBar from './components/NavigationBar';
 import Illustration from './components/Illustration';
-
 import './index.styl';
 
-class Main extends Component {
+class Header extends Component {
   onClickExplore() {
-    trackEvent('Explore clicked')
+    trackEvent('Explore clicked');
   }
 
   render() {
@@ -23,7 +21,11 @@ class Main extends Component {
       <div className="header">
         <NavigationBar />
         <div className="content">
-          <Parallax className="content-info">
+          <Parallax
+            className="content-info"
+            offsetYMax={40}
+            offsetYMin={-40}
+          >
             <Heading
               subTitle="Insighty Studio"
               title="We Create Web & Mobile Applications That’ll Delight Your Users"
@@ -48,4 +50,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default Header;

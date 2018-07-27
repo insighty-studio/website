@@ -1,3 +1,5 @@
+@import '~styles/config.styl'
+
 .betteryet-page .illustration-section
   display flex
   position relative
@@ -8,8 +10,15 @@
   margin-top 120px
   height 100vh
 
+  +iphone()
+    overflow hidden
+
   .notebook-illustration
     position absolute
 
     img
       height 750px
+
+      +iphone()
+        margin-left 26%
+        height 650px

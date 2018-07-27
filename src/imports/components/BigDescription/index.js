@@ -4,31 +4,34 @@ import classnames from 'classnames';
 
 import Heading from 'components/Typography/Heading';
 import Paragraph from 'components/Typography/Paragraph';
-
 import './index.styl';
 
 class Description extends PureComponent {
   static propTypes = {
-		subtitle: PropTypes.string,
-		title: PropTypes.string,
+    subtitle: PropTypes.string,
+    title: PropTypes.string,
     text: PropTypes.string,
-    page: PropTypes.string,
+    page: PropTypes.string
   };
 
   static defaultProps = {
-		subtitle: '',
-		title: '',
+    subtitle: '',
+    title: '',
     text: '',
-    page: 'landing',
+    page: 'landing'
   };
 
   render() {
-    const {title, subtitle, text, page} = this.props;
+    const {
+      title, subtitle, text, page
+    } = this.props;
 
     return (
       <div className={classnames('service-description', page)}>
         <Heading className={page} subTitle={subtitle} title={title} />
-        <Paragraph>{text}</Paragraph>
+        <Paragraph>
+          {text}
+        </Paragraph>
       </div>
     );
   }

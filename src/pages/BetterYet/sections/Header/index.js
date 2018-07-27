@@ -1,7 +1,8 @@
 import React, {PureComponent} from 'react';
 import NavigationBar from 'components/NavigationBar';
-import {BetterYetTitle} from './icons';
 
+import ByMobile from './images/by-mobile.png';
+import {BetterYetTitle} from './icons';
 import './index.styl';
 
 class Header extends PureComponent {
@@ -9,10 +10,10 @@ class Header extends PureComponent {
     return (
       <div className="header-section">
         <NavigationBar />
-        <img className="mobile" src={require('./images/by-mobile.png')} />
+        <img alt="" className="mobile" src={ByMobile} />
         <BetterYetTitle />
       </div>
-    )
+    );
   }
 }
 

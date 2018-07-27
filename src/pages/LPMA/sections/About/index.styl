@@ -1,13 +1,14 @@
-@import '~styles/config.styl'
-
 .lpma-page
   .about-section
     margin-bottom 128px
 
+    .about-section-background
+      fill #515A5D
+
     .desc
       z-index 1
       position relative
-      font-family: Rubik, sans-serif;
+      font-family Rubik, sans-serif;
       max-width 1452px
       min-height 0
       width 80%
@@ -21,6 +22,12 @@
 
           span
             font-weight $medium-weight
+
+        .service-description .sub-title, .short-description .title
+          color $green
+
+          &:before
+            background $green
 
       .story
         font-weight $medium-weight

@@ -1,5 +1,3 @@
-@import "~styles/config.styl"
-
 .button
   outline none
   cursor pointer
@@ -21,20 +19,20 @@
 
   &:hover
     .button-title, .button-hover-text
-      padding-left: 20px
+      padding-left 20px
 
     .button-icon svg
       transform translateX(-3px)
 
     .button-title
-      margin-right: 0
+      margin-right 0
 
     .button-hover-text
       width: 100% !important
 
       span, a
-        padding-right: 0
-        transform: translateX(0)
+        padding-right 0
+        transform translateX(0)
 
   &:disabled
     opacity 0.9
@@ -44,8 +42,8 @@
     transition padding .4s, margin .4s
 
   .button-hover-text
-    position: absolute
-    background: $blue
+    position absolute
+    background $blue
     color white
     height 48px
     border-radius @height
@@ -72,16 +70,16 @@
       text-decoration none
 
   .button-icon
-    background: $blue
-    width: 48px
-    height: @width
-    display: flex
+    background $blue
+    width 48px
+    height @width
+    display flex
     align-items center
     justify-content center
     border-radius @width
-    position: relative
-    z-index: 3
+    position relative
+    z-index 3
 
     svg
-      display: block
+      display block
       transition transform .4s
