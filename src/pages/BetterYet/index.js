@@ -1,5 +1,4 @@
 import React, {PureComponent} from 'react';
-import BodyBackground from 'components/BodyBackground';
 import Loader from 'components/Loader';
 import WhitePaper from 'components/Sections/WhitePaper';
 import {betteryetBlue, betteryetOrangeYellow} from 'styles/config';
@@ -44,7 +43,6 @@ class BetterYet extends PureComponent {
     return (
       <div className="betteryet-page">
         <Loader colors={{light: betteryetOrangeYellow, dark: betteryetBlue}} />
-        <BodyBackground color={betteryetBlue} />
         <Header />
         <About />
         {this.renderTopPrototypes()}
