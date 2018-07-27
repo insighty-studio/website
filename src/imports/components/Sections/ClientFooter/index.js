@@ -6,7 +6,7 @@ import {RightArrowIcon} from 'icons';
 
 import './index.styl';
 
-class Client extends PureComponent {
+class ClientFooter extends PureComponent {
   static propTypes = {
     name: PropTypes.string.isRequired,
     position: PropTypes.string.isRequired,
@@ -22,9 +22,9 @@ class Client extends PureComponent {
       name, position, comment, href, page, photo, color
     } = this.props;
     return (
-      <div className="client">
+      <div className="client-footer">
         <div className="client-photo">
-          <img src={require(`../../images/${photo}.png`)} alt="" />
+          <img src={`/images/clients/${photo}.png`} alt="Avatar" />
         </div>
         <div className="client-overview">
           <div className="name">
@@ -50,4 +50,4 @@ class Client extends PureComponent {
   }
 }
 
-export default Client;
+export default ClientFooter;

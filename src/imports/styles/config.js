@@ -3,3 +3,5 @@ export const betteryetYellow = '#FFDF4A';
 export const betteryetOrangeYellow = '#F8C91C';
 export const lpmaGreen = '#7ED321';
 export const lpmaDarkGray = '#464F53';
+export const blue = '#005EFF';
+export const darkBlue = '#060B18';

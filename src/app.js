@@ -1,15 +1,14 @@
 import React, {Component, Fragment} from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import LoaderLine from 'components/Loader/LoaderLine';
 import 'normalize.css';
 import 'styles/main.styl';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import Loader from './pages/Loader';
 import Landing from './pages/Landing';
 import BetterYet from './pages/BetterYet';
 import LPMA from './pages/LPMA';
-import LoaderLine from './pages/Loader/LoaderLine';
 
 AOS.init({
   disable: false,
@@ -78,6 +77,7 @@ class App extends Component {
     const {
       ready, images, progress, chunksReady
     } = this.state;
+
     if (!ready) {
       return (
         <Fragment>
@@ -106,7 +106,6 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="root">
-          <Loader />
           {ready && this.renderRoutes()}
         </div>
       </BrowserRouter>
