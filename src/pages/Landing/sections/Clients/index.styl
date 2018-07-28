@@ -24,17 +24,16 @@
       +iphone()
         margin-top 24px
 
-      .project-details-btn
-        +iphone()
-          margin 0
+    .project-details-btn, .full-review-btn
+      .button-title
+        color $black
 
-        .button-title
-          +iphone()
-            color $black
+      .button-icon
+        background-color $black
 
-        .button-icon
-          +iphone()
-            background-color $black
+    .project-details-btn
+      +iphone()
+        margin 0
 
     &.animated
       animation ClientBlock 1.4s ease forwards
