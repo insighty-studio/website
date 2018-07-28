@@ -1,7 +1,8 @@
 import React, {PureComponent} from 'react';
-import BodyBackground from 'components/BodyBackground';
 import Loader from 'components/Loader';
+import WhitePaper from 'components/Sections/WhitePaper';
 import {betteryetBlue, betteryetOrangeYellow} from 'styles/config';
+import Footer from 'components/Footer';
 
 import Header from './sections/Header';
 import About from './sections/About';
@@ -9,7 +10,7 @@ import BetterYetLogo from './sections/BetterYetLogo';
 import Prototypes from './sections/Prototypes';
 import Colors from './sections/Colors';
 import ContactUs from './sections/ContactUs';
-import Footer from './sections/Footer';
+import ClientFooterSection from './sections/ClientFooter';
 import Illustration from './sections/Illustration';
 import Image1 from './images/image1.png';
 import Image2 from './images/image2.png';
@@ -48,7 +49,6 @@ class BetterYet extends PureComponent {
     return (
       <div className="betteryet-page">
         <Loader colors={{light: betteryetOrangeYellow, dark: betteryetBlue}} />
-        <BodyBackground color={betteryetBlue} />
         <Header />
         <About />
         {this.renderTopPrototypes()}
@@ -56,7 +56,10 @@ class BetterYet extends PureComponent {
         {this.renderBottomPrototypes()}
         <Colors />
         <Illustration />
-        <ContactUs />
+        <WhitePaper>
+          <ContactUs />
+          <ClientFooterSection />
+        </WhitePaper>
         <Footer />
       </div>
     );
