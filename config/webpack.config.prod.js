@@ -27,7 +27,7 @@ const cssFilename = 'static/css/[name].[contenthash:8].css';
 
 const extractTextPluginOptions = shouldUseRelativeAssetPaths
   ?
-    {publicPath: Array(cssFilename.split('/').length).join('../')}
+  {publicPath: Array(cssFilename.split('/').length).join('../')}
   : {};
 
 module.exports = {
@@ -49,14 +49,15 @@ module.exports = {
       process.env.NODE_PATH.split(path.delimiter).filter(Boolean)
     ),
     extensions: ['.web.js', '.mjs', '.js', '.json', '.web.jsx', '.jsx'],
-		alias: {
-			utils: path.resolve('src/imports/utils'),
-			components: path.resolve('src/imports/components'),
-			icons: path.resolve('src/imports/icons'),
-			styles: path.resolve('src/imports/styles'),
+    alias: {
+      utils: path.resolve('src/imports/utils'),
+      components: path.resolve('src/imports/components'),
+      icons: path.resolve('src/imports/icons'),
+      styles: path.resolve('src/imports/styles'),
       analytics: path.resolve('src/imports/analytics'),
+      data: path.resolve('src/imports/data'),
       'react-native': 'react-native-web',
-		},
+    },
     plugins: [
       new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
     ],
