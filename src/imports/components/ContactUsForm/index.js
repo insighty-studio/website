@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, {PureComponent} from 'react';
 import classnames from 'classnames';
 import request from 'utils/request';
@@ -31,33 +33,43 @@ class ContactUsForm extends PureComponent {
     trackEvent('Form submit pressed');
 
     e.preventDefault();
-    const {
-      name, email, phone, website, message
-    } = this.state;
-    const formData = JSON.stringify({
-      attachments: [
-        {
-          color: '#000000',
-          pretext: 'New Contact Us form request',
-          author_name: `From: ${name}`,
-          text: `*Email:* ${email}\n*Phone:* ${phone}\n*Website:* ${website}\n*Message:* _${message}_`,
-        }
-      ]
-    });
+    // const {
+    //   name, email, phone, website, message
+    // } = this.state;
+    // const formData = JSON.stringify({
+    //   attachments: [
+    //     {
+    //       color: '#000000',
+    //       pretext: 'New Contact Us form request',
+    //       author_name: `From: ${name}`,
+    //       text: `*Email:* ${email}\n*Phone:* ${phone}\n*Website:* ${website}\n*Message:* _${message}_`,
+    //     }
+    //   ]
+    // });
 
-    request.post(WEBHOOK_URL, formData)
-      .then(() => {
-        this.setState({
-          name: '',
-          email: '',
-          phone: '',
-          website: '',
-          message: '',
-          messageIsVisible: true,
-          formIsSubmitted: true
-        });
-        setTimeout(() => this.setState({messageIsVisible: false}), 5000);
-      });
+    // request.post(WEBHOOK_URL, formData)
+    //   .then(() => {
+    //     this.setState({
+    //       name: '',
+    //       email: '',
+    //       phone: '',
+    //       website: '',
+    //       message: '',
+    //       messageIsVisible: true,
+    //       formIsSubmitted: true
+    //     });
+    //     setTimeout(() => this.setState({messageIsVisible: false}), 5000);
+    //   });
+    this.setState({
+      name: '',
+      email: '',
+      phone: '',
+      website: '',
+      message: '',
+      messageIsVisible: true,
+      formIsSubmitted: true
+    });
+    setTimeout(() => this.setState({messageIsVisible: false}), 5000);
   }
 
   handleFormInput(e, pristine) {
