@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import provideScrollPosition from 'react-provide-scroll-position';
 import ScrollUpButton from 'components/ScrollUpButton';
 import Footer from 'components/Footer';
-// import Loader from 'components/Loader';
-// import {darkBlue, blue} from 'styles/config';
+import Loader from 'components/Loader';
+import {darkBlue, blue} from 'styles/config';
 
 import Header from './sections/Header';
 import Services from './sections/Services';
@@ -27,7 +27,7 @@ class LandingPage extends PureComponent {
     const {scrollTop} = this.props;
     return (
       <div className="landing">
-        {/* <Loader colors={{light: blue, dark: darkBlue}} /> */}
+        <Loader colors={{light: blue, dark: darkBlue}} />
         <ScrollUpButton percentagesScrolled={scrollTop} />
         <Header />
         <Services />
