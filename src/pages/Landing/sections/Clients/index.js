@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import classnames from 'classnames';
 import SectionHeading from 'components/Typography/SectionHeading';
 import ClientFooter from 'components/Sections/ClientFooter';
+import clients from 'data/clients';
 
 import Dot from './components/Dot';
-import clients from './clients';
 import './index.styl';
 
 class Clients extends Component {

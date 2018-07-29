@@ -1,5 +1,3 @@
-@import '~styles/config.styl'
-
 .clients
   position relative
 
@@ -19,6 +17,24 @@
     padding 60px 0
     opacity 1
 
+    +iphone()
+      height 100%
+
+    .client-footer
+      +iphone()
+        margin-top 24px
+
+    .project-details-btn, .full-review-btn
+      .button-title
+        color $black
+
+      .button-icon
+        background-color $black
+
+    .project-details-btn
+      +iphone()
+        margin 0
+
     &.animated
       animation ClientBlock 1.4s ease forwards
 
@@ -29,6 +45,9 @@
     .pagination
       display flex
       align-items flex-end
+
+      +iphone()
+        display none
 
     .element:last-child
       margin-right 0
