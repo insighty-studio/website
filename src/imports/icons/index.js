@@ -513,23 +513,13 @@ export class ExploreButtonIcon extends PureComponent {
   }
 }
 
-export class SendButtonIcon extends PureComponent {
-  render() {
-    return (
-      <svg width="15px" height="15px" stroke="none" strokeWidth="1" fill="#FFFFFF" fillRule="nonzero">
-        <path d="M0,0 C0,4 0,6 0,6 C0,6 2.49999994,6.5 7.49999983,7.5 L0,9 L0,15 L15,7.5 L0,0 Z" />
-      </svg>
-    )
-  }
-}
-
 export class RightArrowIcon extends PureComponent {
   static propTypes = {
     color: PropTypes.string
   };
 
   static defaultProps = {
-    color: ''
+    color: '#FFF'
   };
 
   render() {

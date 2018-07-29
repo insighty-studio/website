@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import classnames from 'classnames';
 import request from 'utils/request';
-import {SendButtonIcon} from 'icons';
+import {RightArrowIcon} from 'icons';
 import SectionHeading from 'components/Typography/SectionHeading';
 import Input from 'components/Input';
 import TextArea from 'components/TextArea';
@@ -131,7 +131,7 @@ class ContactUsForm extends PureComponent {
             title={formIsSubmitted ? 'Thanks!' : 'SEND'}
             disabled={formIsSubmitted}
           >
-            <SendButtonIcon />
+            <RightArrowIcon />
           </Button>
         </form>
         {this.showMessage(messageIsVisible, '*your message has been sent')}
