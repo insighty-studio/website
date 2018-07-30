@@ -1,6 +1,7 @@
 {
   "projects": {
     "master": "",
-    "production": "insighty-website"
+    "website-staging": "insighty-website-staging",
+    "website-production": "insighty-website"
   }
 }
