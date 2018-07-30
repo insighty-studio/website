@@ -513,23 +513,13 @@ export class ExploreButtonIcon extends PureComponent {
   }
 }
 
-export class SendButtonIcon extends PureComponent {
-  render() {
-    return (
-      <svg width="15px" height="15px" stroke="none" strokeWidth="1" fill="#FFFFFF" fillRule="nonzero">
-        <path d="M0,0 C0,4 0,6 0,6 C0,6 2.49999994,6.5 7.49999983,7.5 L0,9 L0,15 L15,7.5 L0,0 Z" />
-      </svg>
-    )
-  }
-}
-
 export class RightArrowIcon extends PureComponent {
   static propTypes = {
     color: PropTypes.string
   };
 
   static defaultProps = {
-    color: ''
+    color: '#FFF'
   };
 
   render() {
@@ -538,6 +528,26 @@ export class RightArrowIcon extends PureComponent {
         <path
           d="M7.51011525,6.88461538 C7.51693377,7.12873677 7.43061924,7.37571617 7.24823153,7.57156599 L1.78094788,13.4423916 C1.40351071,13.8476876 0.757567115,13.8805433 0.338192479,13.515777 C-0.0811821572,13.1510106 -0.115179189,12.5267518 0.262257984,12.1214559 L5.1391346,6.88461538 L0.262257984,1.64777489 C-0.115179189,1.24247896 -0.0811821572,0.618220141 0.338192479,0.253453799 C0.757567115,-0.111312542 1.40351071,-0.0784568152 1.78094788,0.32683912 L7.24823153,6.19766478 C7.43061924,6.39351459 7.51693377,6.640494 7.51011525,6.88461538 Z"
         />
+      </svg>
+    )
+  }
+}
+
+export class LetsGoHomeButtonIcon extends PureComponent {
+  render() {
+    return (
+      <svg width="14px" height="6px">
+        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+          <g transform="translate(-285.000000, -453.000000)" fill="#FFFFFF">
+            <g transform="translate(127.000000, 197.000000)">
+              <g transform="translate(0.000000, 234.000000)">
+                <g transform="translate(141.000000, 0.000000)">
+                  <path d="M23.8846154,22.0002746 C24.1287368,21.9952718 24.3757162,22.0586013 24.571566,22.1924202 L30.4423916,26.2037978 C30.8476876,26.4807256 30.8805433,26.9546581 30.515777,27.2623557 C30.1510106,27.5700533 29.5267518,27.5949971 29.1214559,27.3180693 L23.8846154,23.7398768 L18.6477749,27.3180693 C18.242479,27.5949971 17.6182201,27.5700533 17.2534538,27.2623557 C16.8886875,26.9546581 16.9215432,26.4807256 17.3268391,26.2037978 L23.1976648,22.1924202 C23.3935146,22.0586013 23.640494,21.9952718 23.8846154,22.0002746 Z" transform="translate(23.884615, 24.755245) scale(1, -1) translate(-23.884615, -24.755245) " />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
       </svg>
     )
   }
