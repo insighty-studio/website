@@ -1,3 +1,19 @@
+## Deployment
+
+#### Production
+
+The live version of the website is available at https://insighty.studio.
+It is being built by CircleCI and deployed on a push to `release`.
+
+#### Staging
+
+There is also a staging app available at: https://insighty-website-staging.firebaseapp.com.
+It is deployed on a push to `master`.
+
+---
+
+## CRA
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
