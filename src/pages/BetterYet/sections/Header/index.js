@@ -9,7 +9,14 @@ class Header extends PureComponent {
   render() {
     return (
       <div className="header-section">
-        <NavigationBar />
+        <NavigationBar
+          links={[
+            {text: 'Home', to: 'home'},
+            {text: 'Services', to: 'services'},
+            {text: 'Process', to: 'process'},
+            {text: 'Contact', to: 'white-paper'},
+          ]}
+        />
         <img alt="" className="mobile" src={ByMobile} />
         <BetterYetTitle />
       </div>

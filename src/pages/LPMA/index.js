@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import BodyBackground from 'components/BodyBackground';
-import {lpmaDarkGray} from 'styles/config';
+import {lpmaDarkGray, lpmaGreen} from 'styles/config';
+import Loader from 'components/Loader';
 
 import Header from './sections/Header';
 import About from './sections/About';
@@ -16,6 +17,7 @@ class LPMA extends PureComponent {
   render() {
     return (
       <div className="lpma-page">
+        <Loader colors={{light: lpmaGreen, dark: lpmaDarkGray}} />
         <BodyBackground color={lpmaDarkGray} />
         <Header />
         <About />

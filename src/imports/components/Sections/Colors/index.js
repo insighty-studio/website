@@ -12,7 +12,8 @@ class ColorsSection extends PureComponent {
       name: PropTypes.string,
       color: PropTypes.string,
       width: PropTypes.string,
-    })).isRequired
+    })).isRequired,
+    colorsSectionColor: PropTypes.string.isRequired
   };
 
   static defaultProps = {
@@ -20,7 +21,7 @@ class ColorsSection extends PureComponent {
   };
 
   render() {
-    const {className, colors} = this.props;
+    const {className, colors, colorsSectionColor} = this.props;
 
     return (
       <div className={classnames('colors-section', className)}>
@@ -32,13 +33,13 @@ class ColorsSection extends PureComponent {
                   {name}
                 </div>
                 <div className="hash">
-                  {color}
+                  {colorsSectionColor}
                 </div>
               </div>
             </div>
           ))}
         </div>
-        <ColorsBackground />
+        <ColorsBackground color={colorsSectionColor} />
       </div>
     );
   }

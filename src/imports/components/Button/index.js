@@ -8,53 +8,38 @@ class Button extends PureComponent {
   static propTypes = {
     className: PropTypes.string,
     title: PropTypes.string.isRequired,
-    disabled: PropTypes.bool,
     children: PropTypes.node,
     href: PropTypes.string
   };
 
   static defaultProps = {
     className: '',
-    disabled: false,
     children: null,
     href: ''
   };
 
-  provideLink(href, title) {
-    if (href) {
-      return (
-        <a target="_blank" rel="noopener noreferrer" href={href}>
-          {title}
-        </a>
-      );
-    }
-    return (
-      <span>
-        {title}
-      </span>
-    );
-  }
-
   render() {
     const {
-      className, title, disabled, children, href
+      className, title, children, href
     } = this.props;
     return (
       // eslint-disable-next-line react/button-has-type
-      <button
+      <a
         className={classnames('button', className)}
-        disabled={disabled}
+        href={href}
       >
         <div className={children && 'button-title'}>
           {title}
         </div>
         <div className="button-hover-text">
-          {this.provideLink(href, title)}
+          <span>
+            {title}
+          </span>
         </div>
         <div className="button-icon">
           {children}
         </div>
-      </button>
+      </a>
     );
   }
 }
