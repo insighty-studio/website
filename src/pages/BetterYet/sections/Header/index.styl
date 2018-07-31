@@ -7,11 +7,14 @@
   height 100vh
   margin 0 32px
 
-  img.mobile
-    width 491px
-    height 658px
+  .mobile-container
     position absolute
+    z-index 1
 
-    +iphone()
-      width 60%
-      height: 45%
+    img.mobile
+      width 491px
+      height 658px
+
+      +iphone()
+        width 60%
+        height: 45%

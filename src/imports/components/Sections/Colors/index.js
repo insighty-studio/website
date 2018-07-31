@@ -1,8 +1,8 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import ColorsBackground from './components/ColorsBackground';
 
+import ColorsBackground from './components/ColorsBackground';
 import './index.styl';
 
 class ColorsSection extends PureComponent {
