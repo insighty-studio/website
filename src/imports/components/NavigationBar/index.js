@@ -2,20 +2,28 @@ import React from 'react';
 import {Link} from 'react-scroll';
 import classnames from 'classnames';
 import {InsightyLogo} from 'icons';
+import PropTypes from 'prop-types';
 
 import './index.styl';
 
-const links = [
-  {text: 'Home', to: 'home'},
-  {text: 'Services', to: 'services'},
-  {text: 'Process', to: 'process'},
-  {text: 'Contact', to: 'contact-us'},
-];
-
 class NavigationBar extends React.Component {
+  static propTypes = {
+    links: PropTypes.arrayOf(PropTypes.object).isRequired,
+  };
+
   renderLinks() {
-    return links.map(({text, to, active}, i) => (
-      <Link key={to} className={classnames({active})} activeClass="active" to={to} smooth duration={500 + (i * 200)}>
+    const {links} = this.props;
+    return links.map(({
+      text, to, active
+    }, i) => (
+      <Link
+        smooth
+        key={to}
+        className={classnames({active})}
+        activeClass="active"
+        to={to}
+        duration={500 + (i * 200)}
+      >
         {text}
       </Link>
     ));
