@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import {Parallax} from 'react-scroll-parallax';
 
 import './index.styl';
 
@@ -22,9 +23,14 @@ class Prototypes extends PureComponent {
 
   render() {
     return (
-      <div className="prototypes-section">
-        {this.renderPrototypes()}
-      </div>
+      <Parallax
+        offsetYMax={20}
+        offsetYMin={-20}
+      >
+        <div className="prototypes-section">
+          {this.renderPrototypes()}
+        </div>
+      </Parallax>
     );
   }
 }
