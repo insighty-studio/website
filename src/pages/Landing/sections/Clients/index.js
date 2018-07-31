@@ -80,7 +80,6 @@ class Clients extends Component {
       <div className="clients">
         <div className="background" style={{backgroundColor: color}} key={currentElementIndex} />
         <div className={classnames('content', activeAnimation)}>
-          {activeAnimation && this.renderAnimation(activeAnimation, label)}
           <div
             className="left-arrow"
             onClick={() => this.slidePrev()}
@@ -112,7 +111,7 @@ class Clients extends Component {
               key={currentElementIndex}
             />
           </div>
-
+          {activeAnimation && this.renderAnimation(activeAnimation, label)}
         </div>
       </div>
     );
