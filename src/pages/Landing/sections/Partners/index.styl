@@ -1,8 +1,10 @@
 .partners
-  display flex
-  justify-content center
+  display grid
+  grid-template-columns repeat(3, 1fr)
   align-items center
-  height 280px
+  justify-items center
+  grid-gap 80px
+  padding 120px 0
   background-color rgba(0,0,0, .1)
 
   +iphone()
@@ -12,8 +14,6 @@
     background-color $white
 
   svg
-    margin-right 56px
-
     +iphone()
       margin 0 0 64px
 

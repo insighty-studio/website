@@ -1,10 +1,16 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, {Component} from 'react';
 import classnames from 'classnames';
 import SectionHeading from 'components/Typography/SectionHeading';
 import ClientFooter from 'components/Sections/ClientFooter';
 import clients from 'data/clients';
 
-import Dot from './components/Dot';
+import {
+  LeftBlackArrow,
+  LeftColorArrow,
+  RightBlackArrow,
+  RightColorArrow
+} from './icons';
 import './index.styl';
 
 class Clients extends Component {
@@ -12,7 +18,7 @@ class Clients extends Component {
     super(props);
     this.state = {
       currentElementIndex: 0,
-      activeAnimation: false
+      activeAnimation: ''
     };
   }
 
@@ -25,29 +31,40 @@ class Clients extends Component {
 
   intervalAnimation(interval) {
     const intervalAnimation = setInterval(() => {
-      this.setState({activeAnimation: false});
+      this.setState({activeAnimation: ''});
       clearInterval(intervalAnimation);
     }, interval);
   }
 
-  renderPagination(data, currentElementIndex) {
-    if (data.length <= 1) return null;
-    return data.map((element, index) => (
-      <Dot
-        key={index}
-        onClick={() => {
-          this.setState({activeAnimation: true});
-          this.intervalCurrentElement(index, 600);
-          this.intervalAnimation(1400);
-        }}
-        className={currentElementIndex === index ? 'current' : ''}
-      />
-    ));
+  slideNext() {
+    const {currentElementIndex} = this.state;
+
+    this.setState({activeAnimation: 'left-animation'});
+    this.intervalAnimation(1400);
+
+    if ((clients.length - 1) === currentElementIndex) {
+      return this.intervalCurrentElement(0, 600);
+    }
+
+    return this.intervalCurrentElement(currentElementIndex + 1, 600);
   }
 
-  renderAnimation() {
+  slidePrev() {
+    const {currentElementIndex} = this.state;
+
+    this.setState({activeAnimation: 'right-animation'});
+    this.intervalAnimation(1400);
+
+    if (currentElementIndex === 0) {
+      return this.intervalCurrentElement(clients.length - 1, 600);
+    }
+
+    return this.intervalCurrentElement(currentElementIndex - 1, 600);
+  }
+
+  renderAnimation(activeAnimation) {
     return (
-      <div className="clients-animation">
+      <div className={classnames('clients-animation', activeAnimation)}>
         <div className="light-layer" />
         <div className="dark-layer" />
       </div>
@@ -57,27 +74,45 @@ class Clients extends Component {
   render() {
     const {currentElementIndex, activeAnimation} = this.state;
     const {
-      name, position, comment, href, page, photo, color
+      name, position, comment, href, page, photo, color, label
     } = clients[currentElementIndex];
     return (
       <div className="clients">
-        {activeAnimation && this.renderAnimation()}
         <div className="background" style={{backgroundColor: color}} key={currentElementIndex} />
-        <div className={classnames('content', activeAnimation && 'animated')}>
-          <SectionHeading subTitle="What Our" title="Clients Say" />
-          <ClientFooter
-            name={name}
-            position={position}
-            comment={comment}
-            href={href}
-            page={page}
-            photo={photo}
-            color={color}
-            key={currentElementIndex}
-          />
-          <div className="pagination">
-            {this.renderPagination(clients, currentElementIndex)}
+        <div className={classnames('content', activeAnimation)}>
+          {activeAnimation && this.renderAnimation(activeAnimation, label)}
+          <div
+            className="left-arrow"
+            onClick={() => this.slidePrev()}
+          >
+            <LeftBlackArrow />
+            <div className="hidden-arrow right">
+              <LeftColorArrow color={color} />
+            </div>
           </div>
+          <div
+            className="right-arrow"
+            onClick={() => this.slideNext()}
+          >
+            <RightBlackArrow />
+            <div className="hidden-arrow left">
+              <RightColorArrow color={color} />
+            </div>
+          </div>
+          <div className="middle">
+            <SectionHeading subTitle="What Our" title="Clients Say" />
+            <ClientFooter
+              name={name}
+              position={position}
+              comment={comment}
+              href={href}
+              page={page}
+              photo={photo}
+              color={color}
+              key={currentElementIndex}
+            />
+          </div>
+
         </div>
       </div>
     );
