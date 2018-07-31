@@ -13,6 +13,7 @@ class Colors extends PureComponent {
           {name: 'Catskill White', color: '#E9F1F5'},
           {name: 'Black', color: '#000000'}
         ]}
+        colorsSectionColor="#515A5D"
       />
     );
   }
