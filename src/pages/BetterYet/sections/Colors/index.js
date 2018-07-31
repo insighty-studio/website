@@ -11,6 +11,7 @@ class Colors extends PureComponent {
           {name: 'Mine Shaft', color: '#272727', width: '15%'},
           {name: 'Dusty Gray', color: '#979797', width: '15%'}
         ]}
+        colorsSectionColor="#93BBD8"
       />
     );
   }
