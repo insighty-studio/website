@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Description from 'components/BigDescription';
+import {Parallax} from 'react-scroll-parallax';
 
 import AboutBackground from './components/AboutBackground';
 import ShortDescription from './components/ShortDescription';
@@ -34,26 +35,32 @@ class AboutSection extends PureComponent {
 
     return (
       <div className={classnames('about-section', className)}>
-        <div className="desc">
-          <div className="short">
-            <ul>
-              <li>
-                <ShortDescription title="Year" description={year} />
-              </li>
-              <li>
-                <ShortDescription title="Client" description={client} />
-              </li>
-              <li>
-                <ShortDescription title="Services" description={services} />
-              </li>
-            </ul>
+        <Parallax
+          className="desc-parallax"
+          offsetYMax={20}
+          offsetYMin={-20}
+        >
+          <div className="desc">
+            <div className="short">
+              <ul>
+                <li>
+                  <ShortDescription title="Year" description={year} />
+                </li>
+                <li>
+                  <ShortDescription title="Client" description={client} />
+                </li>
+                <li>
+                  <ShortDescription title="Services" description={services} />
+                </li>
+              </ul>
+            </div>
+            <Description
+              subtitle={subtitle}
+              title={title}
+              text={desc}
+            />
           </div>
-          <Description
-            subtitle={subtitle}
-            title={title}
-            text={desc}
-          />
-        </div>
+        </Parallax>
         <AboutBackground />
         {logo}
       </div>

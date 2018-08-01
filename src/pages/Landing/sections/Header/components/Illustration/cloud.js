@@ -6,7 +6,7 @@ class CloudIcon extends Component {
     return (
       <svg width="999px" height="784px" viewBox="0 0 999 784">
         <defs>
-          <linearGradient x1="7.5%" y1="78.5%" x2="76.5%" y2="20%" id="linearGradient-1">
+          <linearGradient x1="7.5%" y1="78.5%" x2="76.5%" y2="20%">
             <stop stopColor="#0051FF" stopOpacity="0" offset="0%" />
             <stop stopColor="#0051FF" stopOpacity="0.2" offset="100%" />
           </linearGradient>

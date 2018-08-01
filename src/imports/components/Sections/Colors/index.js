@@ -1,8 +1,9 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import ColorsBackground from './components/ColorsBackground';
+import {Parallax} from 'react-scroll-parallax';
 
+import ColorsBackground from './components/ColorsBackground';
 import './index.styl';
 
 class ColorsSection extends PureComponent {
@@ -12,7 +13,8 @@ class ColorsSection extends PureComponent {
       name: PropTypes.string,
       color: PropTypes.string,
       width: PropTypes.string,
-    })).isRequired
+    })).isRequired,
+    colorsSectionColor: PropTypes.string.isRequired
   };
 
   static defaultProps = {
@@ -20,25 +22,31 @@ class ColorsSection extends PureComponent {
   };
 
   render() {
-    const {className, colors} = this.props;
+    const {className, colors, colorsSectionColor} = this.props;
 
     return (
       <div className={classnames('colors-section', className)}>
-        <div className="colors">
-          {colors.map(({name, color, width}) => (
-            <div key={color} className="color" style={{backgroundColor: color, width}}>
-              <div className="color-info">
-                <div>
-                  {name}
-                </div>
-                <div className="hash">
-                  {color}
+        <Parallax
+          className="colors-parallax"
+          offsetYMax={120}
+          offsetYMin={-120}
+        >
+          <div className="colors">
+            {colors.map(({name, color, width}) => (
+              <div key={color} className="color" style={{backgroundColor: color, width}}>
+                <div className="color-info">
+                  <div>
+                    {name}
+                  </div>
+                  <div className="hash">
+                    {colorsSectionColor}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-        <ColorsBackground />
+            ))}
+          </div>
+        </Parallax>
+        <ColorsBackground color={colorsSectionColor} />
       </div>
     );
   }

@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {Parallax} from 'react-scroll-parallax';
 import {Link} from 'react-scroll';
-import {ExploreButtonIcon} from 'icons';
+import {Logo, ExploreButtonIcon} from 'icons';
 import {trackEvent} from 'analytics';
+import NavigationBar from 'components/NavigationBar';
 import Heading from 'components/Typography/Heading';
 import Paragraph from 'components/Typography/Paragraph';
 import Button from 'components/Button';
 
-import NavigationBar from './components/NavigationBar';
 import Illustration from './components/Illustration';
 import './index.styl';
 
@@ -19,7 +19,16 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <NavigationBar />
+        <NavigationBar
+          links={[
+            {text: 'Home', to: 'home', active: true},
+            {text: 'Services', to: 'services'},
+            {text: 'Process', to: 'process'},
+            {text: 'Clients', to: 'clients'},
+            {text: 'Contact', to: 'contact-us'}
+          ]}
+          logoIcon={<Logo blue />}
+        />
         <div className="content">
           <Parallax
             className="content-info"

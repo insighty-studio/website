@@ -1,31 +1,56 @@
 import React from 'react';
 import {Link} from 'react-scroll';
 import classnames from 'classnames';
-import {InsightyLogo} from 'icons';
+import PropTypes from 'prop-types';
 
 import './index.styl';
 
-const links = [
-  {text: 'Home', to: 'home'},
-  {text: 'Services', to: 'services'},
-  {text: 'Process', to: 'process'},
-  {text: 'Contact', to: 'contact-us'},
-];
-
 class NavigationBar extends React.Component {
+  static propTypes = {
+    links: PropTypes.arrayOf(PropTypes.object).isRequired,
+    logoIcon: PropTypes.element.isRequired,
+    white: PropTypes.bool
+  };
+
+  static defaultProps = {
+    white: false
+  };
+
   renderLinks() {
-    return links.map(({text, to, active}, i) => (
-      <Link key={to} className={classnames({active})} activeClass="active" to={to} smooth duration={500 + (i * 200)}>
-        {text}
-      </Link>
-    ));
+    const {links, white} = this.props;
+    return links.map(({
+      text, to, href, active
+    }, i) => {
+      if (href) {
+        return (
+          <a className={white && 'white'} rel="noopener noreferrer" href={href}>
+            {text}
+          </a>
+        );
+      }
+      return (
+        <Link
+          smooth
+          key={to}
+          className={classnames({active}, white && 'white')}
+          activeClass="active"
+          to={to}
+          duration={500 + (i * 200)}
+        >
+          {text}
+        </Link>
+      );
+    });
   }
 
   render() {
+    const {logoIcon} = this.props;
     return (
-      <div className="pages-navigation-bar">
+      <div className="navigation-bar">
         <div className="bar-content">
-          <InsightyLogo />
+          <a href="https://insighty.studio/" rel="noopener noreferrer">
+            {logoIcon}
+          </a>
           <div className="links">
             {this.renderLinks()}
           </div>

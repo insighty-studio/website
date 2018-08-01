@@ -25,9 +25,9 @@ class BetterYet extends PureComponent {
     return (
       <Prototypes
         prototypes={[
-          {src: Image1},
-          {src: Image2},
-          {src: Image3},
+          {src: Image1, offset: 20},
+          {src: Image2, offset: 40},
+          {src: Image3, offset: 20},
         ]}
       />
     );
@@ -37,9 +37,9 @@ class BetterYet extends PureComponent {
     return (
       <Prototypes
         prototypes={[
-          {src: Image4},
-          {src: Image5},
-          {src: Image6},
+          {src: Image4, offset: 20},
+          {src: Image5, offset: 40},
+          {src: Image6, offset: 20},
         ]}
       />
     );

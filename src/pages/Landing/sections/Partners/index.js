@@ -14,12 +14,12 @@ class Partners extends PureComponent {
   render() {
     return (
       <div className="partners">
-        <Momentum />
-        <Teradata />
         <Lieferando />
+        <Momentum />
         <Jackman />
-        <Staples />
+        <Teradata />
         <Menlopark />
+        <Staples />
       </div>
     );
   }
