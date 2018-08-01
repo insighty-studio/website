@@ -72,13 +72,11 @@
           &.right
             right 50px
 
-    .right-arrow:hover ~ .middle,
-    .right-arrow:hover ~ .clients-animation.left-animation.light-layer
+    .right-arrow:hover ~ .middle
       transform translateX(-40px)
       transition transform .2s ease
 
-    .left-arrow:hover ~ .middle,
-    .right-arrow:hover ~ .clients-animation.right-animation.light-layer
+    .left-arrow:hover ~ .middle
       transform translateX(40px)
       transition transform .2s ease
 
@@ -90,6 +88,9 @@
       height 100vh
       padding 60px 0
       transition transform .2s ease
+
+      +iphone()
+        width 100vw
 
     +iphone()
       height 100%
@@ -115,10 +116,10 @@
 
     .pagination
       display flex
-      align-items flex-end
-
-      +iphone()
-        display none
+      position absolute
+      bottom 20px
+      left 50%
+      transform translateX(-50%)
 
     .element:last-child
       margin-right 0
@@ -177,7 +178,7 @@
 
     .dark-layer
       z-index 11
-      background-color $snow
+      background-color $white
 
 @keyframes MiddleContentToRight
   0%
