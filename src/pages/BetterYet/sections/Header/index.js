@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import NavigationBar from 'components/NavigationBar';
 import {Logo} from 'icons';
+import {Parallax} from 'react-scroll-parallax';
 
 import ByMobile from './images/by-mobile.png';
 import {BetterYetTitle} from './icons';
@@ -18,8 +19,19 @@ class Header extends PureComponent {
           ]}
           logoIcon={<Logo />}
         />
-        <img alt="" className="mobile" src={ByMobile} />
-        <BetterYetTitle />
+        <Parallax
+          className="mobile-container"
+          offsetYMax={40}
+          offsetYMin={-40}
+        >
+          <img alt="" className="mobile" src={ByMobile} />
+        </Parallax>
+        <Parallax
+          offsetYMax={20}
+          offsetYMin={-20}
+        >
+          <BetterYetTitle />
+        </Parallax>
       </div>
     );
   }
