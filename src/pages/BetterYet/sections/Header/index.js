@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import NavigationBar from 'components/NavigationBar';
+import {Logo} from 'icons';
 import {Parallax} from 'react-scroll-parallax';
 
 import ByMobile from './images/by-mobile.png';
@@ -11,12 +12,12 @@ class Header extends PureComponent {
     return (
       <div className="header-section">
         <NavigationBar
+          white
           links={[
-            {text: 'Home', to: 'home'},
-            {text: 'Services', to: 'services'},
-            {text: 'Process', to: 'process'},
+            {text: 'Home', href: 'https://insighty.studio/'},
             {text: 'Contact', to: 'white-paper'},
           ]}
+          logoIcon={<Logo />}
         />
         <Parallax
           className="mobile-container"
