@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import {Parallax} from 'react-scroll-parallax';
 
 import ColorsBackground from './components/ColorsBackground';
 import './index.styl';
@@ -25,20 +26,26 @@ class ColorsSection extends PureComponent {
 
     return (
       <div className={classnames('colors-section', className)}>
-        <div className="colors">
-          {colors.map(({name, color, width}) => (
-            <div key={color} className="color" style={{backgroundColor: color, width}}>
-              <div className="color-info">
-                <div>
-                  {name}
-                </div>
-                <div className="hash">
-                  {colorsSectionColor}
+        <Parallax
+          className="colors-parallax"
+          offsetYMax={120}
+          offsetYMin={-120}
+        >
+          <div className="colors">
+            {colors.map(({name, color, width}) => (
+              <div key={color} className="color" style={{backgroundColor: color, width}}>
+                <div className="color-info">
+                  <div>
+                    {name}
+                  </div>
+                  <div className="hash">
+                    {colorsSectionColor}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </Parallax>
         <ColorsBackground color={colorsSectionColor} />
       </div>
     );

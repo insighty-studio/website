@@ -8,29 +8,30 @@ import './index.styl';
 class Prototypes extends PureComponent {
   static propTypes = {
     prototypes: PropTypes.arrayOf(PropTypes.shape({
-      src: PropTypes.string,
+      src: PropTypes.string.isRequired,
+      offset: PropTypes.number,
     })).isRequired
   };
 
   renderPrototypes() {
     const {prototypes} = this.props;
-    return prototypes.map(({src}, i) => (
+    return prototypes.map(({src, offset}, i) => (
       <div className={classnames('prototype', i > 0 && 'mobile-hidden')}>
-        <img alt="" height="574" width="283" src={src} />
+        <Parallax
+          offsetYMax={offset}
+          offsetYMin={-offset}
+        >
+          <img alt="" height="574" width="283" src={src} />
+        </Parallax>
       </div>
     ));
   }
 
   render() {
     return (
-      <Parallax
-        offsetYMax={20}
-        offsetYMin={-20}
-      >
-        <div className="prototypes-section">
-          {this.renderPrototypes()}
-        </div>
-      </Parallax>
+      <div className="prototypes-section">
+        {this.renderPrototypes()}
+      </div>
     );
   }
 }
