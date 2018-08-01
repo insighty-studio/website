@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import NavigationBar from 'components/NavigationBar';
+import {Logo} from 'icons';
 
 import ByMobile from './images/by-mobile.png';
 import {BetterYetTitle} from './icons';
@@ -10,12 +11,12 @@ class Header extends PureComponent {
     return (
       <div className="header-section">
         <NavigationBar
+          white
           links={[
-            {text: 'Home', to: 'home'},
-            {text: 'Services', to: 'services'},
-            {text: 'Process', to: 'process'},
+            {text: 'Home', href: 'https://insighty.studio/'},
             {text: 'Contact', to: 'white-paper'},
           ]}
+          logoIcon={<Logo />}
         />
         <img alt="" className="mobile" src={ByMobile} />
         <BetterYetTitle />

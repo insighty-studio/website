@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import {InsightyLogo} from 'icons';
+import {Logo} from 'icons';
 
 import './index.styl';
 
@@ -22,7 +22,7 @@ class Loader extends PureComponent {
     return (
       <div className="loader-page">
         <div className="loader">
-          <InsightyLogo />
+          <Logo />
           <div className="light-shade" style={{backgroundColor: light}} />
           <div className="dark-shade" style={{backgroundColor: dark}} />
         </div>
