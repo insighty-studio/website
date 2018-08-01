@@ -1,9 +1,11 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import classnames from 'classnames';
 import SectionHeading from 'components/Typography/SectionHeading';
 import ClientFooter from 'components/Sections/ClientFooter';
 import clients from 'data/clients';
+import Swipeable from 'react-swipeable';
+import {isMobile} from 'react-device-detect';
 
 import {
   LeftBlackArrow,
@@ -11,6 +13,7 @@ import {
   RightBlackArrow,
   RightColorArrow
 } from './icons';
+import Dot from './components/Dot';
 import './index.styl';
 
 class Clients extends Component {
@@ -62,6 +65,21 @@ class Clients extends Component {
     return this.intervalCurrentElement(currentElementIndex - 1, 600);
   }
 
+  renderPagination(data, currentElementIndex) {
+    if (data.length <= 1) return null;
+    return data.map((element, index) => (
+      <Dot
+        key={index}
+        onClick={() => {
+          this.setState({activeAnimation: true});
+          this.intervalCurrentElement(index, 600);
+          this.intervalAnimation(1400);
+        }}
+        className={currentElementIndex === index ? 'current' : ''}
+      />
+    ));
+  }
+
   renderAnimation(activeAnimation) {
     return (
       <div className={classnames('clients-animation', activeAnimation)}>
@@ -71,46 +89,82 @@ class Clients extends Component {
     );
   }
 
+  renderMiddleContent() {
+    const {currentElementIndex} = this.state;
+    const {
+      name, position, comment, href, page, photo, color
+    } = clients[currentElementIndex];
+
+    return (
+      <div className="middle">
+        <SectionHeading subTitle="What Our" title="Clients Say" />
+        <ClientFooter
+          name={name}
+          position={position}
+          comment={comment}
+          href={href}
+          page={page}
+          photo={photo}
+          color={color}
+          key={currentElementIndex}
+        />
+      </div>
+    );
+  }
+
+  renderWebVersion() {
+    const {currentElementIndex} = this.state;
+    const {color} = clients[currentElementIndex];
+
+    return (
+      <Fragment>
+        <div
+          className="left-arrow"
+          onClick={() => this.slidePrev()}
+        >
+          <LeftBlackArrow />
+          <div className="hidden-arrow right">
+            <LeftColorArrow color={color} />
+          </div>
+        </div>
+        <div
+          className="right-arrow"
+          onClick={() => this.slideNext()}
+        >
+          <RightBlackArrow />
+          <div className="hidden-arrow left">
+            <RightColorArrow color={color} />
+          </div>
+        </div>
+        {this.renderMiddleContent()}
+      </Fragment>
+    );
+  }
+
+  renderMobileVersion() {
+    const {currentElementIndex} = this.state;
+
+    return (
+      <Swipeable
+        onSwipingLeft={() => this.slideNext()}
+        onSwipingRight={() => this.slidePrev()}
+      >
+        {this.renderMiddleContent()}
+        <div className="pagination">
+          {this.renderPagination(clients, currentElementIndex)}
+        </div>
+      </Swipeable>
+    );
+  }
+
   render() {
     const {currentElementIndex, activeAnimation} = this.state;
-    const {
-      name, position, comment, href, page, photo, color, label
-    } = clients[currentElementIndex];
+    const {color, label} = clients[currentElementIndex];
     return (
       <div className="clients">
         <div className="background" style={{backgroundColor: color}} key={currentElementIndex} />
         <div className={classnames('content', activeAnimation)}>
-          <div
-            className="left-arrow"
-            onClick={() => this.slidePrev()}
-          >
-            <LeftBlackArrow />
-            <div className="hidden-arrow right">
-              <LeftColorArrow color={color} />
-            </div>
-          </div>
-          <div
-            className="right-arrow"
-            onClick={() => this.slideNext()}
-          >
-            <RightBlackArrow />
-            <div className="hidden-arrow left">
-              <RightColorArrow color={color} />
-            </div>
-          </div>
-          <div className="middle">
-            <SectionHeading subTitle="What Our" title="Clients Say" />
-            <ClientFooter
-              name={name}
-              position={position}
-              comment={comment}
-              href={href}
-              page={page}
-              photo={photo}
-              color={color}
-              key={currentElementIndex}
-            />
-          </div>
+          {isMobile ? this.renderMobileVersion() : this.renderWebVersion()}
           {activeAnimation && this.renderAnimation(activeAnimation, label)}
         </div>
       </div>

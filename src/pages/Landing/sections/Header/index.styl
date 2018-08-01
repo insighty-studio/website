@@ -21,9 +21,10 @@
     height 100%
     position relative
     align-items center
-    padding-top 48px
+    padding 48px 32px 0
 
     +iphone()
+      padding 0
       max-width 100%
       width 100%
       padding-top 0
@@ -45,6 +46,10 @@
       .heading
         +iphone()
           margin 24px 0
+
+        .sub-title
+          color rgba(0,0,0, .4)
+          font-weight 400
 
       .paragraph
         opacity 0.8
