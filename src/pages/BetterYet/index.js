@@ -1,12 +1,12 @@
 import React, {PureComponent} from 'react';
 import Loader from 'components/Loader';
 import WhitePaper from 'components/Sections/WhitePaper';
-import {betteryetBlue, betteryetOrangeYellow} from 'styles/config';
 import Footer from 'components/Footer';
+import {betteryetBlue, betteryetOrangeYellow} from 'styles/config';
 
 import Header from './sections/Header';
 import About from './sections/About';
-import BetterYetLogo from './sections/BetterYetLogo';
+import Logo from './sections/Logo';
 import Prototypes from './sections/Prototypes';
 import Colors from './sections/Colors';
 import ContactUs from './sections/ContactUs';
@@ -52,7 +52,7 @@ class BetterYet extends PureComponent {
         <Header />
         <About />
         {this.renderTopPrototypes()}
-        <BetterYetLogo />
+        <Logo />
         {this.renderBottomPrototypes()}
         <Colors />
         <Illustration />
