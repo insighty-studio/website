@@ -128,7 +128,7 @@ class ContactUsForm extends PureComponent {
           <Button
             className="form-btn"
             type="button"
-            title={messageIsVisible ? 'Thanks!' : 'SEND'}
+            title={messageIsVisible ? 'Thanks!' : 'Send'}
             disabled={messageIsVisible}
           >
             <RightArrowIcon />
