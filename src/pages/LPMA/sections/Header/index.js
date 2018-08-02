@@ -1,7 +1,8 @@
 import React, {PureComponent} from 'react';
-import {LPMATitle, LPMAGraph} from 'icons';
+import {LPMATitle} from 'icons';
 
 import Laptop from './img/laptop.png';
+import {LPMAGraph} from './icons';
 import './index.styl';
 
 class Header extends PureComponent {
