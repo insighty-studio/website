@@ -13,16 +13,19 @@ class ColorsSection extends PureComponent {
       name: PropTypes.string,
       color: PropTypes.string,
       width: PropTypes.string,
+      dark: PropTypes.bool,
     })).isRequired,
-    colorsSectionColor: PropTypes.string.isRequired
+    colorsSectionColor: PropTypes.string.isRequired,
   };
 
   static defaultProps = {
-    className: ''
+    className: '',
   };
 
   render() {
-    const {className, colors, colorsSectionColor} = this.props;
+    const {
+      className, colors, colorsSectionColor
+    } = this.props;
 
     return (
       <div className={classnames('colors-section', className)}>
@@ -32,9 +35,11 @@ class ColorsSection extends PureComponent {
           offsetYMin={-120}
         >
           <div className="colors">
-            {colors.map(({name, color, width}) => (
+            {colors.map(({
+              name, color, width, dark
+            }) => (
               <div key={color} className="color" style={{backgroundColor: color, width}}>
-                <div className="color-info">
+                <div className={classnames('color-info', dark && 'dark')}>
                   <div>
                     {name}
                   </div>

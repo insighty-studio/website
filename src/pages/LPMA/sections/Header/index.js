@@ -1,5 +1,6 @@
 import React, {PureComponent} from 'react';
 import {LPMATitle} from 'icons';
+import {Parallax} from 'react-scroll-parallax';
 
 import Laptop from './img/laptop.png';
 import {LPMAGraph} from './icons';
@@ -10,13 +11,28 @@ class Header extends PureComponent {
     return (
       <div className="header-section">
         <div className="lpma-graph">
-          <LPMAGraph />
+          <Parallax
+            offsetYMax={40}
+            offsetYMin={-40}
+          >
+            <LPMAGraph />
+          </Parallax>
         </div>
         <div className="lpma-title">
-          <LPMATitle />
+          <Parallax
+            offsetYMax={20}
+            offsetYMin={-20}
+          >
+            <LPMATitle />
+          </Parallax>
         </div>
         <div className="laptop-image">
-          <img alt="LPMA" src={Laptop} />
+          <Parallax
+            offsetYMax={60}
+            offsetYMin={-60}
+          >
+            <img alt="LPMA" src={Laptop} />
+          </Parallax>
         </div>
       </div>
     );
