@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
-import classnames from 'classnames';
 import request from 'utils/request';
 import {RightArrowIcon} from 'icons';
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 import SectionHeading from 'components/Typography/SectionHeading';
 import Input from 'components/Input';
 import TextArea from 'components/TextArea';
@@ -22,15 +22,14 @@ class ContactUsForm extends PureComponent {
       website: '',
       message: '',
       messageIsVisible: false,
-      formIsSubmitted: false,
       pristine: true
     };
   }
 
   handleSubmit(e) {
     trackEvent('Form submit pressed');
-
     e.preventDefault();
+
     const {
       name, email, phone, website, message
     } = this.state;
@@ -53,9 +52,9 @@ class ContactUsForm extends PureComponent {
           phone: '',
           website: '',
           message: '',
-          messageIsVisible: true,
-          formIsSubmitted: true
+          messageIsVisible: true
         });
+        NotificationManager.success('Your message has been sent!', null, 5000);
         setTimeout(() => this.setState({messageIsVisible: false}), 5000);
       });
   }
@@ -68,9 +67,9 @@ class ContactUsForm extends PureComponent {
     this.setState({[e.target.name]: e.target.value});
   }
 
-  showMessage(messageIsVisible, message) {
+  showMessage(message) {
     return (
-      <div className={classnames('form-message', messageIsVisible && 'appearance')}>
+      <div className="form-message">
         {message}
       </div>
     );
@@ -78,7 +77,7 @@ class ContactUsForm extends PureComponent {
 
   render() {
     const {
-      name, email, phone, website, message, messageIsVisible, formIsSubmitted, pristine
+      name, email, phone, website, message, messageIsVisible, pristine
     } = this.state;
 
     return (
@@ -128,13 +127,14 @@ class ContactUsForm extends PureComponent {
           />
           <Button
             className="form-btn"
-            title={formIsSubmitted ? 'Thanks!' : 'SEND'}
-            disabled={formIsSubmitted}
+            type="button"
+            title={messageIsVisible ? 'Thanks!' : 'SEND'}
+            disabled={messageIsVisible}
           >
             <RightArrowIcon />
           </Button>
         </form>
-        {this.showMessage(messageIsVisible, '*your message has been sent')}
+        {messageIsVisible && <NotificationContainer />}
       </div>
     );
   }

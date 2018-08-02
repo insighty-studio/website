@@ -15,7 +15,7 @@
   position: relative
   border-radius @height
   white-space nowrap
-  transition margin .4s
+  transition margin .4s, color .5s
   text-decoration none
 
   &:hover
@@ -36,7 +36,14 @@
         transform translateX(0)
 
   &:disabled
-    opacity 0.9
+    color $gray
+
+    .button-hover-text
+      box-shadow 0 4px 16px 0 rgba(0,0,0, .08)
+
+    .button-hover-text,
+    .button-icon
+      background $gray
 
   .button-title
     margin-right 20px
@@ -54,7 +61,7 @@
     align-items center
     width: 48px
     overflow: hidden
-    transition width .4s, padding .4s
+    transition width .4s, padding .4s, background-color .5s, box-shadow .5s
     box-shadow: 0 4px 16px 0 rgba(0,94,255,0.25)
 
     span, a
@@ -80,6 +87,7 @@
     border-radius @width
     position relative
     z-index 3
+    transition background-color .5s
 
     svg
       display block

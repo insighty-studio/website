@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import Button from 'components/Button';
 import {RightArrowIcon} from 'icons';
+import Button from 'components/Button';
 
 import './index.styl';
 
@@ -11,14 +11,13 @@ class ClientFooter extends PureComponent {
     position: PropTypes.string.isRequired,
     comment: PropTypes.string.isRequired,
     href: PropTypes.string.isRequired,
-    page: PropTypes.string.isRequired,
     photo: PropTypes.string.isRequired,
     color: PropTypes.string.isRequired
   };
 
   render() {
     const {
-      name, position, comment, href, page, photo, color
+      name, position, comment, href, photo, color, page
     } = this.props;
     return (
       <div className="client-footer">
@@ -36,10 +35,18 @@ class ClientFooter extends PureComponent {
             {comment}
           </div>
           <div className="buttons">
-            <Button title="full review" className="full-review-btn" href={href}>
+            <Button
+              title="full review"
+              className="full-review-btn"
+              href={href}
+            >
               <RightArrowIcon color={color} />
             </Button>
-            <Button title="project details" className="project-details-btn" href={page}>
+            <Button
+              title="project details"
+              className="project-details-btn"
+              href={page}
+            >
               <RightArrowIcon color={color} />
             </Button>
           </div>
