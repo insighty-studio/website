@@ -21,26 +21,10 @@ import Image6 from './images/image6.png';
 import './index.styl';
 
 class BetterYet extends PureComponent {
-  renderTopPrototypes() {
+  renderPrototypes(...rest) {
     return (
       <Prototypes
-        prototypes={[
-          {src: Image1, offset: 20},
-          {src: Image2, offset: 40},
-          {src: Image3, offset: 20},
-        ]}
-      />
-    );
-  }
-
-  renderBottomPrototypes() {
-    return (
-      <Prototypes
-        prototypes={[
-          {src: Image4, offset: 20},
-          {src: Image5, offset: 40},
-          {src: Image6, offset: 20},
-        ]}
+        prototypes={rest}
       />
     );
   }
@@ -51,9 +35,17 @@ class BetterYet extends PureComponent {
         <Loader colors={{light: betteryetOrangeYellow, dark: betteryetBlue}} />
         <Header />
         <About />
-        {this.renderTopPrototypes()}
+        {this.renderPrototypes(
+          {src: Image1, offset: 20},
+          {src: Image2, offset: 40},
+          {src: Image3, offset: 20}
+        )}
         <BetterYetLogo />
-        {this.renderBottomPrototypes()}
+        {this.renderPrototypes(
+          {src: Image4, offset: 20},
+          {src: Image5, offset: 40},
+          {src: Image6, offset: 20}
+        )}
         <Colors />
         <Illustration />
         <WhitePaper>
