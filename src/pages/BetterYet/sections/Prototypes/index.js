@@ -15,7 +15,7 @@ class Prototypes extends PureComponent {
   renderPrototypes() {
     const {prototypes} = this.props;
     return prototypes.map(({src, offset}) => (
-      <div className="prototype">
+      <div className="prototype" key={src}>
         <Parallax
           offsetYMax={offset}
           offsetYMin={-offset}

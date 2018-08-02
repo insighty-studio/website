@@ -13,7 +13,7 @@ class AboutSection extends PureComponent {
   static propTypes = {
     className: PropTypes.string,
     shortDesc: PropTypes.shape({
-      year: PropTypes.number,
+      year: PropTypes.string,
       client: PropTypes.string,
       services: PropTypes.string,
     }).isRequired,
@@ -21,11 +21,12 @@ class AboutSection extends PureComponent {
       name: PropTypes.string,
       desc: PropTypes.string,
     }).isRequired,
-    logo: PropTypes.node.isRequired
+    logo: PropTypes.node
   };
 
   static defaultProps = {
     className: '',
+    logo: null
   };
 
   render() {
