@@ -2,8 +2,8 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Scroll from 'react-scroll';
-import {ScrollUpBtnIcon} from 'icons';
 
+import {ScrollUpButtonIcon} from './icons';
 import './index.styl';
 
 class ScrollUpButton extends PureComponent {
@@ -24,7 +24,7 @@ class ScrollUpButton extends PureComponent {
           percentagesScrolled >= window.innerHeight && 'scroll-up-btn-visible')}
         onClick={() => Scroll.animateScroll.scrollToTop({smooth: true, duration: 500})}
       >
-        <ScrollUpBtnIcon />
+        <ScrollUpButtonIcon />
       </div>
     );
   }

@@ -9,6 +9,7 @@ import 'aos/dist/aos.css';
 import Landing from './pages/Landing';
 import BetterYet from './pages/BetterYet';
 import LPMA from './pages/LPMA';
+import Page404 from './pages/Page404';
 
 AOS.init({
   disable: false,
@@ -67,6 +68,7 @@ class App extends Component {
             <Route exact path="/" component={Landing} />
             <Route path="/betteryet" component={BetterYet} />
             <Route path="/lpma" component={LPMA} />
+            <Route component={Page404} />
           </Switch>
         </div>
       </BrowserRouter>

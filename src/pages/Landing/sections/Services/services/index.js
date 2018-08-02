@@ -12,7 +12,7 @@ import {
   QAIcon,
   ProjectManagementIcon,
   AutomationIcon
-} from 'icons';
+} from '../icons';
 
 export const Design = [
   {
