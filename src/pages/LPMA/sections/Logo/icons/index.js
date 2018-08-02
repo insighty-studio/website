@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable max-len */
 import React, {PureComponent} from 'react';
 
 export class LPMALogo extends PureComponent {
