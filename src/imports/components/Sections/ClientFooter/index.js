@@ -12,7 +12,8 @@ class ClientFooter extends PureComponent {
     comment: PropTypes.string.isRequired,
     href: PropTypes.string.isRequired,
     photo: PropTypes.string.isRequired,
-    color: PropTypes.string.isRequired
+    color: PropTypes.string.isRequired,
+    page: PropTypes.string.isRequired,
   };
 
   render() {

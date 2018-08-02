@@ -10,12 +10,14 @@ class Button extends PureComponent {
     title: PropTypes.string.isRequired,
     children: PropTypes.node,
     href: PropTypes.string,
+    disabled: PropTypes.bool,
     onClick: PropTypes.func,
     type: PropTypes.oneOf(['button', 'link']),
   };
 
   static defaultProps = {
     type: 'link',
+    disabled: false,
     className: '',
     children: null,
     href: '',
