@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
@@ -37,11 +36,11 @@ class AboutSection extends PureComponent {
 
     return (
       <div className={classnames('about-section', className)}>
-        {/*<Parallax*/}
-          {/*className="desc-parallax"*/}
-          {/*offsetYMax={20}*/}
-          {/*offsetYMin={-20}*/}
-        {/*>*/}
+        <Parallax
+          className="desc-parallax"
+          offsetYMax={20}
+          offsetYMin={-20}
+        >
           <div className="desc">
             <div className="short">
               <ul>
@@ -62,7 +61,7 @@ class AboutSection extends PureComponent {
               text={desc}
             />
           </div>
-        {/*</Parallax>*/}
+        </Parallax>
         <AboutBackground />
         {logo}
       </div>
