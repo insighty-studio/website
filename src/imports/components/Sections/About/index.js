@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import Description from 'components/BigDescription';
+import Description from 'components/Description';
 import {Parallax} from 'react-scroll-parallax';
 
 import AboutBackground from './components/AboutBackground';
