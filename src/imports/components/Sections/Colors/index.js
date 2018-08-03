@@ -13,20 +13,16 @@ class ColorsSection extends PureComponent {
       name: PropTypes.string,
       color: PropTypes.string,
       width: PropTypes.string,
-      dark: PropTypes.bool,
     })).isRequired,
-    colorsSectionColor: PropTypes.string.isRequired,
+    colorsSectionColor: PropTypes.string.isRequired
   };
 
   static defaultProps = {
-    className: '',
+    className: ''
   };
 
   render() {
-    const {
-      className, colors, colorsSectionColor
-    } = this.props;
-
+    const {className, colors, colorsSectionColor} = this.props;
     return (
       <div className={classnames('colors-section', className)}>
         <Parallax
@@ -35,15 +31,13 @@ class ColorsSection extends PureComponent {
           offsetYMin={-120}
         >
           <div className="colors">
-            {colors.map(({
-              name, color, width, dark
-            }) => (
-              <div key={color} className="color" style={{backgroundColor: color, width}}>
-                <div className={classnames('color-info', dark && 'dark')}>
+            {colors.map(({name, color, width}) => (
+              <div key={color} className="color" style={{backgroundColor: color, width, height: width}}>
+                <div className="color-info">
                   <div>
                     {name}
                   </div>
-                  <div className="hash">
+                  <div>
                     {colorsSectionColor}
                   </div>
                 </div>

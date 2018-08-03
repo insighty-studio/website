@@ -6,7 +6,7 @@ import {betteryetBlue, betteryetOrangeYellow} from 'styles/config';
 
 import Header from './sections/Header';
 import About from './sections/About';
-import Logo from './sections/Logo';
+import BetterYetLogo from './sections/BetterYetLogo';
 import Prototypes from './sections/Prototypes';
 import Colors from './sections/Colors';
 import ContactUs from './sections/ContactUs';
@@ -21,26 +21,10 @@ import Image6 from './images/image6.png';
 import './index.styl';
 
 class BetterYet extends PureComponent {
-  renderTopPrototypes() {
+  renderPrototypes(...rest) {
     return (
       <Prototypes
-        prototypes={[
-          {src: Image1, offset: 20},
-          {src: Image2, offset: 40},
-          {src: Image3, offset: 20},
-        ]}
-      />
-    );
-  }
-
-  renderBottomPrototypes() {
-    return (
-      <Prototypes
-        prototypes={[
-          {src: Image4, offset: 20},
-          {src: Image5, offset: 40},
-          {src: Image6, offset: 20},
-        ]}
+        prototypes={rest}
       />
     );
   }
@@ -51,14 +35,23 @@ class BetterYet extends PureComponent {
         <Loader colors={{light: betteryetOrangeYellow, dark: betteryetBlue}} />
         <Header />
         <About />
-        {this.renderTopPrototypes()}
-        <Logo />
-        {this.renderBottomPrototypes()}
+        {this.renderPrototypes(
+          {src: Image1, offset: 20},
+          {src: Image2, offset: 40},
+          {src: Image3, offset: 20}
+        )}
+        <BetterYetLogo />
+        {this.renderPrototypes(
+          {src: Image4, offset: 20},
+          {src: Image5, offset: 40},
+          {src: Image6, offset: 20}
+        )}
         <Colors />
         <Illustration />
         <WhitePaper>
           <ContactUs />
           <ClientFooterSection />
+          <Footer />
         </WhitePaper>
         <Footer />
       </div>

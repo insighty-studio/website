@@ -5,14 +5,22 @@
   height 100vh
   margin 0 32px
 
+  .navigation-bar
+    +iphone()
+      position absolute
+
+      .bar-content
+        padding 32px 32px 0
+
   .mobile-container
     position absolute
     z-index 1
 
     img.mobile
-      width 491px
-      height 658px
+      width 373px
+      height 500px
 
       +iphone()
-        width 60%
-        height: 45%
+        width 309px
+        height 415px
+
