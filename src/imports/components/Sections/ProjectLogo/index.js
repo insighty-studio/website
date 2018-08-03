@@ -18,7 +18,7 @@ class ProjectLogo extends PureComponent {
     const {logo, background} = this.props;
 
     return (
-      <div className="project-logo">
+      <div className="logo-section">
         <Parallax
           className="logo-parallax"
           offsetYMax={160}
