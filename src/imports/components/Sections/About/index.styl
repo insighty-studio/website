@@ -1,44 +1,67 @@
 .about-section
+  position relative
   display flex
   flex-direction column
-  position relative
-  padding 0 32px
-  overflow hidden
+  justify-content center
+  height 720px
+
+  +iphone()
+    height 100%
+    padding 40px
+    justify-content flex-start
 
   .desc-parallax
     z-index 1
 
   .desc
     display flex
-    max-width 1320px
     width 100%
-    z-index 1
+    max-width 1160px
     margin 0 auto
     justify-content space-evenly
-    flex-wrap wrap
-    align-items center
-    min-height 450px
+    z-index 1
 
     +iphone()
-      justify-content normal
+      flex-direction column
 
-    .short ul
-      margin 0 auto
-      padding-left 0
-      width 280px
 
-      li
-        font-size 20px
-        font-weight 700
-        color #999
-        list-style none
-        margin-bottom 15px
+    .short
+      ul
+        margin 0
+        padding-left 0
+        width 280px
+
+        li
+          font-size 20px
+          font-weight 700
+          color #999
+          list-style none
+          margin-bottom 30px
+
+          &:last-child
+            margin 0
 
         span
           color $white
 
         &:last-item
           margin-bottom 0
+
+    .service-description
+      height 100%
+      margin 0
+
+      .title
+        width 440px
+
+      +iphone()
+        margin-top 32px
+
+        .heading
+          margin-bottom 16px
+
+          .title
+            width 100%
 
     .story
       width 660px
@@ -48,3 +71,4 @@
 
       span
         color #FFD900
+

@@ -6,10 +6,10 @@ class Colors extends PureComponent {
     return (
       <ColorsSection
         colors={[
-          {name: 'Mustard', color: '#FFDF4A', width: '40%'},
-          {name: 'Lightning Yellow', color: '#F8C91C', width: '30%'},
-          {name: 'Mine Shaft', color: '#272727', width: '15%'},
-          {name: 'Dusty Gray', color: '#979797', width: '15%'}
+          {name: 'mustard', color: '#FFDF4A', width: '40%'},
+          {name: 'lightning yellow', color: '#F8C91C', width: '30%'},
+          {name: 'mine shaft', color: '#272727', width: '15%'},
+          {name: 'dusty gray', color: '#979797', width: '15%'}
         ]}
         colorsSectionColor="#93BBD8"
       />

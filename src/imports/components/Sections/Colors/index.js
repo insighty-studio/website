@@ -23,7 +23,6 @@ class ColorsSection extends PureComponent {
 
   render() {
     const {className, colors, colorsSectionColor} = this.props;
-
     return (
       <div className={classnames('colors-section', className)}>
         <Parallax
@@ -33,12 +32,12 @@ class ColorsSection extends PureComponent {
         >
           <div className="colors">
             {colors.map(({name, color, width}) => (
-              <div key={color} className="color" style={{backgroundColor: color, width}}>
+              <div key={color} className="color" style={{backgroundColor: color, width, height: width}}>
                 <div className="color-info">
                   <div>
                     {name}
                   </div>
-                  <div className="hash">
+                  <div>
                     {colorsSectionColor}
                   </div>
                 </div>
