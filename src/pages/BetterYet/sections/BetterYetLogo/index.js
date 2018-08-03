@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import {Parallax} from 'react-scroll-parallax';
 
-import {Background, AboutLogo} from './icons';
+import {Background, BackgroundMobile, AboutLogo} from './icons';
 import './index.styl';
 
 class BetterYetLogo extends PureComponent {
@@ -16,6 +16,7 @@ class BetterYetLogo extends PureComponent {
         </Parallax>
         <div className="logo-bg">
           <Background />
+          <BackgroundMobile />
         </div>
       </div>
     );
