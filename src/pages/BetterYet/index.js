@@ -1,8 +1,8 @@
 import React, {PureComponent} from 'react';
 import Loader from 'components/Loader';
 import WhitePaper from 'components/Sections/WhitePaper';
-import {betteryetBlue, betteryetOrangeYellow} from 'styles/config';
 import Footer from 'components/Footer';
+import {betteryetBlue, betteryetOrangeYellow} from 'styles/config';
 
 import Header from './sections/Header';
 import About from './sections/About';

@@ -1,3 +1,5 @@
+export const white = '#fff';
+export const black = '#000';
 export const betteryetBlue = '#9FC6E2';
 export const betteryetYellow = '#FFDF4A';
 export const betteryetOrangeYellow = '#F8C91C';
