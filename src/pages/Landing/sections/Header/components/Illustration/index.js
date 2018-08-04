@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import {Parallax} from 'react-scroll-parallax';
 
-import CloudIcon from './cloud';
+import CloudIcon from './cloud.js';
 import './index.styl';
 
 class Illustration extends PureComponent {
