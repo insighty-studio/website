@@ -6,7 +6,7 @@ import {betteryetBlue, betteryetOrangeYellow} from 'styles/config';
 
 import Header from './sections/Header';
 import About from './sections/About';
-import BetterYetLogo from './sections/BetterYetLogo';
+import Logo from './sections/Logo';
 import Prototypes from './sections/Prototypes';
 import Colors from './sections/Colors';
 import ContactUs from './sections/ContactUs';
@@ -40,7 +40,7 @@ class BetterYet extends PureComponent {
           {src: Image2, offset: 40},
           {src: Image3, offset: 20}
         )}
-        <BetterYetLogo />
+        <Logo />
         {this.renderPrototypes(
           {src: Image4, offset: 20},
           {src: Image5, offset: 40},

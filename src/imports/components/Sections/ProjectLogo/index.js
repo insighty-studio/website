@@ -7,7 +7,7 @@ import './index.styl';
 class ProjectLogo extends PureComponent {
   static propTypes = {
     logo: PropTypes.node.isRequired,
-    background: PropTypes.node,
+    background: PropTypes.arrayOf(PropTypes.node)
   };
 
   static defaultProps = {
@@ -16,7 +16,6 @@ class ProjectLogo extends PureComponent {
 
   render() {
     const {logo, background} = this.props;
-
     return (
       <div className="logo-section">
         <Parallax
