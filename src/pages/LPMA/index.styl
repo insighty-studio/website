@@ -2,3 +2,16 @@
   overflow hidden
   background-color #464F53
 
+  .white-paper
+    +iphone()
+      background linear-gradient(white, #DFE8F7)
+    .paper-width .footer
+      display none
+
+      +iphone()
+        display block
+        background-color transparent
+
+  >.footer
+    +iphone()
+      display none

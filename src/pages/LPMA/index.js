@@ -30,6 +30,7 @@ class LPMA extends PureComponent {
         <WhitePaper>
           <ContactUs />
           <ClientFooterSection />
+          <Footer />
         </WhitePaper>
         <Footer />
       </div>
