@@ -7,7 +7,10 @@ import './index.styl';
 class ProjectLogo extends PureComponent {
   static propTypes = {
     logo: PropTypes.node.isRequired,
-    background: PropTypes.arrayOf(PropTypes.node)
+    background: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node
+    ])
   };
 
   static defaultProps = {
