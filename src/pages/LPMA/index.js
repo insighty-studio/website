@@ -23,13 +23,14 @@ class LPMA extends PureComponent {
         <BodyBackground color={lpmaDarkGray} />
         <Header />
         <About />
-        <Logo />
         <Illustrations />
+        <Logo />
         <Colors />
         <Screens />
         <WhitePaper>
           <ContactUs />
           <ClientFooterSection />
+          <Footer />
         </WhitePaper>
         <Footer />
       </div>

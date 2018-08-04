@@ -1,14 +1,14 @@
 import React, {PureComponent} from 'react';
 import ProjectLogo from 'components/Sections/ProjectLogo';
 
-import {AboutBackground, AboutLogo} from './icons';
+import {Background, BackgroundMobile, AboutLogo} from './icons';
 
 class Logo extends PureComponent {
   render() {
     return (
       <ProjectLogo
         logo={<AboutLogo />}
-        background={<AboutBackground />}
+        background={[<Background />, <BackgroundMobile />]}
       />
     );
   }
