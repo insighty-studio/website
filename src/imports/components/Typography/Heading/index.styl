@@ -15,7 +15,9 @@
 
     +iphone5()
       font-size 10px
-      line-height 12px
+
+    +iphone()
+      font-size 12px
 
     &:before
       content ''
@@ -28,10 +30,17 @@
       +iphone5()
         width 20px
 
+      +iphone()
+        width 40px
+
   .title
     font-size 32px
     line-height 42px
 
     +iphone5()
       font-size 20px
-      line-height 24px
+      line-height 28px
+
+    +iphone()
+      font-size 32px
+      line-height 42px
