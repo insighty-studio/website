@@ -2,6 +2,14 @@ iphone()
   @media only screen and (min-device-width : 375px) and (max-device-width : 667px)
     {block}
 
+iphone5()
+  @media only screen and (min-device-width : 320px) and (max-device-width : 320px)
+    {block}
+
 iphoneDisabled()
   +iphone()
+    display none
+
+iphone5Disabled()
+  +iphone5()
     display none

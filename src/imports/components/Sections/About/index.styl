@@ -10,6 +10,11 @@
     padding 40px
     justify-content flex-start
 
+  +iphone5()
+    height 100%
+    padding 40px
+    justify-content flex-start
+
   .desc-parallax
     z-index 1
 
@@ -22,6 +27,9 @@
     z-index 1
 
     +iphone()
+      flex-direction column
+
+    +iphone5()
       flex-direction column
 
     .short
@@ -51,14 +59,11 @@
       margin 0
 
       .heading
-        .sub-title
-          opacity 1
-
         +iphone()
           margin 32px 0 16px
 
-          .title
-            width 100%
+        +iphone5()
+          margin 30px 0 14px
 
     .story
       width 660px

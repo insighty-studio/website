@@ -7,7 +7,13 @@
 
   +iphone()
     width 100%
-    margin 28px 0 40px
+    margin 24px 0 40px
+    flex-direction column
+    align-items center
+
+  +iphone5()
+    width 100%
+    margin 20px 0 40px
     flex-direction column
     align-items center
 
@@ -24,6 +30,10 @@
 
     +iphone()
       width 294px
+      margin 24px 0 0
+
+    +iphone5()
+      width 270px
       margin 24px 0 0
 
     .name, .position
@@ -73,7 +83,10 @@
         +iphone()
           width 32px
           height 32px
-          background $blue
+
+        +iphone5()
+          width 30px
+          height 30px
 
       .button-icon
         border-radius 50%
@@ -83,9 +96,13 @@
           width 32px
           height 32px
 
+        +iphone5()
+          width 30px
+          height 30px
+
     .full-review-btn
-      +iphone()
-        display none
+      iphoneDisabled()
+      iphone5Disabled()
 
     .project-details-btn
       margin-left 40px
@@ -93,13 +110,8 @@
       +iphone()
         margin 0
 
-      .button-title
-        +iphone()
-          color $blue
-
-      .button-icon
-        +iphone()
-          background-color $blue
+      +iphone5()
+        margin 0
 
 .client-enter
   opacity 0.01

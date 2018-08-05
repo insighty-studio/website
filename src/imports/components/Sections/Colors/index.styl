@@ -16,7 +16,17 @@
       .parallax-inner
         height inherit
 
+    +iphone5()
+      height 100%
+      .parallax-inner
+        height inherit
+
   +iphone()
+    height 100vh
+    display block
+    padding 0
+
+  +iphone5()
     height 100vh
     display block
     padding 0
@@ -35,23 +45,36 @@
       display block
       height inherit
 
+    +iphone5()
+      display block
+      height inherit
+
     .color
       height auto
 
       +iphone()
         width 100% !important
 
+      +iphone5()
+        width 100% !important
+
       &:first-child
-        border-radius: 8px 0 0 8px;
+        border-radius 8px 0 0 8px
 
         +iphone()
-          border-radius: 0
+          border-radius 0
+
+        +iphone5()
+          border-radius 0
 
       &:last-child
-        border-radius: 0 8px 8px 0;
+        border-radius 0 8px 8px 0
 
         +iphone()
-          border-radius: 0
+          border-radius 0
+
+        +iphone5()
+          border-radius 0
 
       .color-info
         padding 24px
