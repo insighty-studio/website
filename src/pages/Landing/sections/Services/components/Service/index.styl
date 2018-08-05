@@ -3,7 +3,15 @@
   margin-bottom 200px
 
   +iphone()
-    margin-bottom: 64px
+    margin-bottom 62px
+    display block
+    width 100%
+    padding 0 40px
+    padding-bottom 210px
+    position relative
+
+  +iphone5()
+    margin-bottom 64px
     display block
     width 100%
     padding 0 40px
@@ -29,6 +37,14 @@
       width 100%
       padding 0 40px
 
+    +iphone5()
+      grid-gap 24px
+      position absolute
+      bottom 0
+      left 0
+      width 100%
+      padding 0 10px
+
     .service-icon
       align-items center
       display flex
@@ -44,4 +60,7 @@
         white-space nowrap
 
         +iphone()
+          font-size 12px
+
+        +iphone5()
           font-size 12px
