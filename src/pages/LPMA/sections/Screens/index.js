@@ -10,9 +10,6 @@ class Screens extends PureComponent {
   render() {
     return (
       <div className="screens-section">
-        <span className="screens-header">
-          UI/UX Design
-        </span>
         <div className="screens-images">
           <div className="left">
             <img alt="LPMA" src={LeftImage} />

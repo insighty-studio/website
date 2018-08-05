@@ -20,6 +20,7 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   entry: [
     require.resolve('./polyfills'),
+    require.resolve('react-notifications/lib/notifications.css'),
     require.resolve('react-dev-utils/webpackHotDevClient'),
     paths.appIndexJs,
   ],

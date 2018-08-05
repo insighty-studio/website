@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Parallax} from 'react-scroll-parallax';
 import {Link} from 'react-scroll';
-import {Logo, ExploreButtonIcon} from 'icons';
+import {Logo} from 'icons';
 import {trackEvent} from 'analytics';
 import NavigationBar from 'components/NavigationBar';
 import Heading from 'components/Typography/Heading';
@@ -9,6 +9,7 @@ import Paragraph from 'components/Typography/Paragraph';
 import Button from 'components/Button';
 
 import Illustration from './components/Illustration';
+import {ExploreButtonIcon} from './icons';
 import './index.styl';
 
 class Header extends Component {

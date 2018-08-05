@@ -1,22 +1,22 @@
 .lpma-page
   .illustrations-section
     display flex
-    flex-direction row
-    flex-wrap wrap
     justify-content center
-    align-content flex-start
-    margin-bottom 128px
+    align-items center
+    height 720px
+    +iphone()
+      height 100vh
+      justify-content flex-end
 
-    .illustrations-header
-      width 100%
-      text-align center
-      font-family Rubik, sans-serif
-      color #ffffff
-      font-size 42px
-      line-height 50px
-      font-weight $medium-weight
-      margin-bottom 70px
+    .illustration-image
+      width 1028px
+      height 378px
+      +iphone()
+        display none
 
-    .illustrations-image
-      img
-        width 79.2vw
+    .illustration-image-mobile
+      display none
+      +iphone()
+        width 362px
+        height 490px
+        display inline

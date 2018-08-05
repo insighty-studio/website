@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import Description from 'components/BigDescription';
+import Description from 'components/Description';
 import {Parallax} from 'react-scroll-parallax';
 
 import AboutBackground from './components/AboutBackground';
@@ -13,7 +13,7 @@ class AboutSection extends PureComponent {
   static propTypes = {
     className: PropTypes.string,
     shortDesc: PropTypes.shape({
-      year: PropTypes.number,
+      year: PropTypes.string,
       client: PropTypes.string,
       services: PropTypes.string,
     }).isRequired,
@@ -21,11 +21,12 @@ class AboutSection extends PureComponent {
       name: PropTypes.string,
       desc: PropTypes.string,
     }).isRequired,
-    logo: PropTypes.node.isRequired
+    logo: PropTypes.node
   };
 
   static defaultProps = {
     className: '',
+    logo: null
   };
 
   render() {

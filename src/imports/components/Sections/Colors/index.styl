@@ -1,38 +1,42 @@
 .colors-section
+  position relative
   display flex
   align-items center
-  position relative
-  height 495px
+  justify-content center
+  height 720px
   padding 0 32px
-  overflow hidden
+  font-family "Roboto Mono", sans-serif
 
   .colors-parallax
     z-index 1
     width 100%
 
+    +iphone()
+      height 100%
+      .parallax-inner
+        height inherit
+
   +iphone()
+    height 100vh
+    display block
     padding 0
 
   .section-name
-    color $white
+    color white
 
   .colors
     display flex
+    width 100%
     max-width 1320px
     margin 0 auto
-    flex-grow 1
-    justify-content space-between
     z-index 1
-    font-family Quicksand
-    font-style Italic
-    font-weight 700
-    margin-top 95px
 
     +iphone()
-      flex-wrap wrap
+      display block
+      height inherit
 
     .color
-      width 25%
+      height auto
 
       +iphone()
         width 100% !important
@@ -50,11 +54,12 @@
           border-radius: 0
 
       .color-info
-        padding 30px
-        color $white
-        font-weight 500
-        font-style: normal
-        font-family "Roboto Mono", sans-serif
+        padding 24px
+        color white
+        font-size $small
+        line-height 24px
+        letter-spacing 2px
+        text-transform uppercase
 
-        .hash
-          font-weight normal
+        div:first-child
+          font-weight $medium-weight

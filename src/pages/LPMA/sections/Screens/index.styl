@@ -1,50 +1,31 @@
-.lpma-page
-  .screens-section
+.lpma-page .screens-section
+  padding 60px 0
+
+  .screens-images
     display flex
-    flex-direction row
-    flex-wrap wrap
-    justify-content: center
-    align-content flex-start
-    margin-bottom 128px
 
-    .screens-header
-      width 100%
-      text-align center
-      font-family Rubik, sans-serif
-      color #ffffff
-      font-size 42px
-      line-height 50px
-      font-weight $medium-weight
-      margin-bottom 70px
+    .left
+      width 50%
+      display flex
+      flex-direction row
+      align-items flex-start
+      justify-content center
 
-    .screens-images
-      max-width 100%
+      img
+        width 80%
+        object-fit contain
+        box-shadow 0 2px 60px 0 rgba(0,0,0,0.3)
+
+
+    .right
+      width 50%
       display flex
       flex-direction row
       flex-wrap wrap
+      align-items flex-start
+      justify-content center
 
-      .left
-        width 50%
-        display flex
-        flex-direction row
-        align-items flex-start
-        justify-content center
-
-        img
-          width 80%
-          object-fit contain
-          box-shadow 0 2px 60px 0 rgba(0,0,0,0.3)
-
-
-      .right
-        width 50%
-        display flex
-        flex-direction row
-        flex-wrap wrap
-        align-items flex-start
-        justify-content center
-
-        img
-          width 80%
-          object-fit contain
-          box-shadow 0 2px 60px 0 rgba(0,0,0,0.3)
+      img
+        width 80%
+        object-fit contain
+        box-shadow 0 2px 60px 0 rgba(0,0,0,0.3)

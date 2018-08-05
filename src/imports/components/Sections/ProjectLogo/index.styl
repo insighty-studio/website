@@ -1,0 +1,17 @@
+.logo-section
+  display flex
+  justify-content center
+  align-items center
+  height 720px
+
+  +iphone()
+    height 100vh
+
+  .logo-bg
+    position absolute
+    svg:first-child
+      iphoneDisabled()
+    svg:last-child
+      display none
+      +iphone()
+        display inline
