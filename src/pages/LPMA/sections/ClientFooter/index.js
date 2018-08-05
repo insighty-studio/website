@@ -4,15 +4,16 @@ import clients from 'data/clients';
 
 class ClientFooterSection extends PureComponent {
   render() {
+    // TODO accept a `client` prop, then destruct
     const {
-      name, position, href, page, photo
-    } = clients[1];
+      name, position, href, page, photo, comment
+    } = clients[0];
 
     return (
       <ClientFooter
         name={name}
         position={position}
-        comment="They know how to build a great product for a very reasonable price."
+        comment={comment}
         href={href}
         page={page}
         photo={photo}
