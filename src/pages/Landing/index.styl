@@ -5,9 +5,8 @@
     +iphone()
       background linear-gradient(white, #DFE8F7)
 
-    .contact-us-form
-      +iphone()
-        height 100%
+    +iphone5()
+      background linear-gradient(white, #DFE8F7)
 
     .footer
       display none
@@ -16,6 +15,10 @@
         display flex
         background-color transparent
 
+      +iphone5()
+        display flex
+        background-color transparent
+
   >.footer
-    +iphone()
-      display none
+    iphoneDisabled()
+    iphone5Disabled()
