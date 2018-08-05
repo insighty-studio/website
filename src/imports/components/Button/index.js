@@ -10,6 +10,7 @@ class Button extends PureComponent {
     title: PropTypes.string.isRequired,
     children: PropTypes.node,
     href: PropTypes.string,
+    opensNewTab: PropTypes.bool,
     disabled: PropTypes.bool,
     onClick: PropTypes.func,
     type: PropTypes.oneOf(['button', 'link']),
@@ -18,6 +19,7 @@ class Button extends PureComponent {
   static defaultProps = {
     type: 'link',
     disabled: false,
+    opensNewTab: false,
     className: '',
     children: null,
     href: '',
@@ -64,11 +66,12 @@ class Button extends PureComponent {
   }
 
   renderLink() {
-    const {href, className} = this.props;
+    const {href, className, opensNewTab} = this.props;
 
     return (
       <a
         href={href}
+        target={opensNewTab ? '_blank' : ''}
         className={classnames('button', className)}
       >
         {this.renderContent()}
