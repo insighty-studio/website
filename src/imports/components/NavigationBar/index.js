@@ -7,17 +7,19 @@ import './index.styl';
 
 class NavigationBar extends React.Component {
   static propTypes = {
-    links: PropTypes.arrayOf(PropTypes.object).isRequired,
+    links: PropTypes.arrayOf(PropTypes.object),
     logoIcon: PropTypes.element.isRequired,
     white: PropTypes.bool
   };
 
   static defaultProps = {
+    links: null,
     white: false
   };
 
   renderLinks() {
     const {links, white} = this.props;
+    if (!links) return null;
     return links.map(({
       text, to, href, active
     }, i) => {

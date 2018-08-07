@@ -8,7 +8,7 @@ import './index.styl';
 class Services extends PureComponent {
   render() {
     return (
-      <div className="services" id="services">
+      <div className="services">
         <SectionHeading subTitle="our" title="services" />
         <div className="service-list">
           <Service

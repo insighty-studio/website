@@ -5,7 +5,7 @@ import Footer from 'components/Footer';
 class ContactUs extends PureComponent {
   render() {
     return (
-      <div className="contact-us">
+      <div className="contact-us" id="contact-us">
         <ContactUsForm />
         <Footer />
       </div>
