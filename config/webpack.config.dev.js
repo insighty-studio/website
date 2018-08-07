@@ -41,7 +41,7 @@ module.exports = {
       utils: path.resolve('src/imports/utils'),
       components: path.resolve('src/imports/components'),
       icons: path.resolve('src/imports/icons'),
-      styles: path.resolve('src/imports/iphone'),
+      styles: path.resolve('src/imports/styles'),
       analytics: path.resolve('src/imports/analytics'),
       data: path.resolve('src/imports/data'),
       'react-native': 'react-native-web',
@@ -95,7 +95,7 @@ module.exports = {
                   importLoaders: 1,
                   stylus: {
                     define: {
-                      $styles: path.resolve('src/imports/iphone')
+                      $styles: path.resolve('src/imports/styles')
                     }
                   }
                 },
@@ -104,7 +104,7 @@ module.exports = {
                 loader: require.resolve('stylus-loader'),
                 options: {
                   import: [
-                    path.resolve('src/imports/iphone/config.styl'),
+                    path.resolve('src/imports/styles/config.styl'),
                   ],
                 }
               },
