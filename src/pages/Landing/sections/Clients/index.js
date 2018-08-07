@@ -70,11 +70,6 @@ class Clients extends Component {
     return data.map((element, index) => (
       <Dot
         key={index}
-        onClick={() => {
-          this.setState({activeAnimation: true});
-          this.intervalCurrentElement(index, 600);
-          this.intervalAnimation(1400);
-        }}
         className={currentElementIndex === index ? 'current' : ''}
       />
     ));

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Parallax} from 'react-scroll-parallax';
+import WebParallax from 'components/WebParallax';
 import {Link} from 'react-scroll';
 import {Logo} from 'icons';
 import {trackEvent} from 'analytics';
@@ -31,7 +31,7 @@ class Header extends Component {
           logoIcon={<Logo blue />}
         />
         <div className="content">
-          <Parallax
+          <WebParallax
             className="content-info"
             offsetYMax={40}
             offsetYMin={-40}
@@ -52,7 +52,7 @@ class Header extends Component {
                 </Button>
               </Link>
             </div>
-          </Parallax>
+          </WebParallax>
           <Illustration />
         </div>
       </div>

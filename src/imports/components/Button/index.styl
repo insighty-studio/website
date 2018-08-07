@@ -18,7 +18,21 @@
   transition margin .4s, color .5s
   text-decoration none
 
+  +iphone()
+    .button-title
+      z-index 3
+      color white
+      padding-left 20px
+      margin 0 !important
+
+    .button-hover-text
+      width 100% !important
+
   &:hover
+    +iphone()
+      .button-hover-text span
+        display none
+
     .button-title, .button-hover-text
       padding-left 20px
 

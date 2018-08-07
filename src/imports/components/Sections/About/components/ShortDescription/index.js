@@ -5,7 +5,7 @@ import './index.styl';
 class ShortDescription extends PureComponent {
   static propTypes = {
     title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    description: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   };
 
   render() {

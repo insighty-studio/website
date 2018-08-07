@@ -22,7 +22,7 @@ class Page404 extends PureComponent {
               Either way, this wasn’t supposed to happen.
             </Paragraph>
             <div className="lets-go-home-button">
-              <Button title="let’s go home" href="https://insighty.studio/">
+              <Button title="let’s go home" href="/" type="link">
                 <LetsGoHomeButtonIcon />
               </Button>
             </div>

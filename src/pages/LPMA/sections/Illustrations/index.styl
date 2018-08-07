@@ -1,10 +1,17 @@
 .lpma-page .illustrations-section
   display flex
-  flex-direction row
-  flex-wrap wrap
-  justify-content center
-  align-content flex-start
-  margin-bottom 128px
+  align-items center
+  height 100vh
 
-  .illustrations-image img
-    width 79.2vw
+  .mac-parallax
+    left 50%
+    position absolute
+    transform translateX(-50%)
+
+    img.left-mac
+      width 700px
+      transform translateY(30px) translateX(-200px)
+
+    img.right-mac
+      width 584px
+      transform translateY(-30px) translateX(200px)
