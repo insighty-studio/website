@@ -1,11 +1,14 @@
 import React, {PureComponent} from 'react';
 import NavigationBar from 'components/NavigationBar';
 import {Logo} from 'icons';
-import {Parallax} from 'react-scroll-parallax';
+import WebParallax from 'components/WebParallax';
 
 import ByMobile from './images/by-mobile.png';
 import {BetterYetTitle} from './icons';
-import './index.styl';
+
+import './styles/web.styl';
+import './styles/iphones.styl';
+import './styles/iphone5.styl';
 
 class Header extends PureComponent {
   render() {
@@ -14,24 +17,26 @@ class Header extends PureComponent {
         <NavigationBar
           white
           links={[
-            {text: 'Home', href: 'https://insighty.studio/'},
+            {text: 'Home', href: '/'},
             {text: 'Contact', to: 'white-paper'},
           ]}
           logoIcon={<Logo />}
         />
-        <Parallax
+        <WebParallax
           className="mobile-container"
           offsetYMax={40}
           offsetYMin={-40}
         >
           <img alt="" className="mobile" src={ByMobile} />
-        </Parallax>
-        <Parallax
+        </WebParallax>
+        <WebParallax
           offsetYMax={20}
           offsetYMin={-20}
         >
-          <BetterYetTitle />
-        </Parallax>
+          <div className="betteryet-title">
+            <BetterYetTitle />
+          </div>
+        </WebParallax>
       </div>
     );
   }

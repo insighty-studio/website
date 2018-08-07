@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import './index.styl';
+import './styles/web.styl';
 
 class Input extends PureComponent {
   static propTypes = {

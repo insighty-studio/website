@@ -4,7 +4,7 @@ import RightOneImage from './img/right-one.png';
 import RightTwoImage from './img/right-two.png';
 import RightThreeImage from './img/right-three.png';
 
-import './index.styl';
+import './styles/web.styl';
 
 class Screens extends PureComponent {
   render() {

@@ -1,0 +1,25 @@
+.step
+  +alliphones()
+    margin-top 24px
+    display block
+    width 100%
+
+  &:first-child
+    +alliphones()
+      margin-top 40px
+
+  .step-header
+    .number
+      .line
+        +alliphones()
+          width 42px
+
+    .filler
+      +alliphones()
+        width 42px
+
+  .step-desc
+    +alliphones()
+      width 100%
+      margin 0
+      padding 24px 40px 0

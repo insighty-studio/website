@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Parallax} from 'react-scroll-parallax';
+import WebParallax from 'components/WebParallax';
 import {Link} from 'react-scroll';
 import {Logo} from 'icons';
 import {trackEvent} from 'analytics';
@@ -10,7 +10,10 @@ import Button from 'components/Button';
 
 import Illustration from './components/Illustration';
 import {ExploreButtonIcon} from './icons';
-import './index.styl';
+
+import './styles/web.styl';
+import './styles/iphones.styl';
+import './styles/iphone5.styl';
 
 class Header extends Component {
   onClickExplore() {
@@ -22,7 +25,7 @@ class Header extends Component {
       <div className="header">
         <NavigationBar
           links={[
-            {text: 'Home', to: 'home', active: true},
+            {text: 'Home', to: 'header', active: true},
             {text: 'Services', to: 'services'},
             {text: 'Process', to: 'process'},
             {text: 'Clients', to: 'clients'},
@@ -31,7 +34,7 @@ class Header extends Component {
           logoIcon={<Logo blue />}
         />
         <div className="content">
-          <Parallax
+          <WebParallax
             className="content-info"
             offsetYMax={40}
             offsetYMin={-40}
@@ -47,12 +50,12 @@ class Header extends Component {
             </Paragraph>
             <div className="buttons">
               <Link smooth to="services" duration={700} onClick={() => this.onClickExplore()}>
-                <Button title="explore" className="explore-btn">
+                <Button title="explore" className="explore-btn" type="button">
                   <ExploreButtonIcon />
                 </Button>
               </Link>
             </div>
-          </Parallax>
+          </WebParallax>
           <Illustration />
         </div>
       </div>

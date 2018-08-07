@@ -13,7 +13,9 @@ import Colors from './sections/Colors';
 import Screens from './sections/Screens';
 import ContactUs from './sections/ContactUs';
 import ClientFooterSection from './sections/ClientFooter';
-import './index.styl';
+
+import './styles/web.styl';
+import './styles/iphones.styl';
 
 class LPMA extends PureComponent {
   render() {

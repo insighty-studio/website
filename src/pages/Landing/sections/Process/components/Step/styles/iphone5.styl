@@ -1,0 +1,21 @@
+.step
+  +iphone5()
+    margin-top 20px
+
+  &:first-child
+    +iphone5()
+      margin-top 36px
+
+  .step-header
+    .number
+      .line
+        +iphone5()
+          width 36px
+
+    .filler
+      +iphone5()
+        width 36px
+
+  .step-desc
+    +iphone5()
+      padding 20px 36px 0
