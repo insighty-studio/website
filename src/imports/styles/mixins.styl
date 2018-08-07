@@ -1,15 +1,43 @@
 iphone()
-  @media only screen and (min-device-width : 375px) and (max-device-width : 667px)
+  @media only screen and (min-device-width : 375px) and (max-device-width : 375px)
     {block}
 
 iphone5()
-  @media only screen and (min-device-width : 320px) and (max-device-width : 320px)
+  @media only screen and (min-device-width : 320px) and (max-device-width : 320px) and (-webkit-min-device-pixel-ratio: 2)
     {block}
 
-iphoneDisabled()
-  +iphone()
+iphone6()
+  @media only screen and (min-device-width : 375px) and (max-device-width : 375px) and (-webkit-min-device-pixel-ratio: 2)
+    {block}
+
+iphone6plus()
+  @media only screen and (min-device-width : 414px) and (max-device-width : 414px) and (-webkit-min-device-pixel-ratio: 3)
+    {block}
+
+iphonex()
+  @media only screen and (min-device-width : 375px) and (max-device-width : 375px) and (-webkit-min-device-pixel-ratio: 3)
+    {block}
+
+alliphones()
+  @media only screen and (max-device-width : 812px)
+    {block}
+
+alliphonesDisabled()
+  +alliphones()
     display none
 
 iphone5Disabled()
   +iphone5()
+    display none
+
+iphone6Disabled()
+  +iphone6()
+    display none
+
+iphone6plusDisabled()
+  +iphone6plus()
+    display none
+
+iphonexDisabled()
+  +iphonex()
     display none

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Footer from 'components/Footer';
 
-import './index.styl';
+import './styles/web.styl';
 
 class FooterSection extends PureComponent {
   static propTypes = {

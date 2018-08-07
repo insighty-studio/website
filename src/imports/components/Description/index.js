@@ -4,7 +4,10 @@ import classnames from 'classnames';
 
 import Heading from 'components/Typography/Heading';
 import Paragraph from 'components/Typography/Paragraph';
-import './index.styl';
+
+import './styles/web.styl';
+import './styles/iphones.styl';
+import './styles/iphone5.styl';
 
 class Description extends PureComponent {
   static propTypes = {

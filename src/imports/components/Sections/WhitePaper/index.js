@@ -1,7 +1,8 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
-import './index.styl';
+import './styles/web.styl';
+import './styles/iphones.styl';
 
 class WhitePaper extends PureComponent {
   static propTypes = {
