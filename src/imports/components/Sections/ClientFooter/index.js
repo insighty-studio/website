@@ -38,6 +38,7 @@ class ClientFooter extends PureComponent {
           <div className="buttons">
             <Button
               title="full review"
+              opensNewTab
               className="full-review-btn"
               href={href}
             >

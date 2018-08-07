@@ -13,23 +13,25 @@ class AboutSection extends PureComponent {
   static propTypes = {
     className: PropTypes.string,
     shortDesc: PropTypes.shape({
-      year: PropTypes.number,
+      year: PropTypes.string,
       client: PropTypes.string,
       services: PropTypes.string,
     }).isRequired,
     story: PropTypes.shape({
       name: PropTypes.string,
       desc: PropTypes.string,
-    }).isRequired
+    }).isRequired,
+    logo: PropTypes.node
   };
 
   static defaultProps = {
     className: '',
+    logo: null
   };
 
   render() {
     const {
-      className, shortDesc: {year, client, services}, story: {title, desc, subtitle}
+      className, shortDesc: {year, client, services}, story: {title, desc, subtitle}, logo
     } = this.props;
 
     return (
@@ -61,6 +63,7 @@ class AboutSection extends PureComponent {
           </div>
         </WebParallax>
         <AboutBackground />
+        {logo}
       </div>
     );
   }

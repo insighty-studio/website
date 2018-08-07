@@ -23,7 +23,7 @@ class NavigationBar extends React.Component {
     }, i) => {
       if (href) {
         return (
-          <a key={to} className={white && 'white'} rel="noopener noreferrer" href={href}>
+          <a className={white && 'white'} rel="noopener noreferrer" href={href} key={i}>
             {text}
           </a>
         );

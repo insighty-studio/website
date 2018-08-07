@@ -15,3 +15,14 @@
     img.right-mac
       width 584px
       transform translateY(-30px) translateX(200px)
+
+    .illustration-image-mobile
+      display none
+      +iphone()
+        width 362px
+        height 490px
+        display inline
+      +iphone5()
+        width 320px
+        height 460px
+        display inline

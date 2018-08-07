@@ -12,6 +12,11 @@
     background url(/images/main-art-mobile@2x.png) center bottom no-repeat, linear-gradient(-180deg, rgba(0,84,255,0.00) 0%, rgba(0,77,255,0.10) 100%)
     background-size 100% auto
 
+  +iphone5()
+    padding 30px
+    background url(/images/main-art-mobile@2x.png) center bottom no-repeat, linear-gradient(-180deg, rgba(0,84,255,0.00) 0%, rgba(0,77,255,0.10) 100%)
+    background-size 100% auto
+
   .content
     display flex
     flex-direction row
@@ -24,7 +29,11 @@
 
     +iphone()
       padding 0
-      max-width 100%
+      width 100%
+      display block
+
+    +iphone5()
+      padding 0
       width 100%
       display block
 
@@ -37,7 +46,11 @@
 
       +iphone()
         width 100%
-        margin 0
+        display block
+        margin-top 16px
+
+      +iphone5()
+        width 100%
         display block
         margin-top 16px
 
@@ -46,8 +59,14 @@
           margin 24px 0
 
         .sub-title
-          color rgba(0,0,0, .4)
           font-weight 400
+
+          &:before
+            +iphone()
+              width 30px
+
+            +iphone5()
+              width 24px
 
       .paragraph
         opacity 0.8
@@ -56,15 +75,27 @@
           opacity 0.6
           line-height 2
 
+        +iphone5()
+          opacity 0.6
+          line-height 1.8
+
       .title
         +iphone()
           font-size 21px
           line-height 1.5
           margin-bottom 16px
 
+        +iphone5()
+          font-size 20px
+          line-height 1.4
+          margin-bottom 16px
+
       .buttons
         display flex
         margin-top 38px
+
+        iphoneDisabled()
+        iphone5Disabled()
 
         .explore-btn
           margin-right 32px

@@ -8,14 +8,14 @@ class About extends PureComponent {
     return (
       <AboutSection
         shortDesc={{
-          year: 2018,
+          year: '2018',
           client: 'LPMA',
           services: 'UX- and UI- Design, Development',
         }}
         story={{
-          title: 'Real estate agency principals to gather insights',
-          desc: 'Customer Excellence Program is enabling real estate agency principals '
-          + 'to gather insights about their tenants experiences.',
+          title: 'Helping real estate principals achieve customer excellence',
+          desc: 'The Customer Excellence program equips real estate agencies to survey their clients. '
+          + 'This is a major breakthrough in their understanding of the clients experiences and satisfaction levels.',
           subtitle: 'Mission'
         }}
       />

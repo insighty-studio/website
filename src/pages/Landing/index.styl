@@ -3,8 +3,22 @@
 
   .contact-us
     +iphone()
-      background linear-gradient($white, #DFE8F7)
+      background linear-gradient(white, #DFE8F7)
 
-    .contact-us-form
+    +iphone5()
+      background linear-gradient(white, #DFE8F7)
+
+    .footer
+      display none
+
       +iphone()
-        height 100%
+        display flex
+        background-color transparent
+
+      +iphone5()
+        display flex
+        background-color transparent
+
+  >.footer
+    iphoneDisabled()
+    iphone5Disabled()
