@@ -4,7 +4,8 @@ import classnames from 'classnames';
 import WebParallax from 'components/WebParallax';
 
 import ColorsBackground from './components/ColorsBackground';
-import './index.styl';
+import './styles/web.styl';
+import './styles/iphones.styl';
 
 class ColorsSection extends PureComponent {
   static propTypes = {

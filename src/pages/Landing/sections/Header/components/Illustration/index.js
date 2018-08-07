@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import WebParallax from 'components/WebParallax';
 
 import CloudIcon from './cloud';
-import './index.styl';
+import './styles/web.styl';
 
 class Illustration extends PureComponent {
   render() {

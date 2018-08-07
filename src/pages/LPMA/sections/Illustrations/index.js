@@ -3,7 +3,10 @@ import WebParallax from 'components/WebParallax';
 
 import LeftMac from './img/left-mac.png';
 import RightMac from './img/right-mac.png';
-import './index.styl';
+
+import './styles/web.styl';
+import './styles/iphones.styl';
+import './styles/iphone5.styl';
 
 class Illustrations extends PureComponent {
   render() {

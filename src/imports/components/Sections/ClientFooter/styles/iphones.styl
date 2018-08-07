@@ -1,0 +1,56 @@
+.client-footer
+  +alliphones()
+    width 100%
+    margin 24px 0 40px
+    flex-direction column
+    align-items center
+
+  .client-overview
+    +alliphones()
+      margin 24px 0 40px 0
+      width 294px
+
+    .name, .position
+      +alliphones()
+        text-align center
+
+    .comment
+      +alliphones()
+        margin 24px 0
+        text-align center
+        font-size 21px
+        line-height 28px
+
+  .buttons
+    +alliphones()
+      justify-content center
+
+    .full-review-btn, .project-details-btn
+      .button-hover-text
+        +alliphones()
+          width 32px
+          height 32px
+
+      .button-icon
+        +alliphones()
+          width 32px
+          height 32px
+
+    .full-review-btn
+      alliphonesDisabled()
+
+    .project-details-btn
+      +alliphones()
+        margin 0
+
+      .button-hover-text
+        +alliphones()
+          background black
+
+      .button-title
+        +alliphones()
+          color white !important
+
+      .button-icon
+        +alliphones()
+          background-color black

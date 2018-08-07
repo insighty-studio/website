@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import Scroll from 'react-scroll';
 
 import {ScrollUpButtonIcon} from './icons';
-import './index.styl';
+import './styles/web.styl';
 
 class ScrollUpButton extends PureComponent {
   static propTypes = {

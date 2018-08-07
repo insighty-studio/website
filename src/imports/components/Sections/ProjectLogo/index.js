@@ -2,7 +2,8 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import WebParallax from 'components/WebParallax';
 
-import './index.styl';
+import './styles/web.styl';
+import './styles/iphones.styl';
 
 class ProjectLogo extends PureComponent {
   static propTypes = {

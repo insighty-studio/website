@@ -3,7 +3,10 @@ import SectionHeading from 'components/Typography/SectionHeading';
 
 import Service from './components/Service';
 import {Design, Development, Quality} from './services';
-import './index.styl';
+
+import './styles/web.styl';
+import './styles/iphones.styl';
+import './styles/iphone5.styl';
 
 class Services extends PureComponent {
   render() {

@@ -3,7 +3,8 @@ import {Link} from 'react-scroll';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-import './index.styl';
+import './styles/web.styl';
+import './styles/iphones.styl';
 
 class NavigationBar extends React.Component {
   static propTypes = {
@@ -23,7 +24,12 @@ class NavigationBar extends React.Component {
     }, i) => {
       if (href) {
         return (
-          <a className={white && 'white'} rel="noopener noreferrer" href={href} key={i}>
+          <a
+            key={i}
+            href={href}
+            className={white && 'white'}
+            rel="noopener noreferrer"
+          >
             {text}
           </a>
         );
@@ -31,11 +37,11 @@ class NavigationBar extends React.Component {
       return (
         <Link
           smooth
-          key={to}
-          className={classnames({active}, white && 'white')}
-          activeClass="active"
+          key={i}
           to={to}
+          activeClass="active"
           duration={500 + (i * 200)}
+          className={classnames({active}, white && 'white')}
         >
           {text}
         </Link>

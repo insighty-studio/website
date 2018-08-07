@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import './index.styl';
+
+import './styles/web.styl';
 
 class ShortDescription extends PureComponent {
   static propTypes = {

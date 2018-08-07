@@ -2,7 +2,8 @@ import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import './index.styl';
+import './styles/web.styl';
+import './styles/iphones.styl';
 
 class Button extends PureComponent {
   static propTypes = {
@@ -27,9 +28,7 @@ class Button extends PureComponent {
   };
 
   renderContent() {
-    const {
-      title, children
-    } = this.props;
+    const {title, children} = this.props;
 
     return (
       <Fragment>
@@ -49,9 +48,7 @@ class Button extends PureComponent {
   }
 
   renderButton() {
-    const {
-      className, onClick, disabled
-    } = this.props;
+    const {className, onClick, disabled} = this.props;
 
     return (
       <button

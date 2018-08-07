@@ -14,7 +14,10 @@ import {
   RightColorArrow
 } from './icons';
 import Dot from './components/Dot';
-import './index.styl';
+
+import './styles/web.styl';
+import './styles/iphones.styl';
+import './styles/iphone5.styl';
 
 class Clients extends Component {
   constructor(props) {

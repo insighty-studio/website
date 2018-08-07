@@ -2,7 +2,10 @@ import React, {PureComponent} from 'react';
 import WebParallax from 'components/WebParallax';
 
 import notebook from './images/notebook.png';
-import './index.styl';
+
+import './styles/web.styl';
+import './styles/iphones.styl';
+import './styles/iphone5.styl';
 
 class Illustration extends PureComponent {
   render() {

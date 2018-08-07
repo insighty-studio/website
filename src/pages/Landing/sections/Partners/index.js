@@ -8,7 +8,9 @@ import {
   Momentum
 } from './icons';
 
-import './index.styl';
+import './styles/web.styl';
+import './styles/iphones.styl';
+import './styles/iphone5.styl';
 
 class Partners extends PureComponent {
   render() {
