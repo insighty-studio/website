@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {Parallax} from 'react-scroll-parallax';
+import WebParallax from 'components/WebParallax';
 
 import './index.styl';
 
@@ -7,62 +7,62 @@ class Illustration extends PureComponent {
   render() {
     return (
       <div className="page-404-illustration">
-        <Parallax
+        <WebParallax
           className="parallax cloud"
           offsetYMax={20}
           offsetYMin={-20}
         >
           <div className="illustration cloud" />
-        </Parallax>
-        <Parallax
+        </WebParallax>
+        <WebParallax
           className="parallax cloud2"
           offsetYMax={20}
           offsetYMin={-20}
         >
           <div className="illustration cloud2" />
-        </Parallax>
-        <Parallax
+        </WebParallax>
+        <WebParallax
           className="parallax banner"
           offsetYMax={15}
           offsetYMin={-15}
         >
           <div className="illustration banner" />
-        </Parallax>
-        <Parallax
+        </WebParallax>
+        <WebParallax
           className="parallax woman"
           offsetYMax={20}
           offsetYMin={-20}
         >
           <div className="illustration woman" />
-        </Parallax>
-        <Parallax
+        </WebParallax>
+        <WebParallax
           className="parallax first-plant"
           offsetYMax={50}
           offsetYMin={-50}
         >
           <div className="illustration first-plant" />
-        </Parallax>
-        <Parallax
+        </WebParallax>
+        <WebParallax
           className="parallax second-plant"
           offsetYMax={35}
           offsetYMin={-35}
         >
           <div className="illustration second-plant" />
-        </Parallax>
-        <Parallax
+        </WebParallax>
+        <WebParallax
           className="parallax first-tree"
           offsetYMax={50}
           offsetYMin={-50}
         >
           <div className="illustration first-tree" />
-        </Parallax>
-        <Parallax
+        </WebParallax>
+        <WebParallax
           className="parallax second-tree"
           offsetYMax={35}
           offsetYMin={-35}
         >
           <div className="illustration second-tree" />
-        </Parallax>
+        </WebParallax>
       </div>
     );
   }

@@ -1,0 +1,241 @@
+.clients
+  position relative
+
+  .background
+    position absolute
+    height 100%
+    width 100%
+
+  .content
+    position relative
+    overflow hidden
+    display flex
+    justify-content center
+    align-items center
+    opacity 1
+
+    &.left-animation .middle
+      animation MiddleContentToLeft 1.4s ease
+
+    &.right-animation .middle
+      animation MiddleContentToRight 1.4s ease
+
+    .right-arrow
+      right 0
+
+    .left-arrow
+      left 0
+
+    .right-arrow, .left-arrow
+      display flex
+      position absolute
+      width 120px
+      height 100vh
+      align-items center
+      cursor pointer
+
+      &:hover .hidden-arrow
+        width 120px
+
+      .right-black-arrow, .right-yellow-arrow
+        position absolute
+        right 50px
+
+      .left-black-arrow, .left-yellow-arrow
+        position absolute
+        left 50px
+
+      .hidden-arrow
+        position absolute
+        top 0
+        width 0
+        height 100vh
+        overflow hidden
+        z-index 2
+        background-color black
+        transition width .2s ease
+
+        &.right
+          left 0
+
+        &.left
+          right 0
+
+        svg
+          position absolute
+          top 50%
+          transform translateY(-50%)
+
+          &.left
+            left 50px
+
+          &.right
+            right 50px
+
+    .right-arrow:hover ~ .middle
+      transform translateX(-40px)
+      transition transform .2s ease
+
+    .left-arrow:hover ~ .middle
+      transform translateX(40px)
+      transition transform .2s ease
+
+    .middle
+      display flex
+      flex-direction column
+      align-items center
+      justify-content space-around
+      height 100vh
+      padding 60px 0
+      transition transform .2s ease
+
+    .project-details-btn, .full-review-btn
+      .button-title
+        color black
+
+      .button-icon
+        background-color black
+
+    span
+      display flex
+      justify-content center
+
+    .pagination
+      display flex
+      position absolute
+      bottom 20px
+      left 50%
+      transform translateX(-50%)
+
+    .element:last-child
+      margin-right 0
+
+      svg
+        vertical-align middle
+
+  .clients-animation
+    height 100vh
+    width 100%
+    z-index 9
+    position absolute
+
+    .logo-animation
+      position absolute
+      z-index 20
+      top 50%
+      left 50%
+      transform translate(-50%, -50%), scale(0.6)
+      animation ClientLogoAnimation .6s ease-in-out forwards
+      animation-delay .3s
+
+    &.right-animation
+      animation RightLayersOut .4s cubic-bezier(0.4, 0, 1, 1) forwards
+      animation-delay .8s
+
+      .light-layer
+        animation RightLayersIn .6s cubic-bezier(0.4, 0, 0.2, 1) forwards
+
+      .dark-layer
+        transform translateX(100%)
+        animation RightLayersIn .6s cubic-bezier(0.4, 0, 0.2, 1) forwards
+        animation-delay .2s
+
+    &.left-animation
+      animation LayersOut .4s cubic-bezier(0.4, 0, 1, 1) forwards
+      animation-delay .8s
+
+      .light-layer
+        animation LayersIn .6s cubic-bezier(0.4, 0, 0.2, 1) forwards
+
+      .dark-layer
+        transform translateX(-100%)
+        animation LayersIn .6s cubic-bezier(0.4, 0, 0.2, 1) forwards
+        animation-delay .2s
+
+    .light-layer, .dark-layer
+      position absolute
+      top 0
+      height 100vh
+      width 100%
+
+    .light-layer
+      z-index 10
+      background-color black
+
+    .dark-layer
+      z-index 11
+      background-color white
+
+@keyframes MiddleContentToRight
+  0%
+    transform translateX(40px)
+
+  50%
+    transform translateX(200px)
+
+  51%
+    transform translateX(-200px)
+
+  100%
+    transform translateX(0)
+
+@keyframes MiddleContentToLeft
+  0%
+    transform translateX(-40px)
+
+  50%
+    transform translateX(-200px)
+
+  51%
+    transform translateX(200px)
+
+  100%
+    transform translateX(0)
+
+@keyframes ClientLogoAnimation
+  0%
+    transform scale(0.6)
+
+  100%
+    transform scale(1.2)
+
+@keyframes RightLayersIn
+  0%
+    transform translateX(-100%)
+
+  100%
+    transform translateX(0)
+
+@keyframes RightLayersOut
+  0%
+    transform translateX(0)
+
+  100%
+    transform translateX(100%)
+
+@keyframes LayersOut
+  0%
+    transform translateX(0)
+
+  100%
+    transform translateX(-100%)
+
+@keyframes LayersIn
+  0%
+    transform translateX(100%)
+
+  100%
+    transform translateX(0)
+
+@keyframes ClientBlock
+  0%
+    transform translateX(0)
+
+  50%
+    transform translateX(-200px)
+
+  51%, 70%
+    transform translateX(80px)
+
+  100%
+    transform translateX(0)
