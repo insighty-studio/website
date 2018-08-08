@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
 import './index.styl';
+import './mobile/index.styl';
 
 class SectionHeading extends PureComponent {
   static propTypes = {

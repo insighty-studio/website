@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {Parallax} from 'react-scroll-parallax';
 
 import './index.styl';
+import './mobile/index.styl';
 
 class ProjectLogo extends PureComponent {
   static propTypes = {

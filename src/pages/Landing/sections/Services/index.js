@@ -4,6 +4,7 @@ import SectionHeading from 'components/Typography/SectionHeading';
 import Service from './components/Service';
 import {Design, Development, Quality} from './services';
 import './index.styl';
+import './mobile/index.styl';
 
 class Services extends PureComponent {
   render() {

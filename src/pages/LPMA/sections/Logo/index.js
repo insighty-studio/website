@@ -3,7 +3,7 @@ import ProjectLogo from 'components/Sections/ProjectLogo';
 
 import {LPMALogo} from './icons';
 import LogoBg from './images/logo-bg.png';
-import './index.styl';
+import './mobile/index.styl';
 
 class Logo extends PureComponent {
   render() {

@@ -4,6 +4,7 @@ import {RightArrowIcon} from 'icons';
 import Button from 'components/Button';
 
 import './index.styl';
+import './mobile/index.styl';
 
 class ClientFooter extends PureComponent {
   static propTypes = {

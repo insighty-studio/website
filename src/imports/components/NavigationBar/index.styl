@@ -5,11 +5,6 @@
   right 0
   z-index 9
 
-  +iphone()
-    position relative
-  +iphone5()
-    position relative
-
   .bar-content
     padding 40px 32px 0
     width 100%
@@ -19,18 +14,8 @@
     justify-content space-between
     align-items center
 
-    +iphone()
-      display block
-      padding 0
-
-    +iphone5()
-      display block
-      padding 0
-
     .links
       display flex
-      iphoneDisabled()
-      iphone5Disabled()
 
       a
         font-size $normal
@@ -85,4 +70,3 @@
         &.active
           color #000
           font-weight $medium-weight
-

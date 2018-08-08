@@ -8,6 +8,7 @@ import AboutBackground from './components/AboutBackground';
 import ShortDescription from './components/ShortDescription';
 
 import './index.styl';
+import './mobile/index.styl';
 
 class AboutSection extends PureComponent {
   static propTypes = {

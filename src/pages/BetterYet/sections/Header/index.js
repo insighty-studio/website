@@ -6,6 +6,7 @@ import {Parallax} from 'react-scroll-parallax';
 import ByMobile from './images/by-mobile.png';
 import {BetterYetTitle} from './icons';
 import './index.styl';
+import './mobile/index.styl';
 
 class Header extends PureComponent {
   render() {

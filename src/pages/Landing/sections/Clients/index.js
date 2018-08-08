@@ -15,6 +15,7 @@ import {
 } from './icons';
 import Dot from './components/Dot';
 import './index.styl';
+import './mobile/index.styl';
 
 class Clients extends Component {
   constructor(props) {

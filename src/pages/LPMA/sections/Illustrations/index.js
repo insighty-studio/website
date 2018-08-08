@@ -5,6 +5,7 @@ import LaptopsImage from './img/laptops.png';
 import LaptopMobile from './img/laptop-mobile.png';
 
 import './index.styl';
+import './mobile/index.styl';
 
 class Illustrations extends PureComponent {
   render() {

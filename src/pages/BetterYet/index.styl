@@ -3,26 +3,6 @@
   background-color $betteryetBlue
 
   .white-paper
-    +iphone()
-      background linear-gradient(white, #DFE8F7)
-
-    +iphone5()
-      background linear-gradient(white, #DFE8F7)
-
-    .paper-width .footer
-      display none
-
-      +iphone()
-        display block
-        background-color transparent
-
-      +iphone5()
-        display block
-        background-color transparent
-
-  >.footer
-    +iphone()
-      display none
-
-    +iphone5()
-      display none
+    .paper-width
+      .footer
+        display none

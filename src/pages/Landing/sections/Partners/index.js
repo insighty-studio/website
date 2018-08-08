@@ -9,6 +9,7 @@ import {
 } from './icons';
 
 import './index.styl';
+import './mobile/index.styl';
 
 class Partners extends PureComponent {
   render() {

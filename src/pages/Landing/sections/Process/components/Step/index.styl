@@ -3,24 +3,6 @@
   flex-direction column
   flex 1
 
-  +iphone()
-    margin-top 24px
-    display block
-    width 100%
-
-  +iphone5()
-    margin-top 20px
-    display block
-    width 100%
-
-  &:first-child
-    +iphone()
-      margin-top 40px
-
-  &:first-child
-    +iphone5()
-      margin-top 36px
-
   .step-header
     display flex
     align-items center
@@ -45,12 +27,6 @@
       .line
         width 126px
 
-        +iphone()
-          width 42px
-
-        +iphone5()
-          width 36px
-
     .line
       width 100%
       height 2px
@@ -59,27 +35,12 @@
     .filler
       width 126px
 
-      +iphone()
-        width 42px
-
-      +iphone5()
-       width 36px
-
   .step-desc
     display flex
     flex-direction column
     margin 22px 0 0 126px
     width 410px
 
-    +iphone()
-      width 100%
-      margin 0
-      padding 24px 40px 0
-
-    +iphone5()
-      width 100%
-      margin 0
-      padding 20px 36px 0
 
     div:first-child
       margin-bottom 12px

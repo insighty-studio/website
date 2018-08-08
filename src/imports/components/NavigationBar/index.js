@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 import './index.styl';
+import './mobile/index.styl';
 
 class NavigationBar extends React.Component {
   static propTypes = {

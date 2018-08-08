@@ -13,6 +13,7 @@ import Clients from './sections/Clients';
 import Partners from './sections/Partners';
 import ContactUs from './sections/ContactUs';
 import './index.styl';
+import './mobile/index.styl';
 
 class LandingPage extends PureComponent {
   static propTypes = {

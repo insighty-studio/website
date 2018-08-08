@@ -3,6 +3,7 @@ import {Parallax} from 'react-scroll-parallax';
 
 import notebook from './images/notebook.png';
 import './index.styl';
+import './mobile/index.styl';
 
 class Illustration extends PureComponent {
   render() {
