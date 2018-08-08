@@ -15,9 +15,8 @@ import {
 } from './icons';
 import Dot from './components/Dot';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
-import './styles/iphone5.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class Clients extends Component {
   constructor(props) {

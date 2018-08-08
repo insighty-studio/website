@@ -19,8 +19,8 @@ import Image4 from './images/image4.png';
 import Image5 from './images/image5.png';
 import Image6 from './images/image6.png';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class BetterYet extends PureComponent {
   renderPrototypes(...rest) {

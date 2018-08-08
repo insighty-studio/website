@@ -3,8 +3,8 @@ import {Link} from 'react-scroll';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class NavigationBar extends React.Component {
   static propTypes = {

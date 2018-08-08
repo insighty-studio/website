@@ -3,8 +3,8 @@ import SectionHeading from 'components/Typography/SectionHeading';
 
 import Step from './components/Step';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class Process extends PureComponent {
   render() {

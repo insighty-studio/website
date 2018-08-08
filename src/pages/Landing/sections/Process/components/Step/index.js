@@ -1,9 +1,8 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
-import './styles/iphone5.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class Step extends PureComponent {
   static propTypes = {

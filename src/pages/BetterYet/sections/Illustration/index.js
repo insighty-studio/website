@@ -3,9 +3,8 @@ import WebParallax from 'components/WebParallax';
 
 import notebook from './images/notebook.png';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
-import './styles/iphone5.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class Illustration extends PureComponent {
   render() {
