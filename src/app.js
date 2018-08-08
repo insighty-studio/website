@@ -1,7 +1,8 @@
 import React, {Component, Fragment} from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import DeviceOrientation, {Orientation} from 'components/Orientation';
 import LoaderLine from 'components/Loader/LoaderLine';
-import {isMobile} from 'react-device-detect';
+import isMobile from 'ismobilejs';
 import 'normalize.css';
 import 'styles/main.styl';
 import AOS from 'aos';
@@ -63,13 +64,33 @@ class App extends Component {
   }
 
   renderRoutes() {
+    const {ready} = this.state;
+    if (!ready) return null;
+
     return (
-      <Switch>
-        <Route exact path="/" component={Landing} />
-        <Route path="/betteryet" component={BetterYet} />
-        <Route path="/lpma" component={LPMA} />
-        <Route component={Page404} />
-      </Switch>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route path="/betteryet" component={BetterYet} />
+          <Route path="/lpma" component={LPMA} />
+          <Route component={Page404} />
+        </Switch>
+      </BrowserRouter>
+    );
+  }
+
+  renderMobile() {
+    return (
+      <Fragment>
+        <DeviceOrientation lockOrientation="landscape">
+          <Orientation orientation="landscape" alwaysRender={false}>
+            <Landscape />
+          </Orientation>
+          <Orientation orientation="portrait" alwaysRender={false}>
+            {this.renderRoutes()}
+          </Orientation>
+        </DeviceOrientation>
+      </Fragment>
     );
   }
 
@@ -77,6 +98,7 @@ class App extends Component {
     const {
       ready, images, progress, chunksReady
     } = this.state;
+    const isPhone = isMobile.apple.phone;
 
     if (!ready) {
       return (
@@ -105,10 +127,7 @@ class App extends Component {
 
     return (
       <div className="root">
-        {isMobile && <Landscape />}
-        <BrowserRouter>
-          {ready && this.renderRoutes()}
-        </BrowserRouter>
+        {isPhone ? this.renderMobile() : this.renderRoutes()}
       </div>
     );
   }
