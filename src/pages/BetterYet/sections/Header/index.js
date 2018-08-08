@@ -6,9 +6,8 @@ import WebParallax from 'components/WebParallax';
 import ByMobile from './images/by-mobile.png';
 import {BetterYetTitle} from './icons';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
-import './styles/iphone5.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class Header extends PureComponent {
   render() {

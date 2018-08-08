@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 import React, {PureComponent} from 'react';
 
-import './styles/web.styl';
+import './index.styl';
 
 class AboutBackground extends PureComponent {
   render() {

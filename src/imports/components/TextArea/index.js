@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import './styles/web.styl';
+import './index.styl';
 
 class TextArea extends PureComponent {
   static propTypes = {

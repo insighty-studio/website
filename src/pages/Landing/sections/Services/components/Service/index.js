@@ -2,9 +2,8 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import Description from 'components/Description';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
-import './styles/iphone5.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class Service extends PureComponent {
   static propTypes = {

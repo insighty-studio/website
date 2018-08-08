@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import {RightArrowIcon} from 'icons';
 import Button from 'components/Button';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
-import './styles/iphone5.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class ClientFooter extends PureComponent {
   static propTypes = {
