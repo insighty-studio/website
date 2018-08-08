@@ -4,6 +4,7 @@ import Button from 'components/Button';
 import {RightArrowIcon} from 'icons';
 
 import './index.styl';
+import './mobile/index.styl';
 
 class NextProject extends PureComponent {
   static propTypes = {
