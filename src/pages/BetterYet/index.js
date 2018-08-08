@@ -1,8 +1,11 @@
-import React, {PureComponent} from 'react';
+import React, {PureComponent, Component} from 'react';
+import PropTypes from 'prop-types';
 import Loader from 'components/Loader';
+import ScrollUpButton from 'components/ScrollUpButton';
 import WhitePaper from 'components/Sections/WhitePaper';
 import Footer from 'components/Footer';
-import {betteryetBlue, betteryetOrangeYellow} from 'styles/config';
+import {betteryetYellow, betteryetBlue, betteryetOrangeYellow} from 'styles/config';
+import provideScrollPosition from 'react-provide-scroll-position';
 
 import Header from './sections/Header';
 import About from './sections/About';
@@ -22,7 +25,15 @@ import Image6 from './images/image6.png';
 import './index.styl';
 import './mobile/index.styl';
 
-class BetterYet extends PureComponent {
+class BetterYetPage extends PureComponent {
+  static propTypes = {
+    scrollTop: PropTypes.number
+  };
+
+  static defaultProps = {
+    scrollTop: 0
+  };
+
   renderPrototypes(...rest) {
     return (
       <Prototypes
@@ -32,9 +43,11 @@ class BetterYet extends PureComponent {
   }
 
   render() {
+    const {scrollTop} = this.props;
     return (
       <div className="betteryet-page">
         <Loader colors={{light: betteryetOrangeYellow, dark: betteryetBlue}} />
+        <ScrollUpButton color={betteryetYellow} percentagesScrolled={scrollTop} />
         <Header />
         <About />
         {this.renderPrototypes(
@@ -58,6 +71,14 @@ class BetterYet extends PureComponent {
         <Footer />
       </div>
     );
+  }
+}
+
+const BetterYetScroll = provideScrollPosition(BetterYetPage);
+
+class BetterYet extends Component {
+  render() {
+    return <BetterYetScroll />;
   }
 }
 

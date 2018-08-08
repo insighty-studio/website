@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import WebParallax from 'components/WebParallax';
+import {Parallax} from 'react-scroll-parallax';
 
 import './index.styl';
 
@@ -22,20 +22,20 @@ class ProjectLogo extends PureComponent {
 
     return (
       <div className="logo-section">
-        <WebParallax
+        <Parallax
           className="logo-parallax"
           offsetYMax={100}
           offsetYMin={-100}
         >
           {logo}
-        </WebParallax>
+        </Parallax>
         <div className="logo-bg">
-          <WebParallax
+          <Parallax
             offsetYMax={10}
             offsetYMin={-10}
           >
             {background}
-          </WebParallax>
+          </Parallax>
         </div>
       </div>
     );

@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import LoaderLine from 'components/Loader/LoaderLine';
+import {isMobile} from 'react-device-detect';
 import 'normalize.css';
 import 'styles/main.styl';
 import AOS from 'aos';
@@ -10,6 +11,7 @@ import Landing from './pages/Landing';
 import BetterYet from './pages/BetterYet';
 import LPMA from './pages/LPMA';
 import Page404 from './pages/Page404';
+import Landscape from './pages/Landscape';
 
 AOS.init({
   disable: false,
@@ -62,16 +64,12 @@ class App extends Component {
 
   renderRoutes() {
     return (
-      <BrowserRouter>
-        <div className="root">
-          <Switch>
-            <Route exact path="/" component={Landing} />
-            <Route path="/betteryet" component={BetterYet} />
-            <Route path="/lpma" component={LPMA} />
-            <Route component={Page404} />
-          </Switch>
-        </div>
-      </BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route path="/betteryet" component={BetterYet} />
+        <Route path="/lpma" component={LPMA} />
+        <Route component={Page404} />
+      </Switch>
     );
   }
 
@@ -106,11 +104,12 @@ class App extends Component {
     }
 
     return (
-      <BrowserRouter>
-        <div className="root">
+      <div className="root">
+        {isMobile && <Landscape />}
+        <BrowserRouter>
           {ready && this.renderRoutes()}
-        </div>
-      </BrowserRouter>
+        </BrowserRouter>
+      </div>
     );
   }
 }
