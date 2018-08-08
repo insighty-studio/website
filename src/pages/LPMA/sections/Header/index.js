@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import {LPMATitle, Logo} from 'icons';
-import WebParallax from 'components/WebParallax';
+import {Parallax} from 'react-scroll-parallax';
 import NavigationBar from 'components/NavigationBar';
 
 import Laptop from './img/laptop.png';
@@ -22,23 +22,23 @@ class Header extends PureComponent {
           logoIcon={<Logo />}
         />
         <div className="lpma-graph">
-          <WebParallax
+          <Parallax
             offsetYMin={-40}
             offsetYMax={40}
           >
             <LPMAGraph />
-          </WebParallax>
+          </Parallax>
         </div>
         <div className="lpma-title">
           <LPMATitle />
         </div>
         <div className="laptop-image">
-          <WebParallax
+          <Parallax
             offsetYMin={-10}
             offsetYMax={10}
           >
             <img alt="LPMA" src={Laptop} />
-          </WebParallax>
+          </Parallax>
         </div>
       </div>
     );

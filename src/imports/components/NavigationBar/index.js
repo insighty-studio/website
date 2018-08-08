@@ -56,7 +56,7 @@ class NavigationBar extends React.Component {
     return (
       <div className="navigation-bar">
         <div className="bar-content">
-          <a href="https://insighty.studio/" rel="noopener noreferrer">
+          <a href="/" rel="noopener noreferrer">
             {logoIcon}
           </a>
           <div className="links">

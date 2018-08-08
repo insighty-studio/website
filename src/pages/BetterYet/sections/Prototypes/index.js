@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import WebParallax from 'components/WebParallax';
+import {Parallax} from 'react-scroll-parallax';
 
 import './index.styl';
 import './mobile/index.styl';
@@ -17,12 +17,12 @@ class Prototypes extends PureComponent {
     const {prototypes} = this.props;
     return prototypes.map(({src, offset}) => (
       <div key={src} className="prototype">
-        <WebParallax
+        <Parallax
           offsetYMax={offset}
           offsetYMin={-offset}
         >
           <img alt="" src={src} />
-        </WebParallax>
+        </Parallax>
       </div>
     ));
   }

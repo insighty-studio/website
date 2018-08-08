@@ -1,0 +1,19 @@
+.landscape-screen
+  display none
+
+  +iphone-landscape()
+    display flex
+    align-items center
+    justify-content center
+    background-color #F6F8FC
+    height 100vh
+
+    .warning
+      display flex
+      flex-direction column
+      align-items center
+
+      .warning-message
+        margin-top 24px
+        font-family Roboto Mono
+        font-size 21px
