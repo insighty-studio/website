@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Loader from 'components/Loader';
 import ScrollUpButton from 'components/ScrollUpButton';
 import WhitePaper from 'components/Sections/WhitePaper';
+import NextProject from 'components/Sections/NextProject';
+import Clutch from 'components/Sections/Clutch';
 import Footer from 'components/Footer';
 import {betteryetYellow, betteryetBlue, betteryetOrangeYellow} from 'styles/config';
 import provideScrollPosition from 'react-provide-scroll-position';
@@ -63,6 +65,12 @@ class BetterYetPage extends PureComponent {
         )}
         <Colors />
         <Illustration />
+        <Clutch />
+        <NextProject
+          name="LPMA"
+          desc="Helping real estate principals achieve customer excellence"
+          href="/lpma"
+        />
         <WhitePaper>
           <ContactUs />
           <ClientFooterSection />

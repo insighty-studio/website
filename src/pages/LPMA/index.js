@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import BodyBackground from 'components/BodyBackground';
 import WhitePaper from 'components/Sections/WhitePaper';
 import ScrollUpButton from 'components/ScrollUpButton';
+import NextProject from 'components/Sections/NextProject';
+import Clutch from 'components/Sections/Clutch';
 import Loader from 'components/Loader';
 import Footer from 'components/Footer';
 import {lpmaDarkGray, lpmaGreen} from 'styles/config';
@@ -39,6 +41,12 @@ class LPMAPage extends PureComponent {
         <Logo />
         <Colors />
         <Screens />
+        <Clutch />
+        <NextProject
+          name="BetterYet"
+          desc="Loyalty programs for the local shoppers"
+          href="/betteryet"
+        />
         <WhitePaper>
           <ContactUs />
           <ClientFooterSection />
