@@ -1,0 +1,48 @@
+.header
+  +iphone()
+    padding 40px
+    background url(/images/main-art-mobile@2x.png) center bottom no-repeat, linear-gradient(-180deg, rgba(0,84,255,0.00) 0%, rgba(0,77,255,0.10) 100%)
+    background-size 100% auto
+
+    +iphone5()
+      background linear-gradient(-180deg, rgba(0,84,255,0.00) 0%, rgba(0,77,255,0.10) 100%)
+      padding 30px
+
+    .content
+      padding 0
+      width 100%
+      display block
+
+      .content-info
+        width 100%
+        display block
+        margin-top 16px
+
+      .heading
+        margin 40px 0 20px 0
+
+      .sub-title:before
+        width 30px
+
+        +iphone5()
+          width 24px
+
+      .paragraph
+        opacity 0.6
+        line-height 2
+
+        +iphone5()
+          line-height 1.8
+
+      .title
+        font-size 21px
+        line-height 1.5
+        margin-bottom 16px
+
+        +iphone5()
+          font-size 20px
+          line-height 1.4
+
+      .buttons
+        iphoneDisabled()
+

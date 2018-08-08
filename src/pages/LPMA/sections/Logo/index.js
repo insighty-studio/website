@@ -3,7 +3,9 @@ import ProjectLogo from 'components/Sections/ProjectLogo';
 
 import {LPMALogo} from './icons';
 import LogoBg from './images/logo-bg.png';
-import './index.styl';
+
+import './styles/iphones.styl';
+import './styles/iphone5.styl';
 
 class Logo extends PureComponent {
   render() {

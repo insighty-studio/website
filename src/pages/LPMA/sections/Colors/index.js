@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import ColorsSection from 'components/Sections/Colors';
 import {black} from 'styles/config';
 
-import './index.styl';
+import './styles/web.styl';
 
 class Colors extends PureComponent {
   render() {

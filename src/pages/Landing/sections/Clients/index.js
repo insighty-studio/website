@@ -14,7 +14,10 @@ import {
   RightColorArrow
 } from './icons';
 import Dot from './components/Dot';
-import './index.styl';
+
+import './styles/web.styl';
+import './styles/iphones.styl';
+import './styles/iphone5.styl';
 
 class Clients extends Component {
   constructor(props) {
@@ -40,7 +43,9 @@ class Clients extends Component {
   }
 
   slideNext() {
-    const {currentElementIndex} = this.state;
+    const {currentElementIndex, activeAnimation} = this.state;
+
+    if (activeAnimation !== '') return null;
 
     this.setState({activeAnimation: 'left-animation'});
     this.intervalAnimation(1400);
@@ -53,7 +58,9 @@ class Clients extends Component {
   }
 
   slidePrev() {
-    const {currentElementIndex} = this.state;
+    const {currentElementIndex, activeAnimation} = this.state;
+
+    if (activeAnimation !== '') return null;
 
     this.setState({activeAnimation: 'right-animation'});
     this.intervalAnimation(1400);
@@ -70,11 +77,6 @@ class Clients extends Component {
     return data.map((element, index) => (
       <Dot
         key={index}
-        onClick={() => {
-          this.setState({activeAnimation: true});
-          this.intervalCurrentElement(index, 600);
-          this.intervalAnimation(1400);
-        }}
         className={currentElementIndex === index ? 'current' : ''}
       />
     ));

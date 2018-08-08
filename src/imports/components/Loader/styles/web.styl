@@ -1,0 +1,78 @@
+.loader-page
+  position absolute
+  width 100%
+  height 100vh
+  overflow hidden
+  display block
+
+  .loader
+    position absolute
+    overflow hidden
+    height 100vh
+    width 100%
+    z-index 15
+    display flex
+    align-items center
+    justify-content center
+    animation shadesOut .8s ease-in-out forwards
+    animation-delay 1.2s
+    background-color white
+
+    svg
+      animation scaleLogo .6s ease-in-out forwards
+      animation-delay .4s
+      z-index 18
+
+    .light-shade, .dark-shade
+      position absolute
+      top 0
+      height 100vh
+      width 100%
+
+    .light-shade
+      z-index 16
+      height 3px
+      animation lightShade 1s ease-in-out forwards
+      background-color $blue
+
+    .dark-shade
+      z-index 17
+      animation darkShade 1.6s ease-in-out forwards
+      animation-delay .4s
+      transform translateY(-100%)
+      background-color #060B18
+
+@keyframes lightShade
+  0%
+    height 3px
+
+  100%
+    height 100vh
+
+@keyframes darkShade
+  0%
+    transform translateY(-100%)
+
+  40%, 60%
+    transform translateY(0)
+
+  100%
+    transform translateY(100%)
+
+@keyframes scaleLogo
+  0%
+    transform scale(0.6)
+
+  100%
+    transform scale(1.2)
+
+@keyframes shadesOut
+  0%
+    transform translateY(0)
+
+  99%
+    height 100vh
+    transform translateY(100%)
+
+  100%
+    height 0

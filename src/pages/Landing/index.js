@@ -2,7 +2,6 @@ import React, {PureComponent, Component} from 'react';
 import PropTypes from 'prop-types';
 import provideScrollPosition from 'react-provide-scroll-position';
 import ScrollUpButton from 'components/ScrollUpButton';
-import Footer from 'components/Footer';
 import Loader from 'components/Loader';
 import {darkBlue, blue} from 'styles/config';
 
@@ -12,7 +11,9 @@ import Process from './sections/Process';
 import Clients from './sections/Clients';
 import Partners from './sections/Partners';
 import ContactUs from './sections/ContactUs';
-import './index.styl';
+
+import './styles/web.styl';
+import './styles/iphones.styl';
 
 class LandingPage extends PureComponent {
   static propTypes = {
@@ -35,7 +36,6 @@ class LandingPage extends PureComponent {
         <Clients />
         <Partners />
         <ContactUs />
-        <Footer />
       </div>
     );
   }

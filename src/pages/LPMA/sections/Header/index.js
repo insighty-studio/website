@@ -1,38 +1,43 @@
 import React, {PureComponent} from 'react';
-import {LPMATitle} from 'icons';
-import {Parallax} from 'react-scroll-parallax';
+import {LPMATitle, Logo} from 'icons';
+import WebParallax from 'components/WebParallax';
+import NavigationBar from 'components/NavigationBar';
 
 import Laptop from './img/laptop.png';
 import {LPMAGraph} from './icons';
-import './index.styl';
+
+import './styles/web.styl';
 
 class Header extends PureComponent {
   render() {
     return (
       <div className="header-section">
+        <NavigationBar
+          white
+          links={[
+            {text: 'Home', href: '/'},
+            {text: 'Contact', to: 'white-paper'},
+          ]}
+          logoIcon={<Logo />}
+        />
         <div className="lpma-graph">
-          <Parallax
-            offsetYMax={40}
+          <WebParallax
             offsetYMin={-40}
+            offsetYMax={40}
           >
             <LPMAGraph />
-          </Parallax>
+          </WebParallax>
         </div>
         <div className="lpma-title">
-          <Parallax
-            offsetYMax={20}
-            offsetYMin={-20}
-          >
-            <LPMATitle />
-          </Parallax>
+          <LPMATitle />
         </div>
         <div className="laptop-image">
-          <Parallax
-            offsetYMax={60}
-            offsetYMin={-60}
+          <WebParallax
+            offsetYMin={-10}
+            offsetYMax={10}
           >
             <img alt="LPMA" src={Laptop} />
-          </Parallax>
+          </WebParallax>
         </div>
       </div>
     );
