@@ -8,8 +8,8 @@ import {darkBlue, blue} from 'styles/config';
 import Illustration from './Illustration';
 import {LetsGoHomeButtonIcon} from './icons';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class Page404 extends PureComponent {
   render() {

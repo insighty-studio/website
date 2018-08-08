@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
-import './styles/web.styl';
+import './index.styl';
 
 class Paragraph extends PureComponent {
   static propTypes = {

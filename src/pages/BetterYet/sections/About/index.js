@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import AboutSection from 'components/Sections/About';
 
-import './styles/web.styl';
+import './index.styl';
 
 class About extends PureComponent {
   render() {

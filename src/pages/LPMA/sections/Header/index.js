@@ -6,7 +6,8 @@ import NavigationBar from 'components/NavigationBar';
 import Laptop from './img/laptop.png';
 import {LPMAGraph} from './icons';
 
-import './styles/web.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class Header extends PureComponent {
   render() {

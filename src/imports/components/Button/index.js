@@ -2,8 +2,8 @@ import React, {PureComponent, Fragment} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class Button extends PureComponent {
   static propTypes = {

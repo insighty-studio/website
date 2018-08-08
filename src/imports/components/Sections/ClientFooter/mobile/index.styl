@@ -1,0 +1,62 @@
+.client-footer
+  +iphone()
+    width 100%
+    margin 24px 0 40px
+    flex-direction column
+    align-items center
+
+    +iphone5()
+      margin-top 20px
+
+    .client-photo img
+      +iphone5()
+        width 120px
+        height 120px
+
+    .client-overview
+      margin 24px 0 40px 0
+      width 294px
+
+      +iphone5()
+        width 270px
+
+      .name, .position
+        text-align center
+
+      .comment
+        margin 24px 0
+        text-align center
+        line-height 28px
+        font-size 21px
+
+        +iphone5()
+          font-size 16px !important
+
+    .buttons
+      justify-content center
+
+      .full-review-btn, .project-details-btn
+        margin 0
+
+        .button-hover-text
+          width 32px
+          height 32px
+
+        .button-icon
+          width 32px
+          height 32px
+
+      .full-review-btn
+        iphoneDisabled()
+
+      .project-details-btn
+        margin 0
+
+        .button-hover-text
+          background black
+
+        .button-title
+          color white !important
+
+        .button-icon
+          background-color black

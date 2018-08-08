@@ -4,9 +4,8 @@ import SectionHeading from 'components/Typography/SectionHeading';
 import Service from './components/Service';
 import {Design, Development, Quality} from './services';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
-import './styles/iphone5.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class Services extends PureComponent {
   render() {

@@ -11,9 +11,8 @@ import Button from 'components/Button';
 import Illustration from './components/Illustration';
 import {ExploreButtonIcon} from './icons';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
-import './styles/iphone5.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class Header extends Component {
   onClickExplore() {

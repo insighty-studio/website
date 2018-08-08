@@ -7,9 +7,8 @@ import WebParallax from 'components/WebParallax';
 import AboutBackground from './components/AboutBackground';
 import ShortDescription from './components/ShortDescription';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
-import './styles/iphone5.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class AboutSection extends PureComponent {
   static propTypes = {

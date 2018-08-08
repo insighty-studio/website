@@ -1,0 +1,19 @@
+.betteryet-page .prototypes-section
+  +iphone()
+    height 100vh
+    justify-content center
+
+    .prototype
+      display none
+
+      &:first-child
+        display block
+
+      img
+        width 283px
+        height 574px
+
+  +iphone5()
+    .prototype img
+      width 253px
+      height 534px
