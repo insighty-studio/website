@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import WebParallax from 'components/WebParallax';
+import {Parallax} from 'react-scroll-parallax';
 
 import ColorsBackground from './components/ColorsBackground';
 
@@ -27,7 +27,7 @@ class ColorsSection extends PureComponent {
     const {className, colors, colorsSectionColor} = this.props;
     return (
       <div className={classnames('colors-section', className)}>
-        <WebParallax
+        <Parallax
           className="colors-parallax"
           offsetYMax={120}
           offsetYMin={-120}
@@ -46,7 +46,7 @@ class ColorsSection extends PureComponent {
               </div>
             ))}
           </div>
-        </WebParallax>
+        </Parallax>
         <ColorsBackground color={colorsSectionColor} />
       </div>
     );
