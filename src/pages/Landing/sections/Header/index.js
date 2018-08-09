@@ -10,6 +10,7 @@ import Button from 'components/Button';
 
 import Illustration from './components/Illustration';
 import {ExploreButtonIcon} from './icons';
+
 import './index.styl';
 import './mobile/index.styl';
 
@@ -23,7 +24,7 @@ class Header extends Component {
       <div className="header">
         <NavigationBar
           links={[
-            {text: 'Home', to: 'home', active: true},
+            {text: 'Home', to: 'header', active: true},
             {text: 'Services', to: 'services'},
             {text: 'Process', to: 'process'},
             {text: 'Clients', to: 'clients'},
@@ -48,7 +49,7 @@ class Header extends Component {
             </Paragraph>
             <div className="buttons">
               <Link smooth to="services" duration={700} onClick={() => this.onClickExplore()}>
-                <Button title="explore" className="explore-btn">
+                <Button title="explore" className="explore-btn" type="button">
                   <ExploreButtonIcon />
                 </Button>
               </Link>

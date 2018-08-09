@@ -1,8 +1,8 @@
-/*eslint-disable*/
 import React, {PureComponent} from 'react';
 import {Parallax} from 'react-scroll-parallax';
-import LaptopsImage from './img/laptops.png';
-import LaptopMobile from './img/laptop-mobile.png';
+
+import LeftMac from './img/left-mac.png';
+import RightMac from './img/right-mac.png';
 
 import './index.styl';
 import './mobile/index.styl';
@@ -12,12 +12,19 @@ class Illustrations extends PureComponent {
     return (
       <div className="illustrations-section">
         <Parallax
-          className="illustrations-parallax"
-          offsetYMax={60}
-          offsetYMin={-60}
+          className="mac-parallax"
+          offsetYMax={5}
+          offsetYMin={-5}
         >
-          <img className="illustration-image" alt="LPMA" src={LaptopsImage} />
-          <img className="illustration-image-mobile" alt="LPMA" src={LaptopMobile} />
+          <img className="left-mac" alt="Left Mac" src={LeftMac} />
+        </Parallax>
+        <Parallax
+          className="mac-parallax"
+          offsetYMax={5}
+          offsetYMin={-5}
+          slowerScrollRate
+        >
+          <img className="right-mac" alt="Right Mac" src={RightMac} />
         </Parallax>
       </div>
     );

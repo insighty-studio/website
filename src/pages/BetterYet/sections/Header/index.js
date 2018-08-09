@@ -5,6 +5,7 @@ import {Parallax} from 'react-scroll-parallax';
 
 import ByMobile from './images/by-mobile.png';
 import {BetterYetTitle} from './icons';
+
 import './index.styl';
 import './mobile/index.styl';
 
@@ -15,7 +16,7 @@ class Header extends PureComponent {
         <NavigationBar
           white
           links={[
-            {text: 'Home', href: 'https://insighty.studio/'},
+            {text: 'Home', href: '/'},
             {text: 'Contact', to: 'white-paper'},
           ]}
           logoIcon={<Logo />}
@@ -31,7 +32,9 @@ class Header extends PureComponent {
           offsetYMax={20}
           offsetYMin={-20}
         >
-          <BetterYetTitle />
+          <div className="betteryet-title">
+            <BetterYetTitle />
+          </div>
         </Parallax>
       </div>
     );

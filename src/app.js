@@ -1,6 +1,8 @@
 import React, {Component, Fragment} from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import DeviceOrientation, {Orientation} from 'components/Orientation';
 import LoaderLine from 'components/Loader/LoaderLine';
+import isMobile from 'ismobilejs';
 import 'normalize.css';
 import 'styles/main.styl';
 import AOS from 'aos';
@@ -9,6 +11,8 @@ import 'aos/dist/aos.css';
 import Landing from './pages/Landing';
 import BetterYet from './pages/BetterYet';
 import LPMA from './pages/LPMA';
+import Page404 from './pages/Page404';
+import Landscape from './pages/Landscape';
 
 AOS.init({
   disable: false,
@@ -60,16 +64,33 @@ class App extends Component {
   }
 
   renderRoutes() {
+    const {ready} = this.state;
+    if (!ready) return null;
+
     return (
       <BrowserRouter>
-        <div className="root">
-          <Switch>
-            <Route exact path="/" component={Landing} />
-            <Route path="/betteryet" component={BetterYet} />
-            <Route path="/lpma" component={LPMA} />
-          </Switch>
-        </div>
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route path="/betteryet" component={BetterYet} />
+          <Route path="/lpma" component={LPMA} />
+          <Route component={Page404} />
+        </Switch>
       </BrowserRouter>
+    );
+  }
+
+  renderMobile() {
+    return (
+      <Fragment>
+        <DeviceOrientation lockOrientation="landscape">
+          <Orientation orientation="landscape" alwaysRender={false}>
+            <Landscape />
+          </Orientation>
+          <Orientation orientation="portrait" alwaysRender={false}>
+            {this.renderRoutes()}
+          </Orientation>
+        </DeviceOrientation>
+      </Fragment>
     );
   }
 
@@ -77,6 +98,7 @@ class App extends Component {
     const {
       ready, images, progress, chunksReady
     } = this.state;
+    const isPhone = isMobile.apple.phone;
 
     if (!ready) {
       return (
@@ -104,11 +126,9 @@ class App extends Component {
     }
 
     return (
-      <BrowserRouter>
-        <div className="root">
-          {ready && this.renderRoutes()}
-        </div>
-      </BrowserRouter>
+      <div className="root">
+        {isPhone ? this.renderMobile() : this.renderRoutes()}
+      </div>
     );
   }
 }

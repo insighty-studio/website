@@ -6,20 +6,17 @@ import './index.styl';
 
 class Dot extends Component {
   static propTypes = {
-    className: PropTypes.string,
-    onClick: PropTypes.func
+    className: PropTypes.string
   };
 
   static defaultProps = {
-    className: '',
-    onClick: () => null
+    className: ''
   };
 
   render() {
-    const {className, onClick} = this.props;
+    const {className} = this.props;
     return (
-      // eslint-disable-next-line jsx-a11y/click-events-have-key-events
-      <div className={classnames('element', className)} onClick={onClick} />
+      <div className={classnames('element', className)} />
     );
   }
 }

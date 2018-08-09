@@ -20,19 +20,20 @@ class ProjectLogo extends PureComponent {
 
   render() {
     const {logo, background} = this.props;
+
     return (
       <div className="logo-section">
         <Parallax
           className="logo-parallax"
-          offsetYMax={160}
-          offsetYMin={-160}
+          offsetYMax={100}
+          offsetYMin={-100}
         >
           {logo}
         </Parallax>
         <div className="logo-bg">
           <Parallax
-            offsetYMax={20}
-            offsetYMin={-20}
+            offsetYMax={10}
+            offsetYMin={-10}
           >
             {background}
           </Parallax>

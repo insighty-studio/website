@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react';
 import SectionHeading from 'components/Typography/SectionHeading';
 
 import Step from './components/Step';
+
 import './index.styl';
 import './mobile/index.styl';
 

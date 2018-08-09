@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import {Parallax} from 'react-scroll-parallax';
 
 import ColorsBackground from './components/ColorsBackground';
+
 import './index.styl';
 import './mobile/index.styl';
 

@@ -8,23 +8,30 @@ import './mobile/index.styl';
 
 class NavigationBar extends React.Component {
   static propTypes = {
-    links: PropTypes.arrayOf(PropTypes.object).isRequired,
+    links: PropTypes.arrayOf(PropTypes.object),
     logoIcon: PropTypes.element.isRequired,
     white: PropTypes.bool
   };
 
   static defaultProps = {
+    links: null,
     white: false
   };
 
   renderLinks() {
     const {links, white} = this.props;
+    if (!links) return null;
     return links.map(({
       text, to, href, active
     }, i) => {
       if (href) {
         return (
-          <a className={white && 'white'} rel="noopener noreferrer" href={href} key={i}>
+          <a
+            key={i}
+            href={href}
+            className={white && 'white'}
+            rel="noopener noreferrer"
+          >
             {text}
           </a>
         );
@@ -32,11 +39,11 @@ class NavigationBar extends React.Component {
       return (
         <Link
           smooth
-          key={to}
-          className={classnames({active}, white && 'white')}
-          activeClass="active"
+          key={i}
           to={to}
+          activeClass="active"
           duration={500 + (i * 200)}
+          className={classnames({active}, white && 'white')}
         >
           {text}
         </Link>
@@ -49,7 +56,7 @@ class NavigationBar extends React.Component {
     return (
       <div className="navigation-bar">
         <div className="bar-content">
-          <a href="https://insighty.studio/" rel="noopener noreferrer">
+          <a href="/" rel="noopener noreferrer">
             {logoIcon}
           </a>
           <div className="links">

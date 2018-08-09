@@ -25,6 +25,7 @@
     "file-loader": "1.1.11",
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
+    "ismobilejs": "^0.4.1",
     "jest": "20.0.4",
     "jquery-parallax.js": "^1.5.0",
     "lodash.uniqueid": "^4.0.1",

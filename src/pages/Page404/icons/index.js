@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable max-len */
 import React, {PureComponent} from 'react';
 
 export class LetsGoHomeButtonIcon extends PureComponent {
@@ -17,6 +17,6 @@ export class LetsGoHomeButtonIcon extends PureComponent {
           </g>
         </g>
       </svg>
-    )
+    );
   }
 }
