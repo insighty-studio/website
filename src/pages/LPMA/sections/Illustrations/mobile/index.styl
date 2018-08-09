@@ -1,10 +1,22 @@
-.lpma-page .illustrations-section .mac-parallax
-  +iphone()
-    .illustration-image-mobile
-      width 362px
-      height 490px
-      display inline
+.lpma-page
+  .illustrations-section
+    +iphone()
+      height 100vh
+      justify-content flex-end
+    +iphone5()
+      height 100vh
+      justify-content flex-end
 
+    .illustration-image
+      iphoneDisabled()
+      iphone5Disabled()
+
+    .illustration-image-mobile
+      +iphone()
+        width 362px
+        height 490px
+        display inline
       +iphone5()
         width 320px
         height 460px
+        display inline

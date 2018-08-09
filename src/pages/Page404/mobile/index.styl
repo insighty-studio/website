@@ -1,39 +1,41 @@
-.page-404
-  +iphone()
-    .mobile-bg
-      width 100%
-      height 296px
-      display block
-      position absolute
-      bottom 28px
-      background url(/images/404/mobile-bg@2x.png)
-      background-size @width @height
++iphone()
+  .page-404
+    position relative
+
+    .navigation-bar .bar-content
+      padding 44px 32px 0
 
     .content
-      +iphone()
-        padding 44px 40px 0
-        align-items flex-start
+      align-items flex-start
+
+      .info
+        position static
+        margin-top 32px
         width 100%
 
-      .content-info
-        +iphone()
-          width 100%
-
         .heading
-          +iphone()
-            margin-bottom 20px
+          margin-bottom 20px
 
           .title
-            +iphone()
-              font-size 21px
+            font-size 21px
+            line-height 30px
 
         .paragraph
-          +iphone()
-            width 100%
-            font-size 15px
-            line-height 28px
-            opacity 0.6
+          width 100%
+          opacity 0.6
+          line-height 28px
 
-        .lets-go-home-button
-          +iphone()
-            margin-top 48px
+        .home-button
+          margin-top 24px
+
+        .illustration
+          z-index -1
+          left 0
+          bottom 0
+          margin 0 0 6px
+          width 380px
+          height 296px
+          background url(/images/404artwork-mobile@2x.png)
+          background-size @width @height
+
+          

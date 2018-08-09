@@ -1,31 +1,39 @@
 .page-404
-  font-family 'Roboto Mono'
-  display flex
+  font-family 'Roboto Mono', monsopace
+  overflow hidden
   height 100vh
   background linear-gradient(rgba(0, 84, 255, 0), rgba(0, 77, 255, 0.1))
-
-  .mobile-bg
-    display none
 
   .content
     display flex
     align-items center
-    width 100%
-    max-width 1024px
+    height 100%
+    max-width 1160px
     margin 0 auto
+    padding 0 32px
 
-    .content-info
+    .info
+      position relative
       display flex
       flex-direction column
       width 452px
 
-      .heading .sub-title
-        opacity 0.4
-
       .paragraph
+        width 410px
         opacity 0.8
-        width 408px
 
-      .lets-go-home-button
-        display flex
+      .home-button
         margin-top 38px
+
+        .button
+          float left
+
+      .illustration
+        bottom -50%
+        position absolute
+        width 539px
+        height 522px
+        left 100%
+        margin 0 0 40px -12px
+        background url(/images/404artwork@2x.png)
+        background-size @width @height
