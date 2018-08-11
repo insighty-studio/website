@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import {Link} from 'react-scroll';
 import classnames from 'classnames';
@@ -19,12 +18,13 @@ import './mobile/index.styl';
 
 class NavigationBar extends React.Component {
   static propTypes = {
-    links: PropTypes.arrayOf(PropTypes.object).isRequired,
+    links: PropTypes.arrayOf(PropTypes.object),
     logoIcon: PropTypes.element.isRequired,
     white: PropTypes.bool
   };
 
   static defaultProps = {
+    links: null,
     white: false
   };
 
@@ -42,11 +42,12 @@ class NavigationBar extends React.Component {
 
   renderLinks() {
     const {links, white} = this.props;
+    if (!links) return null;
     return (
       <div className="links">
         {links.map(({
-          text, to, href, active
-        }, i) => {
+                      text, to, href, active
+                    }, i) => {
           const duration = 500 + (i * 200);
           if (href) {
             return (
@@ -97,18 +98,6 @@ class NavigationBar extends React.Component {
         onClick={() => this.setState({isMenuStatus: 'opened'})}
       >
         <MenuIcon />
-      </div>
-    );
-  }
-
-  renderSocial() {
-    return (
-      <div className="social-links">
-        <FacebookIcon />
-        <LinkedInIcon />
-        <BloggerIcon />
-        <ClutchIcon />
-        <AngelListIcon />
       </div>
     );
   }

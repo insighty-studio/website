@@ -18,6 +18,8 @@ import Colors from './sections/Colors';
 import Screens from './sections/Screens';
 import ContactUs from './sections/ContactUs';
 import ClientFooterSection from './sections/ClientFooter';
+import './index.styl';
+import './mobile/index.styl';
 
 class LPMAPage extends PureComponent {
   static propTypes = {

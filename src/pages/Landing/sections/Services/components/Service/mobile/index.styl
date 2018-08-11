@@ -1,14 +1,11 @@
-.service
-  +iphone()
++iphone()
+  .service
     margin-bottom 62px
     display block
     width 100%
     padding 0 40px
     padding-bottom 210px
     position relative
-
-    +iphone5()
-      margin-bottom 64px
 
     &:last-child
       margin-bottom 64px
@@ -21,9 +18,27 @@
       width 100%
       padding 0 40px
 
-      +iphone5()
-        grid-gap 24px
-        padding 0 10px
+      .service-icon
+        .icon-title
+          font-size 12px
 
-      .service-icon .icon-title
-        font-size 12px
++iphone5()
+  .service
+    margin-bottom 64px
+    display block
+    width 100%
+    padding 0 40px
+    padding-bottom 210px
+    position relative
+
+    .service-icons
+      grid-gap 24px
+      position absolute
+      bottom 0
+      left 0
+      width 100%
+      padding 0 10px
+
+      .service-icon
+        .icon-title
+          font-size 12px
