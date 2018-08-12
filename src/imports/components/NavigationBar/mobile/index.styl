@@ -1,22 +1,72 @@
-+iphone()
-  .navigation-bar
+.navigation-bar
+  +iphone()
     position relative
 
+    &.opened
+      height 100vh
+      padding 40px
+      top 0
+      position absolute
+      background linear-gradient(white, $snow)
+
+      .bar-content
+        .top-bar
+          animation none
+          opacity 1
+
+        .social-links
+          display flex
+          position absolute
+          bottom 24px
+
+          a
+            margin-right 24px
+
+            &:last-child
+              margin-right 0
+
+        .links
+          display flex
+          position absolute
+          flex-direction column
+          top 25%
+
+          a
+            margin 0 0 40%
+            font-weight 500
+            color black
+
+            &:before
+              content none
+
+            &:last-child
+              margin 0
+
+    &.closed
+      height 100vh
+      padding 40px
+      top 0
+      position absolute
+
     .bar-content
-      display block
+      display flex
       padding 0
 
       .links
         display none
 
+      .top-bar
+        display flex
+        flex 1
+        justify-content space-between
+        align-items center
 
-+iphone5()
-  .navigation-bar
-    position relative
+        .menu
+          display flex
 
-    .bar-content
-      display block
-      padding 0
+  +iphone5()
+    &.opened
+      padding 30px
 
-      .links
-        display none
+      .bar-content .links a
+        margin 0 0 30%
