@@ -1,3 +1,4 @@
+/*eslint-disable*/
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, {Component, Fragment} from 'react';
 import classnames from 'classnames';
@@ -166,6 +167,7 @@ class Clients extends Component {
         <div className="background" style={{backgroundColor: color}} key={currentElementIndex} />
         <div className={classnames('content', activeAnimation)}>
           {isMobile ? this.renderMobileVersion() : this.renderWebVersion()}
+          {/*{this.renderWebVersion()}*/}
           {activeAnimation && this.renderAnimation(activeAnimation, label)}
         </div>
       </div>
