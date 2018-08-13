@@ -2,10 +2,7 @@ import React, {PureComponent} from 'react';
 import ContactUsForm from 'components/ContactUsForm';
 import Footer from 'components/Footer';
 import {
-  AngelIcon,
-  BloggerIcon,
-  ClutchIcon,
-  LinkedinIcon,
+  AngelIcon, BloggerIcon, ClutchIcon, LinkedinIcon
 } from 'icons';
 
 class ContactUs extends PureComponent {
