@@ -1,14 +1,15 @@
 import React, {PureComponent} from 'react';
-import WebParallax from 'components/WebParallax';
+import {Parallax} from 'react-scroll-parallax';
 
 import CloudIcon from './cloud';
-import './styles/web.styl';
+
+import './index.styl';
 
 class Illustration extends PureComponent {
   render() {
     return (
       <div className="header-illustration">
-        <WebParallax
+        <Parallax
           className="parallax cloud"
           offsetYMax={5}
           offsetYMin={-5}
@@ -17,43 +18,43 @@ class Illustration extends PureComponent {
           <div className="illustration cloud">
             <CloudIcon />
           </div>
-        </WebParallax>
-        <WebParallax
+        </Parallax>
+        <Parallax
           className="parallax person"
           offsetYMax={15}
           offsetYMin={-15}
         >
           <div className="illustration person" />
-        </WebParallax>
-        <WebParallax
+        </Parallax>
+        <Parallax
           className="parallax plant"
           offsetYMax={50}
           offsetYMin={-50}
         >
           <div className="illustration plant" />
-        </WebParallax>
-        <WebParallax
+        </Parallax>
+        <Parallax
           className="parallax message"
           offsetYMax={5}
           offsetYMin={-5}
           slowerScrollRate
         >
           <div className="illustration message" />
-        </WebParallax>
-        <WebParallax
+        </Parallax>
+        <Parallax
           className="parallax laptop"
           offsetYMax={20}
           offsetYMin={-20}
         >
           <div className="illustration laptop" />
-        </WebParallax>
-        <WebParallax
+        </Parallax>
+        <Parallax
           className="parallax program"
           offsetYMax={10}
           offsetYMin={-10}
         >
           <div className="illustration program" />
-        </WebParallax>
+        </Parallax>
       </div>
     );
   }

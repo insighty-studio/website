@@ -1,0 +1,22 @@
+.scroll-up-btn
+  position fixed
+  right 32px
+  bottom 32px
+  z-index 10
+  opacity 0
+  transition opacity .3s
+
+  &.scroll-up-btn-visible
+    opacity 1
+
+  .scroll-to-top-btn-icon
+    display flex
+    align-items center
+    justify-content center
+    cursor pointer
+    width 48px
+    height 48px
+    border-radius 24px
+    -webkit-box-shadow 0 2px 5px 0 rgba(0, 94, 255, 0.3)
+    -moz-box-shadow 0 2px 5px 0 rgba(0, 94, 255, 0.3)
+    box-shadow 0 2px 5px 0 rgba(0, 94, 255, 0.3)

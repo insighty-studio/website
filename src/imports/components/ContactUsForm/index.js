@@ -8,9 +8,8 @@ import TextArea from 'components/TextArea';
 import Button from 'components/Button';
 import {trackEvent} from 'analytics';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
-import './styles/iphone5.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 const WEBHOOK_URL = 'https://hooks.slack.com/services/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';
 

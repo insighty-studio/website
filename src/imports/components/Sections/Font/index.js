@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import SectionName from '../SectionName';
-import './styles/web.styl';
 
 class FontSection extends PureComponent {
   static propTypes = {

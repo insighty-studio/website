@@ -5,9 +5,8 @@ import classnames from 'classnames';
 import Heading from 'components/Typography/Heading';
 import Paragraph from 'components/Typography/Paragraph';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
-import './styles/iphone5.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class Description extends PureComponent {
   static propTypes = {

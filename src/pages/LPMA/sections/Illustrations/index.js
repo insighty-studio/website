@@ -1,32 +1,23 @@
 import React, {PureComponent} from 'react';
-import WebParallax from 'components/WebParallax';
+import {Parallax} from 'react-scroll-parallax';
+import LaptopsImage from './img/laptops.png';
+import LaptopMobile from './img/laptop-mobile.png';
 
-import LeftMac from './img/left-mac.png';
-import RightMac from './img/right-mac.png';
-
-import './styles/web.styl';
-import './styles/iphones.styl';
-import './styles/iphone5.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class Illustrations extends PureComponent {
   render() {
     return (
       <div className="illustrations-section">
-        <WebParallax
-          className="mac-parallax"
-          offsetYMax={5}
-          offsetYMin={-5}
+        <Parallax
+          className="illustrations-parallax"
+          offsetYMax={60}
+          offsetYMin={-60}
         >
-          <img className="left-mac" alt="Left Mac" src={LeftMac} />
-        </WebParallax>
-        <WebParallax
-          className="mac-parallax"
-          offsetYMax={5}
-          offsetYMin={-5}
-          slowerScrollRate
-        >
-          <img className="right-mac" alt="Right Mac" src={RightMac} />
-        </WebParallax>
+          <img className="illustration-image" alt="LPMA" src={LaptopsImage} />
+          <img className="illustration-image-mobile" alt="LPMA" src={LaptopMobile} />
+        </Parallax>
       </div>
     );
   }

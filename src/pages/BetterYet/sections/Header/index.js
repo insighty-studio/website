@@ -1,14 +1,13 @@
 import React, {PureComponent} from 'react';
 import NavigationBar from 'components/NavigationBar';
 import {Logo} from 'icons';
-import WebParallax from 'components/WebParallax';
+import {Parallax} from 'react-scroll-parallax';
 
 import ByMobile from './images/by-mobile.png';
 import {BetterYetTitle} from './icons';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
-import './styles/iphone5.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class Header extends PureComponent {
   render() {
@@ -22,21 +21,21 @@ class Header extends PureComponent {
           ]}
           logoIcon={<Logo />}
         />
-        <WebParallax
+        <Parallax
           className="mobile-container"
           offsetYMax={40}
           offsetYMin={-40}
         >
           <img alt="" className="mobile" src={ByMobile} />
-        </WebParallax>
-        <WebParallax
+        </Parallax>
+        <Parallax
           offsetYMax={20}
           offsetYMin={-20}
         >
           <div className="betteryet-title">
             <BetterYetTitle />
           </div>
-        </WebParallax>
+        </Parallax>
       </div>
     );
   }

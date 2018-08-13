@@ -2,14 +2,13 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Description from 'components/Description';
-import WebParallax from 'components/WebParallax';
+import {Parallax} from 'react-scroll-parallax';
 
 import AboutBackground from './components/AboutBackground';
 import ShortDescription from './components/ShortDescription';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
-import './styles/iphone5.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class AboutSection extends PureComponent {
   static propTypes = {
@@ -38,7 +37,7 @@ class AboutSection extends PureComponent {
 
     return (
       <div className={classnames('about-section', className)}>
-        <WebParallax
+        <Parallax
           className="desc-parallax"
           offsetYMax={20}
           offsetYMin={-20}
@@ -63,7 +62,7 @@ class AboutSection extends PureComponent {
               text={desc}
             />
           </div>
-        </WebParallax>
+        </Parallax>
         <AboutBackground />
         {logo}
       </div>

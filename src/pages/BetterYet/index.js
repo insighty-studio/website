@@ -1,8 +1,13 @@
-import React, {PureComponent} from 'react';
+import React, {PureComponent, Component} from 'react';
+import PropTypes from 'prop-types';
 import Loader from 'components/Loader';
+import ScrollUpButton from 'components/ScrollUpButton';
 import WhitePaper from 'components/Sections/WhitePaper';
+import NextProject from 'components/Sections/NextProject';
+import Clutch from 'components/Sections/Clutch';
 import Footer from 'components/Footer';
-import {betteryetBlue, betteryetOrangeYellow} from 'styles/config';
+import {betteryetYellow, betteryetBlue, betteryetOrangeYellow} from 'styles/config';
+import provideScrollPosition from 'react-provide-scroll-position';
 
 import Header from './sections/Header';
 import About from './sections/About';
@@ -18,11 +23,18 @@ import Image3 from './images/image3.png';
 import Image4 from './images/image4.png';
 import Image5 from './images/image5.png';
 import Image6 from './images/image6.png';
+import './index.styl';
+import './mobile/index.styl';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
+class BetterYetPage extends PureComponent {
+  static propTypes = {
+    scrollTop: PropTypes.number
+  };
 
-class BetterYet extends PureComponent {
+  static defaultProps = {
+    scrollTop: 0
+  };
+
   renderPrototypes(...rest) {
     return (
       <Prototypes
@@ -32,9 +44,11 @@ class BetterYet extends PureComponent {
   }
 
   render() {
+    const {scrollTop} = this.props;
     return (
       <div className="betteryet-page">
         <Loader colors={{light: betteryetOrangeYellow, dark: betteryetBlue}} />
+        <ScrollUpButton color={betteryetYellow} percentagesScrolled={scrollTop} />
         <Header />
         <About />
         {this.renderPrototypes(
@@ -50,14 +64,36 @@ class BetterYet extends PureComponent {
         )}
         <Colors />
         <Illustration />
+        <Clutch />
+        <NextProject
+          name="LPMA"
+          desc="Helping real estate principals achieve customer excellence"
+          href="/lpma"
+        />
         <WhitePaper>
           <ContactUs />
           <ClientFooterSection />
-          <Footer />
+          <Footer
+            rights="© 2018 Insighty All Rights Reserved"
+            email="hello@insighty.studio"
+            address="240 Richmond St W, Toronto, ON M5V 1V6"
+          />
         </WhitePaper>
-        <Footer />
+        <Footer
+          rights="© 2018 Insighty All Rights Reserved"
+          email="hello@insighty.studio"
+          address="240 Richmond St W, Toronto, ON M5V 1V6"
+        />
       </div>
     );
+  }
+}
+
+const BetterYetScroll = provideScrollPosition(BetterYetPage);
+
+class BetterYet extends Component {
+  render() {
+    return <BetterYetScroll />;
   }
 }
 

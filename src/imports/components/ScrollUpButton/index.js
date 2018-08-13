@@ -4,19 +4,22 @@ import classnames from 'classnames';
 import Scroll from 'react-scroll';
 
 import {ScrollUpButtonIcon} from './icons';
-import './styles/web.styl';
+
+import './index.styl';
 
 class ScrollUpButton extends PureComponent {
   static propTypes = {
-    percentagesScrolled: PropTypes.number
+    percentagesScrolled: PropTypes.number,
+    color: PropTypes.string,
   };
 
   static defaultProps = {
-    percentagesScrolled: 0
+    percentagesScrolled: 0,
+    color: '#005EFF'
   };
 
   render() {
-    const {percentagesScrolled} = this.props;
+    const {color, percentagesScrolled} = this.props;
     return (
       // eslint-disable-next-line jsx-a11y/click-events-have-key-events
       <div
@@ -24,7 +27,7 @@ class ScrollUpButton extends PureComponent {
           percentagesScrolled >= window.innerHeight && 'scroll-up-btn-visible')}
         onClick={() => Scroll.animateScroll.scrollToTop({smooth: true, duration: 500})}
       >
-        <ScrollUpButtonIcon />
+        <ScrollUpButtonIcon color={color} />
       </div>
     );
   }

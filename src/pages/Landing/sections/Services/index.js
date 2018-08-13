@@ -4,14 +4,13 @@ import SectionHeading from 'components/Typography/SectionHeading';
 import Service from './components/Service';
 import {Design, Development, Quality} from './services';
 
-import './styles/web.styl';
-import './styles/iphones.styl';
-import './styles/iphone5.styl';
+import './index.styl';
+import './mobile/index.styl';
 
 class Services extends PureComponent {
   render() {
     return (
-      <div className="services" id="services">
+      <div className="services">
         <SectionHeading subTitle="our" title="services" />
         <div className="service-list">
           <Service

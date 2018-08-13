@@ -12,7 +12,7 @@ body
   font-size: 16px
   line-height: 1.4
 
-  +alliphones()
+  +iphone()
     font-size 15px
 
   +iphone5()
@@ -21,29 +21,23 @@ body
 h1, h2, h3
   font-weight: 500
 
-.no-user-select {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
-}
+.no-user-select
+  -webkit-touch-callout none
+  -webkit-user-select none
+  -khtml-user-select none
+  -moz-user-select none
+  -ms-user-select none
+  user-select none
 
-.hover-grow {
-  display: inline-block;
-  vertical-align: middle;
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  transition-duration: 0.3s;
-  transition-property: transform;
-}
+.hover-grow
+  display inline-block
+  vertical-align middle
+  transform translateZ(0)
+  box-shadow 0 0 1px rgba(0, 0, 0, 0)
+  backface-visibility hidden
+  -moz-osx-font-smoothing grayscale
+  transition-duration 0.3s
+  transition-property transform
 
-.hover-grow:hover,
-.hover-grow:focus,
-.hover-grow:active {
-  transform: scale(1.1);
-}
+  &:hover, &:focus, &:active
+    transform scale(1.1)

@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {Logo} from 'icons';
 
-import './styles/web.styl';
+import './index.styl';
 
 class Loader extends PureComponent {
   static propTypes = {
