@@ -4,25 +4,30 @@
   display flex
   align-items center
   justify-content center
-  flex-direction column
-  font-family Roboto Mono
-  font-size $small
 
-  .title
-    margin-bottom 14px
-    font-weight $medium-weight
-    text-transform uppercase
-    letter-spacing 1.75px
+  .description
+    display flex
+    flex-direction column
+    margin-left 80px
+    font-family Roboto Mono, sans-serif
 
-  .desc
-    width 460px
-    text-align center
-    margin-bottom 30px
-    color rgba(0, 0, 0, .6)
-    letter-spacing 1.36px
+    .title
+      margin-bottom 14px
+      font-weight $medium-weight
+      text-transform uppercase
+      letter-spacing 1.75px
 
-  .full-review-btn
-    font-size $small
+    .desc
+      font-family Roboto, sans-serif
+      font-size $small
+      width 306px
+      line-height 28px
+      margin-bottom 20px
+      color rgba(0, 0, 0, .6)
 
-    .button-title
-      color black
+    .full-review-btn
+      .button
+        float left
+
+        .button-title
+          color black
