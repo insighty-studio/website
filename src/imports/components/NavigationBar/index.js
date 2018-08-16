@@ -57,6 +57,7 @@ class NavigationBar extends React.Component {
                 href={href}
                 onClick={() => this.clearMenuStatus(i, duration)}
                 className={white && 'white'}
+                id={`${text.toLowerCase()}-link`}
                 rel="noopener noreferrer"
               >
                 {text}
@@ -71,6 +72,7 @@ class NavigationBar extends React.Component {
               activeClass="active"
               onClick={() => this.clearMenuStatus(i, duration)}
               duration={duration}
+              id={`${text.toLowerCase()}-link`}
               className={classnames({active}, white && 'white')}
             >
               {text}
