@@ -1,4 +1,7 @@
 coverage:
+  codecov:
+    token: d27d7277-4678-4bc8-b0f1-fd975e9947fc
+
   status:
     project:
       default: off
