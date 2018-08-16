@@ -3,19 +3,33 @@ jobs:
   build:
     docker:
       - image: circleci/node:7.10
+
     working_directory: ~/website/
+
     steps:
       - checkout:
           path: ~/website/
+
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
           - v1-dependencies-
-      - run: npm install
+
+      - run:
+          name: Install packages
+          command: |
+            npm install
+
+      - run:
+          name: Test
+          command: |
+            npm run test
+
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+
       - run:
           name: Build project
           command: |
