@@ -1,9 +1,11 @@
 import React, {PureComponent} from 'react';
+import {isMobile} from 'react-device-detect';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Paragraph from 'components/Typography/Paragraph/index';
 
 import './index.styl';
+import './mobile/index.styl';
 
 class Step extends PureComponent {
   static propTypes = {
@@ -28,7 +30,7 @@ class Step extends PureComponent {
     return (
       <div className="step">
         <div className="number">
-          {hiddenLine ? null : <div className={classnames('line', first && 'first', last && 'last')} />}
+          {(hiddenLine && !isMobile) ? null : <div className={classnames('line', first && 'first', last && 'last')} />}
           <div className="circle">
             {number}
           </div>

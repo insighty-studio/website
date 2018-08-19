@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import React, {PureComponent, Component} from 'react';
 import PropTypes from 'prop-types';
 import provideScrollPosition from 'react-provide-scroll-position';
