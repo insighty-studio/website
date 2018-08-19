@@ -6,7 +6,7 @@ import Step from './components/Step';
 import './index.styl';
 import './mobile/index.styl';
 
-class Process extends PureComponent {
+class ProcessOld extends PureComponent {
   render() {
     return (
       <div className="process">
@@ -63,4 +63,4 @@ class Process extends PureComponent {
   }
 }
 
-export default Process;
+export default ProcessOld;
