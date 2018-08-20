@@ -6,13 +6,13 @@ module.exports = {
   'Page 404': (client) => {
     client
       .url(PAGE404_URL)
-      .waitForElementVisible('.loader-page', 2000)
+      .waitForElementVisible('.loader-page')
       .pause(3000)
-      .waitForElementVisible('.page-404', 2000)
-      .waitForElementVisible('a.home-button', 2000)
+      .waitForElementVisible('.page-404')
+      .waitForElementVisible('a.home-button')
       .click('a[href="/"]')
       .useXpath()
-      .waitForElementVisible('(//div[@class="landing"])[1]', 2000)
+      .waitForElementVisible('(//div[@class="landing"])[1]')
       .useCss()
       .url(PAGE404_URL);
   },

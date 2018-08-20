@@ -5,6 +5,10 @@
   "custom_assertions_path" : "",
   "page_objects_path" : "",
   "globals_path" : "",
+  "abortOnAssertionFailure": false,
+  "waitForConditionPollInterval": 300,
+  "waitForConditionTimeout": 2000,
+  "retryAssertionTimeout": 5000,
 
   "selenium" : {
     "start_process" : true,
