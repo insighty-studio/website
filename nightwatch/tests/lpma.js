@@ -1,28 +1,24 @@
 const form = require('./helpers/form.js');
 
-const BETTERYET_URL = 'http://localhost:3000/betteryet';
+const LPMA_URL = 'http://localhost:3000/lpma';
 
 module.exports = {
-  '@disabled': true,
+  '@disabled': false,
 
-  'BetterYet Page': (client) => {
+  'LPMA Page': (client) => {
     client
-      .url(BETTERYET_URL)
+      .url(LPMA_URL)
       .waitForElementVisible('.loader-page')
       .pause(3000)
-      .waitForElementVisible('.betteryet-page', 3000)
       .waitForElementVisible('.bar-content .links')
       .waitForElementVisible('.links #home-link')
       .waitForElementVisible('.links #contact-link')
       .waitForElementVisible('.header-section')
       .waitForElementVisible('.about-section')
-      .useXpath()
-      .waitForElementVisible('(//div[@class="prototypes-section"])[1]')
-      .waitForElementVisible('(//div[@class="prototypes-section"])[2]')
-      .useCss()
+      .waitForElementVisible('.illustrations-section')
       .waitForElementVisible('.logo-section')
       .waitForElementVisible('.colors-section')
-      .waitForElementVisible('.illustration-section')
+      .waitForElementVisible('.screens-section')
       .waitForElementVisible('.clutch-section')
       .waitForElementVisible('.next-project-section')
       .waitForElementVisible('.contact-us-form')
@@ -32,12 +28,12 @@ module.exports = {
       .useXpath()
       .waitForElementVisible('(//div[@class="landing"])[1]')
       .useCss()
-      .url(BETTERYET_URL)
+      .url(LPMA_URL)
       .pause(3000)
       .click('#contact-link');
   },
 
-  'Form on BetterYet page': form.sendForm,
+  'Form on LPMA page': form.sendForm,
 
   after: (browser) => {
     browser.end();

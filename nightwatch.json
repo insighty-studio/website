@@ -1,14 +1,10 @@
 {
-  "src_folders" : ["tests"],
+  "src_folders" : ["nightwatch/tests"],
   "output_folder" : "reports",
   "custom_commands_path" : "",
   "custom_assertions_path" : "",
   "page_objects_path" : "",
-  "globals_path" : "",
-  "abortOnAssertionFailure": false,
-  "waitForConditionPollInterval": 300,
-  "waitForConditionTimeout": 2000,
-  "retryAssertionTimeout": 5000,
+  "globals_path" : "./nightwatch/globals/globalModules.js",
 
   "selenium" : {
     "start_process" : true,
@@ -16,9 +12,7 @@
     "log_path" : "",
     "port" : 4444,
     "cli_args" : {
-      "webdriver.chrome.driver" : "./bin/chromedriver",
-      "webdriver.gecko.driver" : "",
-      "webdriver.edge.driver" : ""
+      "webdriver.chrome.driver" : "./bin/chromedriver"
     }
   },
 
@@ -37,19 +31,7 @@
         "javascriptEnabled": true,
         "acceptSslCerts": true
       },
-      "exclude" : ["tests/helpers/form.js"]
-    },
-
-    "chrome" : {
-      "desiredCapabilities": {
-        "browserName": "chrome"
-      }
-    },
-
-    "edge" : {
-      "desiredCapabilities": {
-        "browserName": "MicrosoftEdge"
-      }
+      "exclude" : ["nightwatch/tests/helpers/form.js"]
     }
   }
 }
