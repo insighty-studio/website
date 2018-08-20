@@ -1,7 +1,11 @@
+const form = require('./helpers/form.js');
+
 const LANDING_URL = 'http://localhost:3000/';
 
 module.exports = {
-  'Landing Page': (client) => {
+  '@disabled': true,
+
+  'Landing page': (client) => {
     client
       .url(LANDING_URL)
       .waitForElementVisible('.loader-page', 2000)
@@ -22,16 +26,12 @@ module.exports = {
       .click('#clients-link')
       .click('#contact-link')
       .pause(1000)
-      .click('.scroll-up-btn')
-      .setValue('input[name=name]', 'nightwatch test')
-      .setValue('input[name=email]', 'nightwatch@test.com')
-      .setValue('input[name=phone]', '+000000000')
-      .setValue('input[name=website]', 'nightwatch.com')
-      .setValue('textarea[name=message]', 'Don\'t worry, it\'s just a test.')
-      .assert.containsText('.form-btn .button-hover-text', 'SEND')
-      .click('.form-btn')
-      .waitForElementVisible('.notification-success', 2000)
-      .assert.containsText('.form-btn .button-hover-text', 'THANKS!')
-      .end();
-  }
+      .click('.scroll-up-btn');
+  },
+
+  'Form on Landing page': form.sendForm,
+
+  after: (browser) => {
+    browser.end();
+  },
 };

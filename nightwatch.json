@@ -5,6 +5,7 @@
   "custom_assertions_path" : "",
   "page_objects_path" : "",
   "globals_path" : "",
+  "filter" : "tests/form/index.js",
 
   "selenium" : {
     "start_process" : true,
@@ -32,7 +33,8 @@
         "browserName": "chrome",
         "javascriptEnabled": true,
         "acceptSslCerts": true
-      }
+      },
+      "exclude" : ["tests/helpers/form.js"]
     },
 
     "chrome" : {
