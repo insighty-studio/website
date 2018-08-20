@@ -64,7 +64,7 @@ class BetterYetPage extends PureComponent {
         )}
         <Colors />
         <Illustration />
-        <Clutch />
+        <Clutch href="https://clutch.co/profile/insighty#review-510820" />
         <NextProject
           name="LPMA"
           desc="Helping real estate principals achieve customer excellence"

@@ -1,4 +1,5 @@
 const form = require('./helpers/form.js');
+const slider = require('./helpers/client-slider.js');
 
 const LANDING_URL = 'http://localhost:3000/';
 
@@ -13,20 +14,19 @@ module.exports = {
       .waitForElementVisible('.bar-content .links')
       .waitForElementVisible('.links #services-link')
       .waitForElementVisible('.header')
-      .waitForElementVisible('.services')
-      .waitForElementVisible('.process')
-      .waitForElementVisible('.clients')
       .waitForElementVisible('.partners')
-      .waitForElementVisible('.contact-us')
       .waitForElementVisible('.explore-btn')
       .click('#home-link')
       .click('#services-link')
+      .waitForElementPresent('.services')
       .click('#process-link')
-      .click('#clients-link')
+      .waitForElementPresent('.process')
       .click('#contact-link')
-      .pause(1000)
+      .waitForElementPresent('.contact-us')
       .click('.scroll-up-btn');
   },
+
+  'Clients Slider on Landing page': slider.clientSlider,
 
   'Form on Landing page': form.sendForm,
 

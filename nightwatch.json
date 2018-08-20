@@ -31,7 +31,10 @@
         "javascriptEnabled": true,
         "acceptSslCerts": true
       },
-      "exclude" : ["nightwatch/tests/helpers/form.js"]
+      "exclude" : [
+        "nightwatch/tests/helpers/form.js",
+        "nightwatch/tests/helpers/client-slider.js"
+      ]
     }
   }
 }

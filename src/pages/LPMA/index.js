@@ -43,7 +43,7 @@ class LPMAPage extends PureComponent {
         <Logo />
         <Colors />
         <Screens />
-        <Clutch />
+        <Clutch href="https://clutch.co/profile/insighty#review-516735" />
         <NextProject
           name="BetterYet"
           desc="Loyalty programs for the local shoppers"

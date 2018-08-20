@@ -11,6 +11,5 @@ exports.sendForm = (client) => {
     .assert.containsText('.form-btn .button-hover-text', 'SEND')
     .click('.form-btn')
     .waitForElementVisible('.notification-success', 2000)
-    .assert.containsText('.form-btn .button-hover-text', 'THANKS!')
-    .end();
+    .assert.containsText('.form-btn .button-hover-text', 'THANKS!');
 };
