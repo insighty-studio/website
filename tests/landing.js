@@ -3,7 +3,7 @@ const form = require('./helpers/form.js');
 const LANDING_URL = 'http://localhost:3000/';
 
 module.exports = {
-  '@disabled': true,
+  '@disabled': false,
 
   'Landing page': (client) => {
     client
@@ -20,7 +20,6 @@ module.exports = {
       .waitForElementVisible('.contact-us', 2000)
       .waitForElementVisible('.explore-btn', 2000)
       .click('#home-link')
-      .click('.explore-btn')
       .click('#services-link')
       .click('#process-link')
       .click('#clients-link')

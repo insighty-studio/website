@@ -3,7 +3,7 @@ const form = require('./helpers/form.js');
 const LPMA_URL = 'http://localhost:3000/lpma';
 
 module.exports = {
-  '@disabled': false,
+  '@disabled': true,
 
   'LPMA Page': (client) => {
     client
@@ -33,7 +33,7 @@ module.exports = {
       .click('#contact-link');
   },
 
-  'Form on BetterYet page': form.sendForm,
+  'Form on LPMA page': form.sendForm,
 
   after: (browser) => {
     browser.end();

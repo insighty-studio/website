@@ -5,7 +5,6 @@
   "custom_assertions_path" : "",
   "page_objects_path" : "",
   "globals_path" : "",
-  "filter" : "tests/form/index.js",
 
   "selenium" : {
     "start_process" : true,
