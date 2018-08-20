@@ -25,6 +25,11 @@ jobs:
           command: |
             npm run test
 
+      - run:
+          name: Nightwatch Tests
+          command: |
+            npm run nightwatch
+
       - save_cache:
           paths:
             - node_modules
