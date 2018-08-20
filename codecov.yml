@@ -1,0 +1,27 @@
+coverage:
+  codecov:
+    token: d27d7277-4678-4bc8-b0f1-fd975e9947fc
+
+  status:
+    project:
+      default: off
+      web:
+        target: 50%
+        flags: frontend
+
+    flags:
+      web:
+        paths:
+        - website/src/
+
+      tests:
+        paths:
+        - website/src/*.test.js
+
+    comment:
+      layout: "reach, diff, flags, files"
+      behavior: default
+      require_changes: false  # if true: only post the comment if coverage changes
+      require_base: no        # [yes :: must have a base report to post]
+      require_head: yes       # [yes :: must have a head report to post]
+      branches: null
