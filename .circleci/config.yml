@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:7.10
+      - image: karthikiyengar/node-nightwatch:0.0.1
 
     working_directory: ~/website/
 
