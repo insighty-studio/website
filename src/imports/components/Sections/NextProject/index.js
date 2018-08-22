@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import Button from 'components/Button';
-import {RightArrowIcon} from 'icons';
+import {RightArrowIcon, HouseIcon} from 'icons';
 
 import './index.styl';
 import './mobile/index.styl';
@@ -24,19 +24,23 @@ class NextProject extends PureComponent {
 
     return (
       <div className="next-project-section">
-        <div className="title">
-          {`Next project - ${name}`}
+        <HouseIcon />
+        <div className="description">
+          <div className="title">
+            {`Next project - ${name}`}
+          </div>
+          <div className="desc">
+            {desc}
+          </div>
+          <div className="full-review-btn">
+            <Button
+              title="Full review"
+              href={href}
+            >
+              <RightArrowIcon />
+            </Button>
+          </div>
         </div>
-        <div className="desc">
-          {desc}
-        </div>
-        <Button
-          title="Full review"
-          className="full-review-btn"
-          href={href}
-        >
-          <RightArrowIcon />
-        </Button>
       </div>
     );
   }

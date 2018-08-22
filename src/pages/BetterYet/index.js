@@ -25,6 +25,12 @@ import Image5 from './images/image5.png';
 import Image6 from './images/image6.png';
 import './index.styl';
 import './mobile/index.styl';
+import {
+  AngelIcon,
+  BloggerIcon,
+  ClutchIcon,
+  LinkedinIcon,
+} from '../../imports/icons';
 
 class BetterYetPage extends PureComponent {
   static propTypes = {
@@ -64,10 +70,10 @@ class BetterYetPage extends PureComponent {
         )}
         <Colors />
         <Illustration />
-        <Clutch />
+        <Clutch link="https://clutch.co/profile/insighty#review-516735" />
         <NextProject
           name="LPMA"
-          desc="Helping real estate principals achieve customer excellence"
+          desc="The Customer Excellence program equips real estate agencies to survey their clients."
           href="/lpma"
         />
         <WhitePaper>
@@ -80,6 +86,19 @@ class BetterYetPage extends PureComponent {
           />
         </WhitePaper>
         <Footer
+          landingStyle
+          links={[
+            {text: 'Home', to: 'header'},
+            {text: 'Services', to: 'services'},
+            {text: 'Process', to: 'process'},
+            {text: 'Contacts', to: 'contact-us'},
+          ]}
+          socials={[
+            {icon: <LinkedinIcon />, link: 'https://www.linkedin.com/company/insighty/'},
+            {icon: <BloggerIcon />, link: 'http://alexpanov.me/'},
+            {icon: <ClutchIcon />, link: 'https://clutch.co/profile/insighty'},
+            {icon: <AngelIcon />, link: 'https://angel.co/insighty'},
+          ]}
           rights="© 2018 Insighty All Rights Reserved"
           email="hello@insighty.studio"
           address="240 Richmond St W, Toronto, ON M5V 1V6"

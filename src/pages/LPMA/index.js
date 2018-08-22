@@ -20,6 +20,12 @@ import ContactUs from './sections/ContactUs';
 import ClientFooterSection from './sections/ClientFooter';
 import './index.styl';
 import './mobile/index.styl';
+import {
+  AngelIcon,
+  BloggerIcon,
+  ClutchIcon,
+  LinkedinIcon,
+} from '../../imports/icons';
 
 class LPMAPage extends PureComponent {
   static propTypes = {
@@ -43,7 +49,7 @@ class LPMAPage extends PureComponent {
         <Logo />
         <Colors />
         <Screens />
-        <Clutch />
+        <Clutch link="https://clutch.co/profile/insighty#review-510820" />
         <NextProject
           name="BetterYet"
           desc="Loyalty programs for the local shoppers"
@@ -59,6 +65,19 @@ class LPMAPage extends PureComponent {
           />
         </WhitePaper>
         <Footer
+          landingStyle
+          links={[
+            {text: 'Home', to: 'header'},
+            {text: 'Services', to: 'services'},
+            {text: 'Process', to: 'process'},
+            {text: 'Contacts', to: 'contact-us'},
+          ]}
+          socials={[
+            {icon: <LinkedinIcon />, link: 'https://www.linkedin.com/company/insighty/'},
+            {icon: <BloggerIcon />, link: 'http://alexpanov.me/'},
+            {icon: <ClutchIcon />, link: 'https://clutch.co/profile/insighty'},
+            {icon: <AngelIcon />, link: 'https://angel.co/insighty'},
+          ]}
           rights="© 2018 Insighty All Rights Reserved"
           email="hello@insighty.studio"
           address="240 Richmond St W, Toronto, ON M5V 1V6"
