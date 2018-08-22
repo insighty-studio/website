@@ -7,6 +7,9 @@
     "browser": true,
     "mocha": true
   },
+  "globals": {
+    "expect": true
+  },
   "extends": "@insighty-studio/eslint-config-react",
   "settings": {
     "import/resolver": {
