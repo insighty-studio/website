@@ -80,7 +80,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "jest && codecov",
-    "nightwatch": "nightwatch",
+    "acceptance-test": "nightwatch",
     "lint": "./node_modules/.bin/eslint ."
   },
   "devDependencies": {
