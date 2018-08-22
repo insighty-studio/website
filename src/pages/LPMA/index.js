@@ -1,7 +1,5 @@
 import React, {PureComponent, Component} from 'react';
 import PropTypes from 'prop-types';
-import BodyBackground from 'components/BodyBackground';
-import WhitePaper from 'components/Sections/WhitePaper';
 import ScrollUpButton from 'components/ScrollUpButton';
 import NextProject from 'components/Sections/NextProject';
 import Clutch from 'components/Sections/Clutch';
@@ -17,9 +15,8 @@ import Logo from './sections/Logo';
 import Colors from './sections/Colors';
 import Screens from './sections/Screens';
 import ContactUs from './sections/ContactUs';
-import ClientFooterSection from './sections/ClientFooter';
+
 import './index.styl';
-import './mobile/index.styl';
 
 class LPMAPage extends PureComponent {
   static propTypes = {
@@ -35,7 +32,6 @@ class LPMAPage extends PureComponent {
     return (
       <div className="lpma-page">
         <Loader colors={{light: lpmaGreen, dark: lpmaDarkGray}} />
-        <BodyBackground color={lpmaDarkGray} />
         <ScrollUpButton color={lpmaGreen} percentagesScrolled={scrollTop} />
         <Header />
         <About />
@@ -46,13 +42,10 @@ class LPMAPage extends PureComponent {
         <Clutch href="https://clutch.co/profile/insighty#review-516735" />
         <NextProject
           name="BetterYet"
-          desc="Loyalty programs for the local shoppers"
+          desc="Loyalty programs for the local shoppers."
           href="/betteryet"
         />
-        <WhitePaper>
-          <ContactUs />
-          <ClientFooterSection />
-        </WhitePaper>
+        <ContactUs />
         <Footer />
       </div>
     );

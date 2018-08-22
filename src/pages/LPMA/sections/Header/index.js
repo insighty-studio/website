@@ -17,7 +17,7 @@ class Header extends PureComponent {
           white
           links={[
             {text: 'Home', href: '/'},
-            {text: 'Contact', to: 'white-paper'},
+            {text: 'Contact', to: 'contact-us-form'},
           ]}
           logoIcon={<Logo />}
         />

@@ -1,7 +1,9 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import Button from 'components/Button';
-import {RightArrowIcon, HouseIcon} from 'icons';
+import {RightArrowIcon} from 'icons';
+
+import {BuildingIllustration} from './icons';
 
 import './index.styl';
 import './mobile/index.styl';
@@ -24,10 +26,10 @@ class NextProject extends PureComponent {
 
     return (
       <div className="next-project-section">
-        <HouseIcon />
+        <BuildingIllustration />
         <div className="description">
           <div className="title">
-            {`Next project - ${name}`}
+            {`Next project - ${name.toUpperCase()}`}
           </div>
           <div className="desc">
             {desc}

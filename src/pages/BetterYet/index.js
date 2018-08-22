@@ -15,7 +15,6 @@ import Logo from './sections/Logo';
 import Prototypes from './sections/Prototypes';
 import Colors from './sections/Colors';
 import ContactUs from './sections/ContactUs';
-import ClientFooterSection from './sections/ClientFooter';
 import Illustration from './sections/Illustration';
 import Image1 from './images/image1.png';
 import Image2 from './images/image2.png';
@@ -67,12 +66,11 @@ class BetterYetPage extends PureComponent {
         <Clutch href="https://clutch.co/profile/insighty#review-510820" />
         <NextProject
           name="LPMA"
-          desc="The Customer Excellence program equips real estate agencies to survey their clients."
+          desc="Helping real estate principals achieve customer excellence."
           href="/lpma"
         />
         <WhitePaper>
           <ContactUs />
-          <ClientFooterSection />
         </WhitePaper>
         <Footer />
       </div>

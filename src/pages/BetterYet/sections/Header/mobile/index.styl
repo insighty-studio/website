@@ -1,27 +1,29 @@
 +iphone()
-  .betteryet-page
-    .header-section
-      .navigation-bar
-        position absolute
+  .betteryet-page .header-section
+    .navigation-bar
+      position absolute
+      padding 40px
 
-        .bar-content
-          padding 32px 32px 0
+      &.opened
+        background $betteryetYellow
 
-      .mobile-container
-        img.mobile
-          width 309px
-          height 415px
+        .links a
+          color white
+
+    .menu-icon svg,
+    .close-menu-icon svg,
+    .social-links svg
+      fill white
+
+    .mobile-container img.mobile
+      width 309px
+      height 415px
 
 +iphone5()
-  .betteryet-page
-    .header-section
-      .navigation-bar
-        position absolute
+  .betteryet-page .header-section
+    .navigation-bar
+      padding 30px
 
-        .bar-content
-          padding 32px 32px 0
-
-      .mobile-container
-        img.mobile
-          width 280px
-          height 392px
+    .mobile-container img.mobile
+      width 280px
+      height 392px
