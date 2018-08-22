@@ -3,17 +3,18 @@ import React from 'react';
 import {Link} from 'react-scroll';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-
 import {
-  MenuIcon,
-  CloseMenuIcon,
   LinkedInIcon,
   FacebookIcon,
   ClutchIcon,
   AngelListIcon,
   BloggerIcon
-} from './icons';
+} from 'icons';
 
+import {
+  MenuIcon,
+  CloseMenuIcon
+} from './icons';
 import './index.styl';
 import './mobile/index.styl';
 

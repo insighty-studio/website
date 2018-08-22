@@ -52,17 +52,8 @@ class LPMAPage extends PureComponent {
         <WhitePaper>
           <ContactUs />
           <ClientFooterSection />
-          <Footer
-            rights="© 2018 Insighty All Rights Reserved"
-            email="hello@insighty.studio"
-            address="240 Richmond St W, Toronto, ON M5V 1V6"
-          />
         </WhitePaper>
-        <Footer
-          rights="© 2018 Insighty All Rights Reserved"
-          email="hello@insighty.studio"
-          address="240 Richmond St W, Toronto, ON M5V 1V6"
-        />
+        <Footer />
       </div>
     );
   }

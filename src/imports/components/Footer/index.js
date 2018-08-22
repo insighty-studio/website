@@ -1,30 +1,27 @@
 import React, {PureComponent} from 'react';
-import {isMobile} from 'react-device-detect';
 import {Link} from 'react-scroll';
-import {Logo} from 'icons';
+import {
+  Logo,
+  AngelListIcon,
+  BloggerIcon,
+  ClutchIcon,
+  LinkedInIcon,
+  FacebookIcon,
+} from 'icons';
 
 import './index.styl';
 import './mobile/index.styl';
-import PropTypes from 'prop-types';
 
 class Footer extends PureComponent {
-  static propTypes = {
-    landingStyle: PropTypes.bool,
-    links: PropTypes.arrayOf(PropTypes.object),
-    socials: PropTypes.arrayOf(PropTypes.object),
-    rights: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    address: PropTypes.string.isRequired,
-  }
+  renderLinks() {
+    const links = [
+      {text: 'Home', to: 'header'},
+      {text: 'Services', to: 'services'},
+      {text: 'Process', to: 'process'},
+      {text: 'Clients', to: 'clients'},
+      {text: 'Contacts', to: 'contact-us'},
+    ];
 
-  static defaultProps = {
-    landingStyle: false,
-    links: null,
-    socials: null,
-  }
-
-  renderLinks(links) {
-    if (!links) return null;
     return (
       <div className="links">
         {links.map(({text, to}, i) => (
@@ -32,7 +29,7 @@ class Footer extends PureComponent {
             smooth
             key={i}
             to={to}
-            duration={500 + (i * 200)}
+            duration={1500 - (i * 200)}
           >
             {text}
           </Link>
@@ -41,78 +38,34 @@ class Footer extends PureComponent {
     );
   }
 
-  renderSocials(socials) {
-    if (!socials) return null;
+  renderSocials() {
     return (
       <div className="socials">
-        {socials.map(({icon, link}, i) => (
-          <a
-            key={i}
-            href={link}
-            rel="noopener noreferrer"
-          >
-            {icon}
-          </a>
-        ))}
-      </div>
-    );
-  }
-
-  renderLandingStyle(links, socials, rights, email, address) {
-    return (
-      <div className="footer-landing">
-        <div className="content">
-          <div className="menu">
-            <div className="logo">
-              <Logo />
-            </div>
-            {this.renderLinks(links)}
-            {this.renderSocials(socials)}
-          </div>
-          <div className="details">
-            <div className="rights">
-              {rights}
-            </div>
-            <div className="info">
-              <span>
-                {email}
-              </span>
-              <br />
-              <span>
-                {address}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  renderDefaultStyle(rights, email, address) {
-    return (
-      <div className="footer-default">
-        <div className="details">
-          {address}
-          <br />
-          {email}
-        </div>
-        <div className="rights">
-          {rights}
-        </div>
+        <FacebookIcon />
+        <LinkedInIcon />
+        <BloggerIcon />
+        <ClutchIcon />
+        <AngelListIcon />
       </div>
     );
   }
 
   render() {
-    const {
-      landingStyle, links, socials, rights, email, address
-    } = this.props;
-    const content = (landingStyle && !isMobile)
-      ? this.renderLandingStyle(links, socials, rights, email, address)
-      : this.renderDefaultStyle(rights, email, address);
     return (
       <div className="footer">
-        {content}
+        <div className="menu">
+          <Logo style={{width: 48, height: 48}} />
+          {this.renderLinks()}
+          {this.renderSocials()}
+        </div>
+        <div className="details">
+          <div className="rights">© 2018 Insighty All Rights Reserved</div>
+          <div className="info">
+            <span>hello@insighty.studio</span>
+            <br />
+            <span>240 Richmond St W, Toronto, ON M5V 1V6</span>
+          </div>
+        </div>
       </div>
     );
   }
