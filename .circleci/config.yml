@@ -11,18 +11,10 @@ deploy-job:
   steps:
   - checkout
 
-  - restore_cache:
-      key: ee-build-{{ checksum "./package.json" }}
-
   - run:
       name: Acceptance Test
       command: |
         npm run acceptance-test
-
-  - save_cache:
-      key: ee-build-{{ checksum "./package.json" }}
-      paths:
-      - ./node_modules
 
 jobs:
   build:
