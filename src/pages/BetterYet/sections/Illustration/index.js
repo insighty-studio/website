@@ -1,7 +1,8 @@
 import React, {PureComponent} from 'react';
 import {Parallax} from 'react-scroll-parallax';
 
-import notebook from './images/notebook.png';
+import leftNotebook from './images/left-notebook.png';
+import rightNotebook from './images/right-notebook.png';
 
 import './index.styl';
 import './mobile/index.styl';
@@ -11,11 +12,19 @@ class Illustration extends PureComponent {
     return (
       <div className="illustration-section">
         <Parallax
-          offsetYMax={10}
-          offsetYMin={-10}
+          offsetYMax={15}
+          offsetYMin={-15}
         >
-          <div className="notebook-illustration">
-            <img alt="" src={notebook} />
+          <div className="left-notebook-illustration">
+            <img alt="" src={leftNotebook} />
+          </div>
+        </Parallax>
+        <Parallax
+          offsetYMax={30}
+          offsetYMin={-30}
+        >
+          <div className="right-notebook-illustration">
+            <img alt="" src={rightNotebook} />
           </div>
         </Parallax>
       </div>

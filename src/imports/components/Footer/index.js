@@ -64,7 +64,7 @@ class Footer extends PureComponent {
         <div className="content">
           <div className="menu">
             <div className="logo">
-              <Logo style={{width: '29px', height: '29px'}} />
+              <Logo />
             </div>
             {this.renderLinks(links)}
             {this.renderSocials(socials)}

@@ -18,7 +18,7 @@
       color white
       font-size $small
       line-height 23px
-      letter-spacing 1.5px
+      letter-spacing 1px
 
       .menu
         display flex
@@ -30,6 +30,7 @@
 
         .links
           a
+            text-transform uppercase
             cursor pointer
             margin-right 40px
 
@@ -57,8 +58,10 @@
         align-items flex-end
         margin-top 70px
 
-        .rights
-          opacity .6
+        .rights, .info
+          letter-spacing 0
+          opacity .4
+          line-height 32px
 
         .info
           text-align right

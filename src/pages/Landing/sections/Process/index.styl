@@ -1,17 +1,16 @@
 .process
-  display flex
-  flex-direction column
-  padding 120px 0
+  .process-content
+    position absolute
+    overflow hidden
+    width 100%
 
-  .description
-    display flex
-    flex-direction column
-
-    .row
-      display flex
-      justify-content space-around
+    .container
       width 100%
-      margin-top 86px
+      max-width 1160px
+      margin 0 auto
+      padding 120px 0
 
-      &:first-child
-        margin-top 96px
+      .row
+        display flex
+        justify-content space-evenly
+        margin-top 80px
