@@ -80,7 +80,7 @@
     "build": "node scripts/build.js",
     "test": "jest && codecov",
     "nightwatch": "nightwatch",
-    "lint": "./node_modules/.bin/eslint src/"
+    "lint": "./node_modules/.bin/eslint ."
   },
   "devDependencies": {
     "@insighty-studio/eslint-config-react": "0.1.11",

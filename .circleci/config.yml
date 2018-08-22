@@ -21,7 +21,7 @@ jobs:
             npm install
 
       - run:
-          name: ESLint
+          name: Lint
           command: npm run lint
 
       - run:
