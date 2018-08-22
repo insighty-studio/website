@@ -79,7 +79,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "jest && codecov",
+    "test": "jest",
     "acceptance-test": "nightwatch",
     "lint": "./node_modules/.bin/eslint ."
   },
