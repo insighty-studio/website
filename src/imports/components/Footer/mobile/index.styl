@@ -1,29 +1,37 @@
 +iphone()
-  .footer .footer-default
-    flex-wrap wrap
-    padding 0 55px 18px
-    font-size 14px
-    text-align center
-    background-color transparent
+  .footer
+    padding 80px 20px
+
+    .menu
+      flex-direction column
+
+      .logo
+        margin-right 0
+
+      .socials
+        margin-top 40px
+
+      .links
+        display flex
+        text-align center
+        flex-direction column
+
+        a
+          margin 16px 0 0
+
+          &:first-child
+            margin-top 40px
 
     .details
-      width 100%
+      font-family Roboto
+      flex-direction column-reverse
+      align-items center
+      text-align center
+      letter-spacing .3px
+      margin-top 40px
 
-    .rights
-      width 100%
-      margin-top 12px
+      .rights
+        margin-top 8px
 
-+iphone5()
-  .footer .footer-default
-    flex-wrap wrap
-    padding 0 30px 18px
-    font-size 13px
-    text-align center
-    background-color transparent
-
-    .details
-      width 100%
-
-    .rights
-      width 100%
-      margin-top 12px
+      .info
+        text-align center

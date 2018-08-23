@@ -3,17 +3,18 @@ import React from 'react';
 import {Link} from 'react-scroll';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-
 import {
-  MenuIcon,
-  CloseMenuIcon,
   LinkedInIcon,
   FacebookIcon,
   ClutchIcon,
   AngelListIcon,
   BloggerIcon
-} from './icons';
+} from 'icons';
 
+import {
+  MenuIcon,
+  CloseMenuIcon
+} from './icons';
 import './index.styl';
 import './mobile/index.styl';
 
@@ -57,6 +58,7 @@ class NavigationBar extends React.Component {
                 href={href}
                 onClick={() => this.clearMenuStatus(i, duration)}
                 className={white && 'white'}
+                id={`${text.toLowerCase()}-link`}
                 rel="noopener noreferrer"
               >
                 {text}
@@ -71,6 +73,7 @@ class NavigationBar extends React.Component {
               activeClass="active"
               onClick={() => this.clearMenuStatus(i, duration)}
               duration={duration}
+              id={`${text.toLowerCase()}-link`}
               className={classnames({active}, white && 'white')}
             >
               {text}

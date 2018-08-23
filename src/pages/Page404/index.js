@@ -24,8 +24,12 @@ class Page404 extends PureComponent {
               You’re either really bad at using the internet, or we’re really bad at making websites.
               Either way, this wasn’t supposed to happen.
             </Paragraph>
-            <div className="home-button">
-              <Button title="let’s go home" href="/" type="link">
+            <div className="buttons">
+              <Button
+                className="home-button"
+                title="Let’s go home"
+                href="/"
+              >
                 <LetsGoHomeButtonIcon />
               </Button>
             </div>

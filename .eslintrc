@@ -8,6 +8,9 @@
     "mocha": true,
     "jest": true
   },
+  "globals": {
+    "expect": true
+  },
   "extends": "@insighty-studio/eslint-config-react",
   "settings": {
     "import/resolver": {

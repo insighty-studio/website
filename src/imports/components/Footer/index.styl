@@ -1,70 +1,63 @@
 .footer
-  .footer-default
+  background-color #121B2F
+  display flex
+  flex-direction column
+  margin 0 auto
+  padding 60px 40px
+  color white
+  font-size $small
+  line-height 23px
+  letter-spacing 1.5px
+
+  .menu
+    display flex
+    align-items center
+
+    .logo
+      margin-right 60px
+
+    .links a
+      font-family Roboto Mono
+      cursor pointer
+      text-transform uppercase
+      margin-right 32px
+
+      &:last-child
+        margin-right 0
+
+    .socials
+      display flex
+      align-items flex-end
+      justify-content flex-end
+      flex-grow 1
+
+      a
+        display flex
+        margin-right 24px
+
+        &:last-child
+          margin-right 0
+
+        svg
+          fill white
+          opacity .4
+          transition opacity .3s
+
+          &:hover
+            opacity 1
+            cursor pointer
+            transition opacity .3s
+
+  .details
     display flex
     justify-content space-between
-    padding 40px 120px
-    line-height 19px
-    background-color white
+    align-items flex-end
+    margin-top 60px
+    color rgba(255, 255, 255, .4)
 
-  .footer-landing
-    background-color #121B2F
+    .info
+      text-align right
 
-    .content
-      display flex
-      flex-direction column
-      max-width 1160px
-      margin 0 auto
-      padding 84px 40px 40px
-      color white
-      font-size $small
-      line-height 23px
-      letter-spacing 1px
-
-      .menu
-        display flex
-        align-items center
-
-        .logo
-          vertical-align middle
-          margin-right 40px
-
-        .links
-          a
-            text-transform uppercase
-            cursor pointer
-            margin-right 40px
-
-            &:last-child
-              margin-right 0
-
-        .socials
-          display flex
-          justify-content flex-end
-          width 100%
-
-          a
-            margin-right 24px
-
-            &:hover
-              cursor pointer
-
-            &:last-child
-              margin-right 0
-
-
-      .details
-        display flex
-        justify-content space-between
-        align-items flex-end
-        margin-top 70px
-
-        .rights, .info
-          letter-spacing 0
-          opacity .4
-          line-height 32px
-
-        .info
-          text-align right
-
-          span:last-child
-            display block
+      span:last-child
+        display block
+        padding-top 8px

@@ -7,18 +7,19 @@ import './index.styl';
 
 class Clutch extends PureComponent {
   static propTypes = {
-    link: PropTypes.string.isRequired,
-  }
+    href: PropTypes.string
+  };
+
+  static defaultProps = {
+    href: ''
+  };
 
   render() {
-    const {link} = this.props;
+    const {href} = this.props;
+
     return (
       <div className="clutch-section">
-        <a
-          href={link}
-          rel="noopener noreferrer"
-          target="_blank"
-        >
+        <a href={href} className="clutch-link">
           See the review on Clutch
           <ClutchIcon />
         </a>

@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react';
 import AboutSection from 'components/Sections/About';
 
 import './index.styl';
+import './mobile/index.styl';
 
 class About extends PureComponent {
   render() {

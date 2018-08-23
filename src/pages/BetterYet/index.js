@@ -15,7 +15,6 @@ import Logo from './sections/Logo';
 import Prototypes from './sections/Prototypes';
 import Colors from './sections/Colors';
 import ContactUs from './sections/ContactUs';
-import ClientFooterSection from './sections/ClientFooter';
 import Illustration from './sections/Illustration';
 import Image1 from './images/image1.png';
 import Image2 from './images/image2.png';
@@ -25,12 +24,6 @@ import Image5 from './images/image5.png';
 import Image6 from './images/image6.png';
 import './index.styl';
 import './mobile/index.styl';
-import {
-  AngelIcon,
-  BloggerIcon,
-  ClutchIcon,
-  LinkedinIcon,
-} from '../../imports/icons';
 
 class BetterYetPage extends PureComponent {
   static propTypes = {
@@ -70,39 +63,16 @@ class BetterYetPage extends PureComponent {
         )}
         <Colors />
         <Illustration />
-        <Clutch link="https://clutch.co/profile/insighty#review-516735" />
+        <Clutch href="https://clutch.co/profile/insighty#review-510820" />
         <NextProject
           name="LPMA"
-          desc="The Customer Excellence program equips real estate agencies to survey their clients."
+          desc="Helping real estate principals achieve customer excellence."
           href="/lpma"
         />
         <WhitePaper>
           <ContactUs />
-          <ClientFooterSection />
-          <Footer
-            rights="© 2018 Insighty All Rights Reserved"
-            email="hello@insighty.studio"
-            address="240 Richmond St W, Toronto, ON M5V 1V6"
-          />
         </WhitePaper>
-        <Footer
-          landingStyle
-          links={[
-            {text: 'Home', to: 'header'},
-            {text: 'Services', to: 'services'},
-            {text: 'Process', to: 'process'},
-            {text: 'Contacts', to: 'contact-us'},
-          ]}
-          socials={[
-            {icon: <LinkedinIcon />, link: 'https://www.linkedin.com/company/insighty/'},
-            {icon: <BloggerIcon />, link: 'http://alexpanov.me/'},
-            {icon: <ClutchIcon />, link: 'https://clutch.co/profile/insighty'},
-            {icon: <AngelIcon />, link: 'https://angel.co/insighty'},
-          ]}
-          rights="© 2018 Insighty All Rights Reserved"
-          email="hello@insighty.studio"
-          address="240 Richmond St W, Toronto, ON M5V 1V6"
-        />
+        <Footer />
       </div>
     );
   }

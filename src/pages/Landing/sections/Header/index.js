@@ -47,13 +47,11 @@ class Header extends Component {
               business problems. We help our clients connect with customers and stand out from
               the chaos of the digital world.
             </Paragraph>
-            <div className="buttons">
-              <Link smooth to="services" duration={700} onClick={() => this.onClickExplore()}>
-                <Button title="explore" className="explore-btn" type="button">
-                  <ExploreButtonIcon />
-                </Button>
-              </Link>
-            </div>
+            <Link smooth to="services" duration={700} onClick={() => this.onClickExplore()}>
+              <Button title="explore" className="explore-btn" type="button">
+                <ExploreButtonIcon />
+              </Button>
+            </Link>
           </Parallax>
           <Illustration />
         </div>

@@ -1,7 +1,7 @@
 +iphone()
   .header
     padding 40px
-    background url(/images/main-art-mobile@2x.png) center bottom no-repeat
+    background url(/images/main-art-mobile@2x.png) center bottom no-repeat, linear-gradient(white, $snow)
     background-size 100% auto
 
     .content
@@ -35,33 +35,9 @@
 
 +iphone5()
   .header
+    background linear-gradient(white, $snow)
     padding 30px
-    background url(/images/main-art-mobile@2x.png) center bottom no-repeat
-    background-size 100% auto
 
-    .content
-      padding 0
-      width 100%
-      display block
-
-      .content-info
-        width 100%
-        display block
-        margin-top 16px
-
-        .heading
-          .sub-title
-            &:before
-              width 30px
-
-        .paragraph
-          opacity 0.6
-          line-height 1.8
-
-        .title
-          font-size 20px
-          line-height 1.4
-          margin-bottom 16px
-
-        .buttons
-          display none
+    .content .content-info .title
+      font-size 20px
+      line-height 1.4
