@@ -16,7 +16,7 @@ import './mobile/index.styl';
 
 class Header extends Component {
   onClickExplore() {
-    trackEvent('Explore clicked');
+    if (process.env.NODE_ENV !== 'production') trackEvent('Explore clicked');
   }
 
   render() {

@@ -1,21 +1,4 @@
 version: 2
-deploy-job:
-  working_directory: ~/website/
-
-  environment:
-  - CI: false
-
-  docker:
-  - image: circleci/node:8.10-browsers
-
-  steps:
-  - checkout
-
-  - run:
-      name: Acceptance Test
-      command: |
-        npm run acceptance-test
-
 jobs:
   build:
     docker:
@@ -74,3 +57,20 @@ jobs:
               ;;
               *) echo "No deployment target available for branch ${CIRCLE_BRANCH}"; ;;
             esac;
+
+deploy-job:
+  working_directory: ~/website/
+
+  environment:
+  - CI: false
+
+  docker:
+  - image: circleci/node:8.10-browsers
+
+  steps:
+  - checkout
+
+  - run:
+      name: Acceptance Test
+      command: |
+        npm run acceptance-test
