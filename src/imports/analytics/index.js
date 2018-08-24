@@ -46,7 +46,7 @@ const setupMockedSegment = () => {
   });
 };
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.REACT_APP_ENV === 'production') {
   setupProductionSegment();
 } else {
   setupMockedSegment();

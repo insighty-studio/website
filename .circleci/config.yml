@@ -38,7 +38,7 @@ jobs:
           name: Build project
           command: |
             if [ "${CIRCLE_BRANCH}" == "release"]; then
-              npm run build
+              REACT_APP_ENV='production' npm run build
             else
               STAGING=true npm run build
             fi
@@ -48,7 +48,7 @@ jobs:
           command: |
             case "${CIRCLE_BRANCH}" in
               "master")
-              ./node_modules/.bin/firebase use website-staging
+                ./node_modules/.bin/firebase use website-staging
                 ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN
               ;;
               "release")

@@ -29,7 +29,7 @@ class ContactUsForm extends PureComponent {
   }
 
   handleSubmit(e) {
-    if (process.env.NODE_ENV !== 'production') trackEvent('Form submit pressed');
+    trackEvent('Form submit pressed');
     e.preventDefault();
 
     const {
@@ -64,7 +64,7 @@ class ContactUsForm extends PureComponent {
   handleFormInput(e, pristine) {
     if (pristine) {
       this.setState({pristine: false});
-      if (process.env.NODE_ENV !== 'production') trackEvent('Form input started');
+      trackEvent('Form input started');
     }
     this.setState({[e.target.name]: e.target.value});
   }
