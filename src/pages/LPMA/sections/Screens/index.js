@@ -1,8 +1,8 @@
 import React, {PureComponent} from 'react';
-import LeftImage from './img/left.png';
-import RightOneImage from './img/right-one.png';
-import RightTwoImage from './img/right-two.png';
-import RightThreeImage from './img/right-three.png';
+import LeftImage from './img/left.webp';
+import RightOneImage from './img/right-one.webp';
+import RightTwoImage from './img/right-two.webp';
+import RightThreeImage from './img/right-three.webp';
 
 import './index.styl';
 

@@ -1,8 +1,8 @@
 import React, {PureComponent} from 'react';
 import {Parallax} from 'react-scroll-parallax';
 
-import leftNotebook from './images/left-notebook.png';
-import rightNotebook from './images/right-notebook.png';
+import leftNotebook from './images/left-notebook.webp';
+import rightNotebook from './images/right-notebook.webp';
 
 import './index.styl';
 import './mobile/index.styl';
