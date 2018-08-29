@@ -39,7 +39,7 @@ class Partners extends PureComponent {
   render() {
     return (
       <div className="partners">
-        {logos.map(logo => <AnimatedLogo logo={logo} />)}
+        {logos.map((logo, i) => <AnimatedLogo logo={logo} key={i} />)}
       </div>
     );
   }
