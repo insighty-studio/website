@@ -40,12 +40,12 @@ class App extends Component {
       progress: 0,
       chunksReady: 0,
       images: [
-        '/images/person@2x.png',
-        '/images/plant@2x.png',
-        '/images/program@2x.png',
-        '/images/message@2x.png',
-        '/images/laptop@2x.png',
-        '/images/main-art-mobile@2x.png',
+        '/images/person@2x.webp',
+        '/images/plant@2x.webp',
+        '/images/program@2x.webp',
+        '/images/message@2x.webp',
+        '/images/laptop@2x.webp',
+        '/images/main-art-mobile@2x.webp',
       ]
     };
   }
