@@ -15,14 +15,13 @@ import Logo from './sections/Logo';
 import Prototypes from './sections/Prototypes';
 import Colors from './sections/Colors';
 import ContactUs from './sections/ContactUs';
-import ClientFooterSection from './sections/ClientFooter';
 import Illustration from './sections/Illustration';
-import Image1 from './images/image1.png';
-import Image2 from './images/image2.png';
-import Image3 from './images/image3.png';
-import Image4 from './images/image4.png';
-import Image5 from './images/image5.png';
-import Image6 from './images/image6.png';
+import Image1 from './images/image1.webp';
+import Image2 from './images/image2.webp';
+import Image3 from './images/image3.webp';
+import Image4 from './images/image4.webp';
+import Image5 from './images/image5.webp';
+import Image6 from './images/image6.webp';
 import './index.styl';
 import './mobile/index.styl';
 
@@ -64,26 +63,16 @@ class BetterYetPage extends PureComponent {
         )}
         <Colors />
         <Illustration />
-        <Clutch />
+        <Clutch href="https://clutch.co/profile/insighty#review-510820" />
         <NextProject
           name="LPMA"
-          desc="Helping real estate principals achieve customer excellence"
+          desc="Helping real estate principals achieve customer excellence."
           href="/lpma"
         />
         <WhitePaper>
           <ContactUs />
-          <ClientFooterSection />
-          <Footer
-            rights="© 2018 Insighty All Rights Reserved"
-            email="hello@insighty.studio"
-            address="240 Richmond St W, Toronto, ON M5V 1V6"
-          />
         </WhitePaper>
-        <Footer
-          rights="© 2018 Insighty All Rights Reserved"
-          email="hello@insighty.studio"
-          address="240 Richmond St W, Toronto, ON M5V 1V6"
-        />
+        <Footer />
       </div>
     );
   }

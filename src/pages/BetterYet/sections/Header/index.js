@@ -3,7 +3,7 @@ import NavigationBar from 'components/NavigationBar';
 import {Logo} from 'icons';
 import {Parallax} from 'react-scroll-parallax';
 
-import ByMobile from './images/by-mobile.png';
+import ByMobile from './images/by-mobile.webp';
 import {BetterYetTitle} from './icons';
 
 import './index.styl';
@@ -17,7 +17,7 @@ class Header extends PureComponent {
           white
           links={[
             {text: 'Home', href: '/'},
-            {text: 'Contact', to: 'white-paper'},
+            {text: 'Contact', to: 'contact-us-form'},
           ]}
           logoIcon={<Logo />}
         />

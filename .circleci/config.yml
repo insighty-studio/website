@@ -3,24 +3,42 @@ jobs:
   build:
     docker:
       - image: circleci/node:7.10
+
     working_directory: ~/website/
+
     steps:
       - checkout:
           path: ~/website/
+
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
           - v1-dependencies-
-      - run: npm install
+
+      - run:
+          name: Install packages
+          command: |
+            npm install
+
+      - run:
+          name: Lint
+          command: npm run lint
+
+      - run:
+          name: Test
+          command: |
+            npm run test
+
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+
       - run:
           name: Build project
           command: |
             if [ "${CIRCLE_BRANCH}" == "release"]; then
-              npm run build
+              REACT_APP_ENV='production' npm run build
             else
               STAGING=true npm run build
             fi
@@ -30,7 +48,7 @@ jobs:
           command: |
             case "${CIRCLE_BRANCH}" in
               "master")
-              ./node_modules/.bin/firebase use website-staging
+                ./node_modules/.bin/firebase use website-staging
                 ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN
               ;;
               "release")
@@ -39,3 +57,20 @@ jobs:
               ;;
               *) echo "No deployment target available for branch ${CIRCLE_BRANCH}"; ;;
             esac;
+
+deploy-job:
+  working_directory: ~/website/
+
+  environment:
+  - CI: false
+
+  docker:
+  - image: circleci/node:8.10-browsers
+
+  steps:
+  - checkout
+
+  - run:
+      name: Acceptance Test
+      command: |
+        npm run acceptance-test

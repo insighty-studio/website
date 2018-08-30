@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Button from 'components/Button';
 import {RightArrowIcon} from 'icons';
 
+import {BuildingIllustration} from './icons';
+
 import './index.styl';
 import './mobile/index.styl';
 
@@ -24,19 +26,23 @@ class NextProject extends PureComponent {
 
     return (
       <div className="next-project-section">
-        <div className="title">
-          {`Next project - ${name}`}
+        <BuildingIllustration />
+        <div className="description">
+          <div className="title">
+            {`Next project - ${name.toUpperCase()}`}
+          </div>
+          <div className="desc">
+            {desc}
+          </div>
+          <div className="full-review-btn">
+            <Button
+              title="Full review"
+              href={href}
+            >
+              <RightArrowIcon />
+            </Button>
+          </div>
         </div>
-        <div className="desc">
-          {desc}
-        </div>
-        <Button
-          title="Full review"
-          className="full-review-btn"
-          href={href}
-        >
-          <RightArrowIcon />
-        </Button>
       </div>
     );
   }

@@ -12,6 +12,7 @@ import './index.styl';
 import './mobile/index.styl';
 
 const WEBHOOK_URL = 'https://hooks.slack.com/services/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';
+const DEV_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
 
 class ContactUsForm extends PureComponent {
   constructor(props) {
@@ -45,7 +46,7 @@ class ContactUsForm extends PureComponent {
       ]
     });
 
-    request.post(WEBHOOK_URL, formData)
+    request.post(process.env.NODE_ENV === 'development' ? DEV_WEBHOOK_URL : WEBHOOK_URL, formData)
       .then(() => {
         this.setState({
           name: '',
@@ -78,7 +79,7 @@ class ContactUsForm extends PureComponent {
 
   render() {
     const {
-      name, email, phone, website, message, messageIsVisible, pristine
+      name, email, message, messageIsVisible, pristine
     } = this.state;
 
     return (
@@ -100,22 +101,6 @@ class ContactUsForm extends PureComponent {
               type="email"
               placeholder="Email *"
               value={email}
-              onChange={e => this.handleFormInput(e, pristine)}
-            />
-          </div>
-          <div className="form-raw">
-            <Input
-              name="phone"
-              type="phone"
-              placeholder="Phone"
-              value={phone}
-              onChange={e => this.handleFormInput(e, pristine)}
-            />
-            <Input
-              name="website"
-              type="text"
-              placeholder="Website"
-              value={website}
               onChange={e => this.handleFormInput(e, pristine)}
             />
           </div>

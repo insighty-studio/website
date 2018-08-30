@@ -1,5 +1,20 @@
-.lpma-page .header-section
-  +iphone()
++iphone()
+  .lpma-page
     .navigation-bar
       position absolute
       padding 40px
+
+      &.opened
+        background $lpmaGreen
+
+        .links a
+          color white
+
+    .menu-icon svg,
+    .close-menu-icon svg,
+    .social-links svg
+      fill white
+
++iphone5()
+  .lpma-page .navigation-bar
+    padding 30px
