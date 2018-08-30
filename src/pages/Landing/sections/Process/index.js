@@ -23,10 +23,8 @@ class Process extends PureComponent {
                 first
                 number="1"
                 title="Product Discovery"
-                desc="You hate software projects that drag on.
-                So do we. That’s why our team creates interactive prototypes
-                within weeks of your brief so you can visualize the end
-                product and request adjustments as quickly as possible."
+                desc="First, we sit down to understand your business, your users, and what problems need to be solved.
+                This gives us a great base to set the process in motion."
               />
               <Step
                 hiddenLine
@@ -42,16 +40,14 @@ class Process extends PureComponent {
                 hiddenLine
                 number="3"
                 title="Workload Estimation"
-                desc="First, we sit down to understand your business your
-                users, and what problems need solved. This gives us a
-                great base to set the process in motion."
+                desc="Our team digs deeply into how much time is needed for the project.
+                This is the perfect opportunity to reduce scope and manage your budget."
               />
               <Step
                 number="4"
                 title="Development"
-                desc="This is where we break down the specific features
-                your application needs and identify potential challenges
-                within the project."
+                desc="This is where the magic happens.
+                Our software engineers get to work, implementing features and functionalities as previously agreed."
               />
             </div>
             <div className="row">
@@ -67,9 +63,8 @@ class Process extends PureComponent {
                 last
                 number="6"
                 title="Client Happiness"
-                desc="Rigorous user testing and quality assurance takes
-                place until the final product perfectly solves user problems
-                and meets the project brief."
+                desc="We create communication channels to make sure that everyone
+                on the team is conscious of your goals. This team alignment ensures mutual wins."
               />
             </div>
           </div>
