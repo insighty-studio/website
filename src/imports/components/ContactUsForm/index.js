@@ -79,7 +79,7 @@ class ContactUsForm extends PureComponent {
 
   render() {
     const {
-      name, email, phone, website, message, messageIsVisible, pristine
+      name, email, message, messageIsVisible, pristine
     } = this.state;
 
     return (
@@ -101,22 +101,6 @@ class ContactUsForm extends PureComponent {
               type="email"
               placeholder="Email *"
               value={email}
-              onChange={e => this.handleFormInput(e, pristine)}
-            />
-          </div>
-          <div className="form-raw">
-            <Input
-              name="phone"
-              type="phone"
-              placeholder="Phone"
-              value={phone}
-              onChange={e => this.handleFormInput(e, pristine)}
-            />
-            <Input
-              name="website"
-              type="text"
-              placeholder="Website"
-              value={website}
               onChange={e => this.handleFormInput(e, pristine)}
             />
           </div>
