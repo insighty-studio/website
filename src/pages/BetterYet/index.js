@@ -16,12 +16,12 @@ import Prototypes from './sections/Prototypes';
 import Colors from './sections/Colors';
 import ContactUs from './sections/ContactUs';
 import Illustration from './sections/Illustration';
-import Image1 from './images/image1.png';
-import Image2 from './images/image2.png';
-import Image3 from './images/image3.png';
-import Image4 from './images/image4.png';
-import Image5 from './images/image5.png';
-import Image6 from './images/image6.png';
+import Image1 from './images/image1.webp';
+import Image2 from './images/image2.webp';
+import Image3 from './images/image3.webp';
+import Image4 from './images/image4.webp';
+import Image5 from './images/image5.webp';
+import Image6 from './images/image6.webp';
 import './index.styl';
 import './mobile/index.styl';
 

@@ -3,7 +3,7 @@ import {LPMATitle, Logo} from 'icons';
 import {Parallax} from 'react-scroll-parallax';
 import NavigationBar from 'components/NavigationBar';
 
-import Laptop from './img/laptop.png';
+import Laptop from './img/laptop.webp';
 import {LPMAGraph} from './icons';
 
 import './index.styl';
