@@ -61,7 +61,7 @@ class Footer extends PureComponent {
         <div className="details">
           <div className="rights">© 2018 Insighty All Rights Reserved</div>
           <div className="info">
-            <span>hello@insighty.studio</span>
+            <a href="mailto:hello@insighty.studio">hello@insighty.studio</a>
             <br />
             <span>240 Richmond St W, Toronto, ON M5V 1V6</span>
           </div>
