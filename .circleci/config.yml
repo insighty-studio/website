@@ -37,7 +37,7 @@ jobs:
       - run:
           name: Build project
           command: |
-            if [ "${CIRCLE_BRANCH}" == "release"]; then
+            if [ "${CIRCLE_BRANCH}" == "release" ]; then
               REACT_APP_ENV='production' npm run build
             else
               STAGING=true npm run build
