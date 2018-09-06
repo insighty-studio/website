@@ -7,6 +7,7 @@ import {
   ClutchIcon,
   LinkedInIcon,
   FacebookIcon,
+  TwitterIcon,
 } from 'icons';
 
 import './index.styl';
@@ -42,6 +43,7 @@ class Footer extends PureComponent {
     return (
       <div className="socials">
         <FacebookIcon />
+        <TwitterIcon />
         <LinkedInIcon />
         <BloggerIcon />
         <ClutchIcon />
