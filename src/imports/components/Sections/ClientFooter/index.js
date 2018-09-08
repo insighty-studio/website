@@ -24,7 +24,7 @@ class ClientFooter extends PureComponent {
     return (
       <div className="client-footer">
         <div className="client-photo">
-          <img src={`/images/clients/${photo}.webp`} alt="Avatar" />
+          <img src={`/images/clients/${photo}.png`} alt="Avatar" />
         </div>
         <div className="client-overview">
           <div className="name">

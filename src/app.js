@@ -2,7 +2,7 @@ import React, {Component, Fragment} from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import DeviceOrientation, {Orientation} from 'components/Orientation';
 import LoaderLine from 'components/Loader/LoaderLine';
-import isMobile from 'ismobilejs';
+import {isMobile} from 'react-device-detect';
 import 'normalize.css';
 import 'styles/main.styl';
 import AOS from 'aos';
@@ -40,12 +40,12 @@ class App extends Component {
       progress: 0,
       chunksReady: 0,
       images: [
-        '/images/person@2x.webp',
-        '/images/plant@2x.webp',
-        '/images/program@2x.webp',
-        '/images/message@2x.webp',
-        '/images/laptop@2x.webp',
-        '/images/main-art-mobile@2x.webp',
+        `/images/person@2x.${isMobile ? 'png' : 'webp'}`,
+        `/images/plant@2x.${isMobile ? 'png' : 'webp'}`,
+        `/images/program@2x.${isMobile ? 'png' : 'webp'}`,
+        `/images/message@2x.${isMobile ? 'png' : 'webp'}`,
+        `/images/laptop@2x.${isMobile ? 'png' : 'webp'}`,
+        `/images/main-art-mobile@2x.${isMobile ? 'png' : 'webp'}`,
       ]
     };
   }
@@ -101,7 +101,6 @@ class App extends Component {
     const {
       ready, images, progress, chunksReady
     } = this.state;
-    const isPhone = isMobile.apple.phone;
 
     if (!ready) {
       return (
@@ -130,7 +129,7 @@ class App extends Component {
 
     return (
       <div className="root">
-        {isPhone ? this.renderMobile() : this.renderRoutes()}
+        {isMobile ? this.renderMobile() : this.renderRoutes()}
       </div>
     );
   }
