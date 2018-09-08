@@ -3,7 +3,7 @@ import NavigationBar from 'components/NavigationBar';
 import {Logo} from 'icons';
 import {Parallax} from 'react-scroll-parallax';
 
-import ByMobile from './images/by-mobile.webp';
+import ByMobile from './images/by-mobile.png';
 import {BetterYetTitle} from './icons';
 
 import './index.styl';

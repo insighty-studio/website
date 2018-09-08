@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import {Parallax} from 'react-scroll-parallax';
 import LaptopsImage from './images/laptops.webp';
-import LaptopMobile from './images/laptop-mobile.webp';
+import LaptopMobile from './images/laptop-mobile.png';
 
 import './index.styl';
 import './mobile/index.styl';
