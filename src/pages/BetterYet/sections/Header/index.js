@@ -1,9 +1,11 @@
 import React, {PureComponent} from 'react';
+import Image from 'react-image-webp';
 import NavigationBar from 'components/NavigationBar';
 import {Logo} from 'icons';
 import {Parallax} from 'react-scroll-parallax';
 
-import ByMobile from './images/by-mobile.webp';
+import ByMobile from './images/by-mobile.png';
+import ByMobileWebp from './images/by-mobile.webp';
 import {BetterYetTitle} from './icons';
 
 import './index.styl';
@@ -26,7 +28,11 @@ class Header extends PureComponent {
           offsetYMax={40}
           offsetYMin={-40}
         >
-          <img alt="" className="mobile" src={ByMobile} />
+          <Image
+            className="mobile"
+            src={ByMobile}
+            webp={ByMobileWebp}
+          />
         </Parallax>
         <Parallax
           offsetYMax={20}

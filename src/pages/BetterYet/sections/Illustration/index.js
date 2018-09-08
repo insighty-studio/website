@@ -1,8 +1,11 @@
 import React, {PureComponent} from 'react';
+import Image from 'react-image-webp';
 import {Parallax} from 'react-scroll-parallax';
 
-import leftNotebook from './images/left-notebook.webp';
-import rightNotebook from './images/right-notebook.webp';
+import leftNotebook from './images/left-notebook.png';
+import leftNotebookWebp from './images/left-notebook.webp';
+import rightNotebook from './images/right-notebook.png';
+import rightNotebookWebp from './images/right-notebook.webp';
 
 import './index.styl';
 import './mobile/index.styl';
@@ -16,7 +19,10 @@ class Illustration extends PureComponent {
           offsetYMin={-15}
         >
           <div className="left-notebook-illustration">
-            <img alt="" src={leftNotebook} />
+            <Image
+              src={leftNotebook}
+              webp={leftNotebookWebp}
+            />
           </div>
         </Parallax>
         <Parallax
@@ -24,7 +30,10 @@ class Illustration extends PureComponent {
           offsetYMin={-30}
         >
           <div className="right-notebook-illustration">
-            <img alt="" src={rightNotebook} />
+            <Image
+              src={rightNotebook}
+              webp={rightNotebookWebp}
+            />
           </div>
         </Parallax>
       </div>

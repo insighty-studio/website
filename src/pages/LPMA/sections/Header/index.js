@@ -1,9 +1,11 @@
 import React, {PureComponent} from 'react';
+import Image from 'react-image-webp';
 import {LPMATitle, Logo} from 'icons';
 import {Parallax} from 'react-scroll-parallax';
 import NavigationBar from 'components/NavigationBar';
 
-import Laptop from './img/laptop.webp';
+import Laptop from './img/laptop.png';
+import LaptopImage from './img/laptop.webp';
 import {LPMAGraph} from './icons';
 
 import './index.styl';
@@ -37,7 +39,11 @@ class Header extends PureComponent {
             offsetYMin={-10}
             offsetYMax={10}
           >
-            <img alt="LPMA" src={Laptop} />
+            <Image
+              alt="LPMA"
+              src={Laptop}
+              webp={LaptopImage}
+            />
           </Parallax>
         </div>
       </div>

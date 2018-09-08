@@ -48,6 +48,7 @@
     "react-dom": "^16.4.1",
     "react-helmet": "^5.2.0",
     "react-hot-loader": "^4.3.3",
+    "react-image-webp": "^0.2.2",
     "react-native-parallax-scroll-opacity": "0.0.2",
     "react-notifications": "^1.4.3",
     "react-provide-scroll-position": "^1.0.2",
