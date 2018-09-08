@@ -1,8 +1,10 @@
 import React, {PureComponent} from 'react';
+import Image from 'react-image-webp';
 import ProjectLogo from 'components/Sections/ProjectLogo';
 
 import {LPMALogo} from './icons';
-import LogoBg from './images/logo-bg.webp';
+import LogoBg from './images/logo-bg.png';
+import LogoBgWebp from './images/logo-bg.webp';
 import './mobile/index.styl';
 
 class Logo extends PureComponent {
@@ -10,7 +12,7 @@ class Logo extends PureComponent {
     return (
       <ProjectLogo
         logo={<LPMALogo />}
-        background={<img alt="LPMA" src={LogoBg} className="lpma-logo-bg" />}
+        background={<Image alt="LPMA" src={LogoBg} webp={LogoBgWebp} className="lpma-logo-bg" />}
       />
     );
   }
