@@ -7,8 +7,11 @@ import Footer from 'components/Footer';
 import {hubDarkBlue, hubGreen} from 'styles/config';
 import provideScrollPosition from 'react-provide-scroll-position';
 
-import './index.styl';
 import Header from './sections/Header';
+import About from './sections/About';
+
+import './index.styl';
+
 
 class HubPage extends PureComponent {
   static propTypes = {
@@ -26,6 +29,7 @@ class HubPage extends PureComponent {
         <Loader colors={{light: hubGreen, dark: hubDarkBlue}} />
         <ScrollUpButton color={hubGreen} percentagesScrolled={scrollTop} />
         <Header />
+        <About />
         <NextProject
           name="LPMA"
           desc="Helping real estate principals achieve customer excellence."
