@@ -10,13 +10,15 @@ import provideScrollPosition from 'react-provide-scroll-position';
 import Header from './sections/Header';
 import About from './sections/About';
 import Prototypes from './sections/Prototypes';
+import Colors from './sections/Colors';
+import Logo from './sections/Logo';
+
 import Image1 from './images/image1.png';
 import Image1Webp from './images/image1.webp';
 import Image2 from './images/image2.png';
 import Image2Webp from './images/image2.webp';
 import Image3 from './images/image3.png';
 import Image3Webp from './images/image3.webp';
-import Logo from './sections/Logo';
 import Image4 from './images/image4.png';
 import Image4Webp from './images/image4.webp';
 import Image5 from './images/image5.png';
@@ -63,6 +65,7 @@ class HubPage extends PureComponent {
           {src: Image5, webp: Image5Webp, offset: 40},
           {src: Image6, webp: Image6Webp, offset: 20},
         )}
+        <Colors />
         <NextProject
           name="LPMA"
           desc="Helping real estate principals achieve customer excellence."
