@@ -10,8 +10,9 @@ import provideScrollPosition from 'react-provide-scroll-position';
 import Header from './sections/Header';
 import About from './sections/About';
 import Prototypes from './sections/Prototypes';
-import Colors from './sections/Colors';
 import Logo from './sections/Logo';
+import Colors from './sections/Colors';
+import ContactUs from './sections/ContactUs';
 
 import Image1 from './images/image1.png';
 import Image1Webp from './images/image1.webp';
@@ -71,6 +72,7 @@ class HubPage extends PureComponent {
           desc="Helping real estate principals achieve customer excellence."
           href="/lpma"
         />
+        <ContactUs />
         <Footer />
       </div>
     );
