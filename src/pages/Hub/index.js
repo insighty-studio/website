@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Loader from 'components/Loader';
 import ScrollUpButton from 'components/ScrollUpButton';
 import NextProject from 'components/Sections/NextProject';
+import WhitePaper from 'components/Sections/WhitePaper';
 import Footer from 'components/Footer';
 import {hubDarkBlue, hubGreen} from 'styles/config';
 import provideScrollPosition from 'react-provide-scroll-position';
@@ -10,6 +11,7 @@ import provideScrollPosition from 'react-provide-scroll-position';
 import Header from './sections/Header';
 import About from './sections/About';
 import Prototypes from './sections/Prototypes';
+import AdditionalPrototype from './sections/AdditionalPrototype';
 import Logo from './sections/Logo';
 import Colors from './sections/Colors';
 import ContactUs from './sections/ContactUs';
@@ -67,12 +69,15 @@ class HubPage extends PureComponent {
           {src: Image6, webp: Image6Webp, offset: 20},
         )}
         <Colors />
+        <AdditionalPrototype src={Image4} webp={Image4Webp} offset={20} />
         <NextProject
           name="LPMA"
           desc="Helping real estate principals achieve customer excellence."
           href="/lpma"
         />
-        <ContactUs />
+        <WhitePaper>
+          <ContactUs />
+        </WhitePaper>
         <Footer />
       </div>
     );
