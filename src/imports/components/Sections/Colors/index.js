@@ -35,12 +35,12 @@ class ColorsSection extends PureComponent {
           <div className="colors">
             {colors.map(({name, color, width}) => (
               <div key={color} className="color" style={{backgroundColor: color, width, height: width}}>
-                <div className="color-info">
+                <div className="color-info" style={{color: color === '#FFFFFF' ? '#262C40' : '#FFFFFF'}}>
                   <div>
                     {name}
                   </div>
                   <div>
-                    {colorsSectionColor}
+                    {color}
                   </div>
                 </div>
               </div>

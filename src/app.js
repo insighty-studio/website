@@ -11,6 +11,7 @@ import 'aos/dist/aos.css';
 import Landing from './pages/Landing';
 import BetterYet from './pages/BetterYet';
 import LPMA from './pages/LPMA';
+import Hub from './pages/Hub';
 import Page404 from './pages/Page404';
 import Landscape from './pages/Landscape';
 
@@ -76,6 +77,7 @@ class App extends Component {
           <Route exact path="/" component={Landing} />
           <Route path="/betteryet" component={BetterYet} />
           <Route path="/lpma" component={LPMA} />
+          <Route path="/hub" component={Hub} />
           <Route component={Page404} />
         </Switch>
       </BrowserRouter>
