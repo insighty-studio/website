@@ -1,4 +1,5 @@
 import React, {PureComponent} from 'react';
+import Image from 'react-image-webp';
 import PropTypes from 'prop-types';
 import {RightArrowIcon} from 'icons';
 import Button from 'components/interactions/Button';
@@ -24,7 +25,11 @@ class ClientFooter extends PureComponent {
     return (
       <div className="client-footer">
         <div className="client-photo">
-          <img src={`/images/clients/${photo}.webp`} alt="Avatar" />
+          <Image
+            src={`/images/clients/${photo}.png`}
+            webp={`/images/clients/${photo}.webp`}
+            alt="Avatar"
+          />
         </div>
         <div className="client-overview">
           <div className="name">

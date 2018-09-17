@@ -1,7 +1,13 @@
 import React, {PureComponent} from 'react';
 import {Link} from 'react-scroll';
 import {
-  AngelListIcon, BloggerIcon, ClutchIcon, FacebookIcon, LinkedInIcon, Logo
+  Logo,
+  AngelListIcon,
+  BloggerIcon,
+  ClutchIcon,
+  LinkedInIcon,
+  FacebookIcon,
+  TwitterIcon,
 } from 'icons';
 
 import './index.styl';
@@ -37,6 +43,7 @@ class Footer extends PureComponent {
     return (
       <div className="socials">
         <FacebookIcon />
+        <TwitterIcon />
         <LinkedInIcon />
         <BloggerIcon />
         <ClutchIcon />

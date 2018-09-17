@@ -16,12 +16,18 @@ import Prototypes from './sections/Prototypes';
 import Colors from './sections/Colors';
 import ContactUs from './sections/ContactUs';
 import Illustration from './sections/Illustration';
-import Image1 from './images/image1.webp';
-import Image2 from './images/image2.webp';
-import Image3 from './images/image3.webp';
-import Image4 from './images/image4.webp';
-import Image5 from './images/image5.webp';
-import Image6 from './images/image6.webp';
+import Image1 from './images/image1.png';
+import Image2 from './images/image2.png';
+import Image3 from './images/image3.png';
+import Image4 from './images/image4.png';
+import Image5 from './images/image5.png';
+import Image6 from './images/image6.png';
+import Image7 from './images/image1.webp';
+import Image8 from './images/image2.webp';
+import Image9 from './images/image3.webp';
+import Image10 from './images/image4.webp';
+import Image11 from './images/image5.webp';
+import Image12 from './images/image6.webp';
 import './index.styl';
 import './mobile/index.styl';
 
@@ -51,15 +57,15 @@ class BetterYetPage extends PureComponent {
         <Header />
         <About />
         {this.renderPrototypes(
-          {src: Image1, offset: 20},
-          {src: Image2, offset: 40},
-          {src: Image3, offset: 20}
+          {src: Image1, webp: Image7, offset: 20},
+          {src: Image2, webp: Image8, offset: 40},
+          {src: Image3, webp: Image9, offset: 20}
         )}
         <Logo />
         {this.renderPrototypes(
-          {src: Image4, offset: 20},
-          {src: Image5, offset: 40},
-          {src: Image6, offset: 20}
+          {src: Image4, webp: Image10, offset: 20},
+          {src: Image5, webp: Image11, offset: 40},
+          {src: Image6, webp: Image12, offset: 20}
         )}
         <Colors />
         <Illustration />

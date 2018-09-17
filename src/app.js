@@ -11,6 +11,7 @@ import 'aos/dist/aos.css';
 import Landing from './pages/Landing';
 import BetterYet from './pages/BetterYet';
 import LPMA from './pages/LPMA';
+import Hub from './pages/Hub';
 import Page404 from './pages/Page404';
 import Landscape from './pages/Landscape';
 
@@ -40,12 +41,12 @@ class App extends Component {
       progress: 0,
       chunksReady: 0,
       images: [
-        '/images/person@2x.webp',
-        '/images/plant@2x.webp',
-        '/images/program@2x.webp',
-        '/images/message@2x.webp',
-        '/images/laptop@2x.webp',
-        '/images/main-art-mobile@2x.webp',
+        '/images/person@2x.png',
+        '/images/plant@2x.png',
+        '/images/program@2x.png',
+        '/images/message@2x.png',
+        '/images/laptop@2x.png',
+        '/images/main-art-mobile@2x.png',
       ]
     };
   }
@@ -76,6 +77,7 @@ class App extends Component {
           <Route exact path="/" component={Landing} />
           <Route path="/betteryet" component={BetterYet} />
           <Route path="/lpma" component={LPMA} />
+          <Route path="/hub" component={Hub} />
           <Route component={Page404} />
         </Switch>
       </BrowserRouter>
