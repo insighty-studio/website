@@ -2,10 +2,10 @@ import React, {PureComponent} from 'react';
 import request from 'utils/request';
 import {RightArrowIcon} from 'icons';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
-import SectionHeading from 'components/Typography/SectionHeading';
+import SectionHeading from 'components/typography/SectionHeading';
 import Input from 'components/Input';
 import TextArea from 'components/TextArea';
-import Button from 'components/Button';
+import Button from 'components/interactions/Button';
 import {trackEvent} from 'analytics';
 
 import './index.styl';

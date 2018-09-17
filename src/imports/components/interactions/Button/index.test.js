@@ -1,7 +1,7 @@
 /* eslint-disable import/no-unresolved */
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
-import {RightArrowIcon} from 'imports/icons';
+import {RightArrowIcon} from 'imports/icons/index';
 import Button from './index';
 
 // TODO: Create onClick test
