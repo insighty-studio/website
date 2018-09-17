@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import Image from 'react-image-webp';
 import PropTypes from 'prop-types';
 import {RightArrowIcon} from 'icons';
-import Button from 'components/Button';
+import Button from 'components/interactions/Button';
 
 import './index.styl';
 import './mobile/index.styl';

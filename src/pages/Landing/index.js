@@ -1,7 +1,7 @@
 import React, {PureComponent, Component} from 'react';
 import PropTypes from 'prop-types';
 import provideScrollPosition from 'react-provide-scroll-position';
-import ScrollUpButton from 'components/ScrollUpButton';
+import ScrollUpButton from 'components/interactions/ScrollUpButton';
 import Loader from 'components/Loader';
 import {darkBlue, blue} from 'styles/config';
 

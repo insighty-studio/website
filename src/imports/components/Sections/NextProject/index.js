@@ -1,6 +1,6 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import Button from 'components/Button';
+import Button from 'components/interactions/Button';
 import {RightArrowIcon} from 'icons';
 
 import {BuildingIllustration} from './icons';

@@ -65,7 +65,13 @@ class Footer extends PureComponent {
           <div className="info">
             <a href="mailto:hello@insighty.studio">hello@insighty.studio</a>
             <br />
-            <span>240 Richmond St W, Toronto, ON M5V 1V6</span>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.google.ca/maps/place/240+Richmond+St+W,+Toronto,+ON+M5V+2C5/@43.6479848,-79.4174159,13z"
+            >
+              240 Richmond St W, Toronto, ON M5V 1V6
+            </a>
           </div>
         </div>
       </div>
