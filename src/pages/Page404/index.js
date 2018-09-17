@@ -21,7 +21,7 @@ class Page404 extends PureComponent {
           <div className="info">
             <Heading subTitle="404" title="Page not found" />
             <Paragraph>
-              You’re either really bad at using the internet, or we’re really bad at making websites.
+              You’re either really good at using the internet, or we’re really bad at making websites.
               Either way, this wasn’t supposed to happen.
             </Paragraph>
             <div className="buttons">
