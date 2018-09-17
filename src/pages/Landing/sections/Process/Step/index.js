@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import {isMobile} from 'react-device-detect';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import Paragraph from 'components/Typography/Paragraph/index';
+import Paragraph from 'components/typography/Paragraph/index';
 
 import './index.styl';
 import './mobile/index.styl';
