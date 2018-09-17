@@ -1,6 +1,6 @@
 import React, {PureComponent, Component} from 'react';
 import PropTypes from 'prop-types';
-import ScrollUpButton from 'components/ScrollUpButton';
+import ScrollUpButton from 'components/interactions/ScrollUpButton';
 import NextProject from 'components/Sections/NextProject';
 import Clutch from 'components/Sections/Clutch';
 import Loader from 'components/Loader';
