@@ -3,6 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@insighty-studio/eslint-config-react": "0.1.11",
+    "babel-eslint": "^8.2.6",
+    "enzyme": "^3.4.4",
+    "enzyme-adapter-react-16": "^1.2.0",
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "firebase-tools": "^4.1.2",
+    "json-loader": "^0.5.7",
     "@types/enzyme": "^3.1.13",
     "animate.css": "^3.6.1",
     "aos": "^3.0.0-beta.5",
@@ -84,19 +95,6 @@
     "test": "jest",
     "acceptance-test": "nightwatch",
     "lint": "./node_modules/.bin/eslint ."
-  },
-  "devDependencies": {
-    "@insighty-studio/eslint-config-react": "0.1.11",
-    "babel-eslint": "^8.2.6",
-    "enzyme": "^3.4.4",
-    "enzyme-adapter-react-16": "^1.2.0",
-    "eslint": "^5.4.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1",
-    "firebase-tools": "^4.1.2",
-    "json-loader": "^0.5.7"
   },
   "jest": {
     "moduleDirectories": [
