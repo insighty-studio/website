@@ -7,6 +7,7 @@ import {
   Square, Braintree, PayPal, Stripe, AmazonPay, Plaid,
 } from 'icons/FinTechLogos';
 
+import design from './Home@2x.png';
 
 import './index.styl';
 
@@ -17,6 +18,7 @@ class Home extends Component {
 
         <Header />
 
+        <img src={design} alt="design" className="design" />
         <div className="vr-girl-container">
           <VRGirlInSpace className="vr-girl" />
         </div>
@@ -60,16 +62,23 @@ class Home extends Component {
 
         <div className="home-case-studies">
           <Heading className="case-studies-heading">Select Case Studies</Heading>
-          <p>BetterYet</p>
-          <p>Loyalty for Small Businesses</p>
-          <p>
-            Mark and Alan, the co-founders of BetterYet, envisioned a
-            future where all businesses can set up a loyalty program
-            in 30 seconds.
-            The problem was that they didn’t have the know-how to
-            turn it into reality. We started from clean slate with the
-            product that now enjoys a growing user base.
-          </p>
+
+          <div className="case-studies-body">
+            <div className="case-studies-description">
+              <p className="case-studies-title">BetterYet</p>
+              <p className="case-studies-subtitle">Loyalty for Small Businesses</p>
+              <div className="case-studies-separator" />
+              <p className="case-studies-text">
+                Mark and Alan, the co-founders of BetterYet, envisioned a
+                future where all businesses can set up a loyalty program
+                in 30 seconds.
+                <br />
+                The problem was that they didn’t have the know-how to
+                turn it into reality. We started from clean slate with the
+                product that now enjoys a growing user base.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     );
