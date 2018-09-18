@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import Header from 'components/Header';
 import Heading from 'components/typography/Heading';
-import {VRGirlInSpace} from 'icons';
+import {VRGirlInSpace, Phone} from 'icons';
 import {
   Square, Braintree, PayPal, Stripe, AmazonPay, Plaid,
 } from 'icons/FinTechLogos';
@@ -63,20 +63,28 @@ class Home extends Component {
         <div className="home-case-studies">
           <Heading className="case-studies-heading">Select Case Studies</Heading>
 
-          <div className="case-studies-body">
+          <div className="case-studies-bg">
             <div className="case-studies-description">
               <p className="case-studies-title">BetterYet</p>
               <p className="case-studies-subtitle">Loyalty for Small Businesses</p>
               <div className="case-studies-separator" />
               <p className="case-studies-text">
                 Mark and Alan, the co-founders of BetterYet, envisioned a
+                <br />
                 future where all businesses can set up a loyalty program
+                <br />
                 in 30 seconds.
                 <br />
                 The problem was that they didn’t have the know-how to
+                <br />
                 turn it into reality. We started from clean slate with the
+                <br />
                 product that now enjoys a growing user base.
               </p>
+            </div>
+
+            <div className="screens-container">
+              <Phone />
             </div>
           </div>
         </div>

@@ -131,6 +131,46 @@ export class TwitterIcon extends PureComponent {
   }
 }
 
+export class Phone extends PureComponent {
+  render() {
+    return (
+      <svg width="25.23vw" height="81.67vh" viewBox="0 0 323 588" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter x="-22.7%" y="-9.2%" width="145.5%" height="122.2%" filterUnits="objectBoundingBox"
+                  id="filter-1">
+            <feOffset dy="10" in="SourceAlpha" result="shadowOffsetOuter1" />
+            <feGaussianBlur stdDeviation="17.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"
+            />
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" in="shadowBlurOuter1"
+                           result="shadowMatrixOuter1" />
+            <feMerge>
+              <feMergeNode in="shadowMatrixOuter1" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+        <g id="Landing" fill="none" fillRule="evenodd">
+          <g id="Home" transform="translate(-566 -1164)">
+            <g id="Case-studies" transform="translate(0 1122)">
+              <g id="Device" transform="translate(601 67)">
+                <g id="Phone" filter="url(#filter-1)">
+                  <path d="M0,474.6 L0,43.4 C0,17.9278158 13.2099496,0 43.5722222,0 C74.9374003,1.81045511e-15 196.873753,3.15686115e-15 210.130556,0 C229.753607,-3.15686123e-15 253,8.68847656 253,43.4 C253,187.35159 253,330.343641 253,474.6 C253,489.001573 248.845665,518 208.022222,518 L43.5722222,518 C4.32860309,518 0,489.162598 0,474.6 Z M16.1638889,66.5 L16.1638889,455.7 L236.133333,455.7 L236.133333,66.5 L16.1638889,66.5 Z"
+                        id="Phone-Shape" fill="#FFF" />
+                  <path d="M126.350877,502.491228 L126.350877,502.491228 C135.107854,502.491228 142.491228,495.107854 142.491228,486.350877 C142.491228,476.892146 135.107854,469.508772 126.350877,469.508772 C116.892146,469.508772 109.508772,476.892146 109.508772,486.350877 C109.508772,495.107854 116.892146,502.491228 126.350877,502.491228 L126.350877,502.491228 Z M126.350877,506 L126.350877,506 C114.954305,506 106,497.045695 106,486.350877 C106,474.954305 114.954305,466 126.350877,466 C137.045695,466 146,474.954305 146,486.350877 C146,497.045695 137.045695,506 126.350877,506 L126.350877,506 Z"
+                        id="Home-Button" fill="#E6E6E6" fillRule="nonzero" />
+                  <path d="M106,41.2 C106,38.5670034 107.580368,37 109.508772,37 L142.491228,37 C144.418586,37 146,38.5665784 146,41.2 C146,42.4329966 144.419632,44 142.491228,44 L109.508772,44 C107.581414,44 106,42.4334216 106,41.2 Z"
+                        id="Mask" fill="#E6E6E6" />
+                  <circle id="Mask" fill="#E6E6E6" cx="126.5" cy="21.5" r="3.5" />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    );
+  }
+}
+
 export class VRGirlInSpace extends PureComponent {
   static propTypes = {
     className: PropTypes.string,
