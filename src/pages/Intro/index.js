@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {Logo} from 'icons';
 import IntroBG from 'icons/IntroBG';
 import Button from 'components/Button';
+import Heading from 'components/typography/Heading';
 
 import './index.styl';
 
@@ -23,7 +24,7 @@ class IntroPage extends Component {
               <div className="intro-principle-line" />
               <p className="intro-principle-text">OUR GUIDING PRINCIPLE</p>
             </div>
-            <p className="intro-heading">Software with Impact</p>
+            <Heading className="intro-heading">Software with Impact</Heading>
             <p className="intro-description">
               We sponsor one socially impactful digital product
               <br />
