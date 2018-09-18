@@ -7,10 +7,12 @@ import './index.styl';
 class Title extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
+    className: PropTypes.string,
   };
 
   static defaultProps = {
-    children: ''
+    children: null,
+    className: '',
   };
 
   render() {
