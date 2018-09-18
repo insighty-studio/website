@@ -8,7 +8,7 @@ import 'styles/main.styl';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import Landing from './pages/Landing';
+import Intro from './pages/Intro';
 import BetterYet from './pages/BetterYet';
 import LPMA from './pages/LPMA';
 import Hub from './pages/Hub';
@@ -74,7 +74,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Landing} />
+          <Route exact path="/" component={Intro} />
           <Route path="/betteryet" component={BetterYet} />
           <Route path="/lpma" component={LPMA} />
           <Route path="/hub" component={Hub} />
