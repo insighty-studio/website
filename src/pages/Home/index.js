@@ -60,6 +60,16 @@ class Home extends Component {
 
         <div className="home-case-studies">
           <Heading className="case-studies-heading">Select Case Studies</Heading>
+          <p>BetterYet</p>
+          <p>Loyalty for Small Businesses</p>
+          <p>
+            Mark and Alan, the co-founders of BetterYet, envisioned a
+            future where all businesses can set up a loyalty program
+            in 30 seconds.
+            The problem was that they didn’t have the know-how to
+            turn it into reality. We started from clean slate with the
+            product that now enjoys a growing user base.
+          </p>
         </div>
       </div>
     );
