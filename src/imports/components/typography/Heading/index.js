@@ -4,43 +4,24 @@ import classnames from 'classnames';
 
 import './index.styl';
 
-class Title extends PureComponent {
+class Heading extends PureComponent {
   static propTypes = {
-    subTitle: PropTypes.string,
-    title: PropTypes.string,
-    animated: PropTypes.bool,
+    children: PropTypes.node,
     className: PropTypes.string,
   };
 
   static defaultProps = {
-    subTitle: '',
-    title: '',
-    animated: false,
+    children: null,
     className: '',
   };
 
   render() {
-    const {
-      animated, subTitle, className, title
-    } = this.props;
+    const {className, children} = this.props;
+
     return (
-      <div className="heading">
-        {subTitle && (
-          <div className={classnames('sub-title', className)}>
-            {subTitle}
-          </div>
-        )}
-        <div
-          className="title"
-          data-aos={animated && 'fade-up'}
-          data-aos-easing={animated && 'ease-out'}
-          data-aos-delay={animated && '40'}
-        >
-          {title}
-        </div>
-      </div>
+      <p className={classnames('heading', className)}>{children}</p>
     );
   }
 }
 
-export default Title;
+export default Heading;
