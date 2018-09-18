@@ -48,9 +48,9 @@ class Home extends Component {
 
         </div>
 
-        <div className="help-section">
+        <div className="home-help-section">
           <Heading className="home-help-heading">Get Help With</Heading>
-          <div className="help-logos-container">
+          <div className="fintech-logos-container">
             <div className="logo"><Square /></div>
             <div className="logo"><Braintree /></div>
             <div className="logo"><PayPal /></div>
@@ -58,6 +58,10 @@ class Home extends Component {
             <div className="logo"><AmazonPay /></div>
             <div className="logo"><Plaid /></div>
           </div>
+        </div>
+
+        <div className="home-case-studies">
+          <Heading className="case-studies-heading">Select Case Studies</Heading>
         </div>
       </div>
     );
