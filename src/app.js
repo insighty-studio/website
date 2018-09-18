@@ -9,6 +9,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import Intro from './pages/Intro';
+// import Home from './pages/Home';
+
 import BetterYet from './pages/BetterYet';
 import LPMA from './pages/LPMA';
 import Hub from './pages/Hub';
