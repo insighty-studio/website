@@ -33,7 +33,7 @@ class IntroPage extends Component {
           </div>
 
           <div className="button-container">
-            <Button>BEGIN JOURNEY</Button>
+            <Button><a href="/home">BEGIN JOURNEY</a></Button>
           </div>
         </div>
       </div>
