@@ -122,9 +122,17 @@ export class TwitterIcon extends PureComponent {
 }
 
 export class VRGirlInSpace extends PureComponent {
+  static propTypes = {
+    className: PropTypes.string,
+  };
+
+  static defaultProps = {
+    className: '',
+  };
+
   render() {
     return (
-      <svg width="482" height="380" viewBox="0 0 482 380" xmlns="http://www.w3.org/2000/svg"
+      <svg className={this.props.className} width="51.72%" height="52.78%" viewBox="0 0 662 380" xmlns="http://www.w3.org/2000/svg"
            xmlnsXlink="http://www.w3.org/1999/xlink">
         <defs>
           <path d="M611.282038,301.30288 C507.247625,413.068781 158.529572,376.284992 62.3803717,301.30288 C-34.3671355,226.189175 -9.39387587,110.03596 74.5673536,81.9071293 C158.396907,53.7712904 206.363605,111.671744 266.14671,111.647442 C326.043156,111.671744 397.997585,-43.8771061 545.472335,12.188035 C643.265521,49.1672031 714.73811,189.083053 611.282038,301.30288 Z"
