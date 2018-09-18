@@ -21,12 +21,12 @@ class Header extends Component {
 
     return (
       <div className={classnames('header', className)}>
-        <Logo />
+        <Logo className="header-logo" />
         <ul className="header-nav">
-          <li className="header-nav-item">Services</li>
-          <li className="header-nav-item">Impact</li>
-          <li className="header-nav-item">Case Studies</li>
-          <li className="header-nav-item">Team</li>
+          <li className="header-nav-item">SERVICES</li>
+          <li className="header-nav-item">IMPACT</li>
+          <li className="header-nav-item">CASE STUDIES</li>
+          <li className="header-nav-item">TEAM</li>
         </ul>
         <Button className="header-button">FREE CONSULTATION</Button>
       </div>
