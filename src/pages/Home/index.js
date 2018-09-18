@@ -7,7 +7,6 @@ import {
   Square, Braintree, PayPal, Stripe, AmazonPay, Plaid,
 } from 'icons/FinTechLogos';
 
-import design from './Home@2x.png';
 
 import './index.styl';
 
@@ -18,7 +17,6 @@ class Home extends Component {
 
         <Header />
 
-        <img alt="design" src={design} className="design" />
         <div className="vr-girl-container">
           <VRGirlInSpace className="vr-girl" />
         </div>
