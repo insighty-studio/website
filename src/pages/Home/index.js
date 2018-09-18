@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+import Header from 'components/Header';
 import Heading from 'components/typography/Heading';
 import {VRGirlInSpace} from 'icons';
 
@@ -9,6 +10,7 @@ class Home extends Component {
   render() {
     return (
       <div className="home-page">
+        <Header />
         <div className="vr-girl-container">
           <VRGirlInSpace className="vr-girl" />
         </div>
