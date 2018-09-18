@@ -17,6 +17,8 @@ import Hub from './pages/Hub';
 import Page404 from './pages/Page404';
 import Landscape from './pages/Landscape';
 
+import './index.styl';
+
 AOS.init({
   disable: false,
   startEvent: 'DOMContentLoaded',
@@ -133,7 +135,7 @@ class App extends Component {
     }
 
     return (
-      <div className="root">
+      <div className="app">
         {isPhone ? this.renderMobile() : this.renderRoutes()}
       </div>
     );
