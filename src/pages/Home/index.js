@@ -1,4 +1,5 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
+import classnames from 'classnames';
 
 import Header from 'components/Header';
 import Footer from 'components/Footer';
@@ -20,7 +21,7 @@ class Home extends Component {
 
   renderExpanded() {
     return (
-      <Fragment>
+      <div className="expanded">
         <span>
           {' '}
           You can use our expertise with the best payment platforms and
@@ -33,7 +34,7 @@ class Home extends Component {
           of the art. Wow, are you really reading this?
           <span className="description-more"> More about our services.</span>
         </p>
-      </Fragment>
+      </div>
     );
   }
 
@@ -56,7 +57,7 @@ class Home extends Component {
             That Changes The World.
           </Heading>
 
-          <div className="home-description">
+          <div className={classnames('home-description', expanded && 'expanded')}>
             <p className="home-description-text">
               You are embarking on a journey of seeing a new FinTech product through.
               We help you overcome the digital chaos to address a market need before

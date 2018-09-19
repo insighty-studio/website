@@ -37,6 +37,9 @@
       margin-top 3.5%
       opacity 0.8
       width 53vw
+      max-height 30vh
+      overflow hidden
+      transition max-height 1s ease
 
       .home-description-text
         font-size 1.5vw
@@ -46,6 +49,9 @@
         .description-more
           cursor pointer
           color #5C64AA
+
+      &.expanded
+        max-height 60vh
 
   .home-help-section
     margin-top 6.2%

@@ -21,7 +21,9 @@ class Header extends Component {
 
     return (
       <div className={classnames('header', className)}>
-        <Logo className="header-logo" />
+        <a href="/home" className="header-logo">
+          <Logo />
+        </a>
         <ul className="header-nav">
           <li className="header-nav-item">SERVICES</li>
           <li className="header-nav-item">IMPACT</li>
