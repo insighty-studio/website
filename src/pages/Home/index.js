@@ -22,6 +22,7 @@ class Home extends Component {
     return (
       <Fragment>
         <span>
+          {' '}
           You can use our expertise with the best payment platforms and
           tools available today. We offer you a system of going from concept to
           production-ready quickly.
