@@ -53,7 +53,7 @@ class Button extends PureComponent {
     return (
       <button
         type="submit"
-        className={classnames('button', className)}
+        className={classnames('animated-button', className)}
         onClick={onClick}
         disabled={disabled}
       >
@@ -69,7 +69,7 @@ class Button extends PureComponent {
       <a
         href={href}
         target={opensNewTab ? '_blank' : ''}
-        className={classnames('button', className)}
+        className={classnames('animated-button', className)}
       >
         {this.renderContent()}
       </a>

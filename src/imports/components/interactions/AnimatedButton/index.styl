@@ -2,7 +2,7 @@
   outline none
   cursor pointer
   text-transform uppercase
-  font-weight $medium-weight
+  font-weight bold
   height 48px
   font-size 16px
   border none
@@ -17,6 +17,7 @@
   white-space nowrap
   transition margin .4s, color .5s
   text-decoration none
+  justify-content flex-end
 
   &:hover
     .button-title, .button-hover-text
@@ -51,18 +52,18 @@
 
   .button-hover-text
     position absolute
-    background $blue
+    background #5C64AA
     color white
-    height 48px
+    width 2.5vw
+    height @width
     border-radius @height
     right 0
     z-index 2
     display flex
     align-items center
-    width: 48px
-    overflow: hidden
+    overflow hidden
     transition width .4s, padding .4s, background-color .5s, box-shadow .5s
-    box-shadow: 0 4px 16px 0 rgba(0,94,255,0.25)
+    box-shadow 0 4px 16px 0 rgba(0,94,255,0.25)
 
     span, a
       position absolute
@@ -78,8 +79,8 @@
       text-decoration none
 
   .button-icon
-    background $blue
-    width 48px
+    background #5C64AA
+    width 2.5vw
     height @width
     display flex
     align-items center

@@ -3,10 +3,12 @@ import React, {Component} from 'react';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Heading from 'components/typography/Heading';
-import {VRGirlInSpace, Phone} from 'icons';
+import AnimatedButton from 'components/interactions/AnimatedButton';
+import {VRGirlInSpace, Phone, RightArrowIcon} from 'icons';
 import {
   Square, Braintree, PayPal, Stripe, AmazonPay, Plaid,
 } from 'icons/FinTechLogos';
+
 
 import './index.styl';
 
@@ -79,7 +81,24 @@ class Home extends Component {
                 <br />
                 product that now enjoys a growing user base.
               </p>
+            </div>
 
+            <div className="animated-button-container">
+              <AnimatedButton
+                title="Project Details"
+                className="animated-button"
+                href="/betteryet"
+              >
+                <RightArrowIcon color="white" />
+              </AnimatedButton>
+
+              <AnimatedButton
+                title="App Store"
+                className="animated-button"
+                href="https://itunes.apple.com/us/app/betteryet-local-cash-rewards/id1408033686"
+              >
+                <RightArrowIcon color="white" />
+              </AnimatedButton>
             </div>
 
             <div className="screens-container">

@@ -2,6 +2,8 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
+import './IntroBG.styl';
+
 class IntroBG extends PureComponent {
   static propTypes = {
     className: PropTypes.string,
@@ -29,16 +31,7 @@ class IntroBG extends PureComponent {
                   id="Shape" transform="matrix(-1 0 0 1 7.325 0)" />
           </g>
         </g>
-        <g id="Turbine">
-          <animateTransform
-            attributeName="transform"
-            attributeType="XML"
-            type="rotate"
-            from="0 58.553392 65.4470719"
-            to="360 58.553392 65.4470719"
-            dur="8s"
-            repeatCount="indefinite"
-          />
+        <g id="far-turbine">
           <g id="Blade-3" transform="translate(54 .5)">
             <g id="connector" transform="translate(3 49)">
               <rect id="Rectangle-path" fill="#FFF" width="3" height="15" />
@@ -99,16 +92,7 @@ class IntroBG extends PureComponent {
                   id="Shape" transform="matrix(-1 0 0 1 9.453 0)" />
           </g>
         </g>
-        <g id="Turbine">
-          <animateTransform
-            attributeName="transform"
-            attributeType="XML"
-            type="rotate"
-            from="0 75.5689076 84.5207077"
-            to="360 75.5689076 84.5207077"
-            dur="12s"
-            repeatCount="indefinite"
-          />
+        <g id="close-turbine">
           <g id="Blade-3" transform="translate(69.692 .645)">
             <g id="connector" transform="translate(3.872 63.24)">
               <rect id="Rectangle-path" fill="#FFF" width="3.872" height="19.359" />
