@@ -1,19 +1,44 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Heading from 'components/typography/Heading';
 import AnimatedButton from 'components/interactions/AnimatedButton';
-import {VRGirlInSpace, Phone, RightArrowIcon} from 'icons';
+import {
+  VRGirlInSpace, Phone, RightArrowIcon, AppleIcon,
+} from 'icons';
 import {
   Square, Braintree, PayPal, Stripe, AmazonPay, Plaid,
 } from 'icons/FinTechLogos';
 
-
 import './index.styl';
 
 class Home extends Component {
+  state = {
+    expanded: false,
+  };
+
+  renderExpanded() {
+    return (
+      <Fragment>
+        <span>
+          You can use our expertise with the best payment platforms and
+          tools available today. We offer you a system of going from concept to
+          production-ready quickly.
+        </span>
+        <p className="home-description-text">
+          Most of all we like doing mobile apps. We also believe in VR, AR and
+          some blockchain here and there. Needless to say, we strive to be state
+          of the art. Wow, are you really reading this?
+          <span className="description-more"> More about our services.</span>
+        </p>
+      </Fragment>
+    );
+  }
+
   render() {
+    const {expanded} = this.state;
+
     return (
       <div className="home-page">
 
@@ -27,22 +52,24 @@ class Home extends Component {
 
           <Heading className="home-heading-main">
             Create The Outlier Software
-            <br />
             That Changes The World.
           </Heading>
 
           <div className="home-description">
             <p className="home-description-text">
               You are embarking on a journey of seeing a new FinTech product through.
-              <br />
               We help you overcome the digital chaos to address a market need before
-              <br />
               someone else seizes the opportunity.
             </p>
             <p className="home-description-text">
               With our guidance you avoid making the mistakes we already learned from.
-              <br />
-              <span className="description-more">More about your journey.</span>
+              {!expanded ? (
+                <span onClick={() => this.setState({expanded: true})} className="description-more">
+                  {' '}
+                  More about your journey.
+                </span>
+              )
+                : this.renderExpanded()}
             </p>
           </div>
 
@@ -70,15 +97,11 @@ class Home extends Component {
               <div className="case-studies-separator" />
               <p className="case-studies-text">
                 Mark and Alan, the co-founders of BetterYet, envisioned a
-                <br />
                 future where all businesses can set up a loyalty program
-                <br />
                 in 30 seconds.
                 <br />
                 The problem was that they didn’t have the know-how to
-                <br />
                 turn it into reality. We started from clean slate with the
-                <br />
                 product that now enjoys a growing user base.
               </p>
             </div>
@@ -97,7 +120,7 @@ class Home extends Component {
                 className="animated-button"
                 href="https://itunes.apple.com/us/app/betteryet-local-cash-rewards/id1408033686"
               >
-                <RightArrowIcon color="white" />
+                <AppleIcon />
               </AnimatedButton>
             </div>
 
