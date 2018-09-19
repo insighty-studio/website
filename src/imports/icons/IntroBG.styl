@@ -4,7 +4,15 @@
 #close-turbine
   animation spin-close 12s infinite linear
 
+#vr-girl-floating
+  animation float 2s infinite ease-in-out
 
+#circle1
+#circle2
+#circle3
+#circle4
+  animation stroke-width-animation 6.2s infinite linear
+  animation-delay 1s
 
 @keyframes spin-far
   0%
@@ -14,13 +22,29 @@
     transform rotate(360deg)
     transform-origin 8.98058% 14.576185278396437%
 
-@keyframes spin-close {
-  from {
+@keyframes spin-close
+  from
     transform rotate(0deg)
     transform-origin 11.590323251533742% 18.824211069042316%
-  }
-  to {
+  to
     transform rotate(360deg)
     transform-origin 11.590323251533742% 18.824211069042316%
-  }
-}
+
+@keyframes float
+  0%
+    transform translate(0, 0)
+  50%
+    transform translate(0, -0.2vh)
+  100%
+    transform translate(0, 0)
+
+@keyframes stroke-width-animation
+  0%
+    stroke-width 0
+  10%
+    stroke-width 1
+  20%
+    stroke-width 0
+  100%
+    stroke-width 0
+
