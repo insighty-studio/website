@@ -18,7 +18,7 @@ class Footer extends PureComponent {
     const links = [
       {text: 'Services', to: 'services'},
       {text: 'Impact', to: 'impact'},
-      {text: 'Case Studeis', to: 'case-studies'},
+      {text: 'Case Studies', to: 'case-studies'},
       {text: 'Team', to: 'team'},
     ];
 
@@ -55,7 +55,7 @@ class Footer extends PureComponent {
     return (
       <div className="footer">
         <div className="menu">
-          <Logo style={{width: 48, height: 48}} />
+          <Logo className="logo" color="white" />
           {this.renderLinks()}
           {this.renderSocials()}
         </div>
