@@ -16,11 +16,10 @@ import './mobile/index.styl';
 class Footer extends PureComponent {
   renderLinks() {
     const links = [
-      {text: 'Home', to: 'header'},
       {text: 'Services', to: 'services'},
-      {text: 'Process', to: 'process'},
-      {text: 'Clients', to: 'clients'},
-      {text: 'Contacts', to: 'contact-us'},
+      {text: 'Impact', to: 'impact'},
+      {text: 'Case Studeis', to: 'case-studies'},
+      {text: 'Team', to: 'team'},
     ];
 
     return (

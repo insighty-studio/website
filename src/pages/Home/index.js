@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 
 import Header from 'components/Header';
+import Footer from 'components/Footer';
 import Heading from 'components/typography/Heading';
 import {VRGirlInSpace, Phone} from 'icons';
 import {
   Square, Braintree, PayPal, Stripe, AmazonPay, Plaid,
 } from 'icons/FinTechLogos';
 
+import design from './Home@2x.png';
 
 import './index.styl';
 
@@ -17,6 +19,7 @@ class Home extends Component {
 
         <Header />
 
+        <img src={design} alt="design" className="design" />
         <div className="vr-girl-container">
           <VRGirlInSpace className="vr-girl" />
         </div>
@@ -79,6 +82,7 @@ class Home extends Component {
                 <br />
                 product that now enjoys a growing user base.
               </p>
+
             </div>
 
             <div className="screens-container">
@@ -86,6 +90,8 @@ class Home extends Component {
             </div>
           </div>
         </div>
+
+        <Footer />
       </div>
     );
   }
