@@ -1,94 +1,16 @@
 .button
-  outline none
   cursor pointer
-  text-transform uppercase
-  font-weight $medium-weight
-  height 48px
-  font-size 16px
-  border none
-  color #5C64AA
-  background none
-  padding 0
-  margin 0
-  display flex
-  align-items center
-  position: relative
-  border-radius @height
-  white-space nowrap
-  transition margin .4s, color .5s
-  text-decoration none
+  background-color #FF5551
+  border-width 0
+  border-radius 47.5px
+  padding 2vw 5vw
+  color white
+  outline none
+  font-weight bold
+  font-size 1.41vw
+  font-family "PT Sans", sans-serif
+  transition all .3s ease-out
 
   &:hover
-    .button-title, .button-hover-text
-      padding-left 20px
-
-    .button-icon svg
-      transform translateX(-3px)
-
-    .button-title
-      margin-right 0
-
-    .button-hover-text
-      width: 100% !important
-
-      span, a
-        padding-right 0
-        transform translateX(0)
-
-  &:disabled
-    color $gray
-
-    .button-hover-text
-      box-shadow 0 4px 16px 0 rgba(0,0,0, .08)
-
-    .button-hover-text,
-    .button-icon
-      background $gray
-
-  .button-title
-    margin-right 20px
-    transition padding .4s, margin .4s
-
-  .button-hover-text
-    position absolute
-    background $blue
-    color white
-    height 48px
-    border-radius @height
-    right 0
-    z-index 2
-    display flex
-    align-items center
-    width: 48px
-    overflow: hidden
-    transition width .4s, padding .4s, background-color .5s, box-shadow .5s
-    box-shadow: 0 4px 16px 0 rgba(0,94,255,0.25)
-
-    span, a
-      position absolute
-      padding-right 20px
-      transform translateX(-100%)
-      transition padding .4s, transform .4s
-
-    .fix
-      position relative
-
-    a
-      color white
-      text-decoration none
-
-  .button-icon
-    background $blue
-    width 48px
-    height @width
-    display flex
-    align-items center
-    justify-content center
-    border-radius @width
-    position relative
-    z-index 3
-    transition background-color .5s
-
-    svg
-      display block
-      transition transform .4s
+    background-color #F96666
+    transform scale(1.005)

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import {Logo} from 'icons';
-import Button from 'components/Button';
+import Button from 'components/interactions/Button';
 
 import './index.styl';
 

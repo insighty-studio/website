@@ -6,7 +6,7 @@ import {trackEvent} from 'analytics';
 import NavigationBar from 'components/NavigationBar';
 import Heading from 'components/typography/Heading';
 import Paragraph from 'components/typography/Paragraph';
-import Button from 'components/interactions/Button';
+import Button from 'components/interactions/AnimatedButton';
 
 import Illustration from './components/Illustration';
 import {ExploreButtonIcon} from './icons';
