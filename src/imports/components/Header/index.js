@@ -25,10 +25,18 @@ class Header extends Component {
           <Logo />
         </a>
         <ul className="header-nav">
-          <li className="header-nav-item">SERVICES</li>
-          <li className="header-nav-item">IMPACT</li>
-          <li className="header-nav-item">CASE STUDIES</li>
-          <li className="header-nav-item">TEAM</li>
+          <li>
+            <a className="header-nav-item" href="/services">SERVICES</a>
+          </li>
+          <li>
+            <a className="header-nav-item" href="/impact">IMPACT</a>
+          </li>
+          <li>
+            <a className="header-nav-item" href="/case-studies">CASE STUDIES</a>
+          </li>
+          <li>
+            <a className="header-nav-item" href="/team">TEAM</a>
+          </li>
         </ul>
         <Button className="header-button">FREE CONSULTATION</Button>
       </div>
