@@ -46,11 +46,11 @@ export class LPMATitle extends PureComponent {
 
 export class RightArrowIcon extends PureComponent {
   static propTypes = {
-    color: PropTypes.string
+    color: PropTypes.string,
   };
 
   static defaultProps = {
-    color: '#FFF'
+    color: '#FFF',
   };
 
   render() {
@@ -194,23 +194,93 @@ export class Phone extends PureComponent {
 export class FeatherPen extends PureComponent {
   render() {
     return (
-      <svg width="3.90625vw" height="6.9445vh" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg"
-           xmlnsXlink="http://www.w3.org/1999/xlink">
+      <svg id="Layer_1" width="3.90625vw" height="6.9445vh" xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 50 50">
         <defs>
-          <path d="M1.70710678,49.7071388 C1.31658249,50.0976631 0.683417511,50.0976631 0.292893219,49.7071388 C-0.0976310729,49.3166145 -0.0976310729,48.6834495 0.292893219,48.2929253 L48.2928932,0.29292525 C48.6834175,-0.0975990415 49.3165825,-0.0975990415 49.7071068,0.29292525 C50.0976311,0.683449542 50.0976311,1.31661452 49.7071068,1.70713881 L1.70710678,49.7071388 Z M36.067162,26.6641613 C36.9125732,27.5102579 38.1261997,28.7201703 39.7052755,30.2910987 C40.0975248,30.6813242 40.0983455,31.3159001 39.7071068,31.7071388 C32.2233126,39.190933 21.322297,43.2788138 7.05038104,43.9987621 C6.42716728,44.0302002 5.92769113,43.4894577 6.00839959,42.8706928 C8.03426747,27.3390391 12.1067603,16.4790581 18.2928932,10.2929253 C24.4974817,4.08833676 34.7267612,0.678576924 48.9524349,0.0011638937 C49.573752,-0.0284226375 50.0710415,0.510358158 49.9918658,1.12731974 C48.6832359,11.3245763 46.5755178,19.1680621 43.648213,24.6707429 C43.5114929,24.9277462 43.2695688,25.1124153 42.9856106,25.1765307 C39.9262282,25.867313 37.6263529,26.36223 36.067162,26.6641613 Z M37.573194,30.9909687 C35.1007587,28.5299435 33.6742972,27.1022875 33.2806823,26.6947133 C32.7047501,26.098356 33.0629204,25.1004645 33.8866354,25.0064786 C34.8773177,24.8934416 37.6350901,24.3303671 42.0935812,23.3274086 C44.6714698,18.3029156 46.5959209,11.2112748 47.8502045,2.06306821 C34.7055572,2.84734732 25.3331539,6.08109168 19.7071068,11.7071388 C14.0478366,17.366409 10.1759395,27.4406578 8.15322557,41.9318915 C20.9156964,41.1023734 30.7096313,37.4477147 37.573194,30.9909687 Z M15.2928932,16.7071388 C14.9023689,16.3166145 14.9023689,15.6834495 15.2928932,15.2929253 C15.6834175,14.902401 16.3165825,14.902401 16.7071068,15.2929253 L21.7071068,20.2929253 C22.0976311,20.6834495 22.0976311,21.3166145 21.7071068,21.7071388 C21.3165825,22.0976631 20.6834175,22.0976631 20.2928932,21.7071388 L15.2928932,16.7071388 Z M11.2928932,24.7071388 C10.9023689,24.3166145 10.9023689,23.6834495 11.2928932,23.2929253 C11.6834175,22.902401 12.3165825,22.902401 12.7071068,23.2929253 L15.7071068,26.2929253 C16.0976311,26.6834495 16.0976311,27.3166145 15.7071068,27.7071388 C15.3165825,28.0976631 14.6834175,28.0976631 14.2928932,27.7071388 L11.2928932,24.7071388 Z"
-                id="path-1" />
+          <mask id="feather-mask" x="0" y="0" width="50" height="50" maskUnits="userSpaceOnUse">
+            <g transform="translate(-2.24 1.22)">
+              <g id="mask-2">
+                <path id="path-1" fill="#fff" d="M4,48.48a1,1,0,0,1-1.42-1.41l48-48A1,1,0,0,1,52-.93,1,1,0,0,1,52,.48Zm34.36-23c.84.85,2.06,2.06,3.64,3.63a1,1,0,0,1,0,1.41Q30.72,41.72,9.29,42.78a1,1,0,0,1-1-1.13q3-23.29,12.28-32.58T51.19-1.22a1,1,0,0,1,1,1.12q-2,15.3-6.34,23.55a1,1,0,0,1-.66.5C42.17,24.64,39.87,25.14,38.31,25.44Zm1.5,4.33c-2.47-2.46-3.89-3.89-4.29-4.3a1,1,0,0,1,.61-1.69c1-.11,3.75-.67,8.2-1.68Q48.2,14.57,50.09.84C37,1.62,27.57,4.86,22,10.48S12.42,26.22,10.39,40.71Q29.55,39.47,39.81,29.77ZM17.53,15.48a1,1,0,0,1,0-1.41,1,1,0,0,1,1.42,0l5,5a1,1,0,1,1-1.42,1.41Zm-4,8a1,1,0,0,1,0-1.41,1,1,0,0,1,1.42,0l3,3a1,1,0,1,1-1.42,1.41Z" />
+              </g>
+            </g>
+          </mask>
         </defs>
-        <g id="Landing" fill="none" fillRule="evenodd">
-          <g id="Services-Extended" transform="translate(-164 -1309)">
-            <g id="Dream-Design-Develop" transform="translate(0 1110)">
-              <g id="Dream,-Design,-Devel" transform="translate(126 69)">
-                <g id="Branding" transform="translate(0 92)">
-                  <g id="2.-Icon-/-2.-Icon-Box-/-25-Size--/-ic_feather-pen" transform="translate(38 38)">
-                    <mask id="mask-2" fill="#fff">
-                      <use xlinkHref="#path-1" />
-                    </mask>
-                    <g id="3.-Color-/-2.-Purple" mask="url(#mask-2)" fill="#5C64AA">
-                      <rect id="Red-Main" width="50" height="50" />
+        <g id="Landing">
+          <g id="Services">
+            <g id="Dream-Design-Develop">
+              <g id="Dream_-Design_-Devel" data-name="Dream,-Design,-Devel">
+                <g id="Branding">
+                  <g className="cls-2" mask="url(#feather-mask)" id="_2.-Icon-_-2.-Icon-Box-_-25-Size--_-ic_feather-pen"
+                     data-name="2.-Icon-/-2.-Icon-Box-/-25-Size--/-ic_feather-pen">
+                    <g id="_3.-Color-_-2.-Purple" data-name="3.-Color-/-2.-Purple">
+                      <rect id="Red-Main" fill="#5c64aa" className="cls-3" width="50" height="50" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    );
+  }
+}
+
+export class Compass extends PureComponent {
+  render() {
+    return (
+      <svg id="Layer_1" data-name="Layer 1" width="3.90625vw" height="6.9445vh" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+        <defs>
+          <mask id="compass-mask" x="0" y="0" width="50" height="50" maskUnits="userSpaceOnUse">
+            <g transform="translate(4 4)">
+              <g id="mask-2">
+                <path id="path-1" className="cls-1" fill="#fff" d="M32.59,33.23a22,22,0,0,1-19.69.84l-7,11.45a1,1,0,0,1-1.7-1l7-11.31A22,22,0,0,1,0,16.09,1,1,0,0,1,.91,15,1,1,0,0,1,2,15.91,20,20,0,0,0,12.16,31.46l8-13a1,1,0,1,1,1.7,1L14,32.35a20,20,0,0,0,17.58-.82l-7.39-12a1,1,0,0,1,1.7-1l16,26a1,1,0,0,1-1.7,1ZM22.13,1a1,1,0,0,1,2,0V6a1,1,0,0,1-2,0ZM23,20a7,7,0,1,1,7-7A7,7,0,0,1,23,20Zm0-2a5,5,0,1,0-5-5A5,5,0,0,0,23,18Z" />
+              </g>
+            </g>
+          </mask>
+        </defs>
+        <g id="Landing">
+          <g id="Services">
+            <g id="Dream-Design-Develop">
+              <g id="Dream_-Design_-Devel" data-name="Dream,-Design,-Devel">
+                <g id="Design">
+                  <g className="cls-2" mask="url(#compass-mask)" id="_2.-Icon-_-2.-Icon-Box-_-25-Size--_-ic_compass"
+                     data-name="2.-Icon-/-2.-Icon-Box-/-25-Size--/-ic_compass">
+                    <g id="_3.-Color-_-2.-Purple" data-name="3.-Color-/-2.-Purple">
+                      <rect id="Red-Main" className="cls-3" fill="#5c64aa" width="50" height="50" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    );
+  }
+}
+
+export class BrowserWindows extends PureComponent {
+  render() {
+    return (
+      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="3.90625vw" height="6.9445vh" viewBox="0 0 50 50">
+        <defs>
+          <mask id="browser-mask" x="0" y="0" width="50" height="50" maskUnits="userSpaceOnUse">
+            <g id="mask-2">
+              <path id="path-1" fill="#fff" className="cls-1" d="M8,16a2,2,0,1,1,2-2A2,2,0,0,1,8,16Zm8,0a2,2,0,1,1,2-2A2,2,0,0,1,16,16Zm8,0a2,2,0,1,1,2-2A2,2,0,0,1,24,16ZM1,22a1,1,0,0,1,0-2H42a1,1,0,0,1,0,2ZM2,8V43a5,5,0,0,0,5,5H42V13a5,5,0,0,0-5-5ZM1,6H37a7,7,0,0,1,7,7V49a1,1,0,0,1-1,1H7a7,7,0,0,1-7-7V7A1,1,0,0,1,1,6ZM8,2a8.45,8.45,0,0,1,6-2H40A10,10,0,0,1,50,10V36a8.45,8.45,0,0,1-2,6V10a8,8,0,0,0-8-8Z"
+              />
+            </g>
+          </mask>
+        </defs>
+        <g id="Landing">
+          <g id="Services">
+            <g id="Dream-Design-Develop">
+              <g id="Dream_-Design_-Devel" data-name="Dream,-Design,-Devel">
+                <g id="Development">
+                  <g className="cls-2" mask="url(#browser-mask)" id="_2.-Icon-_-2.-Icon-Box-_-25-Size--_-ic_browser-windows"
+                     data-name="2.-Icon-/-2.-Icon-Box-/-25-Size--/-ic_browser-windows">
+                    <g id="_3.-Color-_-2.-Purple" data-name="3.-Color-/-2.-Purple">
+                      <rect id="Red-Main" fill="#5c64aa" className="cls-3" width="50" height="50" />
                     </g>
                   </g>
                 </g>

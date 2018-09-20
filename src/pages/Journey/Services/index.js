@@ -5,8 +5,8 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Heading from 'components/typography/Heading';
 import Button from 'components/interactions/Button';
-import {FeatherPen} from 'icons';
-import ServicesChart from 'icons/ServicesBG';
+import {FeatherPen, Compass, BrowserWindows} from 'icons';
+import ServicesChart from 'icons/backgrounds/ServicesBG';
 
 import './index.styl';
 
@@ -93,6 +93,7 @@ class Services extends Component {
               </p>
             </div>
             <div className="service-block">
+              <Compass />
               <h3 className="service-block-heading">Design</h3>
               <p className="service-block-description">
                 We design applications that
@@ -102,6 +103,7 @@ class Services extends Component {
               </p>
             </div>
             <div className="service-block">
+              <BrowserWindows />
               <h3 className="service-block-heading">Development</h3>
               <p className="service-block-description">
                 With over a decade of experience
