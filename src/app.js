@@ -11,13 +11,14 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import Intro from './pages/Intro';
-import Home from './pages/Home';
-import Services from './pages/Services';
-import Impact from './pages/Impact';
+import Home from './pages/Journey/Home';
+import Services from './pages/Journey/Services';
+import Impact from './pages/Journey/Impact';
 
-import BetterYet from './pages/BetterYet';
-import LPMA from './pages/LPMA';
-import Hub from './pages/Hub';
+import BetterYet from './pages/Projects/BetterYet';
+import LPMA from './pages/Projects/LPMA';
+import Hub from './pages/Projects/Hub';
+
 import Landscape from './pages/Landscape';
 
 import './index.styl';
