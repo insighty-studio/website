@@ -13,23 +13,23 @@ class CaseStudies extends Component {
           <CaseStudy
             title="BetterYet"
             subtitle="Loyalty for Small Businesses"
-            text="Mark and Alan, the co-founders of BetterYet,
+            text={`Mark and Alan, the co-founders of BetterYet,
               envisioned a future where all businesses can set up a
               loyalty program in 30 seconds.
-              The problem was that they didn’t have the know-how to
+              \\nThe problem was that they didn’t have the know-how to
               turn it into reality. We started from clean slate with the
-              product that now enjoys a growing user base."
+              product that now enjoys a growing user base.`}
             href="/betteryet"
           />
           <CaseStudy
             title="HUB 4.0"
             subtitle="Community App"
-            text="Mark and Alan, the co-founders of BetterYet,
+            text={`Mark and Alan, the co-founders of BetterYet,
               envisioned a future where all businesses can set up a
               loyalty program in 30 seconds.
-              The problem was that they didn’t have the know-how to
+              \\nThe problem was that they didn’t have the know-how to
               turn it into reality. We started from clean slate with the
-              product that now enjoys a growing user base."
+              product that now enjoys a growing user base.`}
             href="/hub"
           />
         </div>

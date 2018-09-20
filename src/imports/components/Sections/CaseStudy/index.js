@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import uniqueid from 'lodash.uniqueid';
 
 import Heading from 'components/typography/Heading';
 import AnimatedButton from 'components/interactions/AnimatedButton';
@@ -23,9 +24,7 @@ class CaseStudy extends Component {
 
             <div className="case-study-separator" />
 
-            <p className="case-study-text">
-              {text}
-            </p>
+            {text.split('\\n').map(par => <p className="case-study-text" key={uniqueid('cs-text-')}>{par}</p>)}
           </div>
 
           <div className="animated-button-container">
