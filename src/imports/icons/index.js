@@ -46,11 +46,11 @@ export class LPMATitle extends PureComponent {
 
 export class RightArrowIcon extends PureComponent {
   static propTypes = {
-    color: PropTypes.string
+    color: PropTypes.string,
   };
 
   static defaultProps = {
-    color: '#FFF'
+    color: '#FFF',
   };
 
   render() {
