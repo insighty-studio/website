@@ -23,7 +23,7 @@ test('Button component', () => {
     .children[0].type).toBe('svg');
   expect(button.toJSON().props).toMatchObject({
     href: '',
-    className: 'button insighty-className'
+    className: 'animated-button insighty-className'
   });
 
   expect(emptyDisabledButton.toJSON().type).toBe('button');

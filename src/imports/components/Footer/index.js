@@ -7,7 +7,6 @@ import {
   ClutchIcon,
   LinkedInIcon,
   FacebookIcon,
-  TwitterIcon,
 } from 'icons';
 
 import './index.styl';
@@ -16,11 +15,10 @@ import './mobile/index.styl';
 class Footer extends PureComponent {
   renderLinks() {
     const links = [
-      {text: 'Home', to: 'header'},
       {text: 'Services', to: 'services'},
-      {text: 'Process', to: 'process'},
-      {text: 'Clients', to: 'clients'},
-      {text: 'Contacts', to: 'contact-us'},
+      {text: 'Impact', to: 'impact'},
+      {text: 'Case Studies', to: 'case-studies'},
+      {text: 'Team', to: 'team'},
     ];
 
     return (
@@ -43,7 +41,6 @@ class Footer extends PureComponent {
     return (
       <div className="socials">
         <FacebookIcon />
-        <TwitterIcon />
         <LinkedInIcon />
         <BloggerIcon />
         <ClutchIcon />
@@ -56,7 +53,7 @@ class Footer extends PureComponent {
     return (
       <div className="footer">
         <div className="menu">
-          <Logo style={{width: 48, height: 48}} />
+          <Logo className="logo" color="white" />
           {this.renderLinks()}
           {this.renderSocials()}
         </div>

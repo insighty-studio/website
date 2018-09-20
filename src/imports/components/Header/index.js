@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import {Logo} from 'icons';
-import Button from 'components/Button';
+import Button from 'components/interactions/Button';
 
 import './index.styl';
 
@@ -21,12 +21,22 @@ class Header extends Component {
 
     return (
       <div className={classnames('header', className)}>
-        <Logo className="header-logo" />
+        <a href="/home" className="header-logo">
+          <Logo />
+        </a>
         <ul className="header-nav">
-          <li className="header-nav-item">SERVICES</li>
-          <li className="header-nav-item">IMPACT</li>
-          <li className="header-nav-item">CASE STUDIES</li>
-          <li className="header-nav-item">TEAM</li>
+          <li>
+            <a className="header-nav-item" href="/services">SERVICES</a>
+          </li>
+          <li>
+            <a className="header-nav-item" href="/impact">IMPACT</a>
+          </li>
+          <li>
+            <a className="header-nav-item" href="/case-studies">CASE STUDIES</a>
+          </li>
+          <li>
+            <a className="header-nav-item" href="/team">TEAM</a>
+          </li>
         </ul>
         <Button className="header-button">FREE CONSULTATION</Button>
       </div>

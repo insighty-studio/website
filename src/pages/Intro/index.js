@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
 import {Logo} from 'icons';
-import IntroBG from 'icons/IntroBG';
-import Button from 'components/Button';
+import IntroBG from 'icons/backgrounds/IntroBG';
+import Button from 'components/interactions/Button';
 import Heading from 'components/typography/Heading';
 import isMobile from 'ismobilejs';
 
@@ -36,7 +36,9 @@ class IntroPage extends Component {
           </div>
 
           <div className="button-container">
-            <Button><a href="/home">BEGIN JOURNEY</a></Button>
+            <a href="/home">
+              <Button>BEGIN JOURNEY</Button>
+            </a>
           </div>
         </div>
       </div>

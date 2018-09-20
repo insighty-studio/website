@@ -2,6 +2,8 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 
+import './IntroBG.styl';
+
 class IntroBG extends PureComponent {
   static propTypes = {
     className: PropTypes.string,
@@ -33,16 +35,7 @@ class IntroBG extends PureComponent {
                   id="Shape" transform="matrix(-1 0 0 1 7.325 0)" />
           </g>
         </g>
-        <g id="Turbine">
-          <animateTransform
-            attributeName="transform"
-            attributeType="XML"
-            type="rotate"
-            from="0 58.553392 65.4470719"
-            to="360 58.553392 65.4470719"
-            dur="8s"
-            repeatCount="indefinite"
-          />
+        <g id="far-turbine">
           <g id="Blade-3" transform="translate(54 .5)">
             <g id="connector" transform="translate(3 49)">
               <rect id="Rectangle-path" fill="#FFF" width="3" height="15" />
@@ -103,16 +96,7 @@ class IntroBG extends PureComponent {
                   id="Shape" transform="matrix(-1 0 0 1 9.453 0)" />
           </g>
         </g>
-        <g id="Turbine">
-          <animateTransform
-            attributeName="transform"
-            attributeType="XML"
-            type="rotate"
-            from="0 75.5689076 84.5207077"
-            to="360 75.5689076 84.5207077"
-            dur="12s"
-            repeatCount="indefinite"
-          />
+        <g id="close-turbine">
           <g id="Blade-3" transform="translate(69.692 .645)">
             <g id="connector" transform="translate(3.872 63.24)">
               <rect id="Rectangle-path" fill="#FFF" width="3.872" height="19.359" />
@@ -161,16 +145,7 @@ class IntroBG extends PureComponent {
 
   renderVRGirl = () => (
     <g id="Girl-in-VR" transform="translate(499.4 111.303) scale(-1, 1)">
-      <g id="girl-wrapper" transform="translate(0 0)">
-        <animateTransform
-          id="vr-girl-floating-up"
-          attributeName="transform"
-          attributeType="XML"
-          type="translate"
-          values="0 0;0 -2;0 0"
-          dur="2s"
-          repeatCount="indefinite"
-        />
+      <g id="vr-girl-floating" transform="translate(0 0)">
         <g id="Hair" transform="translate(11.85)">
           <mask id="mask-110" fill="#fff">
             <use xlinkHref="#path-109" />
@@ -247,21 +222,17 @@ class IntroBG extends PureComponent {
 
   renderManTouch = () => (
     <g id="Touch">
-      <circle id="r1" cx={24} cy={20} stroke="#E5F1FF" opacity="0.5" r="0" strokeWidth="0" >
+      <circle id="circle1" cx={24} cy={20} stroke="#E5F1FF" opacity="0.5" r="0" strokeWidth="0" >
         <animate id="touch1" attributeName="r" values="0;3;0" dur="1.2s" begin="1s;touch1.end+5s" />
-        <animate attributeName="stroke-width" values="0;1;0" dur="1.2s" begin="1s;touch1.end+5s" />
       </circle>
-      <circle id="r2" cx={24} cy={20} stroke="#E5F1FF" opacity="0.5" r="3" strokeWidth="0">
+      <circle id="circle2" cx={24} cy={20} stroke="#E5F1FF" opacity="0.5" r="3" strokeWidth="0">
         <animate attributeName="r" values="3;0;3" dur="1.2s" begin="1s;touch1.end+5s" />
-        <animate attributeName="stroke-width" values="0;1;0" dur="1.2s" begin="1s;touch1.end+5s" />
       </circle>
-      <circle id="r3" cx={24} cy={20} stroke="#E5F1FF" opacity="0.5" r="3" strokeWidth="0">
+      <circle id="circle3" cx={24} cy={20} stroke="#E5F1FF" opacity="0.5" r="3" strokeWidth="0">
         <animate attributeName="r" values="3;6;3" dur="1.2s" begin="1s;touch1.end+5s" />
-        <animate attributeName="stroke-width" values="0;1;0" dur="1.2s" begin="1s;touch1.end+5s" />
       </circle>
-      <circle id="r4" cx={24} cy={20} stroke="#E5F1FF" opacity="0.5" r="6" strokeWidth="0">
+      <circle id="circle4" cx={24} cy={20} stroke="#E5F1FF" opacity="0.5" r="6" strokeWidth="0">
         <animate attributeName="r" values="6;3;6" dur="1.2s" begin="1s;touch1.end+5s" />
-        <animate attributeName="stroke-width" values="0;1;0" dur="1.2s" begin="1s;touch1.end+5s" />
       </circle>
     </g>
   );

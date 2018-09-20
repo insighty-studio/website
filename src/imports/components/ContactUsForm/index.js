@@ -5,7 +5,7 @@ import {NotificationContainer, NotificationManager} from 'react-notifications';
 import SectionHeading from 'components/typography/SectionHeading';
 import Input from 'components/Input';
 import TextArea from 'components/TextArea';
-import Button from 'components/interactions/Button';
+import Button from 'components/interactions/AnimatedButton';
 import {trackEvent} from 'analytics';
 
 import './index.styl';

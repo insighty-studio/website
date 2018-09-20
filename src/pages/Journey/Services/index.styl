@@ -1,0 +1,102 @@
+.design
+  width 100vw
+  position absolute
+  top 0
+  z-index 0
+  opacity 0.5
+
+.services-page
+  width 100vw
+  display flex
+  flex-direction column
+  align-items center
+
+  .services-bg
+    height 100vh
+    width 100vw
+    position absolute
+    overflow hidden
+
+    .services-chart
+      margin-left 61.2vw
+      margin-top 39.5vh
+
+  .services-content
+    margin-top 14vh
+    width 80vw
+
+    .services-heading
+      font-size 2.9vw
+      margin 0
+
+    .services-description
+      margin 0
+      width 45vw
+      max-height 52vh
+      overflow hidden
+      transition max-height 1s ease-in
+
+      .services-description-text
+        font-size 1.5vw
+        line-height 4.8vh
+        opacity 0.8
+        letter-spacing normal
+
+        .description-more
+          cursor pointer
+          color #5C64AA
+
+      &.expanded
+        max-height 104vh
+
+      .services-button
+        margin-top 7vh
+        padding 2.8vh 2vw
+        font-size 1.4vw
+        letter-spacing 1.8pt
+        line-height 3.2vh
+        width 20vw
+
+  .services-dream-section
+    display flex
+    flex-direction column
+    align-items center
+    margin-top 12.5vh
+    width 100vw
+    background-color #F7F9FC
+    padding 4vh 0 19vh 0
+
+    .services-dream-heading
+      font-size 3vw
+      width 80vw
+
+    .services-dream-blocks
+      margin-top 1.5vh
+      display flex
+      flex-direction row
+      align-items center
+      justify-content space-between
+      width 80vw
+
+      .service-block
+        padding 4vh 2.8vw
+        border-radius 9px
+        transition all .2s ease-in-out
+
+        &:hover
+          background-color white
+          transform scale(1.05)
+          box-shadow 0 10px 50px 0 rgba(0, 0, 0, 0.1)
+
+        .service-block-heading
+          font-weight 600
+          line-height 24pt
+          font-size 1.7vw
+
+        .service-block-description
+          letter-spacing 0.1pt
+          line-height 24pt
+          font-size 1.2vw
+          width 20vw
+
+
