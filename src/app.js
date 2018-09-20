@@ -15,6 +15,7 @@ import Home from './pages/Journey/Home';
 import Services from './pages/Journey/Services';
 import Impact from './pages/Journey/Impact';
 import CaseStudies from './pages/Journey/CaseStudies';
+import Team from './pages/Journey/Team';
 
 import BetterYet from './pages/Projects/BetterYet';
 import LPMA from './pages/Projects/LPMA';
@@ -88,6 +89,7 @@ class App extends Component {
           <Route exact path="/services" component={Services} />
           <Route exact path="/impact" component={Impact} />
           <Route exact path="/case-studies" component={CaseStudies} />
+          <Route exact path="/team" component={Team} />
           <Route exact path="/betteryet" component={BetterYet} />
           <Route exact path="/lpma" component={LPMA} />
           <Route exact path="/hub" component={Hub} />
