@@ -28,17 +28,6 @@ class Home extends Component {
           tools available today. We offer you a system of going from concept to
           production-ready quickly.
         </span>
-        <p className="home-description-text">
-          Most of all we like doing mobile apps. We also believe in VR, AR and
-          some blockchain here and there. Needless to say, we strive to be state
-          of the art. Wow, are you really reading this?
-          <span className="description-more">
-            {' '}
-            <a href="/services">
-              More about our services.
-            </a>
-          </span>
-        </p>
       </div>
     );
   }
@@ -77,6 +66,17 @@ class Home extends Component {
                 </span>
               )
                 : this.renderExpanded()}
+            </p>
+            <p className="home-description-text">
+              Most of all we like doing mobile apps. We also believe in VR, AR and
+              some blockchain here and there. Needless to say, we strive to be state
+              of the art. Wow, are you really reading this?
+              <span className="description-more">
+                {' '}
+                <a href="/services">
+                  More about our services.
+                </a>
+              </span>
             </p>
           </div>
 
