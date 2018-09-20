@@ -46,7 +46,7 @@ class Home extends Component {
 
         <Header />
 
-        <div className="vr-girl-container">
+        <div className="home-bg">
           <VRGirlInSpace className="vr-girl" />
         </div>
 
