@@ -7,10 +7,14 @@ import './IntroBG.styl';
 class IntroBG extends PureComponent {
   static propTypes = {
     className: PropTypes.string,
+    width: PropTypes.string,
+    height: PropTypes.string,
   };
 
   static defaultProps = {
     className: '',
+    width: '50.94%',
+    height: '62.36%',
   };
 
   renderTurbines = () => (
@@ -328,8 +332,10 @@ class IntroBG extends PureComponent {
   );
 
   render() {
+    const {className, width, height} = this.props;
+
     return (
-      <svg className={this.props.className} width="50.94%" height="62.36%" viewBox="0 0 652 449" xmlns="http://www.w3.org/2000/svg"
+      <svg className={className} width={width} height={height} viewBox="0 0 652 449" xmlns="http://www.w3.org/2000/svg"
            xmlnsXlink="http://www.w3.org/1999/xlink">
         <defs>
           <path d="M219.627337,4.61424353 L219.627337,269.292544 C167.791646,317.475834 74.4555864,352.659758 22.1472945,357.137077 C15.4163829,357.74373 8.20955518,358.37051 0.593019741,358.945694 C0.215448199,358.276681 0,357.504015 0,356.681025 L0,4.61424353 C0,2.0658672 2.06576698,0 4.61401969,0 L215.013318,0 C217.56157,0 219.627337,2.0658672 219.627337,4.61424353 Z"
