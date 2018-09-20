@@ -25,13 +25,6 @@ class Services extends Component {
           Native, Firebase, Node.js, Mongo, Meteor, Machine Learning, VR,
           AR, as well as all kinds of payment processors and so much more.
         </span>
-        <p className="services-description-text">
-          We are always looking to hear from people that want to change the
-          world with software. We call them heroes. If you’re one of them,
-          please get in touch.
-        </p>
-
-        <Button className="services-button">FREE CONSULTATION</Button>
       </Fragment>
     );
   }
@@ -74,6 +67,13 @@ class Services extends Component {
               )
                 : this.renderExpanded()}
             </p>
+            <p className="services-description-text">
+              We are always looking to hear from people that want to change the
+              world with software. We call them heroes. If you’re one of them,
+              please get in touch.
+            </p>
+
+            <Button className="services-button">FREE CONSULTATION</Button>
           </div>
 
         </div>
