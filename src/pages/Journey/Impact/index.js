@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Heading from 'components/typography/Heading';
-import ImpactBG from 'icons/ImpactBG';
+import ImpactBG from 'icons/backgrounds/ImpactBG';
 
 import './index.styl';
 

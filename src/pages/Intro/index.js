@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import {Logo} from 'icons';
-import IntroBG from 'icons/IntroBG';
+import IntroBG from 'icons/backgrounds/IntroBG';
 import Button from 'components/interactions/Button';
 import Heading from 'components/typography/Heading';
 import isMobile from 'ismobilejs';

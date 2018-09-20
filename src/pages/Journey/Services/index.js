@@ -6,7 +6,7 @@ import Footer from 'components/Footer';
 import Heading from 'components/typography/Heading';
 import Button from 'components/interactions/Button';
 import {FeatherPen, Compass, BrowserWindows} from 'icons';
-import ServicesChart from 'icons/ServicesBG';
+import ServicesChart from 'icons/backgrounds/ServicesBG';
 
 import './index.styl';
 
