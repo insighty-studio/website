@@ -5,6 +5,8 @@ import classnames from 'classnames';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 
+import './index.styl';
+
 class Page extends Component {
   static propTypes = {
     className: PropTypes.string,
