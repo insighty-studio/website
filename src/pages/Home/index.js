@@ -32,7 +32,12 @@ class Home extends Component {
           Most of all we like doing mobile apps. We also believe in VR, AR and
           some blockchain here and there. Needless to say, we strive to be state
           of the art. Wow, are you really reading this?
-          <span className="description-more"> More about our services.</span>
+          <span className="description-more">
+            {' '}
+            <a href="/services">
+              More about our services.
+            </a>
+          </span>
         </p>
       </div>
     );
