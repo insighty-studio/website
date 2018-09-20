@@ -14,6 +14,7 @@ import Intro from './pages/Intro';
 import Home from './pages/Journey/Home';
 import Services from './pages/Journey/Services';
 import Impact from './pages/Journey/Impact';
+import CaseStudies from './pages/Journey/CaseStudies';
 
 import BetterYet from './pages/Projects/BetterYet';
 import LPMA from './pages/Projects/LPMA';
@@ -86,9 +87,10 @@ class App extends Component {
           <Route exact path="/home" component={Home} />
           <Route exact path="/services" component={Services} />
           <Route exact path="/impact" component={Impact} />
-          <Route path="/betteryet" component={BetterYet} />
-          <Route path="/lpma" component={LPMA} />
-          <Route path="/hub" component={Hub} />
+          <Route exact path="/case-studies" component={CaseStudies} />
+          <Route exact path="/betteryet" component={BetterYet} />
+          <Route exact path="/lpma" component={LPMA} />
+          <Route exact path="/hub" component={Hub} />
           <Route path="*" render={() => <Redirect to="/" />} />
         </Switch>
       </BrowserRouter>
