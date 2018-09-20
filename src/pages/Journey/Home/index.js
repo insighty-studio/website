@@ -1,16 +1,14 @@
 import React, {Component} from 'react';
 import classnames from 'classnames';
 
-import Header from 'components/Header';
-import Footer from 'components/Footer';
+import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
 import AnimatedButton from 'components/interactions/AnimatedButton';
-import {
-  VRGirlInSpace, Phone, RightArrowIcon, AppleIcon,
-} from 'icons';
+import {Phone, RightArrowIcon, AppleIcon} from 'icons';
 import {
   Square, Braintree, PayPal, Stripe, AmazonPay, Plaid,
 } from 'icons/FinTechLogos';
+import VRGirlInSpace from 'icons/backgrounds/HomeBG';
 
 import './index.styl';
 
@@ -36,10 +34,7 @@ class Home extends Component {
     const {expanded} = this.state;
 
     return (
-      <div className="home-page">
-
-        <Header />
-
+      <Page className="home-page">
         <div className="home-bg">
           <VRGirlInSpace className="vr-girl" />
         </div>
@@ -136,9 +131,7 @@ class Home extends Component {
             </div>
           </div>
         </div>
-
-        <Footer />
-      </div>
+      </Page>
     );
   }
 }

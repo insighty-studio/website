@@ -1,8 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import classnames from 'classnames';
 
-import Header from 'components/Header';
-import Footer from 'components/Footer';
+import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
 import Button from 'components/interactions/Button';
 import {FeatherPen, Compass, BrowserWindows} from 'icons';
@@ -33,12 +32,10 @@ class Services extends Component {
     const {expanded} = this.state;
 
     return (
-      <div className="services-page">
+      <Page className="services-page">
         <div className="services-bg">
           <ServicesChart className="services-chart" />
         </div>
-
-        <Header />
 
         <div className="services-content">
           <Heading className="services-heading">Services You Deserve</Heading>
@@ -114,9 +111,7 @@ class Services extends Component {
             </div>
           </div>
         </div>
-
-        <Footer />
-      </div>
+      </Page>
     );
   }
 }
