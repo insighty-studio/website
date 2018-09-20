@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 
 import Page from 'components/Page';
 import CaseStudy from 'components/Sections/CaseStudy';
+import Heading from 'components/typography/Heading';
+
 
 import './index.styl';
 
@@ -9,6 +11,9 @@ class CaseStudies extends Component {
   render() {
     return (
       <Page className="case-studies-page">
+
+        <Heading className="case-studies-heading">Select Case Studies</Heading>
+
         <div className="case-studies-content">
           <CaseStudy
             title="BetterYet"

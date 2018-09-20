@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import uniqueid from 'lodash.uniqueid';
 
-import Heading from 'components/typography/Heading';
 import AnimatedButton from 'components/interactions/AnimatedButton';
 import {Phone, RightArrowIcon} from 'icons';
 
@@ -15,8 +14,6 @@ class CaseStudy extends Component {
 
     return (
       <div className="case-study">
-        <Heading className="case-study-heading">Select Case Studies</Heading>
-
         <div className="case-study-bg">
           <div className="case-study-description">
             <p className="case-study-title">{title}</p>
@@ -38,7 +35,7 @@ class CaseStudy extends Component {
           </div>
 
           <div className="screens-container">
-            <Phone />
+            <Phone height="72.67vh" width="22.23vw" />
           </div>
         </div>
       </div>

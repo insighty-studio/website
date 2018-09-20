@@ -152,9 +152,21 @@ export class AppleIcon extends PureComponent {
 }
 
 export class Phone extends PureComponent {
+  static propTypes = {
+    height: PropTypes.string,
+    width: PropTypes.string,
+  };
+
+  static defaultProps = {
+    height: '81.67vh',
+    width: '25.23vw',
+  };
+
   render() {
+    const {height, width} = this.props;
+
     return (
-      <svg width="25.23vw" height="81.67vh" viewBox="0 0 323 588" xmlns="http://www.w3.org/2000/svg">
+      <svg width={width} height={height} viewBox="0 0 323 588" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <filter x="-22.7%" y="-9.2%" width="145.5%" height="122.2%" filterUnits="objectBoundingBox"
                   id="filter-1">
