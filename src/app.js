@@ -11,6 +11,7 @@ import 'aos/dist/aos.css';
 import Intro from './pages/Intro';
 import Home from './pages/Home';
 import Services from './pages/Services';
+import Impact from './pages/Impact';
 
 import BetterYet from './pages/BetterYet';
 import LPMA from './pages/LPMA';
@@ -82,6 +83,7 @@ class App extends Component {
           <Route exact path="/" component={Intro} />
           <Route path="/home" component={Home} />
           <Route exact path="/services" component={Services} />
+          <Route exact path="/impact" component={Impact} />
           <Route path="/betteryet" component={BetterYet} />
           <Route path="/lpma" component={LPMA} />
           <Route path="/hub" component={Hub} />
