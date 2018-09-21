@@ -38,7 +38,7 @@ class Header extends Component {
             <a className="header-nav-item" href="/team">TEAM</a>
           </li>
         </ul>
-        <Button className="header-button"><a href="/consult">FREE CONSULTATION</a></Button>
+        <a className="header-link" href="/consult"><Button className="header-button">FREE CONSULTATION</Button></a>
       </div>
     );
   }

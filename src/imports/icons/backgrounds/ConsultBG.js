@@ -1,10 +1,10 @@
 /* eslint-disable */
 import React, {PureComponent} from 'react';
 
-class ConsultUs extends PureComponent {
+export class ConsultUs extends PureComponent {
   render() {
     return (
-      <svg className={this.props.className} width="41.40625wh" height="59.027778vh" viewBox="0 0 530 425" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+      <svg className={this.props.className} width="41.40625vw" height="59.027778vh" viewBox="0 0 530 425" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
         <defs>
           <path d="M474.812934,1.77524893 C568.097464,12.4785095 596.968223,115.88676 561.425209,312 L2.66499308,312 C-4.67154342,249.801829 3.61954616,207.639667 27.5382618,185.513514 C112.880875,107.24987 191.789321,154.897407 253.174343,126.930299 C328.839027,92.1505547 335.122444,-14.5153252 474.812934,1.77524893 Z" id="path-1" />
           <rect id="path-3" x="8.883" y="8.876" width="325.573" height="325.314" />
@@ -253,4 +253,159 @@ class ConsultUs extends PureComponent {
   }
 }
 
-export default ConsultUs;
+export class MailBox extends PureComponent {
+  render() {
+    const svg = 'svg className={this.props.className} width="39.84375vw" height="47.361vh" viewBox="0 0 510 341" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"';
+    return (
+      <svg className={this.props.className} width="39.84375vw" height="47.361vh" viewBox="0 0 510 341" version="1.1">
+        <defs>
+          <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stopColor="#FF6663" stopOpacity="0" offset="0%" />
+            <stop stopColor="#000000" stopOpacity="0.1" offset="100%" />
+          </linearGradient>
+          <path d="M4.54747351e-13,0 L20.6973664,0 L20.6973664,115.375204 C18.2058875,113.181102 14.7563264,109.981845 10.3486832,105.777431 C5.70102578,101.34407 4.54747351e-13,95.9250368 4.54747351e-13,95.3316599 L4.54747351e-13,0 Z" id="path-2" />
+          <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-4">
+            <stop stopColor="#000000" stopOpacity="0.3" offset="0%" />
+            <stop stopColor="#FF6663" stopOpacity="0" offset="100%" />
+          </linearGradient>
+          <linearGradient x1="50%" y1="-19.9791751%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stopColor="#9FB1FB" stopOpacity="0" offset="0%" />
+            <stop stopColor="#000000" stopOpacity="0.272078804" offset="100%" />
+          </linearGradient>
+          <path d="M30.1810643,44.003059 C29.6134447,36.3950377 31.3516681,30.0860855 35.3539904,25.3738481 C39.0772671,20.6141624 44.2584204,18.1948252 50.8727688,18.0202122 C51.515243,18.0020479 52.0993864,18.6248314 52.1660003,19.4909394 C52.4373988,26.9148277 50.6878806,32.9927993 46.9930742,37.6299079 C43.3528298,41.9858931 38.6367001,44.3810487 32.7675274,44.9835438 L23.4033152,84.8451722 L21.1862206,82.6563271 L30.1810643,44.003059 Z" id="path-6" />
+          <path d="M38.3511369,98.8378228 C36.8377141,97.536912 35.6659138,96.4784442 34.8357358,95.6624196 C27.7029042,75.8711149 20.9081709,54.8250239 14.4515359,32.5241466 C8.608498,29.8889785 4.36784993,25.9026241 2.15298369,20.2201299 C-0.575700712,14.5666533 -0.697877521,8.1299268 1.71374968,1.0258638 C1.81513075,0.266869647 2.55352345,-0.135913008 3.0314517,0.0415424585 C9.64084665,2.49029866 14.1008207,6.56082061 16.647706,12.3455592 C19.0406479,17.8882533 19.2416637,24.069416 17.08694,31.0476646 L38.3511369,98.8378228 Z" id="path-7" />
+          <path d="M0,0 L125.204336,0 C145.017644,0 161.079504,16.0874786 161.079504,35.9323891 L161.079504,119.654856 C161.079504,120.250203 160.597648,120.732827 160.003249,120.732827 L0,120.732827 L0,0 Z" id="mail-path-8" />
+          <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-9">
+            <stop stopColor="#B0B0F9" stopOpacity="0" offset="0%" />
+            <stop stopColor="#000000" stopOpacity="0.05" offset="100%" />
+          </linearGradient>
+          <path d="M150.280878,120.732827 L3.57811614,120.732827 C1.60197716,120.732827 0,119.12408 0,117.139589 C0,115.155098 1.60197716,113.54635 3.57811614,113.54635 L67.9842067,113.54635 L67.9842067,41.3509934 C67.9842067,18.5134704 86.406944,0 109.132542,0 C131.85814,0 150.280878,18.5134704 150.280878,41.3509934 L150.280878,120.732827 Z" id="mail-path-10" />
+          <path d="M34.1956489,0 C53.0813842,0 68.3912977,16.3029067 68.3912977,36.4135614 L68.3912977,106.316967 L0,106.316967 L0,36.4135614 C0,16.3029067 15.3099135,0 34.1956489,0 Z" id="mail-path-11" />
+          <linearGradient x1="-27.4224468%" y1="50%" x2="100%" y2="50%" id="linearGradient-13">
+            <stop stopColor="#464D89" stopOpacity="0" offset="0%" />
+            <stop stopColor="#000000" offset="100%" />
+          </linearGradient>
+          <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-14">
+            <stop stopColor="#E6E6EF" stopOpacity="0" offset="0%" />
+            <stop stopColor="#000000" stopOpacity="0.05" offset="100%" />
+          </linearGradient>
+          <path d="M1.79977099,0 L77.3901527,0 C78.3841387,5.13604554e-15 79.1899237,0.80919054 79.1899237,1.80737766 L79.1899237,58.5590361 C79.1899237,59.5572232 78.3841387,60.3664137 77.3901527,60.3664137 L1.79977099,60.3664137 C0.80578492,60.3664137 1.21728186e-16,59.5572232 0,58.5590361 L0,1.80737766 C-1.21728186e-16,0.80919054 0.80578492,1.83363999e-16 1.79977099,0 Z" id="mail-path-15" />
+          <linearGradient x1="50%" y1="0%" x2="50%" y2="143.565324%" id="linearGradient-17">
+            <stop stopColor="#F0F0F6" stopOpacity="0" offset="0%" />
+            <stop stopColor="#000000" stopOpacity="0.05" offset="100%" />
+          </linearGradient>
+          <path d="M0,53.4381327 C24.6576496,41.4291123 37.8559702,35.4246021 39.5949618,35.4246021 C41.3339535,35.4246021 54.5322741,41.4291123 79.1899237,53.4381327 L79.1899237,60.3664137 L0,60.3664137 L0,53.4381327 Z" id="path-18" />
+          <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-19">
+            <stop stopColor="#000000" stopOpacity="0.1" offset="0%" />
+            <stop stopColor="#F0F1F5" stopOpacity="0" offset="100%" />
+          </linearGradient>
+          <linearGradient x1="50%" y1="0%" x2="50%" y2="143.565324%" id="linearGradient-20">
+            <stop stopColor="#F7F7F8" stopOpacity="0" offset="0%" />
+            <stop stopColor="#000000" stopOpacity="0.05" offset="100%" />
+          </linearGradient>
+          <path d="M0,20.9139415 L0,0 L79.1899237,0 L79.1899237,20.9139415 C54.5322741,32.9975521 41.3339535,39.0393574 39.5949618,39.0393574 C37.8559702,39.0393574 24.6576496,32.9975521 0,20.9139415 Z" id="mail-path-21" />
+          <path d="M1.79977099,0 L77.3901527,0 C78.3841387,5.13604554e-15 79.1899237,0.80919054 79.1899237,1.80737766 L79.1899237,58.5590361 C79.1899237,59.5572232 78.3841387,60.3664137 77.3901527,60.3664137 L1.79977099,60.3664137 C0.80578492,60.3664137 1.21728186e-16,59.5572232 0,58.5590361 L0,1.80737766 C-1.21728186e-16,0.80919054 0.80578492,1.83363999e-16 1.79977099,0 Z" id="mail-path-22" />
+          <path d="M0,53.4381327 C24.6576496,41.4291123 37.8559702,35.4246021 39.5949618,35.4246021 C41.3339535,35.4246021 54.5322741,41.4291123 79.1899237,53.4381327 L79.1899237,60.3664137 L0,60.3664137 L0,53.4381327 Z" id="mail-path-24" />
+          <path d="M0,20.9139415 L0,0 L79.1899237,0 L79.1899237,20.9139415 C54.5322741,32.9975521 41.3339535,39.0393574 39.5949618,39.0393574 C37.8559702,39.0393574 24.6576496,32.9975521 0,20.9139415 Z" id="path-25" />
+        </defs>
+        <g id="Landing" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+          <g id="Free-consultation" transform="translate(-770.000000, -867.000000)">
+            <g id="Contacts-picture" transform="translate(770.000000, 867.000000)">
+              <g id="Spot-02" transform="translate(352.500000, 170.500000) rotate(-180.000000) translate(-352.500000, -170.500000) translate(87.000000, 0.000000)" fill="#F7F9FC">
+                <path d="M0,241.550025 C0,173.550804 34.3973644,145.062671 119.781375,125.865147 C205.220385,106.977547 216.543882,-2.3043147e-13 327.433258,0 C438.629238,2.10316784e-13 584.765632,190.463021 511.03637,299.855204 C437.333445,409.355888 232.615541,259.981963 165.566534,309.572734 C98.3870154,358.928097 6.65072857e-15,309.360246 0,241.550025 Z" id="Details" />
+              </g>
+              <g id="Mailbox" transform="translate(0.000000, 56.000000)">
+                <g id="Leg" transform="translate(159.279733, 120.732827)">
+                  <mask id="mask-3" fill="white">
+                    <use href="#path-2" />
+                  </mask>
+                  <g>
+                    <use fill="#FF5551" href="#path-2" />
+                    <use fill="url(#linearGradient-1)" href="#path-2" />
+                  </g>
+                  <path d="M20.6973664,48.1529966 L20.6973664,60.1827915 C20.5789931,60.1951817 20.460043,60.206779 20.3405153,60.2175853 L16.5297768,74.2702662 L20.5702727,85.0290954 C20.3896307,85.3654882 20.0348852,85.5941687 19.626813,85.5941687 L18.6033908,85.5941687 L15.5811954,77.7683054 L13.4590154,85.5941687 L11.2945537,85.5941687 L14.2665168,74.3639937 L5.35276718,51.2821686 C3.32105878,50.4631236 1.52781414,49.464338 -1.55098157e-13,48.2661727 L0,29.367037 C3.26562436,31.1353595 5.61937975,33.5468788 7.1370229,36.6280852 C9.08114393,40.6532977 9.24445715,45.1421785 7.49387405,50.2099186 L15.2166471,70.7737304 L18.1994084,59.502752 C17.8248216,55.0809569 18.6633101,51.2610587 20.6973664,48.1529966 Z" id="Sh" fill="url(#linearGradient-4)" mask="url(#mask-3)" />
+                  <polygon id="Sh" fill="url(#linearGradient-4)" mask="url(#mask-3)" points="0 0 20.6973664 0 20.6973664 23.6368834" />
+                </g>
+                <g id="Flowers" transform="translate(141.282023, 136.950670)">
+                  <g id="Flower">
+                    <use fill="#403F9F" href="#path-6" />
+                    <use fill="url(#linearGradient-5)" href="#path-6" />
+                  </g>
+                  <g id="Flower">
+                    <use fill="#403F9F" href="#path-7" />
+                    <use fill="url(#linearGradient-5)" href="#path-7" />
+                  </g>
+                </g>
+                <g id="Box" transform="translate(108.886145, 0.000000)">
+                  <g>
+                    <use fill="#403F9F" href="#mail-path-8" />
+                    <use fill="url(#linearGradient-5)" href="#mail-path-8" />
+                  </g>
+                  <path d="M77.131611,52.1019642 L125.204336,52.1019642 C127.185667,52.1019642 128.791853,53.7107121 128.791853,55.6952031 L128.791853,79.41058 C128.791853,81.395071 127.185667,83.0038189 125.204336,83.0038189 L77.131611,83.0038189 C75.1502801,83.0038189 73.5440942,81.395071 73.5440942,79.41058 L73.5440942,55.6952031 C73.5440942,53.7107121 75.1502801,52.1019642 77.131611,52.1019642 Z" id="Plate" fill="#A7A7EE" />
+                </g>
+                <g id="Door">
+                  <use fill="#B0B0F9" href="#mail-path-10" />
+                  <use fill="url(#linearGradient-9)" href="#mail-path-10" />
+                </g>
+                <g id="Box" transform="translate(75.590382, 7.207930)">
+                  <mask id="mask-12" fill="white">
+                    <use href="#mail-path-11" />
+                  </mask>
+                  <use id="Sh" fill="#464D89" href="#mail-path-11" />
+                  <path d="M59.3924427,0 C78.2781781,0 93.5880916,16.3029067 93.5880916,36.4135614 L93.5880916,106.316967 L25.1967939,106.316967 L25.1967939,36.4135614 C25.1967939,16.3029067 40.5067074,0 59.3924427,0 Z" id="Sh" fill="url(#linearGradient-13)" mask="url(#mask-12)" />
+                </g>
+                <g id="Mail" transform="translate(43.194504, 38.742624)">
+                  <mask id="mask-16" fill="white">
+                    <use href="#mail-path-15" />
+                  </mask>
+                  <g id="Mask">
+                    <use fill="#E6E6EF" href="#mail-path-15" />
+                    <use fill="url(#linearGradient-14)" href="#mail-path-15" />
+                  </g>
+                  <g mask="url(#mask-16)">
+                    <use fill="#F7F7F8" href="#path-18" />
+                    <use fill="url(#linearGradient-17)" href="#path-18" />
+                  </g>
+                  <path d="M0,24.4503674 L0,3.61475531 L79.1899237,3.61475531 L79.1899237,24.4503674 C54.5322741,38.0320997 41.3339535,44.8229659 39.5949618,44.8229659 C37.8559702,44.8229659 24.6576496,38.0320997 0,24.4503674 Z" id="Sh" fill="url(#linearGradient-19)" mask="url(#mask-16)" />
+                  <g mask="url(#mask-16)">
+                    <use fill="#F7F7F8" href="#mail-path-21" />
+                    <use fill="url(#linearGradient-20)" href="#mail-path-21" />
+                  </g>
+                </g>
+                <g id="Mail" transform="translate(43.194504, 38.742624)">
+                  <mask id="mask-23" fill="white">
+                    <use href="#mail-path-22" />
+                  </mask>
+                  <g id="Mask">
+                    <use fill="#E6E6EF" href="#mail-path-22" />
+                    <use fill="url(#linearGradient-14)" href="#mail-path-22" />
+                  </g>
+                  <g mask="url(#mask-23)">
+                    <use fill="#F7F7F8" href="#mail-path-24" />
+                    <use fill="url(#linearGradient-17)" href="#mail-path-24" />
+                  </g>
+                  <path d="M0,24.4503674 L0,3.61475531 L79.1899237,3.61475531 L79.1899237,24.4503674 C54.5322741,38.0320997 41.3339535,44.8229659 39.5949618,44.8229659 C37.8559702,44.8229659 24.6576496,38.0320997 0,24.4503674 Z" id="Sh" fill="url(#linearGradient-19)" mask="url(#mask-23)" />
+                  <g mask="url(#mask-23)">
+                    <use fill="#F7F7F8" href="#path-25" />
+                    <use fill="url(#linearGradient-20)" href="#path-25" />
+                  </g>
+                </g>
+                <g id="Stars" transform="translate(19.797481, 0.000000)" fill="#FEEC80">
+                  <ellipse id="Star" cx="56.9756844" cy="14.0246401" rx="4.65838929" ry="4.67488004" />
+                  <ellipse id="Star" cx="26.5169852" cy="22.2955817" rx="4.65838929" ry="4.67488004" />
+                  <ellipse id="Star" cx="32.9670627" cy="1.79803078" rx="1.79168819" ry="1.79803078" />
+                  <ellipse id="Star" cx="2.68753228" cy="16.7216863" rx="2.68753228" ry="2.69704618" />
+                  <ellipse id="Star" cx="75.7884104" cy="26.7906587" rx="2.68753228" ry="2.69704618" />
+                  <ellipse id="Star" cx="115.026382" cy="65.8079267" rx="4.65838929" ry="4.67488004" />
+                  <ellipse id="Star" cx="109.292979" cy="80.1921729" rx="1.79168819" ry="1.79803078" />
+                  <ellipse id="Star" cx="84.2093449" cy="12.9458216" rx="1.79168819" ry="1.79803078" />
+                  <ellipse id="Star" cx="108.576304" cy="28.4088864" rx="4.65838929" ry="4.67488004" />
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    );
+  }
+}

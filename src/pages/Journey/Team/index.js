@@ -7,6 +7,7 @@ import TeamChat from 'icons/backgrounds/TeamBG';
 
 import './index.styl';
 
+
 class Team extends Component {
   render() {
     return (
