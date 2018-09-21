@@ -1,0 +1,82 @@
++iphone()
+  .header
+    padding 4vh 8% 4vh 10%
+    margin-top 0
+    display flex
+    flex-direction row
+    justify-content space-between
+    align-items center
+    z-index 5
+
+    &.opened
+      position fixed
+      display flex
+      flex-direction row
+      align-items flex-start
+      justify-content space-between
+      height 100vh
+      top 0
+      background-color #5C64AA
+
+      .header-button
+        display none
+
+      .opened-wrapper
+        width 100%
+
+        .close-menu-header
+          display flex
+          flex-direction row
+          align-items center
+          justify-content space-between
+          width 100%
+
+      .mobile-header-nav
+        list-style-type none
+        display flex
+        flex-direction column
+        margin 13vh 0 0 0
+        padding 0
+
+        li
+          margin-bottom 6.6vh
+
+          .header-nav-item, a
+            text-decoration none
+            color #FFFFFF
+            margin 0
+            font-size 4.8vw
+            letter-spacing 0.88pt
+
+      .social-links
+        display flex
+        position absolute
+        bottom 24px
+
+        a
+          margin-right 24px
+
+          svg
+            width 5vw
+            height 5vw
+            fill #ffffff
+
+          &:last-child
+            margin-right 0
+
+    .header-logo
+      display none
+
+    .header-nav
+      display none
+
+    .menu-icon, .close-menu-icon
+      display block
+      line-height 0
+
+    .header-button
+      margin 0
+      padding 1.55% 5.5%
+      font-size 3.47vw
+      letter-spacing 1.37pt
+      background-color #5C64AA
