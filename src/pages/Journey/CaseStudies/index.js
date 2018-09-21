@@ -4,7 +4,6 @@ import Page from 'components/Page';
 import CaseStudy from 'components/Sections/CaseStudy';
 import Heading from 'components/typography/Heading';
 
-
 import './index.styl';
 
 class CaseStudies extends Component {
@@ -13,6 +12,7 @@ class CaseStudies extends Component {
       <Page className="case-studies-page">
 
         <Heading className="case-studies-heading">Select Case Studies</Heading>
+
 
         <div className="case-studies-content">
           <CaseStudy

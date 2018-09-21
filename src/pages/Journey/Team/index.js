@@ -6,6 +6,8 @@ import TeamChat from 'icons/backgrounds/TeamBG';
 
 import './index.styl';
 
+import design from './Team.png';
+
 class Team extends Component {
   render() {
     return (
@@ -13,6 +15,8 @@ class Team extends Component {
         <div className="team-bg">
           <TeamChat className="team-chat" />
         </div>
+
+        <img src={design} alt="" className="design" />
 
         <div className="team-content">
           <Heading className="team-heading">Meat the Team</Heading>
