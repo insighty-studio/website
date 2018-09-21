@@ -9,7 +9,6 @@ import ServicesChart from 'icons/backgrounds/ServicesBG';
 
 import './index.styl';
 
-
 class Services extends Component {
   state = {
     expanded: false,
