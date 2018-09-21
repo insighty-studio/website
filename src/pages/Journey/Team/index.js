@@ -7,8 +7,6 @@ import TeamChat from 'icons/backgrounds/TeamBG';
 
 import './index.styl';
 
-import design from './Team.png';
-
 class Team extends Component {
   render() {
     return (
@@ -16,8 +14,6 @@ class Team extends Component {
         <div className="team-bg">
           <TeamChat className="team-chat" />
         </div>
-
-        <img src={design} alt="" className="design" />
 
         <div className="team-content">
           <Heading className="team-heading">Meet the Team</Heading>
@@ -30,22 +26,62 @@ class Team extends Component {
         </div>
 
         <div className="team-members-cards">
-          <div className="team-member">
-            <div className="member-photo" />
-            <div className="member-content">
-              <h3 className="member-name">Alex P.</h3>
-              <p className="member-position">Head of Client Success</p>
-              <div className="member-separator" />
-              <div className="member-text">
-                <p className="member-para">
-                - Everyone you know has a VR headset
-                </p>
-                <p className="member-para">
-                - Business trips to emerging markets in Africa are commonplace
-                </p>
-                <p className="member-para">
-                - Disconnecting from the level of the Web has become a universal human right
-                </p>
+          <div className="card-row">
+            <div className="team-member">
+              <div className="member-photo" />
+              <div className="member-content">
+                <h3 className="member-name">Alex P.</h3>
+                <p className="member-position">Head of Client Success</p>
+                <div className="member-separator" />
+                <div className="member-text">
+                  <p className="member-para">
+                  - Everyone you know has a VR headset
+                  </p>
+                  <p className="member-para">
+                  - Business trips to emerging markets in Africa are commonplace
+                  </p>
+                  <p className="member-para">
+                  - Disconnecting from the level of the Web has become a universal human right
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="team-member">
+              <div className="member-photo" />
+              <div className="member-content">
+                <h3 className="member-name">Ksenia G.</h3>
+                <p className="member-position">Head of Design</p>
+                <div className="member-separator" />
+                <div className="member-text">
+                  <p className="member-para">
+                    - We print stuff we need on the community accessible 3d printers.
+                  </p>
+                  <p className="member-para">
+                    - Self-driving electric vehicles are our new public transit.
+                  </p>
+                  <p className="member-para">
+                    - Clothing with sensors help us be healthier and live better.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="team-member">
+              <div className="member-photo" />
+              <div className="member-content">
+                <h3 className="member-name">Dmitry Y.</h3>
+                <p className="member-position">Head of Engineering</p>
+                <div className="member-separator" />
+                <div className="member-text">
+                  <p className="member-para">
+                    - Online learning is the dominant form of professional education in most fields.
+                  </p>
+                  <p className="member-para">
+                    - Most urban commuters prefer electric transport like e-bikes and e-scooters.
+                  </p>
+                  <p className="member-para">
+                    - Supervised robotic surgeries have emerged.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
