@@ -3,10 +3,10 @@ import classnames from 'classnames';
 
 import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
+import TeamMemberCard from 'components/TeamMemberCard';
 import TeamChat from 'icons/backgrounds/TeamBG';
 
 import './index.styl';
-
 
 class Team extends Component {
   render() {
@@ -28,63 +28,66 @@ class Team extends Component {
 
         <div className="team-members-cards">
           <div className="card-row">
-            <div className="team-member">
-              <div className="member-photo" />
-              <div className="member-content">
-                <h3 className="member-name">Alex P.</h3>
-                <p className="member-position">Head of Client Success</p>
-                <div className="member-separator" />
-                <div className="member-text">
-                  <p className="member-para">
-                  - Everyone you know has a VR headset
-                  </p>
-                  <p className="member-para">
-                  - Business trips to emerging markets in Africa are commonplace
-                  </p>
-                  <p className="member-para">
-                  - Disconnecting from the level of the Web has become a universal human right
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="team-member">
-              <div className="member-photo" />
-              <div className="member-content">
-                <h3 className="member-name">Ksenia G.</h3>
-                <p className="member-position">Head of Design</p>
-                <div className="member-separator" />
-                <div className="member-text">
-                  <p className="member-para">
-                    - We print stuff we need on the community accessible 3d printers.
-                  </p>
-                  <p className="member-para">
-                    - Self-driving electric vehicles are our new public transit.
-                  </p>
-                  <p className="member-para">
-                    - Clothing with sensors help us be healthier and live better.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="team-member">
-              <div className="member-photo" />
-              <div className="member-content">
-                <h3 className="member-name">Dmitry Y.</h3>
-                <p className="member-position">Head of Engineering</p>
-                <div className="member-separator" />
-                <div className="member-text">
-                  <p className="member-para">
-                    - Online learning is the dominant form of professional education in most fields.
-                  </p>
-                  <p className="member-para">
-                    - Most urban commuters prefer electric transport like e-bikes and e-scooters.
-                  </p>
-                  <p className="member-para">
-                    - Supervised robotic surgeries have emerged.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <TeamMemberCard
+              name="Alex P."
+              position="Head of Client Success"
+              text="- Everyone you know has a VR headset
+                \n- Business trips to emerging markets in Africa are commonplace
+                \n- Disconnecting from the level of the Web has become a universal human right"
+            />
+            <TeamMemberCard
+              name="Ksenia G."
+              position="Head of Design"
+              text="- We print stuff we need on the community accessible 3d printers.
+                \n- Self-driving electric vehicles are our new public transit.
+                \n- Clothing with sensors help us be healthier and live better."
+            />
+            <TeamMemberCard
+              name="Dmitry Y."
+              position="Head of Engineering"
+              text="- Online learning is the dominant form of professional education in most fields.
+                \n- Most urban commuters prefer electric transport like e-bikes and e-scooters.
+                \n- Supervised robotic surgeries have emerged."
+            />
+          </div>
+          <div className="card-row">
+            <TeamMemberCard
+              name="Lidia K."
+              position="Sales Representative"
+              text="- The problems of hunger and malnutrition are solved in the least developed countries.
+                \n- VR is widely used for education.
+                \n- Artificial intelligence is more advantageous and powerful than human intelligence."
+            />
+            <TeamMemberCard
+              name="Roman K."
+              position="Software Engineer"
+              text="Here are some phrases from the future:
+                \n- I better take an uber home because flying through the air pockets is driving me crazy.
+                \n- Cheers from Mars and ... Good luck, Mr. Gorsky."
+            />
+            <TeamMemberCard
+              name="Vadym K."
+              position="UX/UI Designer"
+              text="- Cybernetic limbs for the disabled.
+                \n- Electric vehicles everywhere.
+                \n- Better ecology."
+            />
+          </div>
+          <div className={classnames('card-row', 'last-row')}>
+            <TeamMemberCard
+              name="Paul P."
+              position="Software Engineer"
+              text="- We return to the Moon.
+                \n- Polio is completely eradicated from our planet.
+                \n- People learn how to consume and process news in the chaos of the digital world."
+            />
+            <TeamMemberCard
+              name="Denis H."
+              position="Software Engineer"
+              text="- We return to the Moon.
+                \n- Polio is completely eradicated from our planet.
+                \n- People learn how to consume and process news in the chaos of the digital world."
+            />
           </div>
         </div>
       </Page>

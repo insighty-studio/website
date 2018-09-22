@@ -118,7 +118,7 @@ class App extends Component {
 
   render() {
     const {
-      ready, images, progress, chunksReady
+      ready, images, progress, chunksReady,
     } = this.state;
     const isPhone = isMobile.apple.phone;
 
