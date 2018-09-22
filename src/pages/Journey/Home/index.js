@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import {Parallax} from 'react-scroll-parallax';
 import classnames from 'classnames';
 
 import Page from 'components/Page';
@@ -36,9 +37,13 @@ class Home extends Component {
 
     return (
       <Page className="home-page">
-        <div className="home-bg">
+        <Parallax
+          className="home-bg"
+          offsetYMax={30}
+          offsetYMin={-30}
+        >
           <VRGirlInSpace className="vr-girl" />
-        </div>
+        </Parallax>
 
         <div className="home-content">
 
