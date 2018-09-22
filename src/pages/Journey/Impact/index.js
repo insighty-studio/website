@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Parallax} from 'react-scroll-parallax';
 
 import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
@@ -10,9 +11,13 @@ class Impact extends Component {
   render() {
     return (
       <Page className="impact-page">
-        <div className="impact-bg">
+        <Parallax
+          className="impact-bg"
+          offsetYMax={10}
+          offsetYMin={-30}
+        >
           <ImpactBG className="impact-svg" />
-        </div>
+        </Parallax>
 
         <div className="impact-content">
           <Heading className="impact-heading">Profits Paired With Purpose</Heading>

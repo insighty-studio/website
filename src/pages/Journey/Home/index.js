@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import classnames from 'classnames';
 
 import Page from 'components/Page';
@@ -68,9 +69,9 @@ class Home extends Component {
               of the art. Wow, are you really reading this?
               <span className="description-more">
                 {' '}
-                <a href="/services">
+                <Link to="services">
                   More about our services.
-                </a>
+                </Link>
               </span>
             </p>
           </div>

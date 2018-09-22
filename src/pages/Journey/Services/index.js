@@ -1,4 +1,5 @@
 import React, {Component, Fragment} from 'react';
+import {Parallax} from 'react-scroll-parallax';
 import classnames from 'classnames';
 
 import Page from 'components/Page';
@@ -32,9 +33,13 @@ class Services extends Component {
 
     return (
       <Page className="services-page">
-        <div className="services-bg">
+        <Parallax
+          className="services-bg"
+          offsetYMax={30}
+          offsetYMin={-30}
+        >
           <ServicesChart className="services-chart" />
-        </div>
+        </Parallax>
 
         <div className="services-content">
           <Heading className="services-heading">Services You Deserve</Heading>
