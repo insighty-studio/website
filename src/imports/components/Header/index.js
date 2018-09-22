@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
@@ -21,24 +22,24 @@ class Header extends Component {
 
     return (
       <div className={classnames('header', className)}>
-        <a href="/home" className="header-logo">
+        <Link to="home" className="header-logo">
           <Logo />
-        </a>
+        </Link>
         <ul className="header-nav">
           <li>
-            <a className="header-nav-item" href="/services">SERVICES</a>
+            <Link className="header-nav-item" to="services">SERVICES</Link>
           </li>
           <li>
-            <a className="header-nav-item" href="/impact">IMPACT</a>
+            <Link className="header-nav-item" to="impact">IMPACT</Link>
           </li>
           <li>
-            <a className="header-nav-item" href="/case-studies">CASE STUDIES</a>
+            <Link className="header-nav-item" to="case-studies">CASE STUDIES</Link>
           </li>
           <li>
-            <a className="header-nav-item" href="/team">TEAM</a>
+            <Link className="header-nav-item" to="team">TEAM</Link>
           </li>
         </ul>
-        <a className="header-link" href="/consult"><Button className="header-button">FREE CONSULTATION</Button></a>
+        <Link className="header-link" to="consult"><Button className="header-button">FREE CONSULTATION</Button></Link>
       </div>
     );
   }
