@@ -39,8 +39,9 @@ class Home extends Component {
       <Page className="home-page">
         <Parallax
           className="home-bg"
-          offsetYMax={30}
-          offsetYMin={-30}
+          offsetYMax={70}
+          offsetYMin={-50}
+          slowerScrollRate
         >
           <VRGirlInSpace className="vr-girl" />
         </Parallax>

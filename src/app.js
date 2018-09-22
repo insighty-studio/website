@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react';
 import {
   BrowserRouter, Route, Switch, Redirect,
 } from 'react-router-dom';
+import ScrollToTop from 'components/ScrollToTop';
 import DeviceOrientation, {Orientation} from 'components/Orientation';
 import LoaderLine from 'components/Loader/LoaderLine';
 import isMobile from 'ismobilejs';
@@ -84,19 +85,21 @@ class App extends Component {
 
     return (
       <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={Intro} />
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/services" component={Services} />
-          <Route exact path="/impact" component={Impact} />
-          <Route exact path="/case-studies" component={CaseStudies} />
-          <Route exact path="/team" component={Team} />
-          <Route exact path="/consult" component={Consultation} />
-          <Route exact path="/betteryet" component={BetterYet} />
-          <Route exact path="/lpma" component={LPMA} />
-          <Route exact path="/hub" component={Hub} />
-          <Route path="*" render={() => <Redirect to="/" />} />
-        </Switch>
+        <ScrollToTop>
+          <Switch>
+            <Route exact path="/" component={Intro} />
+            <Route exact path="/home" component={Home} />
+            <Route exact path="/services" component={Services} />
+            <Route exact path="/impact" component={Impact} />
+            <Route exact path="/case-studies" component={CaseStudies} />
+            <Route exact path="/team" component={Team} />
+            <Route exact path="/consult" component={Consultation} />
+            <Route exact path="/betteryet" component={BetterYet} />
+            <Route exact path="/lpma" component={LPMA} />
+            <Route exact path="/hub" component={Hub} />
+            <Route path="*" render={() => <Redirect to="/" />} />
+          </Switch>
+        </ScrollToTop>
       </BrowserRouter>
     );
   }

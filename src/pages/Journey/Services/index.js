@@ -1,4 +1,5 @@
 import React, {Component, Fragment} from 'react';
+import {Link} from 'react-router-dom';
 import {Parallax} from 'react-scroll-parallax';
 import classnames from 'classnames';
 
@@ -35,8 +36,9 @@ class Services extends Component {
       <Page className="services-page">
         <Parallax
           className="services-bg"
-          offsetYMax={30}
-          offsetYMin={-30}
+          offsetYMax={70}
+          offsetYMin={-50}
+          slowerScrollRate
         >
           <ServicesChart className="services-chart" />
         </Parallax>
@@ -74,7 +76,9 @@ class Services extends Component {
               please get in touch.
             </p>
 
-            <Button className="services-button">FREE CONSULTATION</Button>
+            <Link className="header-link" to="consult">
+              <Button className="services-button">FREE CONSULTATION</Button>
+            </Link>
           </div>
 
         </div>
