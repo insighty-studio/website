@@ -4,7 +4,7 @@
     scroll-snap-type y mandatory
     display flex
     flex-direction column
-    height 100vh
+    height 100%
 
     .services-content
       scroll-snap-align start
@@ -25,11 +25,14 @@
         margin-top -38.38vh
         z-index 0
 
-        .services-chart
-          margin 0
-          flex 1 0 auto
-          width 93vw
-          height 38.38vh
+        .parallax-inner
+          transform none !important
+
+          .services-chart
+            margin 0
+            flex 1 0 auto
+            width 100vw
+            height 38.38vh
 
       .services-heading
         width 100%
@@ -117,7 +120,7 @@
         height 45vh
         display flex
         flex-direction row
-        overflow scroll
+        overflow auto
         scroll-snap-type x proximity
 
         .service-block
