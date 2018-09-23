@@ -13,6 +13,7 @@ import {
 import VRGirlInSpace from 'icons/backgrounds/HomeBG';
 
 import './index.styl';
+import './mobile/index.styl';
 
 class Home extends Component {
   state = {
@@ -47,6 +48,9 @@ class Home extends Component {
         </Parallax>
 
         <div className="home-content">
+          <div className="home-bg">
+            <VRGirlInSpace className="vr-girl" />
+          </div>
 
           <Heading className="home-heading-main">
             Create The Outlier Software

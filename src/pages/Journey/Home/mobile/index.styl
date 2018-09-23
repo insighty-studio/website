@@ -1,0 +1,137 @@
++iphone()
+  .home-page
+    overflow auto
+    scroll-snap-type y mandatory
+    display flex
+    flex-direction column
+    height 100vh
+
+    .home-content
+      scroll-snap-align start
+      flex-shrink 0
+      width 100%
+      height 100vh
+      margin-top 5.9%
+      padding 16vh 5% 0 10%
+      overflow hidden
+
+      .home-bg
+        flex 1 0 auto
+        position relative
+        top 80vh
+        left 45vw
+        display flex
+        height 35vh
+        margin-top -35vh
+        width 100%
+        z-index 0
+
+        .vr-girl
+          margin 0
+          flex 1 0 auto
+          width 90.13vw
+          height 35vh
+
+      .home-heading-main
+        width 100%
+        font-size 6.93vw
+        line-height 30pt
+        padding-right 10%
+
+      .home-description
+        width 100%
+        max-height none
+        padding-right 10%
+
+        .home-description-text
+          font-size 4vw
+          line-height 20pt
+
+          .description-more
+            display none
+
+          &:nth-child(2)
+            padding-right 30%
+
+          &:last-child
+            display none
+
+    .home-help-section
+      scroll-snap-align start
+      margin 0
+      flex-shrink 0
+      height 100vh
+      padding 16vh 10% 0 10%
+      width 100%
+
+      .home-help-heading
+        margin 0
+        font-size 6.93vw
+
+      .fintech-logos-container
+        width 100%
+        margin 0
+        display flex
+        flex-direction row
+        flex-wrap wrap
+
+        .logo
+          width 37.5vw
+          height 37.5vw
+          margin-top 4vw
+          justify-content center
+
+          &:nth-child(even)
+            margin-left 2vw
+          &:nth-child(odd)
+            margin-right 2vw
+
+          svg
+            width 85%
+
+
+    .home-case-studies
+      width 100%
+      scroll-snap-align start
+      margin 0
+      flex-shrink 0
+      height 100vh
+      padding 16vh 10% 0 10%
+
+      .case-studies-heading
+        width 100%
+        font-size 6.93vw
+        margin 0
+
+      .case-studies-bg
+        margin-top 0
+        padding 0
+        background-color: #ffffff;
+        .case-studies-description
+          margin-top 54vh
+          .case-studies-title
+            font-size 5.33vw
+            margin 0
+          .case-studies-subtitle
+            font-size 3.73vw
+          .case-studies-text, .case-studies-separator
+            display none
+
+        .animated-button-container
+          margin-top 0
+          .button-hover-text
+            height 65%
+            border-radius 5vw
+          .animated-button
+            &:nth-child(2)
+              display none
+
+      .screens-container
+        top -3.5vh
+        left auto
+        right auto
+        margin 0 auto
+
+        svg
+          width 52.5vw
+          height 60vh

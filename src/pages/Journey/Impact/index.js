@@ -6,6 +6,7 @@ import Heading from 'components/typography/Heading';
 import ImpactBG from 'icons/backgrounds/ImpactBG';
 
 import './index.styl';
+import './mobile/index.styl';
 
 class Impact extends Component {
   render() {
@@ -20,6 +21,10 @@ class Impact extends Component {
         </Parallax>
 
         <div className="impact-content">
+          <div className="impact-bg">
+            <ImpactBG className="impact-svg" />
+          </div>
+
           <Heading className="impact-heading">Profits Paired With Purpose</Heading>
 
           <p className="impact-description">

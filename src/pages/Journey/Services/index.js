@@ -8,8 +8,10 @@ import Heading from 'components/typography/Heading';
 import Button from 'components/interactions/Button';
 import {FeatherPen, Compass, BrowserWindows} from 'icons';
 import ServicesChart from 'icons/backgrounds/ServicesBG';
+import ServicesManMobile from 'icons/backgrounds/ServicesMobileBG';
 
 import './index.styl';
+import './mobile/index.styl';
 
 class Services extends Component {
   state = {
@@ -44,6 +46,10 @@ class Services extends Component {
         </Parallax>
 
         <div className="services-content">
+          <div className="services-bg">
+            <ServicesChart className="services-chart" />
+          </div>
+
           <Heading className="services-heading">Services You Deserve</Heading>
 
           <div className={classnames('services-description', expanded && 'expanded')}>
@@ -83,9 +89,35 @@ class Services extends Component {
 
         </div>
 
+        <div className="services-content-mobile">
+          <div className="services-bg">
+            <ServicesManMobile />
+          </div>
+
+          <Heading className="services-heading">See The Buzzwords</Heading>
+          <div className="services-description">
+            <p className="services-description-text">
+              We adjust to demanding schedules, provide accurate granular
+              estimates and meet the most stringent deadlines. That’s why we
+              rigorously apply the 80/20 rule.
+            </p>
+            <p className="services-description-text">
+              You draw from our expertise with tech like
+              {' '}
+              <b>
+                React Native, Firebase, Node.js, Mongo, Meteor, Machine Learning, VR, AR
+              </b>
+              , as well as all kinds of payment processors and so much more.
+            </p>
+          </div>
+        </div>
+
         <div className="services-dream-section">
           <Heading className="services-dream-heading">Dream, Design, Develop</Heading>
-
+          <p className="services-dream-text-mobile">
+            We are always looking to hear from people that want to change the world with software.
+            We call them heroes. If you’re one of them, please get in touch.
+          </p>
           <div className="services-dream-blocks">
             <div className="service-block">
               <FeatherPen />
