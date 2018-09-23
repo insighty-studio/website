@@ -197,7 +197,7 @@ export class Phone extends PureComponent {
   }
 }
 
-export class PhoneWithScreen extends PureComponent {
+export class PhoneWithBYScreen extends PureComponent {
   static propTypes = {
     height: PropTypes.string,
     width: PropTypes.string,
