@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
+import {Parallax} from 'react-scroll-parallax';
 
-import Header from 'components/Header';
-import Footer from 'components/Footer';
+import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
 import ImpactBG from 'icons/backgrounds/ImpactBG';
 
@@ -11,14 +11,15 @@ import './mobile/index.styl';
 class Impact extends Component {
   render() {
     return (
-      <div className="impact-page">
-
-        <Header />
-
+      <Page className="impact-page">
         <div className="impact-content">
-          <div className="impact-bg">
+          <Parallax
+            className="impact-bg"
+            offsetYMax={10}
+            offsetYMin={-30}
+          >
             <ImpactBG className="impact-svg" />
-          </div>
+          </Parallax>
 
           <Heading className="impact-heading">Profits Paired With Purpose</Heading>
 
@@ -33,9 +34,7 @@ class Impact extends Component {
             know you.
           </p>
         </div>
-
-        <Footer />
-      </div>
+      </Page>
     );
   }
 }

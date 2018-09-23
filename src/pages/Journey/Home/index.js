@@ -1,16 +1,16 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
+import {Parallax} from 'react-scroll-parallax';
 import classnames from 'classnames';
 
-import Header from 'components/Header';
-import Footer from 'components/Footer';
+import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
 import AnimatedButton from 'components/interactions/AnimatedButton';
-import {
-  VRGirlInSpace, Phone, RightArrowIcon, AppleIcon,
-} from 'icons';
+import {PhoneWithBYScreen, RightArrowIcon, AppleIcon} from 'icons';
 import {
   Square, Braintree, PayPal, Stripe, AmazonPay, Plaid,
 } from 'icons/FinTechLogos';
+import VRGirlInSpace from 'icons/backgrounds/HomeBG';
 
 import './index.styl';
 import './mobile/index.styl';
@@ -37,14 +37,16 @@ class Home extends Component {
     const {expanded} = this.state;
 
     return (
-      <div className="home-page">
-
-        <Header />
-
+      <Page className="home-page">
         <div className="home-content">
-          <div className="home-bg">
-            <VRGirlInSpace className="vr-girl" />
-          </div>
+          <Parallax
+            className="home-bg"
+            offsetYMax={70}
+            offsetYMin={-50}
+            slowerScrollRate
+          >
+            <VRGirlInSpace className="vr-girl-new" />
+          </Parallax>
 
           <Heading className="home-heading-main">
             Create The Outlier Software
@@ -73,9 +75,9 @@ class Home extends Component {
               of the art. Wow, are you really reading this?
               <span className="description-more">
                 {' '}
-                <a href="/services">
+                <Link to="services">
                   More about our services.
-                </a>
+                </Link>
               </span>
             </p>
           </div>
@@ -132,13 +134,11 @@ class Home extends Component {
             </div>
 
             <div className="screens-container">
-              <Phone />
+              <PhoneWithBYScreen />
             </div>
           </div>
         </div>
-
-        <Footer />
-      </div>
+      </Page>
     );
   }
 }

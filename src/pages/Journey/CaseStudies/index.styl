@@ -1,0 +1,36 @@
+.case-studies-page
+  .header
+    margin-top 0
+    padding-bottom 2vh
+
+  .case-studies-heading
+    margin 0 auto
+    font-size 3vw
+    width 80vw
+    margin-top 4vh
+
+  .case-studies-content
+    height 78vh
+    overflow-y scroll
+    scroll-snap-type y mandatory
+    -ms-scroll-snap-type mandatory
+    -webkit-scroll-snap-type mandatory
+    -webkit-scroll-snap-destination 0% 0%
+    -webkit-overflow-scrolling touch
+
+    &::-webkit-scrollbar
+      display none
+
+    .case-study
+      height 78vh
+      scroll-snap-align end
+      scroll-snap-coordinate 0% 0%
+      -webkit-scroll-snap-coordinate 0% 0%
+      padding-top 2vh
+      margin 0
+
+      .case-study-bg
+        padding-bottom 6vh
+
+  .footer
+    margin-top 14vh

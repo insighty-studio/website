@@ -1,8 +1,9 @@
 import React, {Component, Fragment} from 'react';
+import {Link} from 'react-router-dom';
+import {Parallax} from 'react-scroll-parallax';
 import classnames from 'classnames';
 
-import Header from 'components/Header';
-import Footer from 'components/Footer';
+import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
 import Button from 'components/interactions/Button';
 import {FeatherPen, Compass, BrowserWindows} from 'icons';
@@ -11,7 +12,6 @@ import ServicesManMobile from 'icons/backgrounds/ServicesMobileBG';
 
 import './index.styl';
 import './mobile/index.styl';
-
 
 class Services extends Component {
   state = {
@@ -35,14 +35,16 @@ class Services extends Component {
     const {expanded} = this.state;
 
     return (
-      <div className="services-page">
-
-        <Header />
-
+      <Page className="services-page">
         <div className="services-content">
-          <div className="services-bg">
+          <Parallax
+            className="services-bg"
+            offsetYMax={70}
+            offsetYMin={-50}
+            slowerScrollRate
+          >
             <ServicesChart className="services-chart" />
-          </div>
+          </Parallax>
 
           <Heading className="services-heading">Services You Deserve</Heading>
 
@@ -76,7 +78,9 @@ class Services extends Component {
               please get in touch.
             </p>
 
-            <Button className="services-button">FREE CONSULTATION</Button>
+            <Link className="header-link" to="consult">
+              <Button className="services-button">FREE CONSULTATION</Button>
+            </Link>
           </div>
 
         </div>
@@ -143,9 +147,7 @@ class Services extends Component {
             </div>
           </div>
         </div>
-
-        <Footer />
-      </div>
+      </Page>
     );
   }
 }

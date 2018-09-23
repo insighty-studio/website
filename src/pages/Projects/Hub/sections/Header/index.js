@@ -21,7 +21,7 @@ class Header extends PureComponent {
             {text: 'Home', href: '/'},
             {text: 'Contact', to: 'contact-us-form'},
           ]}
-          logoIcon={<Logo />}
+          logoIcon={<Logo color="white" />}
         />
         <Parallax
           className="mobile-container"
