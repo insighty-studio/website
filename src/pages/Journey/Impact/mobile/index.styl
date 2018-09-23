@@ -4,7 +4,7 @@
     scroll-snap-type y mandatory
     display flex
     flex-direction column
-    height 100vh
+    height 100%
 
     .impact-content
       scroll-snap-align start
@@ -19,17 +19,20 @@
         width 100vw
         flex 1 0 auto
         position relative
-        top 81vh
+        top 83vh
         display flex
         height 30vh
         margin-top -30vh
         z-index 0
 
-        .impact-svg
-          margin 0
-          flex 1 0 auto
-          width 93vw
-          height 30vh
+        .parallax-inner
+          transform none !important
+
+          .impact-svg
+            margin 0
+            flex 1 0 auto
+            width 93vw
+            height 24vh
 
       .impact-heading
         width 100%
