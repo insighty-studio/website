@@ -2,6 +2,7 @@
   .home-content
     margin-top 9.8%
     width 80%
+    overflow hidden
 
     .home-bg
       width 100vw
@@ -9,10 +10,11 @@
       position absolute
       overflow hidden
       top 0
+      right 0
       z-index 0
 
-      .vr-girl-new
-        margin-left 52.34%
+      .vr-girl
+        margin-left 62.34%
         margin-top 24%
 
     .home-heading-main
@@ -80,6 +82,7 @@
     flex-direction column
     align-items center
     margin-top 9.5%
+    overflow-x hidden
 
     .case-studies-heading
       margin 0 auto
@@ -126,13 +129,22 @@
       margin-top 3.6vh
       display flex
       flex-direction row
+      z-index 0
 
       .animated-button
         margin 0 8vw 0 0
 
     .screens-container
       position absolute
-      right 30.5vw
-      top -10vh
+      right -6vw
+      top -9.5vh
+      display flex
+      align-items center
+
+      img
+        max-width 16.40625vw
+
+        &.phone-image
+          max-width 19.765625vw
 
 

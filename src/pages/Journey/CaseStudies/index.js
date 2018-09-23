@@ -25,6 +25,11 @@ class CaseStudies extends Component {
               turn it into reality. We started from clean slate with the
               product that now enjoys a growing user base.`}
             href="/betteryet"
+            images={[
+              '/images/screens/BY/BYScreen1.png',
+              '/images/screens/BY/BYScreen2.png',
+              '/images/screens/BY/BYScreen3.png',
+            ]}
           />
           <CaseStudy
             title="HUB 4.0"
@@ -36,6 +41,11 @@ class CaseStudies extends Component {
               turn it into reality. We started from clean slate with the
               product that now enjoys a growing user base.`}
             href="/hub"
+            images={[
+              '/images/screens/HUB/HubScreen1.png',
+              '/images/screens/HUB/HubScreen2.png',
+              '/images/screens/HUB/HubScreen3.png',
+            ]}
           />
         </div>
       </Page>
