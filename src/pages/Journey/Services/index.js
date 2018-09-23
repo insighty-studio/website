@@ -36,19 +36,15 @@ class Services extends Component {
 
     return (
       <Page className="services-page">
-        <Parallax
-          className="services-bg"
-          offsetYMax={70}
-          offsetYMin={-50}
-          slowerScrollRate
-        >
-          <ServicesChart className="services-chart" />
-        </Parallax>
-
         <div className="services-content">
-          <div className="services-bg">
+          <Parallax
+            className="services-bg"
+            offsetYMax={70}
+            offsetYMin={-50}
+            slowerScrollRate
+          >
             <ServicesChart className="services-chart" />
-          </div>
+          </Parallax>
 
           <Heading className="services-heading">Services You Deserve</Heading>
 
