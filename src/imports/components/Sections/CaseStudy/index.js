@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import uniqueid from 'lodash.uniqueid';
 
 import AnimatedButton from 'components/interactions/AnimatedButton';
-import {Phone, RightArrowIcon} from 'icons';
+import {RightArrowIcon} from 'icons';
 
 import './index.styl';
 
@@ -13,11 +14,12 @@ class CaseStudy extends Component {
     subtitle: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
     href: PropTypes.string.isRequired,
+    images: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   render() {
     const {
-      title, subtitle, text, href,
+      title, subtitle, text, href, images,
     } = this.props;
 
     return (
@@ -43,7 +45,14 @@ class CaseStudy extends Component {
           </div>
 
           <div className="screens-container">
-            <Phone height="72.67vh" width="22.23vw" />
+            {images.map((source, idx) => (
+              <img
+                key={uniqueid('screen-')}
+                alt="phone screenshot"
+                className={classnames(!idx && 'phone-image')}
+                src={source}
+              />
+            ))}
           </div>
         </div>
       </div>

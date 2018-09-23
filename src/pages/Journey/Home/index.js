@@ -6,7 +6,8 @@ import classnames from 'classnames';
 import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
 import AnimatedButton from 'components/interactions/AnimatedButton';
-import {PhoneWithBYScreen, RightArrowIcon, AppleIcon} from 'icons';
+import {RightArrowIcon, AppleIcon} from 'icons';
+
 import {
   Square, Braintree, PayPal, Stripe, AmazonPay, Plaid,
 } from 'icons/FinTechLogos';
@@ -45,7 +46,7 @@ class Home extends Component {
             offsetYMin={-50}
             slowerScrollRate
           >
-            <VRGirlInSpace className="vr-girl-new" />
+            <VRGirlInSpace className="vr-girl" />
           </Parallax>
 
           <Heading className="home-heading-main">
@@ -134,7 +135,9 @@ class Home extends Component {
             </div>
 
             <div className="screens-container">
-              <PhoneWithBYScreen />
+              <img alt="phone screenshot" className="phone-image" src="/images/screens/BY/BYScreen1.png" />
+              <img alt="phone screenshot" src="/images/screens/BY/BYScreen2.png" />
+              <img alt="phone screenshot" src="/images/screens/BY/BYScreen3.png" />
             </div>
           </div>
         </div>
