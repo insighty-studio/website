@@ -13,6 +13,7 @@ import {
 } from 'icons/FinTechLogos';
 
 import './index.styl';
+import './mobile/index.styl';
 
 class Home extends Component {
   state = {
@@ -40,11 +41,10 @@ class Home extends Component {
 
         <Header />
 
-        <div className="home-bg">
-          <VRGirlInSpace className="vr-girl" />
-        </div>
-
         <div className="home-content">
+          <div className="home-bg">
+            <VRGirlInSpace className="vr-girl" />
+          </div>
 
           <Heading className="home-heading-main">
             Create The Outlier Software

@@ -9,12 +9,15 @@ import {
   FacebookIcon,
 } from 'icons';
 
+import Button from 'components/interactions/Button';
+
 import './index.styl';
 import './mobile/index.styl';
 
 class Footer extends PureComponent {
   renderLinks() {
     const links = [
+      {text: 'Home', to: 'home'},
       {text: 'Services', to: 'services'},
       {text: 'Impact', to: 'impact'},
       {text: 'Case Studies', to: 'case-studies'},
@@ -55,6 +58,7 @@ class Footer extends PureComponent {
         <div className="menu">
           <Logo className="logo" color="white" />
           {this.renderLinks()}
+          <Button className="header-button">FREE CONSULTATION</Button>
           {this.renderSocials()}
         </div>
         <div className="details">

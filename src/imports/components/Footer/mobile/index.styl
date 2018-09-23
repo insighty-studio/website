@@ -1,37 +1,63 @@
 +iphone()
   .footer
-    padding 80px 20px
+    scroll-snap-align start
+    flex-shrink 0
+    height 100vh
+    z-index 6
+    padding 0
 
     .menu
+      display flex
       flex-direction column
 
       .logo
-        margin-right 0
-
-      .socials
-        margin-top 40px
+        margin 9.9vh 0 5.3vh 0
+        width 12.8vw
 
       .links
         display flex
-        text-align center
         flex-direction column
+        align-items center
 
         a
-          margin 16px 0 0
+          font-size 4.27vw
+          margin 0 0 4vh 0
+
+          &:last-child
+            margin-bottom 5.3vh
 
           &:first-child
-            margin-top 40px
+            display block
+
+      .header-button
+        display block
+        background-color #ffffff
+        color #5C64AA
+        width 58.67vw
+        height 7.5vh
+        font-size 4.27vw
+        margin-bottom 7.8vh
+
+      .socials
+        a
+          margin-right 6.4vw
+
+          &:last-child
+            margin-right 0
+
+          svg
+            width 4.53vw
+            height 4.53vw
 
     .details
-      font-family Roboto
+      display flex
       flex-direction column-reverse
       align-items center
-      text-align center
-      letter-spacing .3px
-      margin-top 40px
+      margin-top 4.95vh
 
-      .rights
-        margin-top 8px
-
-      .info
+      .info, .rights
         text-align center
+        font-size 3.73vw
+        line-height 18pt
+        letter-spacing normal
+
