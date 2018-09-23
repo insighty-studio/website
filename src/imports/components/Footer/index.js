@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {Link} from 'react-scroll';
+import {Link} from 'react-router-dom';
 import {
   Logo,
   AngelListIcon,
@@ -28,10 +28,8 @@ class Footer extends PureComponent {
       <div className="links">
         {links.map(({text, to}, i) => (
           <Link
-            smooth
             key={i}
             to={to}
-            duration={1500 - (i * 200)}
           >
             {text}
           </Link>
