@@ -47,7 +47,7 @@ class Home extends Component {
             offsetYMin={-50}
             slowerScrollRate
           >
-            <VRGirlInSpace className="vr-girl-new" />
+            <VRGirlInSpace className="vr-girl" />
           </Parallax>
 
           <Heading className="home-heading-main">
