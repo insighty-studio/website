@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import uniqueid from 'lodash.uniqueid';
 
 import AnimatedButton from 'components/interactions/AnimatedButton';
@@ -7,6 +8,13 @@ import {Phone, RightArrowIcon} from 'icons';
 import './index.styl';
 
 class CaseStudy extends Component {
+  static propTypes = {
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    href: PropTypes.string.isRequired,
+  };
+
   render() {
     const {
       title, subtitle, text, href,
