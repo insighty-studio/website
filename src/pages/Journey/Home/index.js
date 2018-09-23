@@ -135,9 +135,9 @@ class Home extends Component {
             </div>
 
             <div className="screens-container">
-              <img alt="" className="phone-image" src="/images/screens/BYScreen1.png" />
-              <img alt="" src="/images/screens/BYScreen2.png" />
-              <img alt="" src="/images/screens/BYScreen3.png" />
+              <img alt="" className="phone-image" src="/images/screens/BY/BYScreen1.png" />
+              <img alt="" src="/images/screens/BY/BYScreen2.png" />
+              <img alt="" src="/images/screens/BY/BYScreen3.png" />
             </div>
           </div>
         </div>
