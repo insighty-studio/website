@@ -12,14 +12,6 @@ class Impact extends Component {
   render() {
     return (
       <Page className="impact-page">
-        <Parallax
-          className="impact-bg"
-          offsetYMax={10}
-          offsetYMin={-30}
-        >
-          <ImpactBG className="impact-svg" />
-        </Parallax>
-
         <div className="impact-content">
           <Parallax
             className="impact-bg"
