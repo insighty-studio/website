@@ -6,8 +6,7 @@ import classnames from 'classnames';
 import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
 import AnimatedButton from 'components/interactions/AnimatedButton';
-import {PhoneWithBYScreen, RightArrowIcon, AppleIcon} from 'icons';
-import CaseStudy from 'components/Sections/CaseStudy';
+import {RightArrowIcon, AppleIcon} from 'icons';
 
 import {
   Square, Braintree, PayPal, Stripe, AmazonPay, Plaid,
@@ -136,21 +135,11 @@ class Home extends Component {
             </div>
 
             <div className="screens-container">
-              <PhoneWithBYScreen />
+              <img alt="" className="phone-image" src="/images/screens/BYScreen1.png" />
+              <img alt="" src="/images/screens/BYScreen2.png" />
+              <img alt="" src="/images/screens/BYScreen3.png" />
             </div>
           </div>
-
-          <CaseStudy
-            title="BetterYet"
-            subtitle="Loyalty for Small Businesses"
-            text={`Mark and Alan, the co-founders of BetterYet,
-              envisioned a future where all businesses can set up a
-              loyalty program in 30 seconds.
-              \\nThe problem was that they didn’t have the know-how to
-              turn it into reality. We started from clean slate with the
-              product that now enjoys a growing user base.`}
-            href="/betteryet"
-          />
         </div>
       </Page>
     );
