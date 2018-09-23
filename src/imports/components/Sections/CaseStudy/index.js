@@ -46,7 +46,12 @@ class CaseStudy extends Component {
 
           <div className="screens-container">
             {images.map((source, idx) => (
-              <img alt="phone screenshot" className={classnames(!idx && 'phone-image')} src={source} />
+              <img
+                key={uniqueid('screen-')}
+                alt="phone screenshot"
+                className={classnames(!idx && 'phone-image')}
+                src={source}
+              />
             ))}
           </div>
         </div>
