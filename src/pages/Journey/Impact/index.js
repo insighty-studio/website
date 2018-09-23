@@ -21,9 +21,13 @@ class Impact extends Component {
         </Parallax>
 
         <div className="impact-content">
-          <div className="impact-bg">
+          <Parallax
+            className="impact-bg"
+            offsetYMax={10}
+            offsetYMin={-30}
+          >
             <ImpactBG className="impact-svg" />
-          </div>
+          </Parallax>
 
           <Heading className="impact-heading">Profits Paired With Purpose</Heading>
 
