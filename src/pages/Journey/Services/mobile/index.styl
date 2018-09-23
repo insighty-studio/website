@@ -1,0 +1,166 @@
++iphone()
+  .services-page
+    overflow auto
+    scroll-snap-type y mandatory
+    display flex
+    flex-direction column
+    height 100vh
+
+    .services-content
+      scroll-snap-align start
+      flex-shrink 0
+      width 100%
+      height 100vh
+      margin-top 5.9%
+      padding 16vh 0 0 0
+      overflow hidden
+
+      .services-bg
+        width 100vw
+        flex 1 0 auto
+        position relative
+        top 80vh
+        display flex
+        height 38.38vh
+        margin-top -38.38vh
+        z-index 0
+
+        .services-chart
+          margin 0
+          flex 1 0 auto
+          width 93vw
+          height 38.38vh
+
+      .services-heading
+        width 100%
+        font-size 6.93vw
+        line-height 30pt
+        padding 0 10%
+
+      .services-button
+        display none
+
+      .services-description
+        width 100%
+        max-height none
+        padding 0 10%
+
+        .services-description-text
+          display none
+          font-size 4vw
+
+          &:first-child
+            display block
+
+    .services-content-mobile
+      display block
+      scroll-snap-align start
+      flex-shrink 0
+      width 100%
+      height 100vh
+      padding 16vh 10% 0 10%
+      background-color #ffffff
+      overflow hidden
+
+      .services-bg
+        width 100vw
+        flex 1 0 auto
+        position relative
+        top 92vh
+        left 10vw
+        display flex
+        height 38.38vh
+        margin-top -38.38vh
+        z-index 0
+
+        svg
+          margin 0
+          flex 1 0 auto
+          width 10vw
+          height 28.34vh
+
+      .services-heading
+        font-size 6.93vw
+        line-height 30pt
+        margin 0
+
+      .services-description .services-description-text
+        font-size 4vw
+        line-height: 4.8vh;
+        opacity: 0.8;
+        letter-spacing: normal;
+
+    .services-dream-section
+      scroll-snap-align start
+      flex-shrink 0
+      width 100%
+      height 100vh
+      padding 16vh 0 0 0
+      background-color #ffffff
+
+      .services-dream-heading
+        width 100%
+        font-size 6.93vw
+        line-height 30pt
+        margin 0
+        padding 0 6.66% 0 10%
+
+      .services-dream-text-mobile
+        display block
+        font-size 4vw
+        line-height 24pt
+        opacity 0.8
+        padding 0 6.66% 0 10%
+
+      .services-dream-blocks
+        width 100%
+        height 45vh
+        display flex
+        flex-direction row
+        overflow scroll
+        scroll-snap-type x proximity
+
+        .service-block
+          scroll-snap-align center
+          position relative
+          box-sizing border-box
+          display flex
+          flex-direction column
+          flex 1 0 auto
+          margin 0 2.665vw
+          width 52.27vw
+          transform none
+          box-shadow 0 10px 50px 0 rgba(0, 0, 0, 0.1)
+          height 35.98vh
+          padding 4vh 5.33vw
+
+          &:first-child
+            scroll-snap-align start
+
+          &:last-child
+            scroll-snap-align end
+
+          &:last-child .service-block-heading
+            font-size 4.5vw
+
+          svg
+            position absolute
+            right 2.8vw
+            width 10.67vw
+            height 10.67vw
+
+          .service-block-heading
+            margin 1.067vw 0
+            color #333333
+            font-size 5.87vw
+
+          .service-block-description
+            font-size 3.2vw
+            line-height 3.5vh
+            width auto
+            color #4A4A4A
+            letter-spacing normal
+
+          &:hover
+            transform none
+
