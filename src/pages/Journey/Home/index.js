@@ -38,19 +38,15 @@ class Home extends Component {
 
     return (
       <Page className="home-page">
-        <Parallax
-          className="home-bg"
-          offsetYMax={70}
-          offsetYMin={-50}
-          slowerScrollRate
-        >
-          <VRGirlInSpace className="vr-girl" />
-        </Parallax>
-
         <div className="home-content">
-          <div className="home-bg">
-            <VRGirlInSpace className="vr-girl" />
-          </div>
+          <Parallax
+            className="home-bg"
+            offsetYMax={70}
+            offsetYMin={-50}
+            slowerScrollRate
+          >
+            <VRGirlInSpace className="vr-girl-new" />
+          </Parallax>
 
           <Heading className="home-heading-main">
             Create The Outlier Software
