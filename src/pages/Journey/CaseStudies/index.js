@@ -5,6 +5,7 @@ import CaseStudy from 'components/Sections/CaseStudy';
 import Heading from 'components/typography/Heading';
 
 import './index.styl';
+import './mobile/index.styl';
 
 class CaseStudies extends Component {
   render() {

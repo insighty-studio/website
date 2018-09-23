@@ -49,19 +49,19 @@ class Header extends Component {
         </div>
         <ul className="mobile-header-nav">
           <li>
-            <a className="header-nav-item" href="/home">HOME</a>
+            <Link className="header-nav-item" to="home">HOME</Link>
           </li>
           <li>
-            <a className="header-nav-item" href="/services">SERVICES</a>
+            <Link className="header-nav-item" to="services">SERVICES</Link>
           </li>
           <li>
-            <a className="header-nav-item" href="/impact">IMPACT</a>
+            <Link className="header-nav-item" to="impact">IMPACT</Link>
           </li>
           <li>
-            <a className="header-nav-item" href="/case-studies">CASE STUDIES</a>
+            <Link className="header-nav-item" to="case-studies">CASE STUDIES</Link>
           </li>
           <li>
-            <a className="header-nav-item" href="/team">TEAM</a>
+            <Link className="header-nav-item" to="team">TEAM</Link>
           </li>
         </ul>
         <div className="social-links">
