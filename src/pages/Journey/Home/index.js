@@ -6,7 +6,7 @@ import classnames from 'classnames';
 import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
 import AnimatedButton from 'components/interactions/AnimatedButton';
-import {Phone, RightArrowIcon, AppleIcon} from 'icons';
+import {PhoneWithScreen, RightArrowIcon, AppleIcon} from 'icons';
 import {
   Square, Braintree, PayPal, Stripe, AmazonPay, Plaid,
 } from 'icons/FinTechLogos';
@@ -134,7 +134,7 @@ class Home extends Component {
             </div>
 
             <div className="screens-container">
-              <Phone />
+              <PhoneWithScreen />
             </div>
           </div>
         </div>
