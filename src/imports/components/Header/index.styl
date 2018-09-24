@@ -16,18 +16,23 @@
     list-style-type none
     display flex
     flex-direction row
+    justify-content space-between
     margin-left 18.5vw
 
     .header-nav-item
       text-decoration none
       color rgba(0, 0, 0, 0.6)
-      margin 0 1.9vw
-      font-size 1.13vw
+      font-size 1.1vw
+      margin 0 1.2vw
       letter-spacing 0.88pt
       cursor pointer
       text-transform uppercase
       position relative
       transition color .4s
+
+      &.active-path
+        font-weight 500
+        color black
 
       &:before
         content ''

@@ -35,6 +35,7 @@ class Team extends Component {
               text="- Everyone you know has a VR headset
                 \n- Business trips to emerging markets in Africa are commonplace
                 \n- Disconnecting from the level of the Web has become a universal human right"
+              src="/images/team-members/alex.jpg"
             />
             <TeamMemberCard
               name="Ksenia G."
@@ -42,6 +43,7 @@ class Team extends Component {
               text="- We print stuff we need on the community accessible 3d printers.
                 \n- Self-driving electric vehicles are our new public transit.
                 \n- Clothing with sensors help us be healthier and live better."
+              src="/images/team-members/ksenia.jpg"
             />
             <TeamMemberCard
               name="Dmitry Y."
@@ -49,22 +51,25 @@ class Team extends Component {
               text="- Online learning is the dominant form of professional education in most fields.
                 \n- Most urban commuters prefer electric transport like e-bikes and e-scooters.
                 \n- Supervised robotic surgeries have emerged."
+              src="/images/team-members/dmitry.jpeg"
             />
           </div>
           <div className="card-row">
             <TeamMemberCard
               name="Lidia K."
               position="Sales Representative"
-              text="- The problems of hunger and malnutrition are solved in the least developed countries.
+              text="- Hunger and malnutrition are defeated even in the least developed countries.
                 \n- VR is widely used for education.
                 \n- Artificial intelligence is more advantageous and powerful than human intelligence."
+              src="/images/team-members/lida.jpeg"
             />
             <TeamMemberCard
               name="Roman K."
               position="Software Engineer"
               text="Here are some phrases from the future:
-                \n- I better take an uber home because flying through the air pockets is driving me crazy.
-                \n- Cheers from Mars and ... Good luck, Mr. Gorsky."
+              \n- I'd better take an uber home because flying through the air pockets is driving me crazy.
+              \n- Cheers from Mars and ... Good luck, Mr. Gorsky."
+              src="/images/team-members/roma.jpeg"
             />
             <TeamMemberCard
               name="Vadym K."
@@ -72,6 +77,7 @@ class Team extends Component {
               text="- Cybernetic limbs for the disabled.
                 \n- Electric vehicles everywhere.
                 \n- Better ecology."
+              src="/images/team-members/vadym.jpeg"
             />
           </div>
           <div className={classnames('card-row', 'last-row')}>
@@ -81,13 +87,15 @@ class Team extends Component {
               text="- We return to the Moon.
                 \n- Polio is completely eradicated from our planet.
                 \n- People learn how to consume and process news in the chaos of the digital world."
+              src="/images/team-members/paul.jpeg"
             />
             <TeamMemberCard
               name="Denis H."
               position="Software Engineer"
-              text="- We return to the Moon.
-                \n- Polio is completely eradicated from our planet.
-                \n- People learn how to consume and process news in the chaos of the digital world."
+              text="- You don’t ever forget your keys again since they are implanted in your body.
+                \n- Self-driving cars mostly replaced the traditional public transit.
+                \n- Every new house has an embedded highly personalized home assistant."
+              src="/images/team-members/denys.jpg"
             />
           </div>
         </div>

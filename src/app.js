@@ -81,6 +81,7 @@ class App extends Component {
 
   renderRoutes() {
     const {ready} = this.state;
+
     if (!ready) return null;
 
     return (
@@ -133,7 +134,7 @@ class App extends Component {
               visibility: 'hidden',
               width: 0,
               height: 0,
-              overflow: 'hidden'
+              overflow: 'hidden',
             }}
           >
             {images.map((src, index) => (

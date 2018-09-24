@@ -9,14 +9,17 @@ class TeamMemberCard extends Component {
     name: PropTypes.string.isRequired,
     position: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired,
   };
 
   render() {
-    const {name, position, text} = this.props;
+    const {
+      name, position, text, src,
+    } = this.props;
 
     return (
       <div className="team-member">
-        <div className="member-photo" />
+        <img className="member-photo" src={src} alt="insighty member" />
         <div className="member-content">
           <h3 className="member-name">{name}</h3>
           <p className="member-position">{position}</p>
