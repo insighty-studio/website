@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import {
   Logo,
   AngelListIcon,
@@ -17,22 +17,19 @@ import './mobile/index.styl';
 class Footer extends PureComponent {
   renderLinks() {
     const links = [
-      {text: 'Home', to: 'home'},
-      {text: 'Services', to: 'services'},
-      {text: 'Impact', to: 'impact'},
-      {text: 'Case Studies', to: 'case-studies'},
-      {text: 'Team', to: 'team'},
+      {text: 'Home', to: '/home'},
+      {text: 'Services', to: '/services'},
+      {text: 'Impact', to: '/impact'},
+      {text: 'Case Studies', to: '/case-studies'},
+      {text: 'Team', to: '/team'},
     ];
 
     return (
       <div className="links">
         {links.map(({text, to}, i) => (
-          <Link
-            key={i}
-            to={to}
-          >
+          <NavLink activeStyle={{fontWeight: 'bold'}} key={i} to={to}>
             {text}
-          </Link>
+          </NavLink>
         ))}
       </div>
     );

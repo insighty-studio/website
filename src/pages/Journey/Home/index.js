@@ -7,7 +7,6 @@ import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
 import AnimatedButton from 'components/interactions/AnimatedButton';
 import {RightArrowIcon, AppleIcon} from 'icons';
-
 import {
   Square, Braintree, PayPal, Stripe, AmazonPay, Plaid,
 } from 'icons/FinTechLogos';

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
+import uniqueid from 'lodash.uniqueid';
 import classnames from 'classnames';
 
 import {
@@ -35,6 +36,28 @@ class Header extends Component {
     };
   }
 
+  renderLinks() {
+    const links = [
+      {text: 'HOME', to: '/home'},
+      {text: 'SERVICES', to: '/services'},
+      {text: 'IMPACT', to: '/impact'},
+      {text: 'CASE STUDIES', to: '/case-studies'},
+      {text: 'TEAM', to: '/team'},
+    ];
+
+    return (
+      <ul className="header-nav">
+        {
+          links.map(({text, to}) => (
+            <NavLink key={uniqueid('link-')} activeStyle={{color: 'black'}} className="header-nav-item" to={to}>
+              {text}
+            </NavLink>
+          ))
+        }
+      </ul>
+    );
+  }
+
   renderOpenedMenu() {
     return (
       <div className="opened-wrapper">
@@ -49,19 +72,19 @@ class Header extends Component {
         </div>
         <ul className="mobile-header-nav">
           <li>
-            <Link className="header-nav-item" to="home">HOME</Link>
+            <NavLink className="header-nav-item" to="/home">HOME</NavLink>
           </li>
           <li>
-            <Link className="header-nav-item" to="services">SERVICES</Link>
+            <NavLink className="header-nav-item" to="/services">SERVICES</NavLink>
           </li>
           <li>
-            <Link className="header-nav-item" to="impact">IMPACT</Link>
+            <NavLink className="header-nav-item" to="/impact">IMPACT</NavLink>
           </li>
           <li>
-            <Link className="header-nav-item" to="case-studies">CASE STUDIES</Link>
+            <NavLink className="header-nav-item" to="/case-studies">CASE STUDIES</NavLink>
           </li>
           <li>
-            <Link className="header-nav-item" to="team">TEAM</Link>
+            <NavLink className="header-nav-item" to="/team">TEAM</NavLink>
           </li>
         </ul>
         <div className="social-links">
@@ -92,25 +115,14 @@ class Header extends Component {
 
     return (
       <div className={classnames('header', className, isMenuStatus)}>
-        <Link to="home" className="header-logo">
+        <NavLink to="/home" className="header-logo">
           <Logo />
-        </Link>
-        <ul className="header-nav">
-          <li>
-            <Link className="header-nav-item" to="services">SERVICES</Link>
-          </li>
-          <li>
-            <Link className="header-nav-item" to="impact">IMPACT</Link>
-          </li>
-          <li>
-            <Link className="header-nav-item" to="case-studies">CASE STUDIES</Link>
-          </li>
-          <li>
-            <Link className="header-nav-item" to="team">TEAM</Link>
-          </li>
-        </ul>
+        </NavLink>
+        {this.renderLinks()}
         {isMenuStatus ? this.renderOpenedMenu() : this.renderClosedMenu()}
-        <Link className="header-link" to="consult"><Button className="header-button">FREE CONSULTATION</Button></Link>
+        <NavLink className="header-link" to="/consult">
+          <Button className="header-button">FREE CONSULTATION</Button>
+        </NavLink>
       </div>
     );
   }
