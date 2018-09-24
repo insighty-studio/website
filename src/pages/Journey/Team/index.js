@@ -58,7 +58,7 @@ class Team extends Component {
             <TeamMemberCard
               name="Lidia K."
               position="Sales Representative"
-              text="- The problems of hunger and malnutrition are solved in the least developed countries.
+              text="- Hunger and malnutrition are defeated even in the least developed countries.
                 \n- VR is widely used for education.
                 \n- Artificial intelligence is more advantageous and powerful than human intelligence."
               src="/images/team-members/lida.jpeg"
@@ -67,8 +67,10 @@ class Team extends Component {
               name="Roman K."
               position="Software Engineer"
               text="Here are some phrases from the future:
-                \n- I better take an uber home because flying through the air pockets is driving me crazy.
-                \n- Cheers from Mars and ... Good luck, Mr. Gorsky."
+              \n- I'd better take an uber home because flying through the air pockets is driving me crazy.
+              \n- Our next task for the course is a team assignment.
+              Please use the following link to join Google Hangouts.
+              \n- Cheers from Mars and ... Good luck, Mr. Gorsky."
               src="/images/team-members/roma.jpeg"
             />
             <TeamMemberCard
@@ -92,9 +94,9 @@ class Team extends Component {
             <TeamMemberCard
               name="Denis H."
               position="Software Engineer"
-              text="- We return to the Moon.
-                \n- Polio is completely eradicated from our planet.
-                \n- People learn how to consume and process news in the chaos of the digital world."
+              text="- You don’t ever forget your keys again since they are implanted in your body.
+                \n- Self-driving cars mostly replaced the traditional public transit.
+                \n- Every new house has an embedded highly personalized home assistant."
               src="/images/team-members/denys.jpg"
             />
           </div>
