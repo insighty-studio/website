@@ -49,7 +49,12 @@ class Header extends Component {
       <ul className="header-nav">
         {
           links.map(({text, to}) => (
-            <NavLink key={uniqueid('link-')} activeStyle={{color: 'black'}} className="header-nav-item" to={to}>
+            <NavLink
+              key={uniqueid('link-')}
+              activeClassName="active-path"
+              className="header-nav-item"
+              to={to}
+            >
               {text}
             </NavLink>
           ))

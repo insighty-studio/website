@@ -9,7 +9,7 @@ class TeamMemberCard extends Component {
     name: PropTypes.string.isRequired,
     position: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
-    src: PropTypes.string,
+    src: PropTypes.string.isRequired,
   };
 
   render() {
