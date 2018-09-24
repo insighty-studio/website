@@ -124,47 +124,53 @@
         overflow auto
         scroll-snap-type x proximity
 
-        .service-block
-          scroll-snap-align center
-          position relative
-          box-sizing border-box
+        .service-blocks-wrapper
+          width auto
           display flex
-          flex-direction column
-          flex 1 0 auto
-          margin 0 2.665vw
-          width 52.27vw
-          transform none
-          box-shadow 0 10px 50px 0 rgba(0, 0, 0, 0.1)
-          height 35.98vh
-          padding 4vh 5.33vw
+          flex-direction row
+          padding 0 6.66vw
 
-          &:first-child
-            scroll-snap-align start
-
-          &:last-child
-            scroll-snap-align end
-
-          &:last-child .service-block-heading
-            font-size 4.5vw
-
-          svg
-            position absolute
-            right 2.8vw
-            width 10.67vw
-            height 10.67vw
-
-          .service-block-heading
-            margin 1.067vw 0
-            color #333333
-            font-size 5.87vw
-
-          .service-block-description
-            font-size 3.2vw
-            line-height 3.5vh
-            width auto
-            color #4A4A4A
-            letter-spacing normal
-
-          &:hover
+          .service-block
+            scroll-snap-align center
+            position relative
+            box-sizing border-box
+            display flex
+            flex-direction column
+            flex 1 0 auto
+            margin 0 2.665vw
+            width 52.27vw
             transform none
+            box-shadow 0 10px 50px 0 rgba(0, 0, 0, 0.1)
+            height 35.98vh
+            padding 4vh 5.33vw
+
+            &:first-child
+              scroll-snap-align start
+
+            &:last-child
+              scroll-snap-align end
+
+            &:last-child .service-block-heading
+              font-size 4.5vw
+
+            svg
+              position absolute
+              right 2.8vw
+              width 10.67vw
+              height 10.67vw
+
+            .service-block-heading
+              margin 1.067vw 0
+              color #333333
+              font-size 5.87vw
+
+            .service-block-description
+              font-size 3.2vw
+              line-height 3.5vh
+              width auto
+              color #4A4A4A
+              letter-spacing normal
+
+            &:hover
+              transform none
 
