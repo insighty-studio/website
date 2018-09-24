@@ -68,8 +68,6 @@ class Team extends Component {
               position="Software Engineer"
               text="Here are some phrases from the future:
               \n- I'd better take an uber home because flying through the air pockets is driving me crazy.
-              \n- Our next task for the course is a team assignment.
-              Please use the following link to join Google Hangouts.
               \n- Cheers from Mars and ... Good luck, Mr. Gorsky."
               src="/images/team-members/roma.jpeg"
             />

@@ -8,9 +8,11 @@
     font-size 3vw
     width 80vw
     margin-top 4vh
+    z-index 0
 
   .case-studies-content
-    height 78vh
+    z-index 1
+    height 81vh
     overflow-y scroll
     scroll-snap-type y mandatory
     -ms-scroll-snap-type mandatory
@@ -22,15 +24,17 @@
       display none
 
     .case-study
-      height 78vh
-      scroll-snap-align end
+      padding-top 4vh
+      z-index 1
+      height 80vh
+      overflow-y visible
+      scroll-snap-align start
       scroll-snap-coordinate 0% 0%
       -webkit-scroll-snap-coordinate 0% 0%
-      padding-top 2vh
       margin 0
 
       .case-study-bg
-        padding-bottom 6vh
+        padding-bottom 4vh
 
   .footer
     margin-top 14vh
