@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 import {Logo} from 'icons';
 import IntroBG from 'icons/backgrounds/IntroBG';
@@ -36,9 +37,9 @@ class IntroPage extends Component {
           </div>
 
           <div className="button-container">
-            <a href="/home">
+            <Link to="/home">
               <Button>BEGIN JOURNEY</Button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
