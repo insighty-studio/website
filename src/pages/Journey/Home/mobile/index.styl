@@ -30,7 +30,7 @@
         .parallax-inner
           transform none !important
 
-          .vr-girl-new
+          .vr-girl
             margin 0
             flex 1 0 auto
             width 90.13vw
@@ -136,12 +136,19 @@
             &:nth-child(2)
               display none
 
-      .screens-container
-        top -3.5vh
-        left auto
-        right auto
-        margin 0 auto
+        .screens-container
+          top 0
+          left 0
+          right 0
+          height 45vh
+          width 50%
+          margin 0 auto
+          display flex
+          flex-direction row
+          justify-content space-evenly
 
-        svg
-          width 48.5vw
-          height 54vh
+          img.phone-image
+            max-width 30.765625vw
+
+          img
+            max-width 28.40625vw

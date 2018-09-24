@@ -7,6 +7,7 @@ import TeamMemberCard from 'components/TeamMemberCard';
 import TeamChat from 'icons/backgrounds/TeamBG';
 
 import './index.styl';
+import './mobile/index.styl';
 
 class Team extends Component {
   render() {
