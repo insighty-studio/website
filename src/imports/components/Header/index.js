@@ -77,19 +77,21 @@ class Header extends Component {
         </div>
         <ul className="mobile-header-nav">
           <li>
-            <NavLink className="header-nav-item" to="/home">HOME</NavLink>
+            <NavLink activeStyle={{fontWeight: 'bold'}} className="header-nav-item" to="/home">HOME</NavLink>
           </li>
           <li>
-            <NavLink className="header-nav-item" to="/services">SERVICES</NavLink>
+            <NavLink activeStyle={{fontWeight: 'bold'}} className="header-nav-item" to="/services">SERVICES</NavLink>
           </li>
           <li>
-            <NavLink className="header-nav-item" to="/impact">IMPACT</NavLink>
+            <NavLink activeStyle={{fontWeight: 'bold'}} className="header-nav-item" to="/impact">IMPACT</NavLink>
           </li>
           <li>
-            <NavLink className="header-nav-item" to="/case-studies">CASE STUDIES</NavLink>
+            <NavLink activeStyle={{fontWeight: 'bold'}} className="header-nav-item" to="/case-studies">
+              CASE STUDIES
+            </NavLink>
           </li>
           <li>
-            <NavLink className="header-nav-item" to="/team">TEAM</NavLink>
+            <NavLink activeStyle={{fontWeight: 'bold'}} className="header-nav-item" to="/team">TEAM</NavLink>
           </li>
         </ul>
         <div className="social-links">
