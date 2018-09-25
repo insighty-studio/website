@@ -64,6 +64,14 @@ class Header extends Component {
   }
 
   renderOpenedMenu() {
+    const links = [
+      {text: 'HOME', to: '/home'},
+      {text: 'SERVICES', to: '/services'},
+      {text: 'IMPACT', to: '/impact'},
+      {text: 'CASE STUDIES', to: '/case-studies'},
+      {text: 'TEAM', to: '/team'},
+    ];
+
     return (
       <div className="opened-wrapper">
         <div className="close-menu-header">
@@ -76,23 +84,19 @@ class Header extends Component {
           <Logo width="12.8vw" height="12.95vw" color="#FFFFFF" />
         </div>
         <ul className="mobile-header-nav">
-          <li>
-            <NavLink activeStyle={{fontWeight: 'bold'}} className="header-nav-item" to="/home">HOME</NavLink>
-          </li>
-          <li>
-            <NavLink activeStyle={{fontWeight: 'bold'}} className="header-nav-item" to="/services">SERVICES</NavLink>
-          </li>
-          <li>
-            <NavLink activeStyle={{fontWeight: 'bold'}} className="header-nav-item" to="/impact">IMPACT</NavLink>
-          </li>
-          <li>
-            <NavLink activeStyle={{fontWeight: 'bold'}} className="header-nav-item" to="/case-studies">
-              CASE STUDIES
-            </NavLink>
-          </li>
-          <li>
-            <NavLink activeStyle={{fontWeight: 'bold'}} className="header-nav-item" to="/team">TEAM</NavLink>
-          </li>
+          {
+            links.map(({text, to}) => (
+              <li key={uniqueid('link-')}>
+                <NavLink
+                  activeStyle={{fontWeight: 'bold'}}
+                  className="header-nav-item"
+                  to={to}
+                >
+                  {text}
+                </NavLink>
+              </li>
+            ))
+          }
         </ul>
         <div className="social-links">
           <FacebookIcon />
