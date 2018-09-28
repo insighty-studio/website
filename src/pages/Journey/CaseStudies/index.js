@@ -11,10 +11,7 @@ class CaseStudies extends Component {
   render() {
     return (
       <Page className="case-studies-page">
-
         <Heading className="case-studies-heading">Select Case Studies</Heading>
-
-
         <div className="case-studies-content">
           <CaseStudy
             title="BetterYet"
