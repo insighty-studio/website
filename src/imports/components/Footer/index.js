@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import {Link} from 'react-scroll';
+import {NavLink} from 'react-router-dom';
 import {
   Logo,
   AngelListIcon,
@@ -9,30 +9,27 @@ import {
   FacebookIcon,
 } from 'icons';
 
+import Button from 'components/interactions/Button';
+
 import './index.styl';
 import './mobile/index.styl';
 
 class Footer extends PureComponent {
   renderLinks() {
     const links = [
-      {text: 'Home', to: 'header'},
-      {text: 'Services', to: 'services'},
-      {text: 'Process', to: 'process'},
-      {text: 'Clients', to: 'clients'},
-      {text: 'Contacts', to: 'contact-us'},
+      {text: 'Home', to: '/home'},
+      {text: 'Services', to: '/services'},
+      {text: 'Impact', to: '/impact'},
+      {text: 'Case Studies', to: '/case-studies'},
+      {text: 'Team', to: '/team'},
     ];
 
     return (
       <div className="links">
         {links.map(({text, to}, i) => (
-          <Link
-            smooth
-            key={i}
-            to={to}
-            duration={1500 - (i * 200)}
-          >
+          <NavLink activeStyle={{fontWeight: 'bold'}} key={i} to={to}>
             {text}
-          </Link>
+          </NavLink>
         ))}
       </div>
     );
@@ -54,8 +51,11 @@ class Footer extends PureComponent {
     return (
       <div className="footer">
         <div className="menu">
-          <Logo style={{width: 48, height: 48}} />
+          <NavLink to="/home">
+            <Logo className="logo" color="white" />
+          </NavLink>
           {this.renderLinks()}
+          <NavLink to="/consult"><Button className="header-button">FREE CONSULTATION</Button></NavLink>
           {this.renderSocials()}
         </div>
         <div className="details">
@@ -63,7 +63,13 @@ class Footer extends PureComponent {
           <div className="info">
             <a href="mailto:hello@insighty.studio">hello@insighty.studio</a>
             <br />
-            <span>240 Richmond St W, Toronto, ON M5V 1V6</span>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.google.ca/maps/place/240+Richmond+St+W,+Toronto,+ON+M5V+2C5/@43.6479848,-79.4174159,13z"
+            >
+              240 Richmond St W, Toronto, ON M5V 1V6
+            </a>
           </div>
         </div>
       </div>

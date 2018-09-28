@@ -1,5 +1,8 @@
 import React, {Component, Fragment} from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {
+  BrowserRouter, Route, Switch, Redirect,
+} from 'react-router-dom';
+import ScrollToTop from 'components/ScrollToTop';
 import DeviceOrientation, {Orientation} from 'components/Orientation';
 import LoaderLine from 'components/Loader/LoaderLine';
 import isMobile from 'ismobilejs';
@@ -8,11 +11,21 @@ import 'styles/main.styl';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import Landing from './pages/Landing';
-import BetterYet from './pages/BetterYet';
-import LPMA from './pages/LPMA';
-import Page404 from './pages/Page404';
+import Intro from './pages/Intro';
+import Home from './pages/Journey/Home';
+import Services from './pages/Journey/Services';
+import Impact from './pages/Journey/Impact';
+import CaseStudies from './pages/Journey/CaseStudies';
+import Team from './pages/Journey/Team';
+import Consultation from './pages/Journey/Consultation';
+
+import BetterYet from './pages/Projects/BetterYet';
+import LPMA from './pages/Projects/LPMA';
+import Hub from './pages/Projects/Hub';
+
 import Landscape from './pages/Landscape';
+
+import './index.styl';
 
 AOS.init({
   disable: false,
@@ -40,12 +53,12 @@ class App extends Component {
       progress: 0,
       chunksReady: 0,
       images: [
-        '/images/person@2x.webp',
-        '/images/plant@2x.webp',
-        '/images/program@2x.webp',
-        '/images/message@2x.webp',
-        '/images/laptop@2x.webp',
-        '/images/main-art-mobile@2x.webp',
+        '/images/person@2x.png',
+        '/images/plant@2x.png',
+        '/images/program@2x.png',
+        '/images/message@2x.png',
+        '/images/laptop@2x.png',
+        '/images/main-art-mobile@2x.png',
       ]
     };
   }
@@ -68,16 +81,26 @@ class App extends Component {
 
   renderRoutes() {
     const {ready} = this.state;
+
     if (!ready) return null;
 
     return (
       <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={Landing} />
-          <Route path="/betteryet" component={BetterYet} />
-          <Route path="/lpma" component={LPMA} />
-          <Route component={Page404} />
-        </Switch>
+        <ScrollToTop>
+          <Switch>
+            <Route exact path="/" component={Intro} />
+            <Route exact path="/home" component={Home} />
+            <Route exact path="/services" component={Services} />
+            <Route exact path="/impact" component={Impact} />
+            <Route exact path="/case-studies" component={CaseStudies} />
+            <Route exact path="/team" component={Team} />
+            <Route exact path="/consult" component={Consultation} />
+            <Route exact path="/betteryet" component={BetterYet} />
+            <Route exact path="/lpma" component={LPMA} />
+            <Route exact path="/hub" component={Hub} />
+            <Route path="*" render={() => <Redirect to="/" />} />
+          </Switch>
+        </ScrollToTop>
       </BrowserRouter>
     );
   }
@@ -99,7 +122,7 @@ class App extends Component {
 
   render() {
     const {
-      ready, images, progress, chunksReady
+      ready, images, progress, chunksReady,
     } = this.state;
     const isPhone = isMobile.apple.phone;
 
@@ -111,7 +134,7 @@ class App extends Component {
               visibility: 'hidden',
               width: 0,
               height: 0,
-              overflow: 'hidden'
+              overflow: 'hidden',
             }}
           >
             {images.map((src, index) => (
@@ -129,7 +152,7 @@ class App extends Component {
     }
 
     return (
-      <div className="root">
+      <div className="app">
         {isPhone ? this.renderMobile() : this.renderRoutes()}
       </div>
     );

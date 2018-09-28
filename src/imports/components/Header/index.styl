@@ -1,0 +1,67 @@
+.header
+  background-color white
+  display flex
+  align-items center
+  position sticky
+  top 0
+  width 100vw
+  padding 4vh 0 4vh 0
+  z-index 3
+
+  .header-logo
+    margin-left 9.85vw
+
+  .header-nav
+    list-style-type none
+    display flex
+    flex-direction row
+    justify-content space-between
+    margin-left 18.5vw
+
+    .header-nav-item
+      text-decoration none
+      color rgba(0, 0, 0, 0.6)
+      font-size 1.1vw
+      margin 0 1.2vw
+      letter-spacing 0.88pt
+      cursor pointer
+      text-transform uppercase
+      position relative
+      transition color .4s
+
+      &.active-path
+        font-weight 500
+        color black
+
+      &:before
+        content ''
+        display block
+        height 2px
+        background #FF5551
+        width 0
+        position absolute
+        bottom -0.5vh
+        right 0
+        transition width .4s
+
+      &:hover
+        color black
+
+        &:before
+          width 100%
+          left 0
+
+  .header-link
+    margin-left 5vw
+    color white
+    text-decoration none
+
+    .header-button
+      padding 2vh 2.4vw
+      font-size 1.13vw
+      letter-spacing 1.8pt
+      line-height 23pt
+
+  .menu-icon, .close-menu-icon
+    display none
+

@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import {isMobile} from 'react-device-detect';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import Paragraph from 'components/Typography/Paragraph/index';
+import Paragraph from 'components/typography/Paragraph/index';
 
 import './index.styl';
 import './mobile/index.styl';
@@ -30,16 +30,17 @@ class Step extends PureComponent {
     return (
       <div className="step">
         <div className="number">
-          {(hiddenLine && !isMobile) ? null : <div className={classnames('line', first && 'first', last && 'last')} />}
-          <div className="circle">
+          {(hiddenLine && !isMobile)
+            ? null : <div className={classnames('line', first && 'first', last && 'last')} />}
+          <div className="circle" data-aos="fade-right">
             {number}
           </div>
         </div>
         <div className="info">
-          <div className="title">
+          <div className="title" data-aos="fade-in" data-aos-easing="ease-in-sine">
             {title}
           </div>
-          <Paragraph>
+          <Paragraph data-aos="fade-in" data-aos-easing="ease-in-sine" data-aos-delay="250">
             {desc}
           </Paragraph>
         </div>

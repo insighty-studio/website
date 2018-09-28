@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, {Component, Fragment} from 'react';
 import classnames from 'classnames';
-import SectionHeading from 'components/Typography/SectionHeading';
+import SectionHeading from 'components/typography/SectionHeading';
 import ClientFooter from 'components/Sections/ClientFooter';
 import clients from 'data/clients';
 import Swipeable from 'react-swipeable';

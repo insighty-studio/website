@@ -22,7 +22,7 @@ class Loader extends PureComponent {
     return (
       <div className="loader-page">
         <div className="loader">
-          <Logo />
+          <Logo color="white" />
           <div className="light-shade" style={{backgroundColor: light}} />
           <div className="dark-shade" style={{backgroundColor: dark}} />
         </div>
