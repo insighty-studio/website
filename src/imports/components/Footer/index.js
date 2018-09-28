@@ -51,7 +51,9 @@ class Footer extends PureComponent {
     return (
       <div className="footer">
         <div className="menu">
-          <Logo className="logo" color="white" />
+          <NavLink to="/home">
+            <Logo className="logo" color="white" />
+          </NavLink>
           {this.renderLinks()}
           <NavLink to="/consult"><Button className="header-button">FREE CONSULTATION</Button></NavLink>
           {this.renderSocials()}
