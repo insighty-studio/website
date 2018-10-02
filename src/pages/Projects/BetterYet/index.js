@@ -2,7 +2,6 @@ import React, {PureComponent, Component} from 'react';
 import PropTypes from 'prop-types';
 import Loader from 'components/Loader';
 import ScrollUpButton from 'components/interactions/ScrollUpButton';
-import WhitePaper from 'components/Sections/WhitePaper';
 import NextProject from 'components/Sections/NextProject';
 import Clutch from 'components/Sections/Clutch';
 import Footer from 'components/Footer';
@@ -14,7 +13,6 @@ import About from './sections/About';
 import Logo from './sections/Logo';
 import Prototypes from './sections/Prototypes';
 import Colors from './sections/Colors';
-import ContactUs from './sections/ContactUs';
 import Illustration from './sections/Illustration';
 import Image1 from './images/image1.png';
 import Image2 from './images/image2.png';
@@ -75,9 +73,6 @@ class BetterYetPage extends PureComponent {
           desc="Helping real estate principals achieve customer excellence."
           href="/lpma"
         />
-        <WhitePaper>
-          <ContactUs />
-        </WhitePaper>
         <Footer />
       </div>
     );
