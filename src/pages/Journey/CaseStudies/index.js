@@ -32,12 +32,10 @@ class CaseStudies extends Component {
           <CaseStudy
             title="HUB 4.0"
             subtitle="Community App"
-            text={`Mark and Alan, the co-founders of BetterYet,
-              envisioned a future where all businesses can set up a
-              loyalty program in 30 seconds.
-              \\nThe problem was that they didn’t have the know-how to
-              turn it into reality. We started from clean slate with the
-              product that now enjoys a growing user base.`}
+            text={`This app is designed to elevate the coworking experience for
+              members of the space we reside in. \\nHub 4.0 delights members with a
+              seamless meeting room booking experience. It also brings the community
+              events to life.`}
             href="/hub"
             images={[
               '/images/screens/HUB/HubScreen1.png',
