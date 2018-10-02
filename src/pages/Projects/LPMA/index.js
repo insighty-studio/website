@@ -14,7 +14,6 @@ import Illustrations from './sections/Illustrations';
 import Logo from './sections/Logo';
 import Colors from './sections/Colors';
 import Screens from './sections/Screens';
-import ContactUs from './sections/ContactUs';
 
 import './index.styl';
 
@@ -45,7 +44,6 @@ class LPMAPage extends PureComponent {
           desc="Loyalty programs for the local shoppers."
           href="/betteryet"
         />
-        <ContactUs />
         <Footer />
       </div>
     );
