@@ -22,6 +22,7 @@
 
     .links
       display flex
+      margin-left: auto
 
       a
         font-size $normal
@@ -76,3 +77,22 @@
         &.active
           color #000
           font-weight $medium-weight
+
+    .consultation-link
+      display block
+      margin-left: 32px
+      background: none
+      border-radius 32px
+      height: 40px
+      line-height: 36px
+      text-transform: uppercase
+      text-decoration: none
+      font-size: 14px
+      font-weight: 600
+      padding: 0 16px
+      border: 2px solid white
+      color: white
+      transition background .2s
+
+      &:hover
+        background: white

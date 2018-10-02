@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 import {Link} from 'react-scroll';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
@@ -134,6 +135,9 @@ class NavigationBar extends React.Component {
             </div>
           </div>
           {this.renderLinks()}
+          <NavLink className="consultation-link" to="/consult">
+            Free Consultation
+          </NavLink>
           {isMenuStatus && this.renderSocial()}
         </div>
       </div>
