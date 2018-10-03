@@ -8,7 +8,7 @@
 .services-page
   .services-content
     margin-top 14vh
-    width 80vw
+    width 100vw
 
     .services-bg
       width 100vw
@@ -17,19 +17,21 @@
       height 200vh
       top 0
       right 0
-      z-index 0
+      z-index -1
 
       .services-chart
         margin-left 61.2vw
         margin-top 39.5vh
 
     .services-heading
+      padding 0 10vw
       font-size 2.9vw
       margin 0
 
     .services-description
       margin 0
-      width 45vw
+      width 55vw
+      padding 0 0 4vw 10vw
       max-height 52vh
       overflow hidden
       transition max-height 1s ease-in
@@ -48,6 +50,7 @@
         max-height 106vh
 
       .services-button
+        min-width 256px
         margin-top 7vh
         padding 2.8vh 2vw
         font-size 1.4vw
@@ -55,10 +58,6 @@
         line-height 3.2vh
         width 20vw
         overflow visible
-
-        &:hover
-          transform none
-          box-shadow none
 
   .services-content-mobile
     display none
