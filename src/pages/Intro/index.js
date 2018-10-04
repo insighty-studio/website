@@ -21,7 +21,7 @@ class IntroPage extends Component {
         </div>
         <div className="intro-main">
           <div className="intro-logo-container">
-            <Logo width={isPhone ? '12.8vw' : '3.75vw'} height={isPhone ? '12.95vw' : '6.75vh'} />
+            <Logo width="48px" height="49px" />
           </div>
 
           <div className="intro-header">

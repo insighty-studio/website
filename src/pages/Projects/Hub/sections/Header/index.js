@@ -17,10 +17,7 @@ class Header extends PureComponent {
       <div className="header-section">
         <NavigationBar
           white
-          links={[
-            {text: 'Home', href: '/'},
-            {text: 'Contact', to: 'contact-us-form'},
-          ]}
+          links={[]}
           logoIcon={<Logo color="white" />}
         />
         <Parallax

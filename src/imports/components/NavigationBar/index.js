@@ -127,9 +127,9 @@ class NavigationBar extends React.Component {
       <div className={classnames('navigation-bar', isMenuStatus)}>
         <div className="bar-content">
           <div className="top-bar">
-            <a className="logo-icon" href="/" rel="noopener noreferrer">
+            <NavLink className="logo-icon" to="/home">
               {logoIcon}
-            </a>
+            </NavLink>
             <div className="menu">
               {isMenuStatus ? this.renderOpenedMenu() : this.renderClosedMenu()}
             </div>
