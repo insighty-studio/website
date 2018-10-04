@@ -112,7 +112,7 @@ class Consultation extends Component {
                 onChange={e => this.handleFormInput(e)}
               />
             </div>
-            <Button type="submit">Send</Button>
+            <Button type="submit">BOOK NOW</Button>
           </form>
         </div>
       </Page>
