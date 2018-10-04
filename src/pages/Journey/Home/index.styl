@@ -1,7 +1,8 @@
 .home-page
   .home-content
     margin-top 9.8%
-    width 80%
+    width 100%
+    padding 0 10% 34px 10%
     overflow hidden
 
     .home-bg
@@ -11,7 +12,7 @@
       overflow hidden
       top 0
       right 0
-      z-index 0
+      z-index -1
 
       .vr-girl
         margin-left 62.34%
@@ -26,29 +27,34 @@
 
     .home-description
       margin-top 3.5%
-      opacity 0.8
-      width 50vw
-      overflow hidden
+      width 54vw
       transition max-height 1s ease-in
 
       .home-description-text
+        opacity 0.8
         font-size 1.5vw
         line-height: 2
         letter-spacing normal
+        margin-bottom 0
 
-        .description-more
-          display inline-block
+      .description-more
+        display inline-block
+        color #5C64AA
+        border-bottom 1px solid #5C64AA
+        cursor pointer
+        line-height 20px
+
+        a
+          text-decoration none
           color #5C64AA
-          border-bottom 1px solid #5C64AA
-          cursor pointer
-          line-height 20px
-
-          a
-            text-decoration none
-            color #5C64AA
 
       &.expanded
-        max-height 60vh
+        .home-description-text:first-child
+          margin-top 0
+
+        .header-link .button
+          margin-top 50px
+
 
   .home-help-section
     z-index 1
