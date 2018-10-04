@@ -6,8 +6,7 @@
   justify-content center
 
   .description
-    display flex
-    flex-direction column
+    display block
     margin-left 80px
     font-family Roboto Mono, sans-serif
 
@@ -23,8 +22,11 @@
       margin-bottom 24px
       color rgba(0, 0, 0, .6)
 
-    .full-review-btn .button
-      float left
+    .full-review-btn
+      display: inline-block
 
-      .button-title
-        color black
+      .button
+        float left
+
+        .button-title
+          color black
