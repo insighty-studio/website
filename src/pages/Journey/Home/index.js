@@ -6,6 +6,7 @@ import classnames from 'classnames';
 import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
 import AnimatedButton from 'components/interactions/AnimatedButton';
+import Button from 'components/interactions/Button';
 import {RightArrowIcon, AppleIcon} from 'icons';
 import {
   Square, Braintree, PayPal, Stripe, AmazonPay, Plaid,
@@ -23,12 +24,25 @@ class Home extends Component {
   renderExpanded() {
     return (
       <div className="expanded">
-        <span>
-          {' '}
+        <p className="home-description-text">
           You can use our expertise with the best payment platforms and
           tools available today. We offer you a system of going from concept to
           production-ready quickly.
-        </span>
+        </p>
+        <p className="home-description-text">
+          Most of all we like doing mobile apps. We also believe in VR, AR and
+          some blockchain here and there. Needless to say, we strive to be state
+          of the art. Wow, are you really reading this?
+          {' '}
+          <span className="description-more">
+            <Link to="services">
+              More about our services.
+            </Link>
+          </span>
+        </p>
+        <Link className="header-link" to="consult">
+          <Button className="services-button">FREE CONSULTATION</Button>
+        </Link>
       </div>
     );
   }
@@ -61,25 +75,14 @@ class Home extends Component {
             </p>
             <p className="home-description-text">
               With our guidance you avoid making the mistakes we already learned from.
-              {!expanded ? (
-                <span onClick={() => this.setState({expanded: true})} className="description-more">
-                  {' '}
-                  More about your journey.
-                </span>
-              )
-                : this.renderExpanded()}
+              {' '}
             </p>
-            <p className="home-description-text">
-              Most of all we like doing mobile apps. We also believe in VR, AR and
-              some blockchain here and there. Needless to say, we strive to be state
-              of the art. Wow, are you really reading this?
-              <span className="description-more">
-                {' '}
-                <Link to="services">
-                  More about our services.
-                </Link>
+            {!expanded ? (
+              <span onClick={() => this.setState({expanded: true})} className="description-more">
+                More about your journey.
               </span>
-            </p>
+            )
+              : this.renderExpanded()}
           </div>
 
         </div>

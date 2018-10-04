@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Loader from 'components/Loader';
 import ScrollUpButton from 'components/interactions/ScrollUpButton';
 import NextProject from 'components/Sections/NextProject';
-import WhitePaper from 'components/Sections/WhitePaper';
 import Footer from 'components/Footer';
 import {hubDarkBlue, hubGreen} from 'styles/config';
 import provideScrollPosition from 'react-provide-scroll-position';
@@ -14,7 +13,6 @@ import Prototypes from './sections/Prototypes';
 import AdditionalPrototype from './sections/AdditionalPrototype';
 import Logo from './sections/Logo';
 import Colors from './sections/Colors';
-import ContactUs from './sections/ContactUs';
 
 import Image1 from './images/image1.png';
 import Image1Webp from './images/image1.webp';
@@ -75,9 +73,6 @@ class HubPage extends PureComponent {
           desc="Helping real estate principals achieve customer excellence."
           href="/lpma"
         />
-        <WhitePaper>
-          <ContactUs />
-        </WhitePaper>
         <Footer />
       </div>
     );

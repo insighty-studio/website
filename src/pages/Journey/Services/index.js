@@ -21,12 +21,19 @@ class Services extends Component {
   renderExpanded() {
     return (
       <Fragment>
-        <span>
-          {' '}
+        <span className="services-description-text">
           You draw from our expertise with tech like React
           Native, Firebase, Node.js, Mongo, Meteor, Machine Learning, VR,
           AR, as well as all kinds of payment processors and so much more.
         </span>
+        <p className="services-description-text">
+          We are always looking to hear from people that want to change the
+          world with software. We call them heroes. If you’re one of them,
+          please get in touch.
+        </p>
+        <Link className="header-link" to="consult">
+          <Button className="services-button">FREE CONSULTATION</Button>
+        </Link>
       </Fragment>
     );
   }
@@ -61,26 +68,17 @@ class Services extends Component {
               estimates and meet the most stringent deadlines. That’s why we
               rigorously apply the 80/20 rule.
             </p>
-            <p className="services-description-text">
+            <span className="services-description-text">
               Expect us to deliver a robust software solution that people will
               actually use.
-              {!expanded ? (
-                <span onClick={() => this.setState({expanded: true})} className="description-more">
-                  {' '}
-                    See the buzzwords.
-                </span>
-              )
-                : this.renderExpanded()}
-            </p>
-            <p className="services-description-text">
-              We are always looking to hear from people that want to change the
-              world with software. We call them heroes. If you’re one of them,
-              please get in touch.
-            </p>
-
-            <Link className="header-link" to="consult">
-              <Button className="services-button">FREE CONSULTATION</Button>
-            </Link>
+              {' '}
+            </span>
+            {!expanded ? (
+              <span onClick={() => this.setState({expanded: true})} className="description-more">
+                See the buzzwords.
+              </span>
+            )
+              : this.renderExpanded()}
           </div>
 
         </div>
