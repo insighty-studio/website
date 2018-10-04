@@ -15,8 +15,8 @@ export class Logo extends PureComponent {
   static defaultProps = {
     className: '',
     color: '#FF5551',
-    width: '3.75vw',
-    height: '6.75vh',
+    width: '48px',
+    height: '49px',
   };
 
   render() {
