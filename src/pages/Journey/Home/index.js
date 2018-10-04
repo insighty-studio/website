@@ -61,9 +61,9 @@ class Home extends Component {
             </p>
             <p className="home-description-text">
               With our guidance you avoid making the mistakes we already learned from.
+              {' '}
               {!expanded ? (
                 <span onClick={() => this.setState({expanded: true})} className="description-more">
-                  {' '}
                   More about your journey.
                 </span>
               )
@@ -73,8 +73,8 @@ class Home extends Component {
               Most of all we like doing mobile apps. We also believe in VR, AR and
               some blockchain here and there. Needless to say, we strive to be state
               of the art. Wow, are you really reading this?
+              {' '}
               <span className="description-more">
-                {' '}
                 <Link to="services">
                   More about our services.
                 </Link>
