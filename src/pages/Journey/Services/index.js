@@ -64,10 +64,10 @@ class Services extends Component {
             <p className="services-description-text">
               Expect us to deliver a robust software solution that people will
               actually use.
+              {' '}
               {!expanded ? (
                 <span onClick={() => this.setState({expanded: true})} className="description-more">
-                  {' '}
-                    See the buzzwords.
+                  See the buzzwords.
                 </span>
               )
                 : this.renderExpanded()}
