@@ -34,9 +34,9 @@ class IntroPage extends Component {
               <div className="intro-principle-line" />
               <p className="intro-principle-text">OUR GUIDING PRINCIPLE</p>
             </div>
-            <Heading className="intro-heading">Software with Impact</Heading>
+            <Heading className="intro-heading">FinTech with Purpose</Heading>
             <p className="intro-description">
-              Your FinTech idea transformed in to reality.
+              Your idea transformed in to reality.
               Build a better tomorrow with Insighty.
             </p>
           </div>
