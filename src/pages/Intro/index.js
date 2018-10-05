@@ -9,8 +9,13 @@ import isMobile from 'ismobilejs';
 
 import './index.styl';
 import './mobile/index.styl';
+import {trackEvent} from 'analytics';
 
 class IntroPage extends Component {
+  onClickBeginJourney() {
+    trackEvent('Begin Journey Clicked');
+  }
+
   render() {
     const isPhone = isMobile.apple.phone;
 
@@ -38,7 +43,7 @@ class IntroPage extends Component {
 
           <div className="button-container">
             <Link to="/home">
-              <Button>BEGIN JOURNEY</Button>
+              <Button onClick={() => this.onClickBeginJourney()}>BEGIN JOURNEY</Button>
             </Link>
           </div>
         </div>
