@@ -90,16 +90,20 @@ class Consultation extends Component {
             <Input
               required
               name="name"
+              id="name"
               type="text"
               placeholder="Name *"
+              label={'What\'s your name?*'}
               value={name}
               onChange={e => this.handleFormInput(e)}
             />
             <Input
               required
               name="email"
+              id="email"
               type="email"
               placeholder="Email *"
+              label={'What\'s your email?*'}
               value={email}
               onChange={e => this.handleFormInput(e)}
             />
@@ -109,6 +113,7 @@ class Consultation extends Component {
                 name="message"
                 value={message}
                 placeholder="(Optional) Tomorrow at 11:30 am or 4 pm EST..."
+                label="When would you like to have a chat?"
                 onChange={e => this.handleFormInput(e)}
               />
             </div>
