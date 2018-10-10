@@ -25,7 +25,7 @@ class CaseStudiesSection extends React.Component {
   render() {
     return (
       <div className="home-case-studies">
-        <Heading className="case-studies-heading">Select Case Studies</Heading>
+        <Heading className="case-studies-heading">Our Work</Heading>
 
         <div className="case-studies-bg">
           <div className="case-studies-description">
@@ -124,7 +124,7 @@ class Home extends Component {
 
           <Heading className="home-heading-main">
             Create The Outlier Software
-            That Changes The World.
+            That Changes The World
           </Heading>
 
           <div className={classnames('home-description', expanded && 'expanded')}>
@@ -148,14 +148,14 @@ class Home extends Component {
         </div>
 
         <div className="home-help-section">
-          <Heading className="home-help-heading">Get Help With</Heading>
+          <Heading className="home-help-heading">Core Expertise</Heading>
           <div className="fintech-logos-container">
+            <div className="logo"><Stripe /></div>
             <div className="logo"><Square /></div>
+            <div className="logo"><Plaid /></div>
             <div className="logo"><Braintree /></div>
             <div className="logo"><PayPal /></div>
-            <div className="logo"><Stripe /></div>
             <div className="logo"><AmazonPay /></div>
-            <div className="logo"><Plaid /></div>
           </div>
         </div>
 
