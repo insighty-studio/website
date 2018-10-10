@@ -12,17 +12,19 @@ import {
   AngelListIcon,
   BloggerIcon
 } from 'icons';
-import Button from 'components/interactions/Button';
+
+import {Aligner} from 'components/Layout';
+import {NavButton} from 'components/Button';
 import {MenuIcon, CloseMenuIcon} from './icons';
 
 import './index.styl';
-import './mobile/index.styl';
+import './mobile.styl';
 
 const links = [
-  {text: 'SERVICES', to: '/services'},
-  {text: 'IMPACT', to: '/impact'},
-  {text: 'CASE STUDIES', to: '/case-studies'},
-  {text: 'TEAM', to: '/team'},
+  {text: 'Services', to: '/services'},
+  {text: 'Impact', to: '/impact'},
+  {text: 'Case Studies', to: '/case-studies'},
+  {text: 'Team', to: '/team'},
 ];
 
 class Header extends Component {
@@ -72,7 +74,7 @@ class Header extends Component {
             <CloseMenuIcon />
           </div>
           <NavLink to="/">
-            <Logo width="12.8vw" height="12.95vw" color="#FFFFFF" />
+            <Logo width="48px" height="49px" color="#FFFFFF" />
           </NavLink>
         </div>
         <ul className="mobile-header-nav">
@@ -118,14 +120,14 @@ class Header extends Component {
 
     return (
       <div className={classnames('header', className, isMenuStatus)}>
-        <NavLink to="/home" className="header-logo">
-          <Logo />
-        </NavLink>
-        {this.renderLinks()}
-        {isMenuStatus ? this.renderOpenedMenu() : this.renderClosedMenu()}
-        <NavLink className="header-link" to="/consult">
-          <Button className="header-button">FREE CONSULTATION</Button>
-        </NavLink>
+        <Aligner>
+          <NavLink to="/home" className="header-logo">
+            <Logo />
+          </NavLink>
+          {this.renderLinks()}
+          {isMenuStatus ? this.renderOpenedMenu() : this.renderClosedMenu()}
+          <NavButton to="/consult" className="header-link">Free Consultation</NavButton>
+        </Aligner>
       </div>
     );
   }
