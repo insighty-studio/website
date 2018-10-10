@@ -69,14 +69,6 @@ class ContactUsForm extends PureComponent {
     this.setState({[e.target.name]: e.target.value});
   }
 
-  showMessage(message) {
-    return (
-      <div className="form-message">
-        {message}
-      </div>
-    );
-  }
-
   render() {
     const {
       name, email, message, messageIsVisible, pristine
