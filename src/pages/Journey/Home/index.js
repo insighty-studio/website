@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 import {Parallax} from 'react-scroll-parallax';
-import classnames from 'classnames';
 
 import Page from 'components/Page';
-import {Heading} from 'components/Typography';
+import {ButtonLink, NavButton} from 'components/Button';
+import {Aligner} from 'components/Layout';
+import {Heading, Paragraph} from 'components/Typography';
 import AnimatedButton from 'components/interactions/AnimatedButton';
-import Button from 'components/interactions/Button';
 import {AppleIcon, RightArrowIcon} from 'icons';
 import {
   AmazonPay, Braintree, PayPal, Plaid, Square, Stripe
@@ -32,7 +31,7 @@ class CaseStudiesSection extends React.Component {
             <p className="case-studies-title">BetterYet</p>
             <p className="case-studies-subtitle">Loyalty for Small Businesses</p>
             <div className="case-studies-separator" />
-            <p className="case-studies-text">
+            <Paragraph className="case-studies-text">
               Mark and Alan, the co-founders of BetterYet, envisioned a
               future where all businesses can set up a loyalty program
               in 30 seconds.
@@ -40,7 +39,7 @@ class CaseStudiesSection extends React.Component {
               The problem was that they didn’t have the know-how to
               turn it into reality. We started from clean slate with the
               product that now enjoys a growing user base.
-            </p>
+            </Paragraph>
           </div>
 
           <div className="animated-button-container">
@@ -82,25 +81,18 @@ class Home extends Component {
   renderExpanded() {
     return (
       <div className="expanded">
-        <p className="home-description-text">
+        <Paragraph>
           You can use our expertise with the best payment platforms and
           tools available today. We offer you a system of going from concept to
           production-ready quickly.
-        </p>
-        <p className="home-description-text">
+        </Paragraph>
+        <Paragraph>
           Most of all we like doing mobile apps. We also believe in VR, AR and
           some blockchain here and there. Needless to say, we strive to be state
           of the art. Wow, are you really reading this?
-          {' '}
-          <span className="description-more">
-            <Link to="services">
-              More about our services.
-            </Link>
-          </span>
-        </p>
-        <Link className="header-link" to="consult">
-          <Button className="services-button">FREE CONSULTATION</Button>
-        </Link>
+          <ButtonLink to="services">More about our services.</ButtonLink>
+        </Paragraph>
+        <NavButton to="consult">Free Consultation</NavButton>
       </div>
     );
   }
@@ -112,7 +104,7 @@ class Home extends Component {
 
     return (
       <Page className="home-page">
-        <div className="home-content">
+        <Aligner className="home-header">
           <Parallax
             className="home-bg"
             offsetYMax={70}
@@ -122,41 +114,41 @@ class Home extends Component {
             <VRGirlInSpace className="vr-girl" />
           </Parallax>
 
-          <Heading className="home-heading-main">
-            Create The Outlier Software
-            That Changes The World
-          </Heading>
+          <div className="home-header-content">
+            <Heading>
+              Create The Outlier Software
+              That Changes The World
+            </Heading>
 
-          <div className={classnames('home-description', expanded && 'expanded')}>
-            <p className="home-description-text">
+            <Paragraph>
               You are embarking on a journey of seeing a new FinTech product through.
               We help you overcome the digital chaos to address a market need before
               someone else seizes the opportunity.
-            </p>
-            <p className="home-description-text">
+            </Paragraph>
+            <Paragraph>
               With our guidance you avoid making the mistakes we already learned from.
-              {' '}
-            </p>
-            {!expanded ? (
-              <span onClick={() => this.setState({expanded: true})} className="description-more">
+            </Paragraph>
+            {!expanded && (
+              <ButtonLink onClick={() => this.setState({expanded: true})}>
                 More about your journey.
-              </span>
-            )
-              : this.renderExpanded()}
+              </ButtonLink>
+            )}
+            {expanded && this.renderExpanded()}
           </div>
-
-        </div>
+        </Aligner>
 
         <div className="home-help-section">
-          <Heading className="home-help-heading">Core Expertise</Heading>
-          <div className="fintech-logos-container">
-            <div className="logo"><Stripe /></div>
-            <div className="logo"><Square /></div>
-            <div className="logo"><Plaid /></div>
-            <div className="logo"><Braintree /></div>
-            <div className="logo"><PayPal /></div>
-            <div className="logo"><AmazonPay /></div>
-          </div>
+          <Aligner>
+            <Heading priority={2}>Core Expertise</Heading>
+          </Aligner>
+          <ul className="core-expertise">
+            <li><Stripe /></li>
+            <li><Square /></li>
+            <li><Plaid /></li>
+            <li><Braintree /></li>
+            <li><PayPal /></li>
+            <li><AmazonPay /></li>
+          </ul>
         </div>
 
         <CaseStudiesSection />
