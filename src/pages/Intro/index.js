@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import {Logo} from 'icons';
 import IntroBG from 'icons/backgrounds/IntroBG';
 import Button from 'components/interactions/Button';
-import Heading from 'components/typography/Heading';
+import {Heading} from 'components/Typography';
 import isMobile from 'ismobilejs';
 
 import './index.styl';

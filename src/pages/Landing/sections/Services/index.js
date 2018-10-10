@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import SectionHeading from 'components/typography/SectionHeading';
+import {Heading} from 'components/typography';
 
 import Service from './components/Service';
 import {Design, Development, Quality} from './services';

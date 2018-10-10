@@ -3,7 +3,7 @@ import request from 'utils/request';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 import Page from 'components/Page';
 import Button from 'components/interactions/Button';
-import Heading from 'components/typography/Heading';
+import {Heading} from 'components/Typography';
 import {ConsultUs, MailBox} from 'icons/backgrounds/ConsultBG';
 import Input from 'components/Input';
 import TextArea from 'components/TextArea';

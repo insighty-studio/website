@@ -4,7 +4,7 @@ import {Parallax} from 'react-scroll-parallax';
 import classnames from 'classnames';
 
 import Page from 'components/Page';
-import Heading from 'components/typography/Heading';
+import {Heading} from 'components/Typography';
 import Button from 'components/interactions/Button';
 import {FeatherPen, Compass, BrowserWindows} from 'icons';
 import ServicesChart from 'icons/backgrounds/ServicesBG';

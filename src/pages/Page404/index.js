@@ -2,8 +2,7 @@ import React, {PureComponent} from 'react';
 import {Logo} from 'icons';
 import Loader from 'components/Loader';
 import NavigationBar from 'components/NavigationBar';
-import Heading from 'components/typography/Heading';
-import Paragraph from 'components/typography/Paragraph';
+import {Heading, Paragraph} from 'components/Typography';
 import Button from 'components/interactions/AnimatedButton';
 import {darkBlue, blue} from 'styles/config';
 

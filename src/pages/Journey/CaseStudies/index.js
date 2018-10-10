@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import Page from 'components/Page';
 import CaseStudy from 'components/Sections/CaseStudy';
-import Heading from 'components/typography/Heading';
+import {Heading} from 'components/Typography';
 
 import './index.styl';
 import './mobile/index.styl';

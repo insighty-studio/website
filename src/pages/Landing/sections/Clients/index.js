@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, {Component, Fragment} from 'react';
 import classnames from 'classnames';
-import SectionHeading from 'components/typography/SectionHeading';
+import {Heading} from 'components/typography';
 import ClientFooter from 'components/Sections/ClientFooter';
 import clients from 'data/clients';
 import Swipeable from 'react-swipeable';
@@ -99,7 +99,7 @@ class Clients extends Component {
 
     return (
       <div className="middle">
-        <SectionHeading subTitle="What Our" title="Clients Say" />
+        <He subTitle="What Our" title="Clients Say" />
         <ClientFooter
           name={name}
           position={position}

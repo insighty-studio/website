@@ -1,9 +1,7 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-
-import Heading from 'components/typography/Heading';
-import Paragraph from 'components/typography/Paragraph';
+import {Heading, Paragraph} from 'components/Typography';
 
 import './index.styl';
 import './mobile/index.styl';

@@ -4,8 +4,7 @@ import {Link} from 'react-scroll';
 import {Logo} from 'icons';
 import {trackEvent} from 'analytics';
 import NavigationBar from 'components/NavigationBar';
-import Heading from 'components/typography/Heading';
-import Paragraph from 'components/typography/Paragraph';
+import {Heading, Paragraph} from 'components/Typography';
 import Button from 'components/interactions/AnimatedButton';
 
 import Illustration from './components/Illustration';

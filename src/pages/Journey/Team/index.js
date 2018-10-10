@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import classnames from 'classnames';
 
 import Page from 'components/Page';
-import Heading from 'components/typography/Heading';
+import {Heading} from 'components/Typography';
 import TeamMemberCard from 'components/TeamMemberCard';
 import TeamChat from 'icons/backgrounds/TeamBG';
 

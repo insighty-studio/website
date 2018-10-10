@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import SectionHeading from 'components/typography/SectionHeading/index';
+import {Heading} from 'components/typography';
 
 import Step from './Step/index';
 import './index.styl';

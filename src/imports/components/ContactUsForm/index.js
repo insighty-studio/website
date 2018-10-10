@@ -2,7 +2,7 @@ import React, {PureComponent} from 'react';
 import request from 'utils/request';
 import {RightArrowIcon} from 'icons';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
-import SectionHeading from 'components/typography/SectionHeading';
+import {Heading} from 'components/typography';
 import Input from 'components/Input';
 import TextArea from 'components/TextArea';
 import Button from 'components/interactions/AnimatedButton';

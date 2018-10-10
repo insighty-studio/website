@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Parallax} from 'react-scroll-parallax';
 
 import Page from 'components/Page';
-import Heading from 'components/typography/Heading';
+import {Heading} from 'components/Typography';
 import ImpactBG from 'icons/backgrounds/ImpactBG';
 
 import './index.styl';
