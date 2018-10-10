@@ -36,7 +36,7 @@ class IntroPage extends Component {
             </div>
             <Heading className="intro-heading">FinTech with Purpose</Heading>
             <p className="intro-description">
-              Your idea transformed in to reality.
+              Your idea transformed into reality.
               Build a better tomorrow with Insighty.
             </p>
           </div>
