@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import request from 'utils/request';
-
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 import Page from 'components/Page';
 import Button from 'components/interactions/Button';
 import Heading from 'components/typography/Heading';
 import {ConsultUs, MailBox} from 'icons/backgrounds/ConsultBG';
 import Input from 'components/Input';
 import TextArea from 'components/TextArea';
+
+import 'react-notifications/lib/notifications.css';
 
 import './index.styl';
 import './mobile/index.styl';
@@ -20,7 +22,8 @@ class Consultation extends Component {
     this.state = {
       name: '',
       email: '',
-      message: ''
+      message: '',
+      showSuccess: false,
     };
   }
 
@@ -48,7 +51,10 @@ class Consultation extends Component {
           name: '',
           email: '',
           message: '',
+          showSuccess: true,
         });
+        NotificationManager.success('Thank you, we will get back to you!', null, 5000);
+        setTimeout(() => this.setState({showSuccess: false}), 5000);
       });
   }
 
@@ -57,10 +63,14 @@ class Consultation extends Component {
   }
 
   render() {
-    const {name, email, message} = this.state;
+    const {
+      name, email, message, showSuccess
+    } = this.state;
 
     return (
       <Page className="consult-page">
+        {showSuccess && <NotificationContainer />}
+
         <div className="consult-bg">
           <ConsultUs className="consult-illustration" />
           <MailBox className="mail-box" />
