@@ -14,3 +14,23 @@ h2
 p
   font-size: 18px
   line-height 2
+
+.section-heading
+  .sub-title
+    font-size 14px
+    font-weight 600
+    letter-spacing 3pt
+    text-transform: uppercase
+    color $red
+    display: flex
+    align-items center
+    margin-bottom: 8px
+    white-space nowrap
+
+    &:before
+      content ''
+      display: block
+      height: 1px
+      background: $red
+      width 64px
+      margin-right: 12px

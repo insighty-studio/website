@@ -1,6 +1,8 @@
 import React, {PureComponent} from 'react';
 import classnames from 'classnames';
 
+import './index.styl';
+
 export class Aligner extends PureComponent {
   render() {
     const {children, className, ...rest} = this.props;

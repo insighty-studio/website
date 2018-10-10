@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 
 import {Logo} from 'icons';
 import IntroBG from 'icons/backgrounds/IntroBG';
-import Button from 'components/interactions/Button';
-import {Heading} from 'components/Typography';
-import isMobile from 'ismobilejs';
+import {NavButton} from 'components/Button';
+import {Aligner} from 'components/Layout';
+import {Paragraph, SectionHeading} from 'components/Typography';
 
 import './index.styl';
-import './mobile/index.styl';
+import './mobile.styl';
+
 import {trackEvent} from 'analytics';
 
 class IntroPage extends Component {
@@ -17,36 +17,29 @@ class IntroPage extends Component {
   }
 
   render() {
-    const isPhone = isMobile.apple.phone;
-
     return (
       <div className="intro-page">
-        <div className="intro-bg-container">
-          <IntroBG className="intro-bg" width={isPhone ? '113.12%' : '50.94%'} height={isPhone ? '36.85%' : '62.36%'} />
-        </div>
-        <div className="intro-main">
-          <div className="intro-logo-container">
-            <Logo width="48px" height="49px" />
-          </div>
+        <Aligner className="intro-top-bar">
+          <Logo width="48px" height="49px" />
+        </Aligner>
 
+        <Aligner className="intro-content">
+          <div className="intro-bg-container">
+            <IntroBG
+              className="intro-bg"
+              width="100%"
+            />
+          </div>
           <div className="intro-header">
-            <div className="intro-principle">
-              <div className="intro-principle-line" />
-              <p className="intro-principle-text">OUR GUIDING PRINCIPLE</p>
-            </div>
-            <Heading className="intro-heading">FinTech with Purpose</Heading>
-            <p className="intro-description">
+            <SectionHeading subTitle="Our Guiding Principle" title="FinTech with Purpose" />
+            <Paragraph className="intro-text">
               Your idea transformed into reality.
+              <br />
               Build a better tomorrow with Insighty.
-            </p>
+            </Paragraph>
+            <NavButton to="/home" onClick={() => this.onClickBeginJourney()}>Begin Journey</NavButton>
           </div>
-
-          <div className="button-container">
-            <Link to="/home">
-              <Button onClick={() => this.onClickBeginJourney()}>BEGIN JOURNEY</Button>
-            </Link>
-          </div>
-        </div>
+        </Aligner>
       </div>
     );
   }

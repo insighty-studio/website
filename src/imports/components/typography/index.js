@@ -20,12 +20,8 @@ export class SectionHeading extends PureComponent {
     const {subTitle, title} = this.props;
     return (
       <div className="section-heading">
-        <div className="sub-title">
-          {subTitle}
-        </div>
-        <div className="title">
-          {title}
-        </div>
+        <div className="sub-title">{subTitle}</div>
+        <h1>{title}</h1>
       </div>
     );
   }
@@ -56,23 +52,19 @@ export class Heading extends PureComponent {
 
 export class Paragraph extends PureComponent {
   static propTypes = {
-    children: PropTypes.string.isRequired,
-    animated: PropTypes.bool
+    className: PropTypes.string,
+    children: PropTypes.node.isRequired
   };
 
   static defaultProps = {
-    animated: false
+    className: ''
   };
 
   render() {
-    const {children, animated} = this.props;
+    const {className, children} = this.props;
+
     return (
-      <p
-        className="paragraph"
-        data-aos={animated && 'fade-up'}
-        data-aos-easing={animated && 'ease-out-sine'}
-        data-aos-delay={animated && '250'}
-      >
+      <p className={classnames('paragraph', className)}>
         {children}
       </p>
     );
