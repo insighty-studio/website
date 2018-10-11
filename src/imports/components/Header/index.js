@@ -18,6 +18,12 @@ import {MenuIcon, CloseMenuIcon} from './icons';
 import './index.styl';
 import './mobile/index.styl';
 
+const links = [
+  {text: 'SERVICES', to: '/services'},
+  {text: 'IMPACT', to: '/impact'},
+  {text: 'CASE STUDIES', to: '/case-studies'},
+  {text: 'TEAM', to: '/team'},
+];
 
 class Header extends Component {
   static propTypes = {
@@ -37,14 +43,6 @@ class Header extends Component {
   }
 
   renderLinks() {
-    const links = [
-      {text: 'HOME', to: '/home'},
-      {text: 'SERVICES', to: '/services'},
-      {text: 'IMPACT', to: '/impact'},
-      {text: 'CASE STUDIES', to: '/case-studies'},
-      {text: 'TEAM', to: '/team'},
-    ];
-
     return (
       <ul className="header-nav">
         {
@@ -64,14 +62,6 @@ class Header extends Component {
   }
 
   renderOpenedMenu() {
-    const links = [
-      {text: 'HOME', to: '/home'},
-      {text: 'SERVICES', to: '/services'},
-      {text: 'IMPACT', to: '/impact'},
-      {text: 'CASE STUDIES', to: '/case-studies'},
-      {text: 'TEAM', to: '/team'},
-    ];
-
     return (
       <div className="opened-wrapper">
         <div className="close-menu-header">

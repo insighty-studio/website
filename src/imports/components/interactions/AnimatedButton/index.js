@@ -1,4 +1,4 @@
-import React, {PureComponent, Fragment} from 'react';
+import React, {Fragment, PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
@@ -63,12 +63,15 @@ class Button extends PureComponent {
   }
 
   renderLink() {
-    const {href, className, opensNewTab} = this.props;
+    const {
+      href, onClick, className, opensNewTab
+    } = this.props;
 
     return (
       <a
         href={href}
         target={opensNewTab ? '_blank' : ''}
+        onClick={onClick}
         className={classnames('animated-button', className)}
       >
         {this.renderContent()}
