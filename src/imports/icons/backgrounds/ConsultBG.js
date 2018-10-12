@@ -257,8 +257,7 @@ export class MailBox extends PureComponent {
   render() {
     const svg = 'svg className={this.props.className} width="39.84375vw" height="47.361vh" viewBox="0 0 510 341" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"';
     return (
-      <svg className={this.props.className} viewBox="0 0 510 341" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-           width="510" height="341">
+      <svg className={this.props.className} width="39.84375vw" height="47.361vh" viewBox="0 0 510 341" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
         <defs>
           <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%">
             <stop offset="0%" stopColor="#FF6663" stopOpacity="0" />
