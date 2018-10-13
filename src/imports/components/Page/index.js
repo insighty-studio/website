@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import Header from 'components/Header';
 import Footer from 'components/Footer';
 
 import './index.styl';
@@ -23,7 +22,6 @@ class Page extends Component {
 
     return (
       <div className={classnames('page', className)}>
-        <Header />
 
         {children}
 
