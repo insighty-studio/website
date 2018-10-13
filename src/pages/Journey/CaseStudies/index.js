@@ -11,7 +11,7 @@ class CaseStudies extends Component {
   render() {
     return (
       <Page className="case-studies-page">
-        <Heading className="case-studies-heading">Select Case Studies</Heading>
+        <Heading className="case-studies-heading">Our Work</Heading>
         <div className="case-studies-content">
           <CaseStudy
             title="BetterYet"
@@ -28,6 +28,12 @@ class CaseStudies extends Component {
               '/images/screens/BY/BYScreen2.png',
               '/images/screens/BY/BYScreen3.png',
             ]}
+            mobileImages={[
+              '/images/screens/BY/MBYScreen1.png',
+              '/images/screens/BY/MBYScreen2.png',
+              '/images/screens/BY/MBYScreen3.png',
+            ]}
+            mockColor="white"
           />
           <CaseStudy
             title="HUB 4.0"
@@ -42,6 +48,12 @@ class CaseStudies extends Component {
               '/images/screens/HUB/HubScreen2.png',
               '/images/screens/HUB/HubScreen3.png',
             ]}
+            mobileImages={[
+              '/images/screens/HUB/MHubScreen1.png',
+              '/images/screens/HUB/MHubScreen2.png',
+              '/images/screens/HUB/MHubScreen3.png',
+            ]}
+            mockColor="black"
           />
         </div>
       </Page>
