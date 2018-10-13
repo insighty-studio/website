@@ -114,7 +114,8 @@ class App extends Component {
               </TransitionGroup>
             </ScrollToTop>
           </Fragment>
-        )} />
+        )}
+        />
       </BrowserRouter>
 
     );
