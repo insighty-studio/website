@@ -8,6 +8,7 @@ import Heading from 'components/typography/Heading';
 import AnimatedButton from 'components/interactions/AnimatedButton';
 import Button from 'components/interactions/Button';
 import {AppleIcon, RightArrowIcon} from 'icons';
+import IphoneMobileMock from 'icons/IphoneMobileMock';
 import {
   AmazonPay, Braintree, PayPal, Plaid, Square, Stripe
 } from 'icons/FinTechLogos';
@@ -26,6 +27,21 @@ class CaseStudiesSection extends React.Component {
     return (
       <div className="home-case-studies">
         <Heading className="case-studies-heading">Our Work</Heading>
+
+        <div className="screens-container-mobile">
+          <div className="screens-scroll">
+            <div className="img-wrapper">
+              <img alt="phone screenshot" src="/images/screens/BY/MBYScreen1.png" />
+            </div>
+            <div className="img-wrapper second">
+              <img alt="phone screenshot" src="/images/screens/BY/MBYScreen2.png" />
+            </div>
+            <div className="img-wrapper third">
+              <img alt="phone screenshot" src="/images/screens/BY/MBYScreen3.png" />
+            </div>
+          </div>
+          <IphoneMobileMock />
+        </div>
 
         <div className="case-studies-bg">
           <div className="case-studies-description">
