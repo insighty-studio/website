@@ -71,7 +71,7 @@ class Header extends Component {
           >
             <CloseMenuIcon />
           </div>
-          <NavLink to="/">
+          <NavLink to="/home">
             <Logo width="12.8vw" height="12.95vw" color="#FFFFFF" />
           </NavLink>
         </div>
