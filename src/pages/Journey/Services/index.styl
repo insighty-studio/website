@@ -90,25 +90,24 @@
         align-items center
         justify-content space-between
 
+        .block-wrapper
+          width auto
+          .service-block
+            padding 4vh 2.8vw
+            border-radius 9px
+            transition all .2s ease-in-out
 
-      .service-block
-        padding 4vh 2.8vw
-        border-radius 9px
-        transition all .2s ease-in-out
+            &:hover
+              background-color white
+              box-shadow 0 10px 50px 0 rgba(0, 0, 0, 0.1)
 
-        &:hover
-          background-color white
-          box-shadow 0 10px 50px 0 rgba(0, 0, 0, 0.1)
+            .service-block-heading
+              font-weight 600
+              line-height 24pt
+              font-size 1.7vw
 
-        .service-block-heading
-          font-weight 600
-          line-height 24pt
-          font-size 1.7vw
-
-        .service-block-description
-          letter-spacing 0.1pt
-          line-height 2
-          font-size 1.2vw
-          width 20vw
-
-
+            .service-block-description
+              letter-spacing 0.1pt
+              line-height 2
+              font-size 1.2vw
+              width 20vw
