@@ -115,35 +115,41 @@ class Services extends Component {
           </p>
           <div className="services-dream-blocks">
             <div className="service-blocks-wrapper">
-              <div className="service-block">
-                <Compass />
-                <h3 className="service-block-heading">Design</h3>
-                <p className="service-block-description">
-                  We design applications that
-                  intuitively meet the needs of your
-                  customers and, in turn keep
-                  them sticking around for good.
-                </p>
+              <div className="block-wrapper">
+                <div className="service-block">
+                  <Compass />
+                  <h3 className="service-block-heading">Design</h3>
+                  <p className="service-block-description">
+                    We design applications that
+                    intuitively meet the needs of your
+                    customers and, in turn keep
+                    them sticking around for good.
+                  </p>
+                </div>
               </div>
-              <div className="service-block">
-                <BrowserWindows />
-                <h3 className="service-block-heading">Development</h3>
-                <p className="service-block-description">
-                  With over a decade of experience
-                  our team creates flawless
-                  applications that work exactly as
-                  you had envisioned.
-                </p>
+              <div className="block-wrapper">
+                <div className="service-block">
+                  <BrowserWindows />
+                  <h3 className="service-block-heading">Development</h3>
+                  <p className="service-block-description">
+                    With over a decade of experience
+                    our team creates flawless
+                    applications that work exactly as
+                    you had envisioned.
+                  </p>
+                </div>
               </div>
-              <div className="service-block">
-                <FeatherPen />
-                <h3 className="service-block-heading">Branding</h3>
-                <p className="service-block-description">
-                  The brand lives and evolves in the
-                  minds of people. We build brands
-                  for companies that are changing
-                  how the world works.
-                </p>
+              <div className="block-wrapper">
+                <div className="service-block">
+                  <FeatherPen />
+                  <h3 className="service-block-heading">Branding</h3>
+                  <p className="service-block-description">
+                    The brand lives and evolves in the
+                    minds of people. We build brands
+                    for companies that are changing
+                    how the world works.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
