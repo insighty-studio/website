@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import classnames from 'classnames';
 
 import './index.styl';
+import './mobile/index.styl';
 
 class Button extends Component {
   render() {
