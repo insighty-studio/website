@@ -71,7 +71,7 @@ class Header extends Component {
           >
             <CloseMenuIcon />
           </div>
-          <NavLink to="/">
+          <NavLink to="/home" onClick={() => this.setState({isMenuStatus: ''})}>
             <Logo width="12.8vw" height="12.95vw" color="#FFFFFF" />
           </NavLink>
         </div>
@@ -82,6 +82,7 @@ class Header extends Component {
                 <NavLink
                   activeStyle={{fontWeight: 'bold'}}
                   className="header-nav-item"
+                  onClick={() => this.setState({isMenuStatus: ''})}
                   to={to}
                 >
                   {text}

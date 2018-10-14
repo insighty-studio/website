@@ -1,5 +1,18 @@
 .app
   position absolute
   display flex
+  flex-direction column
   width 100vw
   font-family "Open Sans", sans-serif
+
+.fade-enter
+  opacity 0
+  z-index 1
+
+.fade-enter.fade-enter-active
+  opacity 1
+  transition opacity 400ms ease-in
+
+.fade-exit
+  svg
+    display none
