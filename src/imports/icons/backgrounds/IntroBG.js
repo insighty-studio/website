@@ -13,8 +13,8 @@ class IntroBG extends PureComponent {
 
   static defaultProps = {
     className: '',
-    width: '50.94%',
-    height: '62.36%',
+    width: '100%',
+    height: '100%',
   };
 
   renderTurbines = () => (
