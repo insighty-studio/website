@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import Button from 'components/interactions/AnimatedButton';
 import {RightArrowIcon} from 'icons';
 
-import {BuildingIllustration} from './icons';
-
 import './index.styl';
 import './mobile/index.styl';
 
@@ -26,7 +24,6 @@ class NextProject extends PureComponent {
 
     return (
       <div className="next-project-section">
-        <BuildingIllustration />
         <div className="description">
           <div className="title">
             {`Next project - ${name.toUpperCase()}`}
