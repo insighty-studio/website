@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import uniqueid from 'lodash.uniqueid';
@@ -12,6 +12,7 @@ import './mobile/index.styl';
 
 class CaseStudy extends Component {
   static propTypes = {
+    hasMobileThumbnails: PropTypes.bool.isRequired,
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
@@ -23,24 +24,35 @@ class CaseStudy extends Component {
 
   render() {
     const {
-      title, subtitle, text, href, images, mobileImages, mockColor,
+      hasMobileThumbnails, title, subtitle, text, href, images, mobileImages, mockColor,
     } = this.props;
 
     return (
       <div className="case-study">
         <div className="screens-container-mobile">
-          <div className="screens-scroll">
-            <div className="img-wrapper">
-              <img alt="phone screenshot" src={mobileImages[0]} />
+          {hasMobileThumbnails ? (
+            <Fragment>
+              <div className="screens-scroll">
+                <div className="img-wrapper">
+                  <img alt="phone screenshot" src={mobileImages[0]} />
+                </div>
+                <div className="img-wrapper second">
+                  <img alt="phone screenshot" src={mobileImages[1]} />
+                </div>
+                <div className="img-wrapper third">
+                  <img alt="phone screenshot" src={mobileImages[2]} />
+                </div>
+              </div>
+              <IphoneMobileMock className={mockColor} />
+            </Fragment>
+          ) : (
+            <div className="screens">
+              <div className="img-wrapper">
+                <img alt="phone screenshot" src={mobileImages[0]} />
+              </div>
             </div>
-            <div className="img-wrapper second">
-              <img alt="phone screenshot" src={mobileImages[1]} />
-            </div>
-            <div className="img-wrapper third">
-              <img alt="phone screenshot" src={mobileImages[2]} />
-            </div>
-          </div>
-          <IphoneMobileMock className={mockColor} />
+          )}
+
         </div>
         <div className="case-study-bg">
           <div className="case-study-description">
@@ -61,17 +73,27 @@ class CaseStudy extends Component {
               <RightArrowIcon color="white" />
             </AnimatedButton>
           </div>
-
-          <div className="screens-container">
-            {images.map((source, idx) => (
+          {hasMobileThumbnails ? (
+            <div className="screens-container">
+              {images.map((source, idx) => (
+                <img
+                  key={uniqueid('screen-')}
+                  alt="phone screenshot"
+                  className={classnames(!idx && 'phone-image')}
+                  src={source}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className={classnames('screens-container', !hasMobileThumbnails && 'laptop')}>
               <img
                 key={uniqueid('screen-')}
-                alt="phone screenshot"
-                className={classnames(!idx && 'phone-image')}
-                src={source}
+                alt="laptop screenshot"
+                className="laptop-image"
+                src={images[0]}
               />
-            ))}
-          </div>
+            </div>
+          )}
         </div>
       </div>
     );

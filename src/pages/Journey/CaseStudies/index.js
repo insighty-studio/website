@@ -14,6 +14,7 @@ class CaseStudies extends Component {
         <Heading className="case-studies-heading">Our Work</Heading>
         <div className="case-studies-content">
           <CaseStudy
+            hasMobileThumbnails
             title="BetterYet"
             subtitle="Loyalty for Small Businesses"
             text={`Mark and Alan, the co-founders of BetterYet,
@@ -36,6 +37,22 @@ class CaseStudies extends Component {
             mockColor="white"
           />
           <CaseStudy
+            hasMobileThumbnails={false}
+            title="LPMA"
+            subtitle="Property management system"
+            text={`The Customer Excellence program equips real estate agencies to survey their clients. \\nThis is a
+             major breakthrough in their understanding of the clients experiences and satisfaction levels.`}
+            href="/lpma"
+            images={[
+              '/images/screens/LPMA/LPMAScreen.png',
+            ]}
+            mobileImages={[
+              '/images/screens/LPMA/LPMAScreen.png',
+            ]}
+            mockColor="black"
+          />
+          <CaseStudy
+            hasMobileThumbnails
             title="HUB 4.0"
             subtitle="Community App"
             text={`This app is designed to elevate the coworking experience for
