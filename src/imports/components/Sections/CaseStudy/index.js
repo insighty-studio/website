@@ -52,8 +52,8 @@ class CaseStudy extends Component {
               </div>
             </div>
           )}
-
         </div>
+
         <div className="case-study-bg">
           <div className="case-study-description">
             <p className="case-study-title">{title}</p>
