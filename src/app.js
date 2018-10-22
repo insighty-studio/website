@@ -15,6 +15,7 @@ import 'aos/dist/aos.css';
 import Header from 'components/Header';
 import Intro from './pages/Intro';
 import Home from './pages/Journey/Home';
+import MobileHome from './mobilePages/Journey/Home';
 import Services from './pages/Journey/Services';
 import Impact from './pages/Journey/Impact';
 import CaseStudies from './pages/Journey/CaseStudies';
@@ -93,13 +94,15 @@ class App extends Component {
             {(location.pathname !== '/'
               && location.pathname !== '/betteryet'
               && location.pathname !== '/lpma'
-              && location.pathname !== '/hub') && <Header />}
+              && location.pathname !== '/hub'
+              && location.pathname !== '/home-reworked') && <Header />}
             <ScrollToTop>
               <TransitionGroup>
                 <CSSTransition key={location.key} classNames="fade" timeout={450}>
                   <Switch location={location}>
                     <Route exact path="/" component={Intro} />
                     <Route exact path="/home" component={Home} />
+                    <Route exact path="/home-reworked" component={MobileHome} />
                     <Route exact path="/services" component={Services} />
                     <Route exact path="/impact" component={Impact} />
                     <Route exact path="/case-studies" component={CaseStudies} />
