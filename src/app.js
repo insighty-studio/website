@@ -95,7 +95,8 @@ class App extends Component {
               && location.pathname !== '/betteryet'
               && location.pathname !== '/lpma'
               && location.pathname !== '/hub'
-              && location.pathname !== '/home') && <Header />}
+              && ((isMobile.phone && location.pathname !== '/home')
+              || (!isMobile.phone))) && <Header />}
             <ScrollToTop>
               <TransitionGroup>
                 <CSSTransition key={location.key} classNames="fade" timeout={450}>
