@@ -42,18 +42,19 @@ class MobileHome extends Component {
                 </div>
                 <div className="slide">
                   <CaseStudy
-                    projectName="HUB 4.0"
+                    projectName="HUB X"
                     projectDescription="Community app"
                     to="/hub"
-                    image="/images/mobile/betteryet-mobile-thumbnail.png"
+                    image="/images/mobile/hub-mobile-thumbnail.png"
                   />
                 </div>
                 <div className="slide">
                   <CaseStudy
+                    desktop
                     projectName="LPMA"
                     projectDescription="Property management system"
                     to="/lpma"
-                    image="/images/mobile/betteryet-mobile-thumbnail.png"
+                    image="/images/mobile/lpma-mobile-thumbnail.png"
                   />
                 </div>
               </div>

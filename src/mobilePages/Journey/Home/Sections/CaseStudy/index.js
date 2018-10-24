@@ -7,14 +7,18 @@ import './index.styl';
 class CaseStudy extends Component {
   render() {
     const {
-      projectName, projectDescription, to, image
+      projectName, projectDescription, to, image, desktop,
     } = this.props;
 
     return (
       <div className="case-studies-section">
         <div className="case-studies-description">
-          <img className="project-thumbnail" src={image} alt={`${projectName} screenshot`} />
-          <div className="project-info">
+          <img
+            className="project-thumbnail"
+            src={image}
+            alt={`${projectName} screenshot`}
+          />
+          <div className="project-info" style={{marginTop: desktop ? '0' : '-30px'}}>
             <h2 className="project-name">
               {projectName}
             </h2>
@@ -33,10 +37,15 @@ class CaseStudy extends Component {
 }
 
 CaseStudy.propTypes = {
+  desktop: PropTypes.bool,
   projectName: PropTypes.string.isRequired,
   projectDescription: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+};
+
+CaseStudy.defaultProps = {
+  desktop: false,
 };
 
 export default CaseStudy;

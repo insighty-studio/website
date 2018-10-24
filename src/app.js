@@ -95,14 +95,13 @@ class App extends Component {
               && location.pathname !== '/betteryet'
               && location.pathname !== '/lpma'
               && location.pathname !== '/hub'
-              && location.pathname !== '/home-reworked') && <Header />}
+              && location.pathname !== '/home') && <Header />}
             <ScrollToTop>
               <TransitionGroup>
                 <CSSTransition key={location.key} classNames="fade" timeout={450}>
                   <Switch location={location}>
                     <Route exact path="/" component={Intro} />
-                    <Route exact path="/home" component={Home} />
-                    <Route exact path="/home-reworked" component={MobileHome} />
+                    <Route exact path="/home" component={isMobile.phone ? MobileHome : Home} />
                     <Route exact path="/services" component={Services} />
                     <Route exact path="/impact" component={Impact} />
                     <Route exact path="/case-studies" component={CaseStudies} />
