@@ -6,7 +6,7 @@ import MobileFooter from 'components/MobileFooter';
 
 import Intro from './Sections/Intro';
 import Services from './Sections/Services';
-import CaseStudies from './Sections/CaseStudies';
+import CaseStudy from './Sections/CaseStudy';
 
 import './index.styl';
 
@@ -18,6 +18,8 @@ class MobileHome extends Component {
         <ReactFullpage
           licenseKey="OPEN-SOURCE-GPLV3-LICENSE"
           navigation
+          slidesNavigation
+          controlArrows={false}
           render={() => (
             <ReactFullpage.Wrapper>
               <div className="section">
@@ -26,8 +28,34 @@ class MobileHome extends Component {
               <div className="section">
                 <Services />
               </div>
-              <div className="section">
-                <CaseStudies />
+              <div className="section cs-section">
+                <h1 className="case-studies-heading">
+                  Our Work
+                </h1>
+                <div className="slide">
+                  <CaseStudy
+                    projectName="BetterYet"
+                    projectDescription="Loyalty for Small Businesses"
+                    to="/betteryet"
+                    image="/images/mobile/betteryet-mobile-thumbnail.png"
+                  />
+                </div>
+                <div className="slide">
+                  <CaseStudy
+                    projectName="HUB 4.0"
+                    projectDescription="Community app"
+                    to="/hub"
+                    image="/images/mobile/betteryet-mobile-thumbnail.png"
+                  />
+                </div>
+                <div className="slide">
+                  <CaseStudy
+                    projectName="LPMA"
+                    projectDescription="Property management system"
+                    to="/lpma"
+                    image="/images/mobile/betteryet-mobile-thumbnail.png"
+                  />
+                </div>
               </div>
               <div className="section footer-section">
                 <MobileFooter />

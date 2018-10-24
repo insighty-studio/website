@@ -61,18 +61,10 @@ class MobileFooter extends Component {
         {this.renderLinks()}
         <NavLink to="/consult" className="consult-button">FREE CONSULTATION</NavLink>
         {this.renderSocials()}
-        <div className="details">
-          <div className="rights">© 2018 Insighty All Rights Reserved</div>
-          <div className="info">
-            <a href="mailto:hello@insighty.studio">hello@insighty.studio</a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.google.ca/maps/place/240+Richmond+St+W,+Toronto,+ON+M5V+2C5/@43.6479848,-79.4174159,13z"
-            >
-              240 Richmond St W, Toronto, ON M5V 1V6
-            </a>
-          </div>
+        <div className="info">
+          <a href="mailto:hello@insighty.studio">hello@insighty.studio</a>
+          <p>240 Richmond St W, Toronto, ON M5V 1V6</p>
+          <p>© 2018 Insighty All Rights Reserved</p>
         </div>
       </div>
     );
