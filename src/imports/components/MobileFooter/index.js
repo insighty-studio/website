@@ -29,6 +29,7 @@ class MobileFooter extends Component {
           links.map(({text, to}) => (
             <NavLink
               key={uniqueid('link-')}
+              activeStyle={{fontWeight: 'bold'}}
               className="mobile-footer-nav-item"
               to={to}
             >
