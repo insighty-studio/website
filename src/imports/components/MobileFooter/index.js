@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {NavLink} from 'react-router-dom';
 import uniqueid from 'lodash.uniqueid';
 
 import {
@@ -27,14 +26,13 @@ class MobileFooter extends Component {
       <ul className="mobile-footer-nav">
         {
           links.map(({text, to}) => (
-            <NavLink
+            <a
               key={uniqueid('link-')}
-              activeStyle={{fontWeight: 'bold'}}
               className="mobile-footer-nav-item"
-              to={to}
+              href={to}
             >
               {text}
-            </NavLink>
+            </a>
           ))
         }
       </ul>
@@ -56,11 +54,11 @@ class MobileFooter extends Component {
   render() {
     return (
       <div className="mobile-footer">
-        <NavLink to="/home" className="logo-link">
+        <a href="/home" className="logo-link">
           <Logo className="logo" color="white" />
-        </NavLink>
+        </a>
         {this.renderLinks()}
-        <NavLink to="/consult" className="consult-button">FREE CONSULTATION</NavLink>
+        <a href="/consult" className="consult-button">FREE CONSULTATION</a>
         {this.renderSocials()}
         <div className="info">
           <a href="mailto:hello@insighty.studio">hello@insighty.studio</a>

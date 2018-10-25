@@ -1,5 +1,4 @@
 import React, {Component, Fragment} from 'react';
-import {NavLink} from 'react-router-dom';
 import uniqueid from 'lodash.uniqueid';
 import classNames from 'classnames';
 
@@ -38,14 +37,13 @@ class MobileHeader extends Component {
       <ul className="mobile-header-nav">
         {
           links.map(({text, to}) => (
-            <NavLink
+            <a
               key={uniqueid('link-')}
-              activeStyle={{fontWeight: 'bold'}}
               className="mobile-header-nav-item"
-              to={to}
+              href={to}
             >
               {text}
-            </NavLink>
+            </a>
           ))
         }
       </ul>
@@ -89,7 +87,7 @@ class MobileHeader extends Component {
         <MenuIcon />
       </button>
 
-      <NavLink to="/consult" className="consult-button">FREE CONSULTATION</NavLink>
+      <a href="/consult" className="consult-button">FREE CONSULTATION</a>
     </div>
   );
 

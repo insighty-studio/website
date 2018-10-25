@@ -1,0 +1,44 @@
+.impact-page
+  .intro-section
+    position relative
+    height calc(100% - 80px)
+    width 100%
+    padding 0 8% 0 10%
+    overflow hidden
+
+    .intro-heading
+      font-size 6.9vw
+      font-weight bold
+      margin 0 0 22px 0
+
+    .intro-description-first, .intro-description-second
+      font-size 4vw
+      color #4A4A4A
+      line-height 30px
+      margin 0 0 22px 0
+
+    .intro-description-second
+      margin 0
+      padding-right 0
+
+    .illustration
+      z-index 0
+      width 100%
+      height 35%
+      position absolute
+      bottom 5px
+      margin-left 10%
+
+      svg
+        height 100%
+        width 100%
+
+
+    +iphone5()
+      .intro-heading
+        margin 0 0 12px 0
+        font-size 6.5vw
+      .intro-description-first, .intro-description-second
+        margin 0 0 12px 0
+        font-size 3.6vw
+        line-height 20px
