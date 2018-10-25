@@ -17,6 +17,7 @@ import Intro from './pages/Intro';
 import Home from './pages/Journey/Home';
 import MobileHome from './mobilePages/Journey/Home';
 import Services from './pages/Journey/Services';
+import MobileServices from './mobilePages/Journey/Services';
 import Impact from './pages/Journey/Impact';
 import MobileImpact from './mobilePages/Journey/Impact';
 import CaseStudies from './pages/Journey/CaseStudies';
@@ -98,6 +99,8 @@ class App extends Component {
               && location.pathname !== '/hub'
               && ((isMobile.phone && location.pathname !== '/home')
               || (!isMobile.phone))
+              && ((isMobile.phone && location.pathname !== '/services')
+              || (!isMobile.phone))
               && ((isMobile.phone && location.pathname !== '/impact')
               || (!isMobile.phone))) && <Header />}
             <ScrollToTop>
@@ -106,7 +109,7 @@ class App extends Component {
                   <Switch location={location}>
                     <Route exact path="/" component={Intro} />
                     <Route exact path="/home" component={isMobile.phone ? MobileHome : Home} />
-                    <Route exact path="/services" component={Services} />
+                    <Route exact path="/services" component={isMobile.phone ? MobileServices : Services} />
                     <Route exact path="/impact" component={isMobile.phone ? MobileImpact : Impact} />
                     <Route exact path="/case-studies" component={CaseStudies} />
                     <Route exact path="/team" component={Team} />
