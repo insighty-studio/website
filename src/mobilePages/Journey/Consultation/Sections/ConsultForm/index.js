@@ -57,8 +57,6 @@ class Intro extends Component {
       name, email, message, showSuccess,
     } = this.state;
 
-    console.log(name, email, message);
-
     return (
       <div className="form-section">
         {showSuccess && <NotificationContainer />}
