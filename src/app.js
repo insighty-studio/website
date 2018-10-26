@@ -25,6 +25,7 @@ import MobileCaseStudies from './mobilePages/Journey/CaseStudies';
 import Team from './pages/Journey/Team';
 import MobileTeam from './mobilePages/Journey/Team';
 import Consultation from './pages/Journey/Consultation';
+import MobileConsultation from './mobilePages/Journey/Consultation';
 
 import BetterYet from './pages/Projects/BetterYet';
 import LPMA from './pages/Projects/LPMA';
@@ -107,6 +108,8 @@ class App extends Component {
                 || (!isMobile.phone))
               && ((isMobile.phone && location.pathname !== '/team')
                 || (!isMobile.phone))
+              && ((isMobile.phone && location.pathname !== '/consult')
+                || (!isMobile.phone))
               && ((isMobile.phone && location.pathname !== '/impact')
               || (!isMobile.phone))) && <Header />}
             <ScrollToTop>
@@ -119,7 +122,7 @@ class App extends Component {
                     <Route exact path="/impact" component={isMobile.phone ? MobileImpact : Impact} />
                     <Route exact path="/our-work" component={isMobile.phone ? MobileCaseStudies : CaseStudies} />
                     <Route exact path="/team" component={isMobile.phone ? MobileTeam : Team} />
-                    <Route exact path="/consult" component={Consultation} />
+                    <Route exact path="/consult" component={isMobile.phone ? MobileConsultation : Consultation} />
                     <Route exact path="/betteryet" component={BetterYet} />
                     <Route exact path="/lpma" component={LPMA} />
                     <Route exact path="/hub" component={Hub} />
