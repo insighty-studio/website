@@ -20,7 +20,7 @@ class Footer extends PureComponent {
       {text: 'Home', to: '/home'},
       {text: 'Services', to: '/services'},
       {text: 'Impact', to: '/impact'},
-      {text: 'Case Studies', to: '/case-studies'},
+      {text: 'Our Work', to: '/our-work'},
       {text: 'Team', to: '/team'},
     ];
 

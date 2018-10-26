@@ -1,0 +1,49 @@
+.team-page
+  .intro-section
+    position relative
+    height calc(100% - 80px)
+    width 100%
+    padding 0 8% 0 10%
+    overflow hidden
+
+    .intro-heading
+      font-size 6.9vw
+      font-weight bold
+      margin 0 0 22px 0
+
+    .intro-description-first
+      font-size 4vw
+      color #4A4A4A
+      line-height 30px
+      margin 0 0 22px 0
+
+    .intro-description-second
+      font-size 5.3vw
+      color #5C64AA
+      font-weight 600
+      padding 0
+      margin 22px 0 0 0
+
+    .illustration
+      height 180px
+      position static
+      z-index 0
+      margin-left 0
+      text-align center
+
+      svg
+        height 100%
+
+
+    +iphone5()
+      .intro-heading
+        margin 0 0 12px 0
+        font-size 6.5vw
+      .intro-description-first
+        margin 0 0 12px 0
+        font-size 3.6vw
+        line-height 20px
+
+      .intro-description-second
+        font-size 4.9vw
+        margin 12px 0 0 0

@@ -1,0 +1,60 @@
+.home-page
+  .case-studies-section
+    position relative
+    top -20px
+    height calc(100% - 80px)
+    width 100%
+    padding 0 8% 32px 10%
+    overflow hidden
+
+    .case-studies-description
+      height 100%
+
+      .project-thumbnail
+        position relative
+        overflow visible
+        width 110%
+        left 50%
+        transform translateX(-50%)
+
+      .project-info
+        margin-top -30px
+        .project-name
+          font-size 5.3vw
+          font-weight bold
+          margin 0
+
+        .project-description
+          font-size 4vw
+          color #4A4A4A
+          margin 0
+
+        .project-details-link
+          width max-content
+          display flex
+          align-items center
+          font-size 4vw
+          font-weight bold
+          color #5C64AA
+          text-decoration none
+          text-transform uppercase
+          margin-top 16px
+
+          svg
+            margin-left 12px
+
+
+    +iphone5()
+      .case-studies-heading
+        margin 0 0 12px 0
+        font-size 6.5vw
+
+      .case-studies-description
+        .project-info
+          .project-name
+            font-size 4.9vw
+          .project-description, .project-details-link
+            font-size 3.6vw
+            svg
+              width 22px
+              height 22px

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.2",
     "@insighty-studio/eslint-config-react": "0.1.11",
     "@types/enzyme": "^3.1.13",
     "animate.css": "^3.6.1",

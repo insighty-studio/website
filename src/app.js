@@ -6,20 +6,26 @@ import {TransitionGroup, CSSTransition} from 'react-transition-group';
 import ScrollToTop from 'components/ScrollToTop';
 import DeviceOrientation, {Orientation} from 'components/Orientation';
 import LoaderLine from 'components/Loader/LoaderLine';
+import Header from 'components/Header';
 import isMobile from 'ismobilejs';
 import 'normalize.css';
 import 'styles/main.styl';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import Header from 'components/Header';
 import Intro from './pages/Intro';
 import Home from './pages/Journey/Home';
+import MobileHome from './mobilePages/Journey/Home';
 import Services from './pages/Journey/Services';
+import MobileServices from './mobilePages/Journey/Services';
 import Impact from './pages/Journey/Impact';
+import MobileImpact from './mobilePages/Journey/Impact';
 import CaseStudies from './pages/Journey/CaseStudies';
+import MobileCaseStudies from './mobilePages/Journey/CaseStudies';
 import Team from './pages/Journey/Team';
+import MobileTeam from './mobilePages/Journey/Team';
 import Consultation from './pages/Journey/Consultation';
+import MobileConsultation from './mobilePages/Journey/Consultation';
 
 import BetterYet from './pages/Projects/BetterYet';
 import LPMA from './pages/Projects/LPMA';
@@ -93,18 +99,30 @@ class App extends Component {
             {(location.pathname !== '/'
               && location.pathname !== '/betteryet'
               && location.pathname !== '/lpma'
-              && location.pathname !== '/hub') && <Header />}
+              && location.pathname !== '/hub'
+              && ((isMobile.phone && location.pathname !== '/home')
+              || (!isMobile.phone))
+              && ((isMobile.phone && location.pathname !== '/services')
+              || (!isMobile.phone))
+              && ((isMobile.phone && location.pathname !== '/our-work')
+                || (!isMobile.phone))
+              && ((isMobile.phone && location.pathname !== '/team')
+                || (!isMobile.phone))
+              && ((isMobile.phone && location.pathname !== '/consult')
+                || (!isMobile.phone))
+              && ((isMobile.phone && location.pathname !== '/impact')
+              || (!isMobile.phone))) && <Header />}
             <ScrollToTop>
               <TransitionGroup>
                 <CSSTransition key={location.key} classNames="fade" timeout={450}>
                   <Switch location={location}>
                     <Route exact path="/" component={Intro} />
-                    <Route exact path="/home" component={Home} />
-                    <Route exact path="/services" component={Services} />
-                    <Route exact path="/impact" component={Impact} />
-                    <Route exact path="/case-studies" component={CaseStudies} />
-                    <Route exact path="/team" component={Team} />
-                    <Route exact path="/consult" component={Consultation} />
+                    <Route exact path="/home" component={isMobile.phone ? MobileHome : Home} />
+                    <Route exact path="/services" component={isMobile.phone ? MobileServices : Services} />
+                    <Route exact path="/impact" component={isMobile.phone ? MobileImpact : Impact} />
+                    <Route exact path="/our-work" component={isMobile.phone ? MobileCaseStudies : CaseStudies} />
+                    <Route exact path="/team" component={isMobile.phone ? MobileTeam : Team} />
+                    <Route exact path="/consult" component={isMobile.phone ? MobileConsultation : Consultation} />
                     <Route exact path="/betteryet" component={BetterYet} />
                     <Route exact path="/lpma" component={LPMA} />
                     <Route exact path="/hub" component={Hub} />
