@@ -18,7 +18,7 @@ const links = [
   {text: 'HOME', to: '/home'},
   {text: 'SERVICES', to: '/services'},
   {text: 'IMPACT', to: '/impact'},
-  {text: 'CASE STUDIES', to: '/case-studies'},
+  {text: 'OUR WORK', to: '/our-work'},
   {text: 'TEAM', to: '/team'},
 ];
 
@@ -71,9 +71,9 @@ class MobileHeader extends Component {
           <button onClick={() => this.setState({isMenuOpened: false})} type="button" className="menu-icon-button">
             <CloseMenuIcon />
           </button>
-          <button onClick={() => this.setState({isMenuOpened: false})} type="button" className="menu-icon-button">
+          <a href="/home" className="menu-icon-button">
             <Logo color="#FFFFFF" />
-          </button>
+          </a>
         </div>
         {this.renderLinks()}
         {this.renderSocials()}

@@ -16,7 +16,7 @@ const links = [
   {text: 'HOME', to: '/home'},
   {text: 'SERVICES', to: '/services'},
   {text: 'IMPACT', to: '/impact'},
-  {text: 'CASE STUDIES', to: '/case-studies'},
+  {text: 'OUR WORK', to: '/our-work'},
   {text: 'TEAM', to: '/team'},
 ];
 

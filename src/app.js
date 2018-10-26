@@ -21,6 +21,7 @@ import MobileServices from './mobilePages/Journey/Services';
 import Impact from './pages/Journey/Impact';
 import MobileImpact from './mobilePages/Journey/Impact';
 import CaseStudies from './pages/Journey/CaseStudies';
+import MobileCaseStudies from './mobilePages/Journey/CaseStudies';
 import Team from './pages/Journey/Team';
 import Consultation from './pages/Journey/Consultation';
 
@@ -101,6 +102,8 @@ class App extends Component {
               || (!isMobile.phone))
               && ((isMobile.phone && location.pathname !== '/services')
               || (!isMobile.phone))
+              && ((isMobile.phone && location.pathname !== '/our-work')
+                || (!isMobile.phone))
               && ((isMobile.phone && location.pathname !== '/impact')
               || (!isMobile.phone))) && <Header />}
             <ScrollToTop>
@@ -111,7 +114,7 @@ class App extends Component {
                     <Route exact path="/home" component={isMobile.phone ? MobileHome : Home} />
                     <Route exact path="/services" component={isMobile.phone ? MobileServices : Services} />
                     <Route exact path="/impact" component={isMobile.phone ? MobileImpact : Impact} />
-                    <Route exact path="/case-studies" component={CaseStudies} />
+                    <Route exact path="/our-work" component={isMobile.phone ? MobileCaseStudies : CaseStudies} />
                     <Route exact path="/team" component={Team} />
                     <Route exact path="/consult" component={Consultation} />
                     <Route exact path="/betteryet" component={BetterYet} />
