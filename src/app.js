@@ -1,39 +1,17 @@
 import React, {Component, Fragment} from 'react';
-import {
-  BrowserRouter, Route, Switch, Redirect,
-} from 'react-router-dom';
-import {TransitionGroup, CSSTransition} from 'react-transition-group';
-import ScrollToTop from 'components/ScrollToTop';
+import {BrowserRouter, Route} from 'react-router-dom';
 import DeviceOrientation, {Orientation} from 'components/Orientation';
 import LoaderLine from 'components/Loader/LoaderLine';
-import Header from 'components/Header';
 import isMobile from 'ismobilejs';
 import 'normalize.css';
 import 'styles/main.styl';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import Intro from './pages/Intro';
-import Home from './pages/Journey/Home';
-import MobileHome from './mobilePages/Journey/Home';
-import Services from './pages/Journey/Services';
-import MobileServices from './mobilePages/Journey/Services';
-import Impact from './pages/Journey/Impact';
-import MobileImpact from './mobilePages/Journey/Impact';
-import CaseStudies from './pages/Journey/CaseStudies';
-import MobileCaseStudies from './mobilePages/Journey/CaseStudies';
-import Team from './pages/Journey/Team';
-import MobileTeam from './mobilePages/Journey/Team';
-import Consultation from './pages/Journey/Consultation';
-import MobileConsultation from './mobilePages/Journey/Consultation';
-
-import BetterYet from './pages/Projects/BetterYet';
-import LPMA from './pages/Projects/LPMA';
-import Hub from './pages/Projects/Hub';
-
 import Landscape from './pages/Landscape';
 
 import './index.styl';
+import Application from './Application';
 
 AOS.init({
   disable: false,
@@ -89,53 +67,14 @@ class App extends Component {
 
   renderRoutes() {
     const {ready} = this.state;
-
-    if (!ready) return null;
+    if (!ready) {
+      return false;
+    }
 
     return (
       <BrowserRouter>
-        <Route render={({location}) => (
-          <Fragment>
-            {(location.pathname !== '/'
-              && location.pathname !== '/betteryet'
-              && location.pathname !== '/lpma'
-              && location.pathname !== '/hub'
-              && ((isMobile.phone && location.pathname !== '/home')
-              || (!isMobile.phone))
-              && ((isMobile.phone && location.pathname !== '/services')
-              || (!isMobile.phone))
-              && ((isMobile.phone && location.pathname !== '/our-work')
-                || (!isMobile.phone))
-              && ((isMobile.phone && location.pathname !== '/team')
-                || (!isMobile.phone))
-              && ((isMobile.phone && location.pathname !== '/consult')
-                || (!isMobile.phone))
-              && ((isMobile.phone && location.pathname !== '/impact')
-              || (!isMobile.phone))) && <Header />}
-            <ScrollToTop>
-              <TransitionGroup>
-                <CSSTransition key={location.key} classNames="fade" timeout={450}>
-                  <Switch location={location}>
-                    <Route exact path="/" component={Intro} />
-                    <Route exact path="/home" component={isMobile.phone ? MobileHome : Home} />
-                    <Route exact path="/services" component={isMobile.phone ? MobileServices : Services} />
-                    <Route exact path="/impact" component={isMobile.phone ? MobileImpact : Impact} />
-                    <Route exact path="/our-work" component={isMobile.phone ? MobileCaseStudies : CaseStudies} />
-                    <Route exact path="/team" component={isMobile.phone ? MobileTeam : Team} />
-                    <Route exact path="/consult" component={isMobile.phone ? MobileConsultation : Consultation} />
-                    <Route exact path="/betteryet" component={BetterYet} />
-                    <Route exact path="/lpma" component={LPMA} />
-                    <Route exact path="/hub" component={Hub} />
-                    <Route path="*" render={() => <Redirect to="/" />} />
-                  </Switch>
-                </CSSTransition>
-              </TransitionGroup>
-            </ScrollToTop>
-          </Fragment>
-        )}
-        />
+        <Route component={Application} />
       </BrowserRouter>
-
     );
   }
 
