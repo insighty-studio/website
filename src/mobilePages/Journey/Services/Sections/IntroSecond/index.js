@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import ServicesManMobile from 'icons/backgrounds/ServicesMobileBG';
 import './index.styl';
+import {Heading} from 'components/typography';
 
 class IntroSecond extends Component {
   render() {
     return (
       <div className="intro-second-section">
-        <h1 className="intro-second-heading">
+        <Heading>
           See The Buzzwords
-        </h1>
+        </Heading>
         <p className="intro-second-description-first">
           We adjust to demanding schedules, provide accurate granular estimates and meet the most stringent deadlines.
           That’s why we rigorously apply the 80/20 rule.

@@ -3,6 +3,7 @@ import ReactFullpage from '@fullpage/react-fullpage';
 
 import MobileHeader from 'components/MobileHeader';
 import MobileFooter from 'components/MobileFooter';
+import {Heading} from 'components/typography';
 
 import Intro from './Sections/Intro';
 import Services from './Sections/Services';
@@ -29,9 +30,9 @@ class MobileHome extends Component {
                 <Services />
               </div>
               <div className="section cs-section">
-                <h1 className="case-studies-heading">
+                <Heading className="case-studies-heading">
                   Our Work
-                </h1>
+                </Heading>
                 <div className="slide">
                   <CaseStudy
                     projectName="BetterYet"

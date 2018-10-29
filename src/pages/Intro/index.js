@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import {Logo} from 'icons';
 import IntroBG from 'icons/backgrounds/IntroBG';
 import Button from 'components/interactions/Button';
+import {Heading} from 'components/typography';
 
 import './index.styl';
 import './mobile/index.styl';
@@ -28,7 +29,7 @@ class IntroPage extends Component {
                 <div className="intro-principle-line" />
                 <p className="intro-principle-text">OUR GUIDING PRINCIPLE</p>
               </div>
-              <h1 className="intro-heading">FinTech with Purpose</h1>
+              <Heading>FinTech with Purpose</Heading>
               <p className="intro-description">
                 Your idea transformed into reality.
                 <br />

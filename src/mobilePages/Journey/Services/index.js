@@ -3,9 +3,9 @@ import ReactFullpage from '@fullpage/react-fullpage';
 
 import MobileHeader from 'components/MobileHeader';
 import MobileFooter from 'components/MobileFooter';
+import {Heading} from 'components/typography';
 
-import {FeatherPen, Compass, BrowserWindows} from 'icons';
-
+import {BrowserWindows, Compass, FeatherPen} from 'icons';
 
 import Intro from './Sections/Intro';
 import IntroSecond from './Sections/IntroSecond';
@@ -32,9 +32,9 @@ class MobileServices extends Component {
                 <IntroSecond />
               </div>
               <div className="section sc-section">
-                <h1 className="service-cards-heading">
+                <Heading className="service-cards-heading">
                   Dream, Design, Develop
-                </h1>
+                </Heading>
                 <p className="service-cards-description">
                   We are always looking to hear from people that want to change the world with software.
                   We call them heroes. If you’re one of them, please get in touch.

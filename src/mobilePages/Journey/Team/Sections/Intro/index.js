@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import TeamChat from 'icons/backgrounds/TeamBG';
+import {Heading} from 'components/typography';
 
 import './index.styl';
 
@@ -7,9 +8,9 @@ class Intro extends Component {
   render() {
     return (
       <div className="intro-section">
-        <h1 className="intro-heading">
+        <Heading>
           Meet the Team
-        </h1>
+        </Heading>
         <p className="intro-description-first">
           These are the people behind Insighty. Here is everyone practicing envisioning the future.
         </p>
