@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import MobileHeader from 'components/MobileHeader';
 import MobileFooter from 'components/MobileFooter';
 import FullPageScroll from 'components/interactions/FullPageScroll';
-
+// TODO rename all the `Sections` directories to `components`
 import Intro from './Sections/Intro';
 import ConsultForm from './Sections/ConsultForm';
 

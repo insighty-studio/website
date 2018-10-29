@@ -1,13 +1,10 @@
 import React, {Component} from 'react';
-import request from 'utils/request';
 import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 import 'react-notifications/lib/notifications.css';
 
 import './index.styl';
-
-const WEBHOOK_URL = 'https://hooks.slack.com/services/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';
-const DEV_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
+import sendContactMessageToSlack from 'utils/sendContactMessageToSlack';
 
 class Intro extends Component {
   constructor(props) {
@@ -24,22 +21,9 @@ class Intro extends Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    const {
-      name, email, message
-    } = this.state;
+    const {name, email, message} = this.state;
 
-    const formData = JSON.stringify({
-      attachments: [
-        {
-          color: '#000000',
-          pretext: 'New Contact Us form request',
-          author_name: `From: ${name}`,
-          text: `*Email:* ${email}\n*Message:* _${message}_`,
-        }
-      ]
-    });
-
-    request.post(process.env.NODE_ENV === 'development' ? DEV_WEBHOOK_URL : WEBHOOK_URL, formData)
+    sendContactMessageToSlack({name, email, message})
       .then(() => {
         this.setState({
           name: '',

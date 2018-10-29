@@ -3,7 +3,7 @@ import {NotificationContainer, NotificationManager} from 'react-notifications';
 import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
 import {ConsultUs, MailBox} from 'icons/backgrounds/ConsultBG';
-import sendContactMessageToSlack from './sendContactMessageToSlack';
+import sendContactMessageToSlack from 'utils/sendContactMessageToSlack';
 
 import 'react-notifications/lib/notifications.css';
 
