@@ -5,90 +5,14 @@ import classnames from 'classnames';
 
 import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
-import AnimatedButton from 'components/interactions/AnimatedButton';
-import Button from 'components/interactions/Button';
-import {AppleIcon, RightArrowIcon} from 'icons';
-import IphoneMobileMock from 'icons/IphoneMobileMock';
-import {
-  AmazonPay, Braintree, PayPal, Plaid, Square, Stripe
-} from 'icons/FinTechLogos';
 import VRGirlInSpace from 'icons/backgrounds/HomeBG';
 
 import './index.styl';
 import './mobile/index.styl';
-import {trackEvent} from 'analytics';
-
-class CaseStudiesSection extends React.Component {
-  onClickAppStore() {
-    trackEvent('BetterYet App Store Link Clicked');
-  }
-
-  render() {
-    return (
-      <div className="home-case-studies">
-        <Heading className="case-studies-heading">Our Work</Heading>
-
-        <div className="screens-container-mobile">
-          <div className="screens-scroll">
-            <div className="img-wrapper">
-              <img alt="phone screenshot" src="/images/screens/BY/MBYScreen1.png" />
-            </div>
-            <div className="img-wrapper second">
-              <img alt="phone screenshot" src="/images/screens/BY/MBYScreen2.png" />
-            </div>
-            <div className="img-wrapper third">
-              <img alt="phone screenshot" src="/images/screens/BY/MBYScreen3.png" />
-            </div>
-          </div>
-          <IphoneMobileMock />
-        </div>
-
-        <div className="case-studies-bg">
-          <div className="case-studies-description">
-            <p className="case-studies-title">BetterYet</p>
-            <p className="case-studies-subtitle">Loyalty for Small Businesses</p>
-            <div className="case-studies-separator" />
-            <p className="case-studies-text">
-              Mark and Alan, the co-founders of BetterYet, envisioned a
-              future where all businesses can set up a loyalty program
-              in 30 seconds.
-              <br />
-              The problem was that they didn’t have the know-how to
-              turn it into reality. We started from clean slate with the
-              product that now enjoys a growing user base.
-            </p>
-          </div>
-
-          <div className="animated-button-container">
-            <AnimatedButton
-              title="Project Details"
-              className="animated-button"
-              href="/betteryet"
-            >
-              <RightArrowIcon color="white" />
-            </AnimatedButton>
-
-            <AnimatedButton
-              opensNewTab
-              onClick={() => this.onClickAppStore()}
-              title="App Store"
-              className="animated-button"
-              href="https://itunes.apple.com/us/app/betteryet-local-cash-rewards/id1408033686"
-            >
-              <AppleIcon />
-            </AnimatedButton>
-          </div>
-
-          <div className="screens-container">
-            <img alt="phone screenshot" className="phone-image" src="/images/screens/BY/BYScreen1.png" />
-            <img alt="phone screenshot" src="/images/screens/BY/BYScreen2.png" />
-            <img alt="phone screenshot" src="/images/screens/BY/BYScreen3.png" />
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
+import {Paragraph} from 'components/typography';
+import FreeConsultationButton from 'components/interactions/FreeConsultationButton';
+import FinTechLogos from './components/FinTechLogos/index';
+import CaseStudiesSection from './components/CaseStudiesSection';
 
 class Home extends Component {
   state = {
@@ -98,12 +22,12 @@ class Home extends Component {
   renderExpanded() {
     return (
       <div className="expanded">
-        <p className="home-description-text">
+        <Paragraph animated>
           You can use our expertise with the best payment platforms and
           tools available today. We offer you a system of going from concept to
           production-ready quickly.
-        </p>
-        <p className="home-description-text">
+        </Paragraph>
+        <Paragraph animated>
           Most of all we like doing mobile apps. We also believe in VR, AR and
           some blockchain here and there. Needless to say, we strive to be state
           of the art. Wow, are you really reading this?
@@ -113,10 +37,9 @@ class Home extends Component {
               More about our services.
             </Link>
           </span>
-        </p>
-        <Link className="header-link" to="consult">
-          <Button className="services-button">FREE CONSULTATION</Button>
-        </Link>
+        </Paragraph>
+        <br />
+        <FreeConsultationButton />
       </div>
     );
   }
@@ -138,25 +61,27 @@ class Home extends Component {
             <VRGirlInSpace className="vr-girl" />
           </Parallax>
 
-          <Heading className="home-heading-main">
-            Create The Outlier Software
-            That Changes The World
-          </Heading>
+          <div className="home-heading-main">
+            <Heading>
+              Create The Outlier Software
+              That Changes The World
+            </Heading>
+          </div>
 
           <div className={classnames('home-description', expanded && 'expanded')}>
-            <p className="home-description-text">
+            <Paragraph>
               You are embarking on a journey of seeing a new FinTech product through.
               We help you overcome the digital chaos to address a market need before
               someone else seizes the opportunity.
-            </p>
-            <p className="home-description-text">
+            </Paragraph>
+            <Paragraph>
               With our guidance you avoid making the mistakes we already learned from.
               {' '}
-            </p>
+            </Paragraph>
             {!expanded ? (
-              <span onClick={() => this.setState({expanded: true})} className="description-more">
-                More about your journey.
-              </span>
+              <a onClick={() => this.setState({expanded: true})} className="description-more">
+                  More about your journey.
+              </a>
             )
               : this.renderExpanded()}
           </div>
@@ -165,14 +90,7 @@ class Home extends Component {
 
         <div className="home-help-section">
           <Heading className="home-help-heading">Core Expertise</Heading>
-          <div className="fintech-logos-container">
-            <div className="logo"><Stripe /></div>
-            <div className="logo"><Square /></div>
-            <div className="logo"><Plaid /></div>
-            <div className="logo"><Braintree /></div>
-            <div className="logo"><PayPal /></div>
-            <div className="logo"><AmazonPay /></div>
-          </div>
+          <FinTechLogos />
         </div>
 
         <CaseStudiesSection />

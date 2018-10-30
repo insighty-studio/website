@@ -1,11 +1,10 @@
 import React, {Component, Fragment} from 'react';
-import {Link} from 'react-router-dom';
 import {Parallax} from 'react-scroll-parallax';
 import classnames from 'classnames';
 
 import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
-import Button from 'components/interactions/Button';
+import FreeConsultationButton from 'components/interactions/FreeConsultationButton';
 import {FeatherPen, Compass, BrowserWindows} from 'icons';
 import ServicesChart from 'icons/backgrounds/ServicesBG';
 import ServicesManMobile from 'icons/backgrounds/ServicesMobileBG';
@@ -31,9 +30,7 @@ class Services extends Component {
           world with software. We call them heroes. If you’re one of them,
           please get in touch.
         </p>
-        <Link className="header-link" to="consult">
-          <Button className="services-button">FREE CONSULTATION</Button>
-        </Link>
+        <FreeConsultationButton />
       </Fragment>
     );
   }
