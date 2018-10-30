@@ -3,6 +3,7 @@ import {NavLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import uniqueid from 'lodash.uniqueid';
 import classnames from 'classnames';
+import FreeConsultationButton from 'components/interactions/FreeConsultationButton';
 
 import {
   Logo,
@@ -12,7 +13,6 @@ import {
   AngelListIcon,
   BloggerIcon
 } from 'icons';
-import Button from 'components/interactions/Button';
 import {MenuIcon, CloseMenuIcon} from './icons';
 
 import './index.styl';
@@ -124,9 +124,9 @@ class Header extends Component {
         </NavLink>
         {this.renderLinks()}
         {isMenuStatus ? this.renderOpenedMenu() : this.renderClosedMenu()}
-        <NavLink className="header-link" to="/consult">
-          <Button className="header-button">FREE CONSULTATION</Button>
-        </NavLink>
+        <div className="header-link">
+          <FreeConsultationButton />
+        </div>
       </div>
     );
   }
