@@ -1,6 +1,5 @@
 import React, {Component, Fragment} from 'react';
 import {Parallax} from 'react-scroll-parallax';
-import classnames from 'classnames';
 
 import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
@@ -37,12 +36,47 @@ class Services extends Component {
     );
   }
 
-  render() {
-    // TODO track expand click
+  renderExpandableBlock() {
     const {expanded} = this.state;
-
+    if (expanded) {
+      return this.renderExpanded();
+    }
     return (
-      <Page className="services-page">
+      <a onClick={() => this.setState({expanded: true})} className="description-more">
+        See the buzzwords.
+      </a>
+    );
+  }
+
+  renderDescription() {
+    return (
+      <div className="services-description">
+        <Paragraph>
+          You hate software projects that drag on. We do too. If you’re like
+          most people, you see software development in general as
+          lingering and expensive.
+        </Paragraph>
+        <Paragraph>
+          We help you win the day by offering an alternative plan.
+        </Paragraph>
+        <Paragraph>
+          We adjust to demanding schedules, provide accurate granular
+          estimates and meet the most stringent deadlines. That’s why we
+          rigorously apply the 80/20 rule.
+        </Paragraph>
+        <Paragraph>
+          Expect us to deliver a robust software solution that people will
+          actually use.
+          {' '}
+        </Paragraph>
+        {this.renderExpandableBlock()}
+      </div>
+    );
+  }
+
+  render() {
+    return (
+      <Page>
         <div className="services-content">
           <Parallax
             className="services-bg"
@@ -55,34 +89,8 @@ class Services extends Component {
 
           <HorizontalPadding>
             <Heading>Services You Deserve</Heading>
+            {this.renderDescription()}
           </HorizontalPadding>
-
-          <div className={classnames('services-description', expanded && 'expanded')}>
-            <Paragraph>
-              You hate software projects that drag on. We do too. If you’re like
-              most people, you see software development in general as
-              lingering and expensive.
-            </Paragraph>
-            <Paragraph>
-              We help you win the day by offering an alternative plan.
-            </Paragraph>
-            <Paragraph>
-              We adjust to demanding schedules, provide accurate granular
-              estimates and meet the most stringent deadlines. That’s why we
-              rigorously apply the 80/20 rule.
-            </Paragraph>
-            <Paragraph>
-              Expect us to deliver a robust software solution that people will
-              actually use.
-              {' '}
-            </Paragraph>
-            {!expanded ? (
-              <a onClick={() => this.setState({expanded: true})} className="description-more">
-                  See the buzzwords.
-              </a>
-            )
-              : this.renderExpanded()}
-          </div>
         </div>
 
         <DreamDesignDevelopSection />
