@@ -8,6 +8,7 @@ import ServicesChart from 'icons/backgrounds/ServicesBG';
 
 import './index.styl';
 import './mobile/index.styl';
+import {TextLink} from 'components/interactions';
 import {Paragraph} from 'components/typography';
 import {HorizontalPadding} from 'components/layout';
 import DreamDesignDevelopSection from './components/DreamDesignDevelopSection';
@@ -36,19 +37,8 @@ class Services extends Component {
     );
   }
 
-  renderExpandableBlock() {
-    const {expanded} = this.state;
-    if (expanded) {
-      return this.renderExpanded();
-    }
-    return (
-      <a onClick={() => this.setState({expanded: true})} className="description-more">
-        See the buzzwords.
-      </a>
-    );
-  }
-
   renderDescription() {
+    const {expanded} = this.state;
     return (
       <div className="services-description">
         <Paragraph>
@@ -68,8 +58,9 @@ class Services extends Component {
           Expect us to deliver a robust software solution that people will
           actually use.
           {' '}
+          {!expanded && <TextLink text="See the buzzwords." onClick={() => this.setState({expanded: true})} />}
         </Paragraph>
-        {this.renderExpandableBlock()}
+        {expanded && this.renderExpanded()}
       </div>
     );
   }

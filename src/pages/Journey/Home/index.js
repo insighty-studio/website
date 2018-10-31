@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 import {Parallax} from 'react-scroll-parallax';
-import classnames from 'classnames';
 
 import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
@@ -11,8 +9,10 @@ import './index.styl';
 import './mobile/index.styl';
 import {Paragraph} from 'components/typography';
 import FreeConsultationButton from 'components/interactions/FreeConsultationButton';
+import {TextLink} from 'components/interactions';
 import FinTechLogos from './components/FinTechLogos/index';
 import CaseStudiesSection from './components/CaseStudiesSection';
+import {HorizontalPadding} from '../../../imports/components/layout';
 
 class Home extends Component {
   state = {
@@ -32,11 +32,7 @@ class Home extends Component {
           some blockchain here and there. Needless to say, we strive to be state
           of the art. Wow, are you really reading this?
           {' '}
-          <span className="description-more">
-            <Link to="services">
-              More about our services.
-            </Link>
-          </span>
+          <TextLink text="More about our services." to="services" />
         </Paragraph>
         <br />
         <FreeConsultationButton />
@@ -68,7 +64,7 @@ class Home extends Component {
             </Heading>
           </div>
 
-          <div className={classnames('home-description', expanded && 'expanded')}>
+          <div className="home-description">
             <Paragraph>
               You are embarking on a journey of seeing a new FinTech product through.
               We help you overcome the digital chaos to address a market need before
@@ -77,19 +73,20 @@ class Home extends Component {
             <Paragraph>
               With our guidance you avoid making the mistakes we already learned from.
               {' '}
+              {!expanded
+              && <TextLink text="More about your journey." onClick={() => this.setState({expanded: true})} />}
             </Paragraph>
-            {!expanded ? (
-              <a onClick={() => this.setState({expanded: true})} className="description-more">
-                  More about your journey.
-              </a>
-            )
-              : this.renderExpanded()}
+            {expanded && this.renderExpanded()}
           </div>
 
         </div>
 
         <div className="home-help-section">
-          <Heading className="home-help-heading">Core Expertise</Heading>
+          <HorizontalPadding>
+            <Heading>
+              Core Expertise
+            </Heading>
+          </HorizontalPadding>
           <FinTechLogos />
         </div>
 
