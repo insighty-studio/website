@@ -3,7 +3,7 @@ import Heading from 'components/typography/Heading';
 import {BrowserWindows, Compass, FeatherPen} from 'icons';
 import './index.styl';
 import PropTypes from 'prop-types';
-import {Paragraph} from 'components/typography';
+import {Paragraph, SmallHeading} from 'components/typography';
 
 const items = [
   {
@@ -33,7 +33,7 @@ class Card extends React.Component {
       <div className="block-wrapper">
         <div className="service-block">
           <Icon />
-          <h3 className="service-block-heading">{title}</h3>
+          <SmallHeading>{title}</SmallHeading>
           <Paragraph>
             {text}
           </Paragraph>
