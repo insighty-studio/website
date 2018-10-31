@@ -4,7 +4,7 @@ import classnames from 'classnames';
 
 import './index.styl';
 
-class Heading extends PureComponent {
+class SmallHeading extends PureComponent {
   static propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
@@ -24,4 +24,4 @@ class Heading extends PureComponent {
   }
 }
 
-export default Heading;
+export default SmallHeading;
