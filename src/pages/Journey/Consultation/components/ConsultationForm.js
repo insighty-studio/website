@@ -64,16 +64,14 @@ export default class ConsultationForm extends React.Component {
           value={email}
           onChange={e => this.onFormInputChange(e)}
         />
-        <div className="mail-time">
-          <TextArea
-            required
-            name="message"
-            value={message}
-            placeholder="(Optional) Tomorrow at 11:30 am or 4 pm EST..."
-            label="When would you like to have a chat?"
-            onChange={e => this.onFormInputChange(e)}
-          />
-        </div>
+        <TextArea
+          required
+          name="message"
+          value={message}
+          placeholder="(Optional) Tomorrow at 11:30 am or 4 pm EST..."
+          label="When would you like to have a chat?"
+          onChange={e => this.onFormInputChange(e)}
+        />
         <Button type="submit" disabled={submitting}>BOOK NOW</Button>
       </form>
     );

@@ -4,6 +4,9 @@ import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
 import {ConsultUs, MailBox} from 'icons/backgrounds/ConsultBG';
 import sendContactMessageToSlack from 'utils/sendContactMessageToSlack';
+import Paragraph from 'components/typography/Paragraph';
+import {HorizontalPadding} from 'components/layout';
+import SmallHeading from 'components/typography/SmallHeading';
 
 import 'react-notifications/lib/notifications.css';
 
@@ -37,28 +40,26 @@ class Consultation extends Component {
           <MailBox className="mail-box" />
         </div>
 
-        <div className="consult-content">
-          <Heading className="consult-heading">Fancy A Free 30-Minute Product Development Session?</Heading>
-          <div className="consult-text-mobile">
-            <p className="consult-para">Here’s the plan:</p>
-            <p className="consult-para">- We learn about your idea.</p>
-            <p className="consult-para">
+        <HorizontalPadding>
+          <div className="consult-content">
+            <Heading>Fancy A Free 30-Minute Product Development Session?</Heading>
+            <Paragraph>Here’s the plan:</Paragraph>
+            <Paragraph>
+              - We learn as much as we can about your idea.
+              <br />
               - We outline the community of people that you want to reach with your product.
-            </p>
-            <p className="consult-para">- You get your idea visualized via mockups a couple of days after.</p>
+              <br />
+              - You get your idea visualized via mockups a couple of days after.
+            </Paragraph>
           </div>
-          <p className="consult-para">Here’s the plan:</p>
-          <p className="consult-para">- We learn as much as we can about your idea.</p>
-          <p className="consult-para">- We outline the community of people that you want to reach with your product.</p>
-          <p className="consult-para">- You get your idea visualized via mockups a couple of days after.</p>
-        </div>
 
-        <div className="mail-section">
-          <Heading className="mail-heading">
-            Book your free 30 minute product development and design consultation
-          </Heading>
-          <ConsultationForm onSubmit={e => this.handleSubmit(e)} />
-        </div>
+          <div className="mail-section">
+            <SmallHeading>
+              Book your free 30 minute product development and design consultation
+            </SmallHeading>
+            <ConsultationForm onSubmit={e => this.handleSubmit(e)} />
+          </div>
+        </HorizontalPadding>
       </Page>
     );
   }
