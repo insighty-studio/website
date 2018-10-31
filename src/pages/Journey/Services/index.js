@@ -10,6 +10,7 @@ import ServicesChart from 'icons/backgrounds/ServicesBG';
 import './index.styl';
 import './mobile/index.styl';
 import {Paragraph} from 'components/typography';
+import {HorizontalPadding} from 'components/layout';
 import DreamDesignDevelopSection from './components/DreamDesignDevelopSection';
 
 class Services extends Component {
@@ -52,7 +53,9 @@ class Services extends Component {
             <ServicesChart className="services-chart" />
           </Parallax>
 
-          <Heading className="services-heading">Services You Deserve</Heading>
+          <HorizontalPadding>
+            <Heading>Services You Deserve</Heading>
+          </HorizontalPadding>
 
           <div className={classnames('services-description', expanded && 'expanded')}>
             <Paragraph>

@@ -4,6 +4,7 @@ import {BrowserWindows, Compass, FeatherPen} from 'icons';
 import './index.styl';
 import PropTypes from 'prop-types';
 import {Paragraph, SmallHeading} from 'components/typography';
+import {HorizontalPadding} from 'components/layout';
 
 const items = [
   {
@@ -55,18 +56,12 @@ export default class DreamDesignDevelopSection extends React.Component {
   render() {
     return (
       <div className="services-dream-section">
-        <div className="services-dream-heading">
+        <HorizontalPadding>
           <Heading>Dream, Design, Develop</Heading>
-        </div>
-        <p className="services-dream-text-mobile">
-          We are always looking to hear from people that want to change the world with software.
-          We call them heroes. If you’re one of them, please get in touch.
-        </p>
-        <div className="services-dream-blocks">
           <div className="service-blocks-wrapper">
             {this.renderCards()}
           </div>
-        </div>
+        </HorizontalPadding>
       </div>
     );
   }
