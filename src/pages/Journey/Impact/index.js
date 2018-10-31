@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {Parallax} from 'react-scroll-parallax';
 
 import Page from 'components/Page';
-import Heading from 'components/typography/Heading';
+import {Heading, Paragraph} from 'components/typography';
+import {HorizontalPadding} from 'components/layout';
 import ImpactBG from 'icons/backgrounds/ImpactBG';
 
 import './index.styl';
@@ -20,19 +21,21 @@ class Impact extends Component {
           >
             <ImpactBG className="impact-svg" />
           </Parallax>
-
-          <Heading className="impact-heading">Profits Paired With Purpose</Heading>
-
-          <p className="impact-description">
-            For any commercial project that you do with us, we build a
-            mobile app for an entrepreneur with a socially impactful cause.
-            Pro bono.
-          </p>
-          <p className="impact-description">
-            We call people that envision a better tomorrow &#39;heros&#39;. Whether
-            you&#39;re a hero that can afford our services or not, we want to
-            know you.
-          </p>
+          <HorizontalPadding>
+            <Heading>Profits Paired With Purpose</Heading>
+            <div className="impact-description">
+              <Paragraph>
+                For any commercial project that you do with us, we build a
+                mobile app for an entrepreneur with a socially impactful cause.
+                Pro bono.
+              </Paragraph>
+              <Paragraph>
+                We call people that envision a better tomorrow &#39;heros&#39;. Whether
+                you&#39;re a hero that can afford our services or not, we want to
+                know you.
+              </Paragraph>
+            </div>
+          </HorizontalPadding>
         </div>
       </Page>
     );
