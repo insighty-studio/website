@@ -28,15 +28,15 @@ class IntroPage extends Component {
                 <div className="intro-principle-line" />
                 <p className="intro-principle-text">OUR GUIDING PRINCIPLE</p>
               </div>
-              <h1 className="intro-heading">FinTech with Purpose</h1>
+              <h1 className="intro-heading">Guides to Your Tech Startup</h1>
               <p className="intro-description">
-                Your idea transformed into reality.
+                We take people&#39;s vision
                 <br />
-                Build a better tomorrow with Insighty.
+                And bring it to life.
               </p>
               <div className="button-container">
                 <Link to="/home">
-                  <Button onClick={() => this.onClickBeginJourney()}>BEGIN JOURNEY</Button>
+                  <Button onClick={() => this.onClickBeginJourney()}>BEGIN YOUR JOURNEY</Button>
                 </Link>
               </div>
             </div>
