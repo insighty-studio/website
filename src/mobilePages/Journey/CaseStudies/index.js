@@ -48,6 +48,14 @@ class MobileCaseStudies extends Component {
                   image="/images/mobile/lpma-mobile-thumbnail.png"
                 />
               </div>
+              <div className="section">
+                <CaseStudy
+                  projectName="CommuniHelp"
+                  projectDescription="Smart way to volunteer"
+                  to="/communihelp"
+                  image="/images/mobile/communihelp-mobile-thumbnail.png"
+                />
+              </div>
               <div className="section footer-section">
                 <MobileFooter />
               </div>

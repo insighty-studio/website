@@ -56,6 +56,14 @@ class MobileHome extends Component {
                     to="/lpma"
                     image="/images/mobile/lpma-mobile-thumbnail.png"
                   />
+                  <div className="slide">
+                    <CaseStudy
+                      projectName="CommuniHelp"
+                      projectDescription="Smart way to volunteer"
+                      to="/communihelp"
+                      image="/images/mobile/communihelp-mobile-thumbnail.png"
+                    />
+                  </div>
                 </div>
               </div>
               <div className="section footer-section">
