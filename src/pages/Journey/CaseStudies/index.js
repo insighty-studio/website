@@ -72,6 +72,27 @@ class CaseStudies extends Component {
             ]}
             mockColor="black"
           />
+          <CaseStudy
+            hasMobileThumbnails
+            title="CommuniHelp"
+            subtitle="Smart way to volunteer"
+            text={`Communihelp is a smarter way to volunteer.
+              The app helps skilled professionals impact the causes they care about.
+              \\nWe optimized search and application processes so now the candidate can find
+              the right position just in minutes.`}
+            href="/communihelp"
+            images={[
+              '/images/screens/CommuniHelp/CHScreen1.png',
+              '/images/screens/CommuniHelp/CHScreen2.png',
+              '/images/screens/CommuniHelp/CHScreen3.png',
+            ]}
+            mobileImages={[
+              '/images/screens/CommuniHelp/CHScreen1.png',
+              '/images/screens/CommuniHelp/CHScreen1.png',
+              '/images/screens/CommuniHelp/CHScreen1.png',
+            ]}
+            mockColor="white"
+          />
         </div>
       </Page>
     );
