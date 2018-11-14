@@ -145,7 +145,7 @@ class Home extends Component {
 
           <div className={classnames('home-description', expanded && 'expanded')}>
             <p className="home-description-text">
-              You are embarking on a journey of seeing a new FinTech product through.
+              You are embarking on a journey of seeing a new Tech Startup through.
               We help you overcome the digital chaos to address a market need before
               someone else seizes the opportunity.
             </p>

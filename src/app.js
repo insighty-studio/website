@@ -30,6 +30,7 @@ import MobileConsultation from './mobilePages/Journey/Consultation';
 import BetterYet from './pages/Projects/BetterYet';
 import LPMA from './pages/Projects/LPMA';
 import Hub from './pages/Projects/Hub';
+import CommuniHelp from './pages/Projects/CommuniHelp';
 
 import Landscape from './pages/Landscape';
 
@@ -100,6 +101,7 @@ class App extends Component {
               && location.pathname !== '/betteryet'
               && location.pathname !== '/lpma'
               && location.pathname !== '/hub'
+              && location.pathname !== '/communihelp'
               && ((isMobile.phone && location.pathname !== '/home')
               || (!isMobile.phone))
               && ((isMobile.phone && location.pathname !== '/services')
@@ -126,6 +128,7 @@ class App extends Component {
                     <Route exact path="/betteryet" component={BetterYet} />
                     <Route exact path="/lpma" component={LPMA} />
                     <Route exact path="/hub" component={Hub} />
+                    <Route exact path="/communihelp" component={CommuniHelp} />
                     <Route path="*" render={() => <Redirect to="/" />} />
                   </Switch>
                 </CSSTransition>

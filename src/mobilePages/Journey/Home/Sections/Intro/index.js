@@ -10,7 +10,7 @@ class Intro extends Component {
           Create The Outlier Software That Changes The World.
         </h1>
         <p className="intro-description-first">
-          You are embarking on a journey of seeing a new FinTech product through.
+          You are embarking on a journey of seeing a new Tech Startup through.
           We help you overcome the digital chaos to address a market need before someone else seizes the opportunity.
         </p>
         <p className="intro-description-second">
