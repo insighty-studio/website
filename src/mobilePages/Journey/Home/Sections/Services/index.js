@@ -6,12 +6,14 @@ import {
 
 import './index.styl';
 
+// TODO rename to CoreExpertiseSection, deduplicate code
+// TODO see Services Section in the mobilePages
 class Services extends Component {
   render() {
     return (
       <div className="services-section">
         <h1 className="services-heading">
-          Get Help With
+          Core Expertise
         </h1>
         <div className="services-cards">
           <div className="logo"><Braintree /></div>

@@ -64,9 +64,10 @@ class CaseStudy extends Component {
             {text.split('\\n').map(par => <p className="case-study-text" key={uniqueid('cs-text-')}>{par}</p>)}
           </div>
 
+          {/* TODO this code is a duplication suspect. Resolve */}
           <div className="animated-button-container">
             <AnimatedButton
-              title="Project Details"
+              title="See More"
               className="animated-button"
               href={href}
             >
