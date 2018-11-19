@@ -26,7 +26,7 @@ class CaseStudy extends Component {
               {projectDescription}
             </p>
             <a href={to} className="project-details-link">
-              Project Details
+              See More
               <ArrowCircled />
             </a>
           </div>

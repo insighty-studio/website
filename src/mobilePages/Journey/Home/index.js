@@ -25,9 +25,6 @@ class MobileHome extends Component {
               <div className="section">
                 <Intro />
               </div>
-              <div className="section">
-                <Services />
-              </div>
               <div className="section cs-section">
                 <h1 className="case-studies-heading">
                   Our Work
@@ -65,6 +62,9 @@ class MobileHome extends Component {
                     />
                   </div>
                 </div>
+              </div>
+              <div className="section">
+                <Services />
               </div>
               <div className="section footer-section">
                 <MobileFooter />

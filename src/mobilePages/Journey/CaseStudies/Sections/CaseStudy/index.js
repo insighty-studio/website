@@ -4,6 +4,7 @@ import ArrowCircled from 'icons/ArrowCircled';
 
 import './index.styl';
 
+// TODO This code is duplicated on the home page. Need to deduplicate
 class CaseStudy extends Component {
   render() {
     const {
@@ -26,7 +27,7 @@ class CaseStudy extends Component {
               {projectDescription}
             </p>
             <a href={to} className="project-details-link">
-              Project Details
+              See More
               <ArrowCircled />
             </a>
           </div>
