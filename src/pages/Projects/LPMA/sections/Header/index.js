@@ -17,7 +17,13 @@ class Header extends PureComponent {
       <div className="header-section">
         <NavigationBar
           white
-          links={[]}
+          links={[
+            {text: 'Home', href: '/home', active: true},
+            {text: 'Services', href: '/services'},
+            {text: 'Impact', href: '/impact'},
+            {text: 'Our Work', href: '/our-work'},
+            {text: 'Team', href: '/team'}
+          ]}
           logoIcon={<Logo color="white" />}
         />
         <div className="lpma-graph">
