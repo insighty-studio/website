@@ -1,12 +1,12 @@
 .navigation-bar
   +iphone()
-    position relative
+    position absolute
 
     &.opened
-      height 100vh
+      position fixed
+      height 100%
       padding 40px
       top 0
-      position absolute
       background linear-gradient(white, $snow)
 
       .bar-content
@@ -21,6 +21,10 @@
 
           a
             margin-right 24px
+
+            svg
+              width 18px
+              height 18px
 
             &:last-child
               margin-right 0
@@ -50,6 +54,7 @@
 
     .bar-content
       display flex
+      align-items center
       padding 0
 
       .links
@@ -60,6 +65,12 @@
         flex 1
         justify-content space-between
         align-items center
+
+        .menu-icon
+          margin-left -6px
+
+        .logo-icon
+          display none
 
         .menu
           display flex
