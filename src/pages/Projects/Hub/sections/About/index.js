@@ -10,7 +10,7 @@ class About extends PureComponent {
       <AboutSection
         shortDesc={{
           year: '2018',
-          client: 'HUB 4.0',
+          client: 'HUB',
           services: 'UX and UI Design, Development',
         }}
         story={{

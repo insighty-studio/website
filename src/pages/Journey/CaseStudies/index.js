@@ -53,10 +53,10 @@ class CaseStudies extends Component {
           />
           <CaseStudy
             hasMobileThumbnails
-            title="HUB 4.0"
+            title="HUB X"
             subtitle="Community App"
             text={`This app is designed to elevate the coworking experience for
-              members of the space we reside in. \\nHub 4.0 delights members with a
+              members of the space we reside in. \\nHub X delights members with a
               seamless meeting room booking experience. It also brings the community
               events to life.`}
             href="/hub"
