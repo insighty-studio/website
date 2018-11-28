@@ -1,5 +1,14 @@
-.hub-page .additional-prototypes-section .prototype
-  display none
+.hub-page .additional-prototypes-section
+  .mobile-prototype
+    display none
+  .desktop-prototype
+    height 720px
+    display block
+    text-align center
+
+    img
+      width 70%
+
 
 +iphone()
   .hub-page .additional-prototypes-section
@@ -7,7 +16,10 @@
     height 100vh
     justify-content center
 
-    .prototype
+    .desktop-prototype
+      display none
+
+    .mobile-prototype
       display block
 
       img
@@ -20,7 +32,10 @@
     height 100vh
     justify-content center
 
-    .prototype
+    .desktop-prototype
+      display none
+
+    .mobile-prototype
       display block
 
       img

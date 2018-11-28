@@ -26,6 +26,8 @@ import Image5 from './images/image5.png';
 import Image5Webp from './images/image5.webp';
 import Image6 from './images/image6.png';
 import Image6Webp from './images/image6.webp';
+import Image7 from './images/image7.png';
+import Image7Webp from './images/image7.webp';
 
 import './index.styl';
 
@@ -67,11 +69,17 @@ class HubPage extends PureComponent {
           {src: Image6, webp: Image6Webp, offset: 20},
         )}
         <Colors />
-        <AdditionalPrototype src={Image4} webp={Image4Webp} offset={20} />
+        <AdditionalPrototype
+          desktopSrc={Image7}
+          desktopWebp={Image7Webp}
+          mobileSrc={Image4}
+          mobileWebp={Image4Webp}
+          offset={20}
+        />
         <NextProject
-          name="LPMA"
-          desc="Helping real estate principals achieve customer excellence."
-          href="/lpma"
+          name="BETTERYET"
+          desc="Loyalty program for the local shoppers."
+          href="/betteryet"
         />
         <Footer />
       </div>

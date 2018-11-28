@@ -7,23 +7,38 @@ import './index.styl';
 
 class AdditionalPrototype extends PureComponent {
   static propTypes = {
-    src: PropTypes.string.isRequired,
-    webp: PropTypes.string.isRequired,
+    desktopSrc: PropTypes.string.isRequired,
+    mobileSrc: PropTypes.string.isRequired,
+    mobileWebp: PropTypes.string.isRequired,
+    desktopWebp: PropTypes.string.isRequired,
     offset: PropTypes.number.isRequired,
   };
 
   render() {
-    const {src, webp, offset} = this.props;
+    const {
+      mobileSrc, desktopSrc, mobileWebp, desktopWebp, offset
+    } = this.props;
     return (
       <div className="additional-prototypes-section">
-        <div key={src} className="prototype">
+        <div key={mobileSrc} className="mobile-prototype">
           <Parallax
             offsetYMax={offset}
             offsetYMin={-offset}
           >
             <Image
-              src={src}
-              webp={webp}
+              src={mobileSrc}
+              webp={mobileWebp}
+            />
+          </Parallax>
+        </div>
+        <div key={desktopSrc} className="desktop-prototype">
+          <Parallax
+            offsetYMax={offset}
+            offsetYMin={-offset}
+          >
+            <Image
+              src={desktopSrc}
+              webp={desktopWebp}
             />
           </Parallax>
         </div>
