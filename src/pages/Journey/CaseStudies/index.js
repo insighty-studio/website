@@ -93,6 +93,20 @@ class CaseStudies extends Component {
             ]}
             mockColor="white"
           />
+          <CaseStudy
+            hasMobileThumbnails
+            title="Booqed"
+            subtitle="Property management system"
+            text="Booqed is a digital marketplace for flexible space, helping to connect
+            businesses needing places to work, meet or host an event,
+            with landlords seeking to monetize under-utilized space."
+            href="/booqed"
+            images={[
+              '/images/screens/Booqed/Booqed.png',
+            ]}
+            mobileImages={[]}
+            mockColor="white"
+          />
         </div>
       </Page>
     );
