@@ -5,6 +5,7 @@ import NavigationBar from 'components/NavigationBar';
 import {Logo} from 'icons';
 
 import BooqedLaptopImage from './images/booqed-laptop.png';
+import Techstars from './images/booqed-techstars.png';
 import './index.styl';
 import './mobile/index.styl';
 
@@ -33,6 +34,7 @@ class Header extends PureComponent {
             src={BooqedLaptopImage}
             alt="booqed laptop"
           />
+          <img src={Techstars} className="techstars-badge" alt="Techstart" />
         </Parallax>
       </div>
     );
