@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 
+import {Heading} from 'components/typography';
 import {
   AmazonPay, Braintree, PayPal, Plaid, Square, Stripe
 } from 'icons/FinTechLogos';
@@ -12,9 +13,7 @@ class Services extends Component {
   render() {
     return (
       <div className="services-section">
-        <h1 className="services-heading">
-          Core Expertise
-        </h1>
+        <Heading>Core Expertise</Heading>
         <div className="services-cards">
           <div className="logo"><Braintree /></div>
           <div className="logo"><Square /></div>

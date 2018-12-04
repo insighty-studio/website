@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import Page from 'components/Page';
 import CaseStudy from 'components/Sections/CaseStudy';
 import Heading from 'components/typography/Heading';
+import {HorizontalPadding} from 'components/layout';
 
 import './index.styl';
 import './mobile/index.styl';
@@ -11,7 +12,9 @@ class CaseStudies extends Component {
   render() {
     return (
       <Page className="case-studies-page">
-        <Heading className="case-studies-heading">Our Work</Heading>
+        <HorizontalPadding>
+          <Heading>Our Work</Heading>
+        </HorizontalPadding>
         <div className="case-studies-content">
           <CaseStudy
             hasMobileThumbnails

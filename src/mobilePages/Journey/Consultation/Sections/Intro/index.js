@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Heading} from 'components/typography';
 import ManWithLaptop from './icons';
 import './index.styl';
 
@@ -6,9 +7,9 @@ class Intro extends Component {
   render() {
     return (
       <div className="intro-section">
-        <h1 className="intro-heading">
+        <Heading>
           Fancy A Free 30-Minute Product Development Session?
-        </h1>
+        </Heading>
         <p className="intro-description">
           Here’s the plan:
           <br />

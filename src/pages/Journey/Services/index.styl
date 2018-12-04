@@ -1,111 +1,18 @@
-.design
+.services-content
+  margin-top 14vh
   width 100vw
-  position absolute
-  top 0
-  z-index 0
-  opacity 0.5
 
-.services-page
-  .services-content
-    margin-top 14vh
-    width 100vw
+  .services-bg
+    position absolute
+    overflow hidden
+    top 0
+    right 0
+    z-index -1
 
-    .services-bg
-      width 100vw
-      position absolute
-      overflow hidden
-      height 200vh
-      top 0
-      right 0
-      z-index -1
+    .services-chart
+      margin-left 61.2vw
+      margin-top 39.5vh
 
-      .services-chart
-        margin-left 61.2vw
-        margin-top 39.5vh
-
-    .services-heading
-      padding 0 10vw
-      font-size 2.9vw
-      margin 0
-
-    .services-description
-      margin 0
-      width 55vw
-      padding 0 0 32px 10vw
-      overflow hidden
-      transition max-height 1s ease-in
-
-      .services-description-text
-        font-size 1.5vw
-        opacity 0.8
-        line-height 2
-        letter-spacing normal
-
-      .description-more
-        font-size 1.5vw
-        display inline-block
-        color #5C64AA
-        border-bottom 1px solid #5C64AA
-        cursor pointer
-        line-height 20px
-
-      &.expanded
-        .services-button
-          margin-top 48px
-          padding 2vh 2.4vw
-          font-size 1.13vw
-          letter-spacing 1.8pt
-          line-height 23pt
-
-  .services-content-mobile
-    display none
-
-  .services-dream-section
-    z-index 1
-    display flex
-    flex-direction column
-    align-items center
-    margin-top 32px
-    width 100vw
-    background-color #F7F9FC
-    padding 64px 0
-
-    .services-dream-heading
-      font-size 3vw
-      width 80vw
-
-    .services-dream-text-mobile
-      display none
-
-    .services-dream-blocks
-      margin-top 1.5vh
-      width 80vw
-
-      .service-blocks-wrapper
-        width 100%
-        display flex
-        flex-direction row
-        align-items center
-        justify-content space-between
-
-        .block-wrapper
-          width auto
-          .service-block
-            padding 4vh 2.8vw
-            border-radius 9px
-            transition all .2s ease-in-out
-
-            &:hover
-              background-color white
-              box-shadow 0 10px 50px 0 rgba(0, 0, 0, 0.1)
-
-            .service-block-heading
-              font-weight 600
-              line-height 24pt
-              font-size 1.7vw
-
-            .service-block-description
-              letter-spacing 0.1pt
-              line-height 2
-              font-size 1.2vw
-              width 20vw
+  .services-description
+    width 50vw
+    padding-bottom 32px

@@ -19,7 +19,7 @@ class Heading extends PureComponent {
     const {className, children} = this.props;
 
     return (
-      <p className={classnames('heading', className)}>{children}</p>
+      <h1 className={classnames('heading', className)}>{children}</h1>
     );
   }
 }

@@ -58,3 +58,7 @@ export const trackEvent = (eventName, props = {}) => {
     ...props
   });
 };
+
+export const trackPage = (pageName, props = {}) => {
+  window.analytics.page(pageName, props);
+};

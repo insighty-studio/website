@@ -1,14 +1,13 @@
 import React, {Component} from 'react';
-import classnames from 'classnames';
 
 import './index.styl';
 import './mobile/index.styl';
 
 class Button extends Component {
   render() {
-    const {children, className, ...rest} = this.props;
+    const {children, ...rest} = this.props;
     return (
-      <button type="button" className={classnames('button', className)} {...rest}>{children}</button>
+      <button type="button" className="button" {...rest}>{children}</button>
     );
   }
 }

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Heading} from 'components/typography';
 import Impact from 'icons/backgrounds/ImpactBG';
 import './index.styl';
 
@@ -6,9 +7,7 @@ class Intro extends Component {
   render() {
     return (
       <div className="intro-section">
-        <h1 className="intro-heading">
-          Profits Paired With Purpose
-        </h1>
+        <Heading>Profits Paired With Purpose</Heading>
         <p className="intro-description-first">
           For any commercial project that you do with us, we build a mobile app for an
           entrepreneur with a socially impactful cause. Pro bono.

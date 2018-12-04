@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import {Logo} from 'icons';
 import IntroBG from 'icons/backgrounds/IntroBG';
 import Button from 'components/interactions/Button';
+import {Heading} from 'components/typography';
 
 import './index.styl';
 import './mobile/index.styl';
@@ -28,7 +29,7 @@ class IntroPage extends Component {
                 <div className="intro-principle-line" />
                 <p className="intro-principle-text">WE ARE INSIGHTY</p>
               </div>
-              <h1 className="intro-heading">Got A Big Idea?</h1>
+              <Heading>Got A Big Idea?</Heading>
               <p className="intro-description">
                 Build your Tech Business with our help.
                 <br />

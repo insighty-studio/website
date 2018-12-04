@@ -8,24 +8,24 @@ class TeamMemberCard extends Component {
   static propTypes = {
     name: PropTypes.string.isRequired,
     position: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-    src: PropTypes.string.isRequired,
+    answers: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
   };
 
   render() {
     const {
-      name, position, text, src,
+      name, position, answers, image,
     } = this.props;
 
     return (
       <div className="team-member">
-        <img className="member-photo" src={src} alt="insighty member" />
+        <img className="member-photo" src={image} alt="insighty member" />
         <div className="member-content">
           <h3 className="member-name">{name}</h3>
           <p className="member-position">{position}</p>
           <div className="member-separator" />
           <div className="member-text">
-            {text.split('\\n').map(par => <p className="member-para" key={uniqueid('member-para-')}>{par}</p>)}
+            {answers.map(answer => <p className="member-para" key={uniqueid('member-para-')}>{answer}</p>)}
           </div>
         </div>
       </div>

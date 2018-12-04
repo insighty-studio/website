@@ -5,15 +5,32 @@ import uniqueid from 'lodash.uniqueid';
 
 import IphoneMobileMock from 'icons/IphoneMobileMock';
 import AnimatedButton from 'components/interactions/AnimatedButton';
+import {Separator} from 'components/layout';
 import {RightArrowIcon} from 'icons';
 
 import './index.styl';
 import './mobile/index.styl';
 
 class CaseStudy extends Component {
+  renderButtons() {
+    const {href} = this.props;
+
+    return (
+      <div className="animated-button-container">
+        <AnimatedButton
+          title="See More"
+          className="animated-button"
+          href={href}
+        >
+          <RightArrowIcon color="white" />
+        </AnimatedButton>
+      </div>
+    );
+  }
+
   render() {
     const {
-      hasMobileThumbnails, title, subtitle, text, href, images, mobileImages, mockColor,
+      hasMobileThumbnails, title, subtitle, text, images, mobileImages, mockColor,
     } = this.props;
 
     return (
@@ -48,21 +65,12 @@ class CaseStudy extends Component {
             <p className="case-study-title">{title}</p>
             <p className="case-study-subtitle">{subtitle}</p>
 
-            <div className="case-study-separator" />
+            <Separator />
 
             {text.split('\\n').map(par => <p className="case-study-text" key={uniqueid('cs-text-')}>{par}</p>)}
           </div>
 
-          {/* TODO this code is a duplication suspect. Resolve */}
-          <div className="animated-button-container">
-            <AnimatedButton
-              title="See More"
-              className="animated-button"
-              href={href}
-            >
-              <RightArrowIcon color="white" />
-            </AnimatedButton>
-          </div>
+          {this.renderButtons()}
           {hasMobileThumbnails ? (
             <div className="screens-container">
               {images.map((source, idx) => (
