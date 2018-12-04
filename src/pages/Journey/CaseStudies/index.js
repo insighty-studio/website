@@ -37,7 +37,6 @@ class CaseStudies extends Component {
             mockColor="white"
           />
           <CaseStudy
-            hasMobileThumbnails={false}
             title="LPMA"
             subtitle="Property management system"
             text={`The Customer Excellence program equips real estate agencies to survey their clients. \\nThis is a
@@ -94,7 +93,6 @@ class CaseStudies extends Component {
             mockColor="white"
           />
           <CaseStudy
-            hasMobileThumbnails
             title="Booqed"
             subtitle="Property management system"
             text="Booqed is a digital marketplace for flexible space, helping to connect
