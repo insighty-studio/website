@@ -4,6 +4,7 @@ import {Parallax} from 'react-scroll-parallax';
 import BooqedLaptopsImage from './images/booqed-laptops.png';
 
 import './index.styl';
+import './mobile/index.styl';
 
 class Illustrations extends PureComponent {
   render() {

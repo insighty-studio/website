@@ -4,6 +4,7 @@ import {Parallax} from 'react-scroll-parallax';
 
 import BooqedIllustrationImage from './images/booqed-illustration.png';
 import './index.styl';
+import './mobile/index.styl';
 
 class Logo extends PureComponent {
   render() {

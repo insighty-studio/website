@@ -8,7 +8,7 @@ import './index.styl';
 class CaseStudy extends Component {
   render() {
     const {
-      projectName, projectDescription, to, image, desktop,
+      projectName, projectDescription, to, image, desktop, customImageStyles,
     } = this.props;
 
     return (
@@ -17,6 +17,7 @@ class CaseStudy extends Component {
           <img
             className="project-thumbnail"
             src={image}
+            style={customImageStyles}
             alt={`${projectName} screenshot`}
           />
           <div className="project-info" style={{marginTop: desktop ? '0' : '-30px'}}>
