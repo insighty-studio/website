@@ -6,8 +6,8 @@ import {Redirect, Route, Switch} from 'react-router-dom';
 import Header from './imports/components/Header';
 import ScrollToTop from './imports/components/ScrollToTop';
 import Intro from './pages/Intro';
-import MobileHome from './mobilePages/Journey/Home';
 import Home from './pages/Journey/Home';
+import MobileHome from './mobilePages/Journey/Home';
 import MobileServices from './mobilePages/Journey/Services';
 import Services from './pages/Journey/Services';
 import MobileImpact from './mobilePages/Journey/Impact';
@@ -19,6 +19,8 @@ import Team from './pages/Journey/Team';
 import MobileConsultation from './mobilePages/Journey/Consultation';
 import Consultation from './pages/Journey/Consultation';
 import BetterYet from './pages/Projects/BetterYet';
+import CommuniHelp from './pages/Projects/CommuniHelp';
+import Booqed from './pages/Projects/Booqed';
 import LPMA from './pages/Projects/LPMA';
 import Hub from './pages/Projects/Hub';
 import {trackPage} from './imports/analytics';
@@ -41,6 +43,8 @@ export default class Application extends React.Component {
           && location.pathname !== '/betteryet'
           && location.pathname !== '/lpma'
           && location.pathname !== '/hub'
+          && location.pathname !== '/communihelp'
+          && location.pathname !== '/booqed'
           && ((isMobile.phone && location.pathname !== '/home')
             || (!isMobile.phone))
           && ((isMobile.phone && location.pathname !== '/services')
@@ -67,6 +71,8 @@ export default class Application extends React.Component {
                 <Route exact path="/betteryet" component={BetterYet} />
                 <Route exact path="/lpma" component={LPMA} />
                 <Route exact path="/hub" component={Hub} />
+                <Route exact path="/communihelp" component={CommuniHelp} />
+                <Route exact path="/booqed" component={Booqed} />
                 <Route path="*" render={() => <Redirect to="/" />} />
               </Switch>
             </CSSTransition>

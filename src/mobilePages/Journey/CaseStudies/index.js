@@ -43,14 +43,14 @@ class MobileCaseStudies extends Component {
             />
           </div>
           <div className="section">
-                <CaseStudy
-                  projectName="CommuniHelp"
-                  projectDescription="Smart way to volunteer"
-                  to="/communihelp"
-                  image="/images/mobile/communihelp-mobile-thumbnail.png"
-                />
-              </div>
-              <div className="section footer-section">
+            <CaseStudy
+              projectName="CommuniHelp"
+              projectDescription="Smart way to volunteer"
+              to="/communihelp"
+              image="/images/mobile/communihelp-mobile-thumbnail.png"
+            />
+          </div>
+          <div className="section footer-section">
             <MobileFooter />
           </div>
         </FullPageScroll>

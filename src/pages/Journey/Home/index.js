@@ -3,20 +3,17 @@ import {Parallax} from 'react-scroll-parallax';
 
 import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
-import Button from 'components/interactions/Button';
 
 import VRGirlInSpace from 'icons/backgrounds/HomeBG';
 
-import CaseStudiesSection from './components/CaseStudiesSection';
-import CoreExpertiseSection from './components/CoreExpertiseSection';
 import './index.styl';
 import './mobile/index.styl';
 import {Paragraph} from 'components/typography';
+import {HorizontalPadding} from 'components/layout';
 import FreeConsultationButton from 'components/interactions/FreeConsultationButton';
 import {TextLink} from 'components/interactions';
 import FinTechLogos from './components/FinTechLogos/index';
 import CaseStudiesSection from './components/CaseStudiesSection';
-import {HorizontalPadding} from '../../../imports/components/layout';
 
 class Home extends Component {
   state = {
