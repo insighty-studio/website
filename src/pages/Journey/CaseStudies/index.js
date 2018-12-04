@@ -37,7 +37,6 @@ class CaseStudies extends Component {
             mockColor="white"
           />
           <CaseStudy
-            hasMobileThumbnails={false}
             title="LPMA"
             subtitle="Property management system"
             text={`The Customer Excellence program equips real estate agencies to survey their clients. \\nThis is a
@@ -53,10 +52,10 @@ class CaseStudies extends Component {
           />
           <CaseStudy
             hasMobileThumbnails
-            title="HUB 4.0"
+            title="HUB X"
             subtitle="Community App"
             text={`This app is designed to elevate the coworking experience for
-              members of the space we reside in. \\nHub 4.0 delights members with a
+              members of the space we reside in. \\nHub X delights members with a
               seamless meeting room booking experience. It also brings the community
               events to life.`}
             href="/hub"
@@ -71,6 +70,40 @@ class CaseStudies extends Component {
               '/images/screens/HUB/MHubScreen3.png',
             ]}
             mockColor="black"
+          />
+          <CaseStudy
+            hasMobileThumbnails
+            title="CommuniHelp"
+            subtitle="Smart way to volunteer"
+            text={`Communihelp is a smarter way to volunteer.
+              The app helps skilled professionals impact the causes they care about.
+              \\nWe optimized search and application processes so now the candidate can find
+              the right position just in minutes.`}
+            href="/communihelp"
+            images={[
+              '/images/screens/CommuniHelp/CHScreen1.png',
+              '/images/screens/CommuniHelp/CHScreen2.png',
+              '/images/screens/CommuniHelp/CHScreen3.png',
+            ]}
+            mobileImages={[
+              '/images/screens/CommuniHelp/CHScreen1.png',
+              '/images/screens/CommuniHelp/CHScreen1.png',
+              '/images/screens/CommuniHelp/CHScreen1.png',
+            ]}
+            mockColor="white"
+          />
+          <CaseStudy
+            title="Booqed"
+            subtitle="Property management system"
+            text="Booqed is a digital marketplace for flexible space, helping to connect
+            businesses needing places to work, meet or host an event,
+            with landlords seeking to monetize under-utilized space."
+            href="/booqed"
+            images={[
+              '/images/screens/Booqed/Booqed.png',
+            ]}
+            mobileImages={[]}
+            mockColor="white"
           />
         </div>
       </Page>

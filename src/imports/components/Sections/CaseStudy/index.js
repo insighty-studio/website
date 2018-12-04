@@ -11,17 +11,6 @@ import './index.styl';
 import './mobile/index.styl';
 
 class CaseStudy extends Component {
-  static propTypes = {
-    hasMobileThumbnails: PropTypes.bool.isRequired,
-    title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-    href: PropTypes.string.isRequired,
-    images: PropTypes.arrayOf(PropTypes.string).isRequired,
-    mobileImages: PropTypes.arrayOf(PropTypes.string).isRequired,
-    mockColor: PropTypes.string.isRequired,
-  };
-
   render() {
     const {
       hasMobileThumbnails, title, subtitle, text, href, images, mobileImages, mockColor,
@@ -64,9 +53,10 @@ class CaseStudy extends Component {
             {text.split('\\n').map(par => <p className="case-study-text" key={uniqueid('cs-text-')}>{par}</p>)}
           </div>
 
+          {/* TODO this code is a duplication suspect. Resolve */}
           <div className="animated-button-container">
             <AnimatedButton
-              title="Project Details"
+              title="See More"
               className="animated-button"
               href={href}
             >
@@ -99,5 +89,20 @@ class CaseStudy extends Component {
     );
   }
 }
+
+CaseStudy.defaultProps = {
+  hasMobileThumbnails: false
+};
+
+CaseStudy.propTypes = {
+  hasMobileThumbnails: PropTypes.bool,
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  mobileImages: PropTypes.arrayOf(PropTypes.string).isRequired,
+  mockColor: PropTypes.string.isRequired,
+};
 
 export default CaseStudy;

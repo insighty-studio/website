@@ -50,8 +50,9 @@ class ClientFooter extends PureComponent {
             >
               <RightArrowIcon color={color} />
             </Button>
+            {/* TODO this code is a duplication suspect. Resolve */}
             <Button
-              title="project details"
+              title="See More"
               className="project-details-btn"
               href={page}
             >

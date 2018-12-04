@@ -3,8 +3,12 @@ import {Parallax} from 'react-scroll-parallax';
 
 import Page from 'components/Page';
 import Heading from 'components/typography/Heading';
+import Button from 'components/interactions/Button';
+
 import VRGirlInSpace from 'icons/backgrounds/HomeBG';
 
+import CaseStudiesSection from './components/CaseStudiesSection';
+import CoreExpertiseSection from './components/CoreExpertiseSection';
 import './index.styl';
 import './mobile/index.styl';
 import {Paragraph} from 'components/typography';
@@ -66,7 +70,7 @@ class Home extends Component {
 
           <div className="home-description">
             <Paragraph>
-              You are embarking on a journey of seeing a new FinTech product through.
+              You are embarking on a journey of seeing a new Tech Startup through.
               We help you overcome the digital chaos to address a market need before
               someone else seizes the opportunity.
             </Paragraph>
@@ -79,6 +83,7 @@ class Home extends Component {
             {expanded && this.renderExpanded()}
           </div>
 
+          {/* TODO home page better yet project details -> see more */}
         </div>
 
         <div className="home-help-section">

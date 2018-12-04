@@ -30,7 +30,7 @@ class Description extends PureComponent {
 
     return (
       <div className={classnames('service-description', page)}>
-        <Heading className={page} subTitle={subtitle} title={title} />
+        <Heading className={page} subTitle={subtitle}>{title}</Heading>
         <Paragraph>
           {text}
         </Paragraph>

@@ -20,14 +20,20 @@ class MobileHome extends Component {
           <div className="section">
             <Intro />
           </div>
-          <div className="section">
-            <Services />
-          </div>
           <div className="section cs-section">
             <Heading className="case-studies-heading">
               Our Work
             </Heading>
             <div className="slide">
+                  <CaseStudy
+                    desktop
+                    projectName="LPMA"
+                    projectDescription="Property management system"
+                    to="/booqed"
+                    image="/images/mobile/lpma-mobile-thumbnail.png"
+                  />
+                </div>
+                <divclassName="slide">
               <CaseStudy
                 projectName="BetterYet"
                 projectDescription="Loyalty for Small Businesses"
@@ -51,7 +57,17 @@ class MobileHome extends Component {
                 to="/lpma"
                 image="/images/mobile/lpma-mobile-thumbnail.png"
               />
-            </div>
+            </div><div className="slide">
+                  <CaseStudy
+                    projectName="CommuniHelp"
+                    projectDescription="Smart way to volunteer"
+                    to="/communihelp"
+                    image="/images/mobile/communihelp-mobile-thumbnail.png"
+                  />
+                </div>
+              </div>
+              <div className="section">
+                <Services />
           </div>
           <div className="section footer-section">
             <MobileFooter />
