@@ -25,6 +25,19 @@ class MobileCaseStudies extends Component {
             <ReactFullpage.Wrapper>
               <div className="section">
                 <CaseStudy
+                  projectName="Booqed"
+                  customImageStyles={{
+                    marginBottom: 40,
+                    maxHeight: 320,
+                    width: 'auto'
+                  }}
+                  projectDescription="It’s time to reimagine space"
+                  to="/booqed"
+                  image="/images/mobile/booqed-mobile-thumbnail.png"
+                />
+              </div>
+              <div className="section">
+                <CaseStudy
                   projectName="BetterYet"
                   projectDescription="Loyalty for Small Businesses"
                   to="/betteryet"
