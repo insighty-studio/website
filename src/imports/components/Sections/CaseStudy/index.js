@@ -11,17 +11,6 @@ import './index.styl';
 import './mobile/index.styl';
 
 class CaseStudy extends Component {
-  static propTypes = {
-    hasMobileThumbnails: PropTypes.bool.isRequired,
-    title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-    href: PropTypes.string.isRequired,
-    images: PropTypes.arrayOf(PropTypes.string).isRequired,
-    mobileImages: PropTypes.arrayOf(PropTypes.string).isRequired,
-    mockColor: PropTypes.string.isRequired,
-  };
-
   render() {
     const {
       hasMobileThumbnails, title, subtitle, text, href, images, mobileImages, mockColor,
@@ -100,5 +89,20 @@ class CaseStudy extends Component {
     );
   }
 }
+
+CaseStudy.defaultProps = {
+  hasMobileThumbnails: false
+};
+
+CaseStudy.propTypes = {
+  hasMobileThumbnails: PropTypes.bool,
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  mobileImages: PropTypes.arrayOf(PropTypes.string).isRequired,
+  mockColor: PropTypes.string.isRequired,
+};
 
 export default CaseStudy;
