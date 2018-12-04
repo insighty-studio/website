@@ -46,12 +46,12 @@ class Team extends Component {
               src="/images/team-members/ksenia.jpg"
             />
             <TeamMemberCard
-              name="Dmitry Y."
-              position="Head of Engineering"
-              text="- Online learning is the dominant form of professional education in most fields.
-                \n- Most urban commuters prefer electric transport like e-bikes and e-scooters.
-                \n- Supervised robotic surgeries have emerged."
-              src="/images/team-members/dmitry.jpeg"
+              name="Vadym K."
+              position="UX/UI Designer"
+              text="- Cybernetic limbs for the disabled.
+                \n- Electric vehicles everywhere.
+                \n- Better ecology."
+              src="/images/team-members/vadym.jpeg"
             />
           </div>
           <div className="card-row">
@@ -72,16 +72,6 @@ class Team extends Component {
               src="/images/team-members/roma.jpeg"
             />
             <TeamMemberCard
-              name="Vadym K."
-              position="UX/UI Designer"
-              text="- Cybernetic limbs for the disabled.
-                \n- Electric vehicles everywhere.
-                \n- Better ecology."
-              src="/images/team-members/vadym.jpeg"
-            />
-          </div>
-          <div className={classnames('card-row', 'last-row')}>
-            <TeamMemberCard
               name="Paul P."
               position="Software Engineer"
               text="- We return to the Moon.
@@ -89,6 +79,8 @@ class Team extends Component {
                 \n- People learn how to consume and process news in the chaos of the digital world."
               src="/images/team-members/paul.jpeg"
             />
+          </div>
+          <div className={classnames('card-row', 'last-row')}>
             <TeamMemberCard
               name="Denis H."
               position="Software Engineer"
