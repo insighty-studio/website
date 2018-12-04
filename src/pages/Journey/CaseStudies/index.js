@@ -37,6 +37,19 @@ class CaseStudies extends Component {
             mockColor="white"
           />
           <CaseStudy
+            title="Booqed"
+            subtitle="Property management system"
+            text="Booqed is a digital marketplace for flexible space, helping to connect
+            businesses needing places to work, meet or host an event,
+            with landlords seeking to monetize under-utilized space."
+            href="/booqed"
+            images={[
+              '/images/screens/Booqed/Booqed.png',
+            ]}
+            mobileImages={[]}
+            mockColor="white"
+          />
+          <CaseStudy
             title="LPMA"
             subtitle="Property management system"
             text={`The Customer Excellence program equips real estate agencies to survey their clients. \\nThis is a
@@ -90,19 +103,6 @@ class CaseStudies extends Component {
               '/images/screens/CommuniHelp/CHScreen1.png',
               '/images/screens/CommuniHelp/CHScreen1.png',
             ]}
-            mockColor="white"
-          />
-          <CaseStudy
-            title="Booqed"
-            subtitle="Property management system"
-            text="Booqed is a digital marketplace for flexible space, helping to connect
-            businesses needing places to work, meet or host an event,
-            with landlords seeking to monetize under-utilized space."
-            href="/booqed"
-            images={[
-              '/images/screens/Booqed/Booqed.png',
-            ]}
-            mobileImages={[]}
             mockColor="white"
           />
         </div>
