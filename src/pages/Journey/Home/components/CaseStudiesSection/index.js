@@ -4,6 +4,7 @@ import Heading from 'components/typography/Heading';
 import IphoneMobileMock from 'icons/IphoneMobileMock';
 import {Paragraph} from 'components/typography';
 import AnimatedButton from 'components/interactions/AnimatedButton';
+import {Separator} from 'components/layout';
 import {AppleIcon, RightArrowIcon} from 'icons';
 import './index.styl';
 
@@ -37,7 +38,7 @@ export default class CaseStudiesSection extends React.Component {
           <div className="case-studies-description">
             <h3 className="case-studies-title">BetterYet</h3>
             <p className="case-studies-subtitle">Loyalty for Small Businesses</p>
-            <div className="case-studies-separator" />
+            <Separator />
             <div className="case-studies-text">
               <Paragraph>
                 Mark and Alan, the co-founders of BetterYet, envisioned a
