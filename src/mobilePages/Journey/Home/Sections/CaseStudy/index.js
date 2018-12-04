@@ -43,10 +43,12 @@ CaseStudy.propTypes = {
   projectDescription: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  customImageStyles: PropTypes.object,
 };
 
 CaseStudy.defaultProps = {
   desktop: false,
+  customImageStyles: {},
 };
 
 export default CaseStudy;
