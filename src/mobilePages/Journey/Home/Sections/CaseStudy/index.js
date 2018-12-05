@@ -7,7 +7,7 @@ import './index.styl';
 class CaseStudy extends Component {
   render() {
     const {
-      projectName, projectDescription, to, image, desktop,
+      projectName, projectDescription, to, image, desktop, customImageStyles
     } = this.props;
 
     return (
@@ -15,6 +15,7 @@ class CaseStudy extends Component {
         <div className="case-studies-description">
           <img
             className="project-thumbnail"
+            style={customImageStyles}
             src={image}
             alt={`${projectName} screenshot`}
           />
@@ -42,10 +43,12 @@ CaseStudy.propTypes = {
   projectDescription: PropTypes.string.isRequired,
   to: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  customImageStyles: PropTypes.object,
 };
 
 CaseStudy.defaultProps = {
   desktop: false,
+  customImageStyles: {},
 };
 
 export default CaseStudy;

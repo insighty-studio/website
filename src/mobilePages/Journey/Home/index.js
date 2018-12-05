@@ -32,10 +32,13 @@ class MobileHome extends Component {
                 <div className="slide">
                   <CaseStudy
                     desktop
-                    projectName="LPMA"
-                    projectDescription="Property management system"
+                    projectName="Booqed"
+                    projectDescription="It’s time to reimagine space"
+                    customImageStyles={{
+                      marginTop: 30
+                    }}
                     to="/booqed"
-                    image="/images/mobile/lpma-mobile-thumbnail.png"
+                    image="/images/mobile/booqed-full.png"
                   />
                 </div>
                 <div className="slide">
